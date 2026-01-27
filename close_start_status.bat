@@ -14,5 +14,5 @@ REM Iniciar nuevamente la aplicación
 REM -----------------------------------------
 start "" python layer_status_script.py
 
-exit
+ 
 
