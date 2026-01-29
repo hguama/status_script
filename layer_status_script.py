@@ -22,6 +22,8 @@ UMBRAL_CAMBIO_DIR = 25
 TURBO_MARGIN = 25
 WRAP_MARGIN = 2
 VENTANA_GESTO_MS = 0.03  # 30 ms
+RADIO_OCULTAR = 80  # píxeles alrededor del indicador donde se oculta
+
 
 
 
@@ -36,6 +38,8 @@ pos_x_referencia = 0
 
 wrap_enabled = threading.Event()
 wrap_enabled.set()
+indicador_visible_por_capa = False
+
 
 # ===============================================================
 # UI
@@ -79,6 +83,8 @@ canvas_mouse = tk.Canvas(mouse_win, width=PUNTO_MOUSE, height=PUNTO_MOUSE,
 canvas_mouse.pack()
 
 def actualizar_ui(capa_msg):
+    global indicador_visible_por_capa
+
     clave = next((k for k in colores if k in capa_msg), None)
     if clave:
         c = colores[clave]
@@ -86,11 +92,14 @@ def actualizar_ui(capa_msg):
         canvas.create_oval(2, 2, DIAMETRO-2, DIAMETRO-2, fill=c, outline="")
         canvas_mouse.delete("all")
         canvas_mouse.create_oval(0, 0, PUNTO_MOUSE, PUNTO_MOUSE, fill=c, outline="")
+        indicador_visible_por_capa = True
         root.deiconify()
         mouse_win.deiconify()
     else:
+        indicador_visible_por_capa = False
         root.withdraw()
         mouse_win.withdraw()
+
 
 # ===============================================================
 # HID
@@ -255,6 +264,38 @@ def wrap_loop():
         # Aumentamos ligeramente el tiempo de espera para que al sistema 
         # le de tiempo de procesar el estado del clic bloqueado
         time.sleep(0.01)
+
+
+# ===============================================================
+# ocultar indicador
+# ===============================================================
+def ocultar_indicador_si_mouse_cerca():
+    while True:
+        try:
+            if not indicador_visible_por_capa:
+                time.sleep(0.05)
+                continue
+
+            mx, my = pyautogui.position()
+
+            # Centro del indicador superior
+            cx = pantalla_ancho // 2
+            cy = 5 + DIAMETRO // 2
+
+            dx = mx - cx
+            dy = my - cy
+            distancia = (dx*dx + dy*dy) ** 0.5
+
+            if distancia < RADIO_OCULTAR:
+                root.withdraw()
+            else:
+                root.deiconify()
+
+        except:
+            pass
+
+        time.sleep(0.03)
+
 # ===============================================================
 # MAIN
 # ===============================================================
@@ -274,6 +315,8 @@ def main():
     threading.Thread(target=seguimiento_mouse, daemon=True).start()
     threading.Thread(target=loop_auto_salto, daemon=True).start()
     threading.Thread(target=wrap_loop, daemon=True).start()
+    threading.Thread(target=ocultar_indicador_si_mouse_cerca, daemon=True).start()
+
 
     print("========================================")
     print("  CORNELL READY – SALTO + WRAP INTEGRADO ")
