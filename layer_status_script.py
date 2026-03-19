@@ -8,6 +8,7 @@ import keyboard
 import ctypes # Añade esto al inicio de tu archivo
 
 from datetime import datetime
+import utils.onenote_nav  # Integración OneNote Nav
 
 pyautogui.FAILSAFE = False
 
@@ -316,7 +317,9 @@ def main():
     threading.Thread(target=loop_auto_salto, daemon=True).start()
     threading.Thread(target=wrap_loop, daemon=True).start()
     threading.Thread(target=ocultar_indicador_si_mouse_cerca, daemon=True).start()
-
+    
+    # Inicia la captura de Alt para OneNote 2016
+    utils.onenote_nav.run_in_background()
 
     print("========================================")
     print("  CORNELL READY – SALTO + WRAP INTEGRADO ")

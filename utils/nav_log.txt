@@ -1,0 +1,2254 @@
+=== HOOK INICIADO (Modo de depuración extrema activado) ===
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[MACRO] Completada exitosamente.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[MACRO] Completada exitosamente.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x25, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page up
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0x21, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x25, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x27, is_injected: False
+    [ACCIÓN] Interceptado atajo Alt+Flecha en OneNote. Lanzando thread...
+[MACRO] Iniciando envío de Ctrl + page down
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] UP   -> vk: 0xa4, is_injected: True
+[DETECTADO] DOWN -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0x22, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[MACRO] Completada exitosamente.
+[DETECTADO] UP   -> vk: 0x27, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+    [BLOQUEO] Alt Up bloqueado porque se usó para salto.
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa2, is_injected: False
+[DETECTADO] UP   -> vk: 0xa0, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0x87, is_injected: False
+[DETECTADO] UP   -> vk: 0x87, is_injected: False
+[DETECTADO] DOWN -> vk: 0x87, is_injected: False
+[DETECTADO] UP   -> vk: 0x87, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa2, is_injected: True
+[DETECTADO] DOWN -> vk: 0x56, is_injected: True
+[DETECTADO] UP   -> vk: 0x56, is_injected: True
+[DETECTADO] UP   -> vk: 0xa2, is_injected: True
+[DETECTADO] DOWN -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xd, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x73, is_injected: False
+[DETECTADO] UP   -> vk: 0x73, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x49, is_injected: False
+[DETECTADO] UP   -> vk: 0x49, is_injected: False
+[DETECTADO] DOWN -> vk: 0x49, is_injected: False
+[DETECTADO] UP   -> vk: 0x49, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xd, is_injected: False
+[DETECTADO] DOWN -> vk: 0x7a, is_injected: False
+[DETECTADO] UP   -> vk: 0x7a, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x49, is_injected: False
+[DETECTADO] UP   -> vk: 0x49, is_injected: False
+[DETECTADO] DOWN -> vk: 0x4f, is_injected: False
+[DETECTADO] UP   -> vk: 0x4f, is_injected: False
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x41, is_injected: False
+[DETECTADO] UP   -> vk: 0x41, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] UP   -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x8, is_injected: False
+[DETECTADO] UP   -> vk: 0x8, is_injected: False
+[DETECTADO] DOWN -> vk: 0x4d, is_injected: False
+[DETECTADO] UP   -> vk: 0x4d, is_injected: False
+[DETECTADO] DOWN -> vk: 0x41, is_injected: False
+[DETECTADO] UP   -> vk: 0x41, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0x4e, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0x1b, is_injected: False
+[DETECTADO] UP   -> vk: 0x1b, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0x85, is_injected: False
+[DETECTADO] UP   -> vk: 0x85, is_injected: False
+[DETECTADO] DOWN -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Down 0xa4
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0x9, is_injected: False
+[DETECTADO] UP   -> vk: 0x9, is_injected: False
+[DETECTADO] DOWN -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xd, is_injected: False
+[DETECTADO] UP   -> vk: 0xa4, is_injected: False
+--- [TECLADO] Alt Up 0xa4
