@@ -60,7 +60,7 @@ colores = {
     "COMMIT": "#E53935",
     "NUMB": "#9E9E9E",
     "MOUSE_1": "#8D6E63",
-    "MOUSE_2": "#FFEB3B",
+    "MOVE": "#FFEB3B",
 }
 
 root = tk.Tk()
