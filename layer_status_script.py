@@ -10,6 +10,13 @@ import ctypes # Añade esto al inicio de tu archivo
 from datetime import datetime
 import utils.onenote_nav  # Integración OneNote Nav
 
+import logging
+logging.basicConfig(level=logging.WARNING, format='%(asctime)s.%(msecs)03d %(levelname)s - %(message)s', datefmt='%H:%M:%S', handlers=[
+    logging.FileHandler("f22_debug.log", encoding='utf-8', mode='a'),
+    logging.StreamHandler()
+])
+logger = logging.getLogger(__name__)
+
 pyautogui.FAILSAFE = False
 
 # ===============================================================
@@ -175,9 +182,10 @@ def presiona_f22(e):
         return
 
     tecla_horiz_down = True
-    x0, _ = pyautogui.position()
+    x0, y0 = pyautogui.position()
     pos_x_referencia = x0
     direccion_fijada = 0
+    logger.debug(f"[F22 PRESS] Start pos: ({x0}, {y0})")
 
     # 🔍 Ventana corta para capturar gesto rápido
     inicio = time.time()
@@ -187,6 +195,7 @@ def presiona_f22(e):
         if abs(dx) > 0:
             direccion_fijada = 1 if dx > 0 else -1
             pos_x_referencia = x1
+            logger.debug(f"[F22 PRESS] Gesture detected! dx={dx}, dir={direccion_fijada}")
             break
         time.sleep(0.005)
 
@@ -194,6 +203,7 @@ def suelta_f22(e):
     global tecla_horiz_down, direccion_fijada
     tecla_horiz_down = False
     direccion_fijada = 0
+    logger.debug("[F22 RELEASE]")
 
 keyboard.on_press_key("f22", presiona_f22)
 keyboard.on_release_key("f22", suelta_f22)
@@ -207,10 +217,12 @@ def loop_auto_salto():
 
             if direccion_fijada == 0 and abs(dx) > 0:
                 direccion_fijada = 1 if dx > 0 else -1
+                logger.debug(f"[LOOP] dir initially 0, set to {direccion_fijada} (dx={dx})")
 
             if direccion_fijada != 0:
                 nx = curr_x + (DISTANCIA_SALTO * direccion_fijada)
                 nx = max(TURBO_MARGIN, min(pantalla_ancho - TURBO_MARGIN, nx))
+                logger.debug(f"[LOOP] Jump! from {curr_x} to {nx} (dir={direccion_fijada})")
                 pyautogui.moveTo(nx, curr_y)
                 pos_x_referencia = nx
 
@@ -222,7 +234,9 @@ def loop_auto_salto():
                     diff = tx - pos_x_referencia
                     if abs(diff) >= UMBRAL_CAMBIO_DIR:
                         nueva = 1 if diff > 0 else -1
+                        logger.debug(f"[LOOP] Movement detected during pause! diff={diff}. nueva={nueva}, dir={direccion_fijada}")
                         if nueva != direccion_fijada:
+                            logger.info(f"[LOOP] Break pause! direction changed from {direccion_fijada} to {nueva}")
                             direccion_fijada = nueva
                             break
                     time.sleep(0.01)
@@ -300,7 +314,23 @@ def ocultar_indicador_si_mouse_cerca():
 # ===============================================================
 # MAIN
 # ===============================================================
+
+# Global reference to avoid Garbage Collection of the mutex
+_mutex_ref = None
+
+def check_single_instance():
+    global _mutex_ref
+    kernel32 = ctypes.windll.kernel32
+    mutex_name = "LAYER_STATUS_SCRIPT_UNIQUE_MUTEX_123"
+    _mutex_ref = kernel32.CreateMutexW(None, False, mutex_name)
+    if kernel32.GetLastError() == 183: # ERROR_ALREADY_EXISTS
+        print("❌ Ya hay una instancia de este script ejecutándose. Saliendo para evitar conflictos...")
+        import sys
+        sys.exit(0)
+
 def main():
+    check_single_instance()
+    
     path = next((d["path"] for d in hid.enumerate()
                 if d["vendor_id"] == VID and d["product_id"] == PID), None)
     if not path:
