@@ -57,14 +57,14 @@ RADIO_OCULTAR = 80
 VEL_BASE = 3.0
 VEL_MAX = 42.0
 ACEL_POR_FRAME = 0.65  # Incremento de velocidad por cada ciclo de 10ms
-PAUSA_BORDE_S = 0.45   # Pausa al tocar el borde antes de saltar
+PAUSA_BORDE_S = 0.6    # Pausa al tocar el borde antes de saltar
 COOLDOWN_WRAP = 0.5    # Tiempo mínimo entre saltos automáticos
+TIEMPO_ANCLAJE = 2   # Segundos que el mouse queda bloqueado tras un salto
 pyautogui.PAUSE = 0    # Eliminar delay interno de pyautogui para máxima fluidez
 
 # --- PARÁMETROS DE PRECISIÓN EN BORDES ---
 MARGIN_ESQUINA = 100    # Píxeles desde las esquinas donde el muro es sólido (no salta)
-DISTANCIA_FRENADO = 80 # Píxeles antes del borde donde empieza a frenar
-VEL_FRENADO = 7.0      # Velocidad máxima permitida en zona de frenado
+DISTANCIA_FRENADO = 500 # Píxeles antes del borde donde empieza a frenar dinámicamente
 UMBRAL_VIAJE_LARGO = 450 # Distancia recorrida para activar el bloqueo de esquinas
 
 
@@ -347,38 +347,38 @@ def loop_movimiento_suave():
         if not tecla_horiz_down and not tecla_vert_down:
             distancia_recorrida = 0
 
-        # DETECTAR SALTO EXTERNO (Con Filtro de Intencionalidad)
+        # DETECTAR SALTO EXTERNO (Con Filtro de Zonas del 25%)
         if abs(curr_x - last_x) > (pantalla_ancho // 2) and not anclado_x:
             # Calculamos la distancia al borde desde el que saltamos
             dist_origen = (pantalla_ancho - last_x) if curr_x < last_x else last_x
             
-            # Solo anclamos si NO estábamos ya cerca del borde (Salto Largo)
-            if dist_origen > 150: 
+            # Solo anclamos si venimos desde LEJOS (más del 25% de la pantalla)
+            if dist_origen > (pantalla_ancho // 4): 
                 anclado_x = True
                 tiempo_anclaje_x = ahora
                 dir_anclaje_x = direccion_fijada if direccion_fijada != 0 else (1 if curr_x < last_x else -1)
                 limite_x = curr_x + (dir_anclaje_x * (pantalla_ancho // 4))
-                logger.debug(f"[SALTO LARGO ANCLADO] X:{last_x}->{curr_x} | ANCLAJE EN: {limite_x}")
+                logger.debug(f"[SALTO PROTEGIDO] X:{last_x}->{curr_x} | ANCLAJE EN: {limite_x}")
             else:
-                logger.debug(f"[SALTO CORTO LIBRE] X:{last_x}->{curr_x} | Sin anclaje (Origen a {dist_origen}px)")
+                logger.debug(f"[SALTO LIBRE POR ZONA] X:{last_x}->{curr_x} | Origen en zona de borde ({dist_origen}px)")
             last_x = curr_x
 
         if abs(curr_y - last_y) > (pantalla_alto // 2) and not anclado_y:
             dist_origen_y = (pantalla_alto - last_y) if curr_y < last_y else last_y
             
-            if dist_origen_y > 150:
+            if dist_origen_y > (pantalla_alto // 4):
                 anclado_y = True
                 tiempo_anclaje_y = ahora
                 dir_anclaje_y = direccion_y_fijada if direccion_y_fijada != 0 else (1 if curr_y < last_y else -1)
                 limite_y = curr_y + (dir_anclaje_y * (pantalla_alto // 4))
-                logger.debug(f"[SALTO LARGO ANCLADO] Y:{last_y}->{curr_y} | ANCLAJE EN: {limite_y}")
+                logger.debug(f"[SALTO PROTEGIDO] Y:{last_y}->{curr_y} | ANCLAJE EN: {limite_y}")
             else:
-                logger.debug(f"[SALTO CORTO LIBRE] Y:{last_y}->{curr_y} | Sin anclaje (Origen a {dist_origen_y}px)")
+                logger.debug(f"[SALTO LIBRE POR ZONA] Y:{last_y}->{curr_y} | Origen en zona de borde ({dist_origen_y}px)")
             last_y = curr_y
 
         # --- APLICAR ANCLAJE (FUERZA CONSTANTE) ---
         if anclado_x:
-            if ahora - tiempo_anclaje_x > 0.8: # Aumentado a 0.8s
+            if ahora - tiempo_anclaje_x > TIEMPO_ANCLAJE:
                 anclado_x = False
                 logger.debug("[MURO X LIBERADO por tiempo]")
             else:
@@ -396,7 +396,7 @@ def loop_movimiento_suave():
                     speed_x = 0
 
         if anclado_y:
-            if ahora - tiempo_anclaje_y > 0.8:
+            if ahora - tiempo_anclaje_y > TIEMPO_ANCLAJE:
                 anclado_y = False
                 logger.debug("[MURO Y LIBERADO por tiempo]")
             else:
@@ -431,10 +431,14 @@ def loop_movimiento_suave():
                 dist_borde_y = min(ny, pantalla_alto - ny)
                 
                 if dist_borde_x < DISTANCIA_FRENADO:
-                    speed_x = min(speed_x, VEL_FRENADO)
+                    # Frenado dinámico proporcional a la distancia al borde
+                    factor_x = max(0.1, dist_borde_x / DISTANCIA_FRENADO)
+                    speed_x = max(VEL_BASE, speed_x * factor_x)
                     nx = curr_x + (speed_x * direccion_fijada)
+
                 if dist_borde_y < DISTANCIA_FRENADO:
-                    speed_y = min(speed_y, VEL_FRENADO)
+                    factor_y = max(0.1, dist_borde_y / DISTANCIA_FRENADO)
+                    speed_y = max(VEL_BASE, speed_y * factor_y)
                     ny = curr_y + (speed_y * direccion_y_fijada)
 
                 hit_edge = False
@@ -482,6 +486,35 @@ def loop_movimiento_suave():
                         pyautogui.moveTo(nx, ny)
                     last_x, last_y = nx, ny
             else:
+                # --- FRENO DE EMERGENCIA GLOBAL (Para teclas normales QMK) ---
+                vx = curr_x - last_x
+                vy = curr_y - last_y
+                
+                # Solo actuar si hay movimiento real (ignorar jitter)
+                if abs(vx) > 1 or abs(vy) > 1:
+                    dist_borde_x = min(curr_x, pantalla_ancho - curr_x)
+                    dist_borde_y = min(curr_y, pantalla_alto - curr_y)
+                    
+                    # Detectar si se mueve HACIA el borde
+                    hacia_borde_x = (vx > 0 and curr_x > pantalla_ancho // 2) or (vx < 0 and curr_x < pantalla_ancho // 2)
+                    hacia_borde_y = (vy > 0 and curr_y > pantalla_alto // 2) or (vy < 0 and curr_y < pantalla_alto // 2)
+                    
+                    # Aplicar límite de velocidad dinámico en zona de frenado
+                    if hacia_borde_x and dist_borde_x < DISTANCIA_FRENADO:
+                        # Velocidad máxima permitida disminuye conforme nos acercamos al borde
+                        v_permitida = max(VEL_BASE, VEL_MAX * (dist_borde_x / DISTANCIA_FRENADO))
+                        if abs(vx) > v_permitida:
+                            nueva_x = last_x + (v_permitida * (1 if vx > 0 else -1))
+                            ctypes.windll.user32.SetCursorPos(int(nueva_x), int(curr_y))
+                            curr_x = nueva_x
+                            
+                    if hacia_borde_y and dist_borde_y < DISTANCIA_FRENADO:
+                        v_permitida_y = max(VEL_BASE, VEL_MAX * (dist_borde_y / DISTANCIA_FRENADO))
+                        if abs(vy) > v_permitida_y:
+                            nueva_y = last_y + (v_permitida_y * (1 if vy > 0 else -1))
+                            ctypes.windll.user32.SetCursorPos(int(curr_x), int(nueva_y))
+                            curr_y = nueva_y
+                            
                 last_x, last_y = curr_x, curr_y
         else:
             last_x, last_y = curr_x, curr_y
