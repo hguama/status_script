@@ -11,11 +11,32 @@ from datetime import datetime
 import utils.onenote_nav  # Integración OneNote Nav
 
 import logging
-logging.basicConfig(level=logging.WARNING, format='%(asctime)s.%(msecs)03d %(levelname)s - %(message)s', datefmt='%H:%M:%S', handlers=[
-    logging.FileHandler("f22_debug.log", encoding='utf-8', mode='a'),
+import os
+import ctypes
+
+# Hacer el proceso consciente de los DPI para que las coordenadas de pantalla coincidan
+try:
+    ctypes.windll.shcore.SetProcessDpiAwareness(1)
+except Exception:
+    try:
+        ctypes.windll.user32.SetProcessDPIAware()
+    except Exception:
+        pass
+
+class POINT(ctypes.Structure):
+    _fields_ = [("x", ctypes.c_long), ("y", ctypes.c_long)]
+
+# Configuración de logs con ruta absoluta
+log_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "f22_debug.log")
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s - %(message)s', datefmt='%H:%M:%S', handlers=[
+    logging.FileHandler(log_path, encoding='utf-8', mode='a'),
     logging.StreamHandler()
 ])
 logger = logging.getLogger(__name__)
+logger.info("==========================================")
+logger.info("SISTEMA REINICIADO CON DPI AWARENESS")
+logger.info(f"ARCHIVO DE LOGS: {log_path}")
+logger.info("==========================================")
 
 pyautogui.FAILSAFE = False
 
@@ -26,11 +47,25 @@ VID, PID = 0x4653, 0x0001
 
 DISTANCIA_SALTO = 450
 PAUSA_ENTRE_SALTOS = 0.3
-UMBRAL_CAMBIO_DIR = 25
+UMBRAL_CAMBIO_DIR = 15 # Reducido para mayor sensibilidad
 TURBO_MARGIN = 25
-WRAP_MARGIN = 2
-VENTANA_GESTO_MS = 0.03  # 30 ms
-RADIO_OCULTAR = 80  # píxeles alrededor del indicador donde se oculta
+WRAP_MARGIN = 5
+VENTANA_GESTO_MS = 0.1  # Aumentado a 100ms
+RADIO_OCULTAR = 80
+
+# --- NUEVOS PARÁMETROS DE SUAVIDAD ---
+VEL_BASE = 3.0
+VEL_MAX = 42.0
+ACEL_POR_FRAME = 0.65  # Incremento de velocidad por cada ciclo de 10ms
+PAUSA_BORDE_S = 0.45   # Pausa al tocar el borde antes de saltar
+COOLDOWN_WRAP = 0.5    # Tiempo mínimo entre saltos automáticos
+pyautogui.PAUSE = 0    # Eliminar delay interno de pyautogui para máxima fluidez
+
+# --- PARÁMETROS DE PRECISIÓN EN BORDES ---
+MARGIN_ESQUINA = 100    # Píxeles desde las esquinas donde el muro es sólido (no salta)
+DISTANCIA_FRENADO = 80 # Píxeles antes del borde donde empieza a frenar
+VEL_FRENADO = 7.0      # Velocidad máxima permitida en zona de frenado
+UMBRAL_VIAJE_LARGO = 450 # Distancia recorrida para activar el bloqueo de esquinas
 
 
 
@@ -39,20 +74,23 @@ RADIO_OCULTAR = 80  # píxeles alrededor del indicador donde se oculta
 # ESTADOS GLOBALES
 # ===============================================================
 alt_tab_menu_visible = False
+INDICADOR_HABILITADO = False
 
 tecla_horiz_down = False
+tecla_vert_down = False
 direccion_fijada = 0
-pos_x_referencia = 0
+direccion_y_fijada = 0
+pos_y_referencia = 0
 
+color_actual = "#FFFFFF"
 wrap_enabled = threading.Event()
 wrap_enabled.set()
 indicador_visible_por_capa = False
 
 
 # ===============================================================
-# UI
-# ===============================================================
-DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 40, 14, 28
+# --- UI CONFIG ---
+DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 30, 10, 22
 
 colores = {
     "ALFA": "#66BB6A",
@@ -90,19 +128,80 @@ canvas_mouse = tk.Canvas(mouse_win, width=PUNTO_MOUSE, height=PUNTO_MOUSE,
                          highlightthickness=0, bg="magenta")
 canvas_mouse.pack()
 
+# --- VENTANA PARA EFECTO PULSO ELEGANTE ---
+ripple_win = tk.Toplevel()
+ripple_win.overrideredirect(True)
+ripple_win.attributes("-topmost", True)
+ripple_win.config(bg="magenta")
+ripple_win.wm_attributes("-transparentcolor", "magenta")
+ripple_win.geometry("120x120+0+0")
+ripple_win.withdraw()
+
+canvas_ripple = tk.Canvas(ripple_win, width=120, height=120, bg="magenta", highlightthickness=0)
+canvas_ripple.pack()
+
+def efecto_onda(x, y):
+    """Muestra un pulso de diamante elegante y sutil SOLO si los indicadores están habilitados."""
+    if not INDICADOR_HABILITADO:
+        return
+        
+    ripple_win.geometry(f"120x120+{int(x-60)}+{int(y-60)}")
+    ripple_win.deiconify()
+    
+    def animar_pulso(step):
+        canvas_ripple.delete("all")
+        if step < 12:
+            # El radio del diamante se expande
+            r = step * 4
+            # El color es el de la capa actual
+            color = color_actual
+            
+            # Dibujar un rombo (diamante) elegante que se expande
+            puntos = [60, 60-r, 60+r, 60, 60, 60+r, 60-r, 60]
+            canvas_ripple.create_polygon(puntos, outline=color, fill="", width=2)
+            
+            # Punto central fijo que se hace más pequeño
+            r_centro = max(1, 4 - (step // 3))
+            canvas_ripple.create_oval(60-r_centro, 60-r_centro, 60+r_centro, 60+r_centro, fill=color, outline="")
+            
+            ripple_win.after(15, lambda: animar_pulso(step + 1))
+        else:
+            ripple_win.withdraw()
+            
+    animar_pulso(0)
+
+def toggle_indicadores(e=None):
+    """Alterna la bandera global de visibilidad de los indicadores."""
+    global INDICADOR_HABILITADO
+    INDICADOR_HABILITADO = not INDICADOR_HABILITADO
+    logger.info(f"Indicadores habilitados: {INDICADOR_HABILITADO}")
+    
+    if not INDICADOR_HABILITADO:
+        root.withdraw()
+        mouse_win.withdraw()
+    elif indicador_visible_por_capa:
+        root.deiconify()
+        mouse_win.deiconify()
+
+# Asignar F21 para alternar la visibilidad de las burbujas
+keyboard.on_press_key("f21", toggle_indicadores)
+
 def actualizar_ui(capa_msg):
-    global indicador_visible_por_capa
+    global indicador_visible_por_capa, color_actual
 
     clave = next((k for k in colores if k in capa_msg), None)
     if clave:
-        c = colores[clave]
+        color_actual = colores[clave]
+        c = color_actual
         canvas.delete("all")
         canvas.create_oval(2, 2, DIAMETRO-2, DIAMETRO-2, fill=c, outline="")
         canvas_mouse.delete("all")
         canvas_mouse.create_oval(0, 0, PUNTO_MOUSE, PUNTO_MOUSE, fill=c, outline="")
         indicador_visible_por_capa = True
-        root.deiconify()
-        mouse_win.deiconify()
+        
+        if INDICADOR_HABILITADO:
+            root.deiconify()
+            mouse_win.deiconify()
     else:
         indicador_visible_por_capa = False
         root.withdraw()
@@ -173,73 +272,220 @@ def seguimiento_mouse():
         time.sleep(0.01)
 
 # ===============================================================
-# F22 – SALTO HORIZONTAL INTELIGENTE
+# F22 / F23 – MOVIMIENTO SUAVE Y CONTROLADO
 # ===============================================================
+
 def presiona_f22(e):
-    global tecla_horiz_down, direccion_fijada, pos_x_referencia
-
-    if tecla_horiz_down:
-        return
-
+    global tecla_horiz_down
     tecla_horiz_down = True
-    x0, y0 = pyautogui.position()
-    pos_x_referencia = x0
-    direccion_fijada = 0
-    logger.debug(f"[F22 PRESS] Start pos: ({x0}, {y0})")
-
-    # 🔍 Ventana corta para capturar gesto rápido
-    inicio = time.time()
-    while time.time() - inicio < VENTANA_GESTO_MS:
-        x1, _ = pyautogui.position()
-        dx = x1 - x0
-        if abs(dx) > 0:
-            direccion_fijada = 1 if dx > 0 else -1
-            pos_x_referencia = x1
-            logger.debug(f"[F22 PRESS] Gesture detected! dx={dx}, dir={direccion_fijada}")
-            break
-        time.sleep(0.005)
+    logger.debug("[TECLA F22 PRESIONADA]")
 
 def suelta_f22(e):
     global tecla_horiz_down, direccion_fijada
     tecla_horiz_down = False
     direccion_fijada = 0
-    logger.debug("[F22 RELEASE]")
+    logger.debug("[TECLA F22 SOLTADA]")
+
+def presiona_f23(e):
+    global tecla_vert_down
+    tecla_vert_down = True
+    logger.debug("[TECLA F23 PRESIONADA]")
+
+def suelta_f23(e):
+    global tecla_vert_down, direccion_y_fijada
+    tecla_vert_down = False
+    direccion_y_fijada = 0
+    logger.debug("[TECLA F23 SOLTADA]")
 
 keyboard.on_press_key("f22", presiona_f22)
 keyboard.on_release_key("f22", suelta_f22)
+keyboard.on_press_key("f23", presiona_f23)
+keyboard.on_release_key("f23", suelta_f23)
 
-def loop_auto_salto():
-    global direccion_fijada, pos_x_referencia
+def loop_movimiento_suave():
+    global direccion_fijada, direccion_y_fijada
+    
+    speed_x = 0
+    speed_y = 0
+    pause_until = 0
+    distancia_recorrida = 0
+    anclado_x = False
+    anclado_y = False
+    limite_x = 0
+    limite_y = 0
+    dir_anclaje_x = 0
+    dir_anclaje_y = 0
+    tiempo_anclaje_x = 0
+    tiempo_anclaje_y = 0
+    
+    last_x, last_y = pyautogui.position()
+    
     while True:
+        # --- OBTENER POSICIÓN REAL (Sin latencia de PyAutoGUI) ---
+        pt = POINT()
+        ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+        curr_x, curr_y = pt.x, pt.y
+        ahora = time.time()
+        
+        # 1. DETECTAR DIRECCIÓN
         if tecla_horiz_down:
-            curr_x, curr_y = pyautogui.position()
-            dx = curr_x - pos_x_referencia
-
-            if direccion_fijada == 0 and abs(dx) > 0:
+            dx = curr_x - last_x
+            if 2 <= abs(dx) < (pantalla_ancho // 2):
                 direccion_fijada = 1 if dx > 0 else -1
-                logger.debug(f"[LOOP] dir initially 0, set to {direccion_fijada} (dx={dx})")
+        else:
+            direccion_fijada = 0
+            speed_x = 0
+            
+        if tecla_vert_down:
+            dy = curr_y - last_y
+            if 2 <= abs(dy) < (pantalla_alto // 2):
+                direccion_y_fijada = 1 if dy > 0 else -1
+        else:
+            direccion_y_fijada = 0
+            speed_y = 0
 
-            if direccion_fijada != 0:
-                nx = curr_x + (DISTANCIA_SALTO * direccion_fijada)
-                nx = max(TURBO_MARGIN, min(pantalla_ancho - TURBO_MARGIN, nx))
-                logger.debug(f"[LOOP] Jump! from {curr_x} to {nx} (dir={direccion_fijada})")
-                pyautogui.moveTo(nx, curr_y)
-                pos_x_referencia = nx
+        if not tecla_horiz_down and not tecla_vert_down:
+            distancia_recorrida = 0
 
-                inicio = time.time()
-                while time.time() - inicio < PAUSA_ENTRE_SALTOS:
-                    if not tecla_horiz_down:
-                        break
-                    tx, _ = pyautogui.position()
-                    diff = tx - pos_x_referencia
-                    if abs(diff) >= UMBRAL_CAMBIO_DIR:
-                        nueva = 1 if diff > 0 else -1
-                        logger.debug(f"[LOOP] Movement detected during pause! diff={diff}. nueva={nueva}, dir={direccion_fijada}")
-                        if nueva != direccion_fijada:
-                            logger.info(f"[LOOP] Break pause! direction changed from {direccion_fijada} to {nueva}")
-                            direccion_fijada = nueva
-                            break
-                    time.sleep(0.01)
+        # DETECTAR SALTO EXTERNO (Con Filtro de Intencionalidad)
+        if abs(curr_x - last_x) > (pantalla_ancho // 2) and not anclado_x:
+            # Calculamos la distancia al borde desde el que saltamos
+            dist_origen = (pantalla_ancho - last_x) if curr_x < last_x else last_x
+            
+            # Solo anclamos si NO estábamos ya cerca del borde (Salto Largo)
+            if dist_origen > 150: 
+                anclado_x = True
+                tiempo_anclaje_x = ahora
+                dir_anclaje_x = direccion_fijada if direccion_fijada != 0 else (1 if curr_x < last_x else -1)
+                limite_x = curr_x + (dir_anclaje_x * (pantalla_ancho // 4))
+                logger.debug(f"[SALTO LARGO ANCLADO] X:{last_x}->{curr_x} | ANCLAJE EN: {limite_x}")
+            else:
+                logger.debug(f"[SALTO CORTO LIBRE] X:{last_x}->{curr_x} | Sin anclaje (Origen a {dist_origen}px)")
+            last_x = curr_x
+
+        if abs(curr_y - last_y) > (pantalla_alto // 2) and not anclado_y:
+            dist_origen_y = (pantalla_alto - last_y) if curr_y < last_y else last_y
+            
+            if dist_origen_y > 150:
+                anclado_y = True
+                tiempo_anclaje_y = ahora
+                dir_anclaje_y = direccion_y_fijada if direccion_y_fijada != 0 else (1 if curr_y < last_y else -1)
+                limite_y = curr_y + (dir_anclaje_y * (pantalla_alto // 4))
+                logger.debug(f"[SALTO LARGO ANCLADO] Y:{last_y}->{curr_y} | ANCLAJE EN: {limite_y}")
+            else:
+                logger.debug(f"[SALTO CORTO LIBRE] Y:{last_y}->{curr_y} | Sin anclaje (Origen a {dist_origen_y}px)")
+            last_y = curr_y
+
+        # --- APLICAR ANCLAJE (FUERZA CONSTANTE) ---
+        if anclado_x:
+            if ahora - tiempo_anclaje_x > 0.8: # Aumentado a 0.8s
+                anclado_x = False
+                logger.debug("[MURO X LIBERADO por tiempo]")
+            else:
+                # Detectar si el usuario intenta alejarse del muro (movimiento fuerte opuesto)
+                dx_manual = curr_x - last_x
+                if abs(dx_manual) >= 8: # Umbral alto para ignorar jitter
+                    if (1 if dx_manual > 0 else -1) == -dir_anclaje_x:
+                        anclado_x = False
+                        logger.debug("[MURO X LIBERADO por movimiento opuesto]")
+                
+                if anclado_x:
+                    # FORZAR POSICIÓN CONSTANTE: No dejamos que QMK lo mueva ni 1 píxel
+                    ctypes.windll.user32.SetCursorPos(int(limite_x), int(curr_y))
+                    curr_x = limite_x
+                    speed_x = 0
+
+        if anclado_y:
+            if ahora - tiempo_anclaje_y > 0.8:
+                anclado_y = False
+                logger.debug("[MURO Y LIBERADO por tiempo]")
+            else:
+                dy_manual = curr_y - last_y
+                if abs(dy_manual) >= 8:
+                    if (1 if dy_manual > 0 else -1) == -dir_anclaje_y:
+                        anclado_y = False
+                        logger.debug("[MURO Y LIBERADO por movimiento opuesto]")
+                
+                if anclado_y:
+                    ctypes.windll.user32.SetCursorPos(int(curr_x), int(limite_y))
+                    curr_y = limite_y
+                    speed_y = 0
+
+        # 2. PROCESAR MOVIMIENTO ACELERADO
+        if ahora > pause_until:
+            if direccion_fijada != 0 or direccion_y_fijada != 0:
+                if direccion_fijada != 0:
+                    speed_x = min(VEL_MAX, (speed_x if speed_x > 0 else VEL_BASE) + ACEL_POR_FRAME)
+                if direccion_y_fijada != 0:
+                    speed_y = min(VEL_MAX, (speed_y if speed_y > 0 else VEL_BASE) + ACEL_POR_FRAME)
+                
+                step_x = speed_x * direccion_fijada
+                step_y = speed_y * direccion_y_fijada
+                distancia_recorrida += (abs(step_x) + abs(step_y))
+
+                nx = curr_x + step_x
+                ny = curr_y + step_y
+                
+                # --- LÓGICA DE FRENADO Y BORDES ---
+                dist_borde_x = min(nx, pantalla_ancho - nx)
+                dist_borde_y = min(ny, pantalla_alto - ny)
+                
+                if dist_borde_x < DISTANCIA_FRENADO:
+                    speed_x = min(speed_x, VEL_FRENADO)
+                    nx = curr_x + (speed_x * direccion_fijada)
+                if dist_borde_y < DISTANCIA_FRENADO:
+                    speed_y = min(speed_y, VEL_FRENADO)
+                    ny = curr_y + (speed_y * direccion_y_fijada)
+
+                hit_edge = False
+                final_x, final_y = nx, ny
+                
+                if nx <= 0:
+                    final_x = pantalla_ancho - WRAP_MARGIN
+                    hit_edge = True
+                elif nx >= pantalla_ancho - 1:
+                    final_x = WRAP_MARGIN
+                    hit_edge = True
+                    
+                if ny <= 0:
+                    final_y = pantalla_alto - WRAP_MARGIN
+                    hit_edge = True
+                elif ny >= pantalla_alto - 1:
+                    final_y = WRAP_MARGIN
+                    hit_edge = True
+
+                if hit_edge:
+                    logger.debug(f"[SALTO INTERNO] nx:{nx} -> {final_x}")
+                    pause_until = ahora + PAUSA_BORDE_S
+                    speed_x = VEL_BASE * 2
+                    speed_y = VEL_BASE * 2
+                    
+                    if final_x != nx:
+                        anclado_x = True
+                        tiempo_anclaje_x = ahora
+                        dir_anclaje_x = direccion_fijada
+                        limite_x = final_x + (dir_anclaje_x * (pantalla_ancho // 4))
+                    if final_y != ny:
+                        anclado_y = True
+                        tiempo_anclaje_y = ahora
+                        dir_anclaje_y = direccion_y_fijada
+                        limite_y = final_y + (dir_anclaje_y * (pantalla_alto // 4))
+
+                    distancia_recorrida = 0 # Resetear tras salto
+                    pyautogui.moveTo(final_x, final_y)
+                    last_x, last_y = final_x, final_y
+                    root.after(0, lambda: efecto_onda(final_x, final_y))
+                else:
+                    nx = max(0, min(pantalla_ancho - 1, nx))
+                    ny = max(0, min(pantalla_alto - 1, ny))
+                    if nx != curr_x or ny != curr_y:
+                        pyautogui.moveTo(nx, ny)
+                    last_x, last_y = nx, ny
+            else:
+                last_x, last_y = curr_x, curr_y
+        else:
+            last_x, last_y = curr_x, curr_y
+            
         time.sleep(0.01)
 
 # ===============================================================
@@ -247,37 +493,44 @@ def loop_auto_salto():
 # ===============================================================
 
 def wrap_loop():
-    # Función para detectar si el botón izquierdo está presionado a nivel sistema
     def click_izquierdo_activo():
-        # GetAsyncKeyState(0x01) verifica el estado del botón izquierdo (clic = 0x01)
-        # Si el bit más alto está activo, el botón está presionado/bloqueado
         return ctypes.windll.user32.GetAsyncKeyState(0x01) & 0x8000 != 0
 
+    ultimo_wrap = 0
     while True:
-        # Ahora verificamos: 
-        # 1. Tu variable de F22
-        # 2. La librería mouse (clic físico)
-        # 3. La API de Windows (clic bloqueado/virtual)
-        if not tecla_horiz_down and not mouse.is_pressed("left") and not click_izquierdo_activo():
-            try:
-                x, y = pyautogui.position()
-                
-                # Solo ejecutamos el salto si el mouse está REALMENTE en el borde (0 o ancho-1)
-                # y no hay ninguna selección activa detectada por Windows
-                if x <= 0:
-                    pyautogui.moveTo(pantalla_ancho - WRAP_MARGIN, y)
-                elif x >= pantalla_ancho - 1:
-                    pyautogui.moveTo(WRAP_MARGIN, y)
+        ahora = time.time()
+        # Solo actuar si no estamos en turbo (F22/F23) y ha pasado el cooldown
+        if not tecla_horiz_down and not tecla_vert_down and (ahora - ultimo_wrap > COOLDOWN_WRAP):
+            if not mouse.is_pressed("left") and not click_izquierdo_activo():
+                try:
+                    x, y = pyautogui.position()
+                    cambio = False
+                    nx, ny = x, y
 
-                if y <= 0:
-                    pyautogui.moveTo(x, pantalla_alto - WRAP_MARGIN)
-                elif y >= pantalla_alto - 1:
-                    pyautogui.moveTo(x, WRAP_MARGIN)
-            except:
-                pass
-        
-        # Aumentamos ligeramente el tiempo de espera para que al sistema 
-        # le de tiempo de procesar el estado del clic bloqueado
+                    if x <= 0:
+                        nx = pantalla_ancho - WRAP_MARGIN
+                        cambio = True
+                    elif x >= pantalla_ancho - 1:
+                        nx = WRAP_MARGIN
+                        cambio = True
+
+                    if y <= 0:
+                        ny = pantalla_alto - WRAP_MARGIN
+                        cambio = True
+                    elif y >= pantalla_alto - 1:
+                        ny = WRAP_MARGIN
+                        cambio = True
+
+                    if cambio:
+                        # Añadimos una pequeña pausa antes del wrap normal para evitar el efecto "spin"
+                        time.sleep(0.2)
+                        pyautogui.moveTo(nx, ny)
+                        ultimo_wrap = time.time()
+                        
+                        # DISPARAR EFECTO VISUAL
+                        root.after(0, lambda: efecto_onda(nx, ny))
+                except:
+                    pass
         time.sleep(0.01)
 
 
@@ -344,7 +597,7 @@ def main():
     threading.Thread(target=escuchar_hid, args=(dev,), daemon=True).start()
     threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
     threading.Thread(target=seguimiento_mouse, daemon=True).start()
-    threading.Thread(target=loop_auto_salto, daemon=True).start()
+    threading.Thread(target=loop_movimiento_suave, daemon=True).start()
     threading.Thread(target=wrap_loop, daemon=True).start()
     threading.Thread(target=ocultar_indicador_si_mouse_cerca, daemon=True).start()
     
