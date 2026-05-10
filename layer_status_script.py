@@ -66,6 +66,7 @@ pyautogui.PAUSE = 0    # Eliminar delay interno de pyautogui para máxima fluide
 MARGIN_ESQUINA = 100    # Píxeles desde las esquinas donde el muro es sólido (no salta)
 DISTANCIA_FRENADO = 500 # Píxeles antes del borde donde empieza a frenar dinámicamente
 UMBRAL_VIAJE_LARGO = 450 # Distancia recorrida para activar el bloqueo de esquinas
+ZONA_LIBRE_BORDE = 0.25  # 25% de la pantalla para permitir paso fluido sin bloqueos
 
 
 
@@ -320,6 +321,10 @@ def loop_movimiento_suave():
     
     last_x, last_y = pyautogui.position()
     
+    origen_swipe_x, origen_swipe_y = pyautogui.position()
+    prev_actual_x, prev_actual_y = origen_swipe_x, origen_swipe_y
+    tiempo_ultimo_movimiento = time.time()
+    
     while True:
         # --- OBTENER POSICIÓN REAL (Sin latencia de PyAutoGUI) ---
         pt = POINT()
@@ -327,6 +332,14 @@ def loop_movimiento_suave():
         curr_x, curr_y = pt.x, pt.y
         ahora = time.time()
         
+        # --- RASTREO UNIVERSAL DE ORIGEN (Manual + Turbo) ---
+        # Comparamos con la posición real anterior, no con la posición ordenada (last_x)
+        if abs(curr_x - prev_actual_x) > 0 or abs(curr_y - prev_actual_y) > 0:
+            tiempo_ultimo_movimiento = ahora
+        elif ahora - tiempo_ultimo_movimiento > 0.15:
+            # Si el ratón se detiene por 150ms, consideramos que empieza un nuevo "viaje"
+            origen_swipe_x, origen_swipe_y = curr_x, curr_y
+
         # 1. DETECTAR DIRECCIÓN
         if tecla_horiz_down:
             dx = curr_x - last_x
@@ -344,36 +357,51 @@ def loop_movimiento_suave():
             direccion_y_fijada = 0
             speed_y = 0
 
-        if not tecla_horiz_down and not tecla_vert_down:
-            distancia_recorrida = 0
-
-        # DETECTAR SALTO EXTERNO (Con Filtro de Zonas del 25%)
+        # DETECTAR SALTO EXTERNO (Con Filtro de Zonas del 25% y Distancia de Viaje)
         if abs(curr_x - last_x) > (pantalla_ancho // 2) and not anclado_x:
-            # Calculamos la distancia al borde desde el que saltamos
-            dist_origen = (pantalla_ancho - last_x) if curr_x < last_x else last_x
+            # Determinamos si fue un viaje largo basándonos en el origen real del swipe (universal)
+            dist_viajada_x = abs(last_x - origen_swipe_x)
+            es_viaje_corto = dist_viajada_x < UMBRAL_VIAJE_LARGO
             
-            # Solo anclamos si venimos desde LEJOS (más del 25% de la pantalla)
-            if dist_origen > (pantalla_ancho // 4): 
+            # Solo anclamos si NO es un viaje corto
+            if not es_viaje_corto: 
                 anclado_x = True
                 tiempo_anclaje_x = ahora
                 dir_anclaje_x = direccion_fijada if direccion_fijada != 0 else (1 if curr_x < last_x else -1)
-                limite_x = curr_x + (dir_anclaje_x * (pantalla_ancho // 4))
-                logger.debug(f"[SALTO PROTEGIDO] X:{last_x}->{curr_x} | ANCLAJE EN: {limite_x}")
+                
+                # Para que se "quede en la pared" donde chocó, lo devolvemos al borde de la pantalla actual
+                if curr_x < last_x: # Cruzó el borde derecho hacia el izquierdo
+                    limite_x = pantalla_ancho - 1
+                else: # Cruzó el borde izquierdo hacia el derecho
+                    limite_x = 0
+                    
+                logger.debug(f"[SALTO PROTEGIDO EXT] X:{last_x}->{curr_x} | ANCLAJE EN BORDE: {limite_x} (Dist: {dist_viajada_x})")
             else:
-                logger.debug(f"[SALTO LIBRE POR ZONA] X:{last_x}->{curr_x} | Origen en zona de borde ({dist_origen}px)")
+                logger.debug(f"[SALTO LIBRE POR ZONA] X:{last_x}->{curr_x} | Viaje Corto (Dist: {dist_viajada_x})")
+            
+            # Tras un salto, el nuevo origen es donde aterrizamos
+            origen_swipe_x = curr_x
             last_x = curr_x
 
         if abs(curr_y - last_y) > (pantalla_alto // 2) and not anclado_y:
-            dist_origen_y = (pantalla_alto - last_y) if curr_y < last_y else last_y
-            
-            if dist_origen_y > (pantalla_alto // 4):
+            dist_viajada_y = abs(last_y - origen_swipe_y)
+            es_viaje_corto_y = dist_viajada_y < UMBRAL_VIAJE_LARGO
+                
+            if not es_viaje_corto_y:
                 anclado_y = True
                 tiempo_anclaje_y = ahora
                 dir_anclaje_y = direccion_y_fijada if direccion_y_fijada != 0 else (1 if curr_y < last_y else -1)
-                limite_y = curr_y + (dir_anclaje_y * (pantalla_alto // 4))
-                logger.debug(f"[SALTO PROTEGIDO] Y:{last_y}->{curr_y} | ANCLAJE EN: {limite_y}")
+                
+                if curr_y < last_y:
+                    limite_y = pantalla_alto - 1
+                else:
+                    limite_y = 0
+                    
+                logger.debug(f"[SALTO PROTEGIDO EXT] Y:{last_y}->{curr_y} | ANCLAJE EN BORDE: {limite_y} (Dist: {dist_viajada_y})")
             else:
-                logger.debug(f"[SALTO LIBRE POR ZONA] Y:{last_y}->{curr_y} | Origen en zona de borde ({dist_origen_y}px)")
+                logger.debug(f"[SALTO LIBRE POR ZONA] Y:{last_y}->{curr_y} | Viaje Corto (Dist: {dist_viajada_y})")
+                
+            origen_swipe_y = curr_y
             last_y = curr_y
 
         # --- APLICAR ANCLAJE (FUERZA CONSTANTE) ---
@@ -441,40 +469,67 @@ def loop_movimiento_suave():
                     speed_y = max(VEL_BASE, speed_y * factor_y)
                     ny = curr_y + (speed_y * direccion_y_fijada)
 
+                es_viaje_corto = abs(curr_x - origen_swipe_x) < UMBRAL_VIAJE_LARGO
                 hit_edge = False
                 final_x, final_y = nx, ny
                 
                 if nx <= 0:
-                    final_x = pantalla_ancho - WRAP_MARGIN
-                    hit_edge = True
+                    if es_viaje_corto:
+                        final_x = pantalla_ancho - WRAP_MARGIN
+                        hit_edge = True
+                    else:
+                        nx = 0
+                        speed_x = 0 # Frena en seco contra la pared
                 elif nx >= pantalla_ancho - 1:
-                    final_x = WRAP_MARGIN
-                    hit_edge = True
-                    
+                    if es_viaje_corto:
+                        final_x = WRAP_MARGIN
+                        hit_edge = True
+                    else:
+                        nx = pantalla_ancho - 1
+                        speed_x = 0
+                        
                 if ny <= 0:
-                    final_y = pantalla_alto - WRAP_MARGIN
-                    hit_edge = True
+                    if es_viaje_corto:
+                        final_y = pantalla_alto - WRAP_MARGIN
+                        hit_edge = True
+                    else:
+                        ny = 0
+                        speed_y = 0
                 elif ny >= pantalla_alto - 1:
-                    final_y = WRAP_MARGIN
-                    hit_edge = True
+                    if es_viaje_corto:
+                        final_y = WRAP_MARGIN
+                        hit_edge = True
+                    else:
+                        ny = pantalla_alto - 1
+                        speed_y = 0
 
                 if hit_edge:
-                    logger.debug(f"[SALTO INTERNO] nx:{nx} -> {final_x}")
-                    pause_until = ahora + PAUSA_BORDE_S
+                    logger.debug(f"[SALTO INTERNO] nx:{nx} -> {final_x} | Viaje Corto: {es_viaje_corto} (Dist: {abs(curr_x - origen_swipe_x)})")
+                    
+                    # Si es un viaje corto (empezó cerca del borde), no hay pausa ni anclaje
+                    if not es_viaje_corto:
+                        pause_until = ahora + PAUSA_BORDE_S
+                    else:
+                        pause_until = ahora + 0.05 # Pausa mínima para evitar rebotes
+                    
                     speed_x = VEL_BASE * 2
                     speed_y = VEL_BASE * 2
                     
                     if final_x != nx:
-                        anclado_x = True
-                        tiempo_anclaje_x = ahora
-                        dir_anclaje_x = direccion_fijada
-                        limite_x = final_x + (dir_anclaje_x * (pantalla_ancho // 4))
+                        # Solo anclamos si es un viaje largo (NO viene de zona segura)
+                        if not es_viaje_corto:
+                            anclado_x = True
+                            tiempo_anclaje_x = ahora
+                            dir_anclaje_x = direccion_fijada
+                            limite_x = final_x + (dir_anclaje_x * (pantalla_ancho // 4))
                     if final_y != ny:
-                        anclado_y = True
-                        tiempo_anclaje_y = ahora
-                        dir_anclaje_y = direccion_y_fijada
-                        limite_y = final_y + (dir_anclaje_y * (pantalla_alto // 4))
+                        if not es_viaje_corto:
+                            anclado_y = True
+                            tiempo_anclaje_y = ahora
+                            dir_anclaje_y = direccion_y_fijada
+                            limite_y = final_y + (dir_anclaje_y * (pantalla_alto // 4))
 
+                    origen_swipe_x, origen_swipe_y = final_x, final_y
                     distancia_recorrida = 0 # Resetear tras salto
                     pyautogui.moveTo(final_x, final_y)
                     last_x, last_y = final_x, final_y
@@ -499,8 +554,12 @@ def loop_movimiento_suave():
                     hacia_borde_x = (vx > 0 and curr_x > pantalla_ancho // 2) or (vx < 0 and curr_x < pantalla_ancho // 2)
                     hacia_borde_y = (vy > 0 and curr_y > pantalla_alto // 2) or (vy < 0 and curr_y < pantalla_alto // 2)
                     
-                    # Aplicar límite de velocidad dinámico en zona de frenado
-                    if hacia_borde_x and dist_borde_x < DISTANCIA_FRENADO:
+                    # Detectar si estamos en zona segura (25% lateral) para desactivar el freno
+                    en_zona_segura_x = curr_x < (pantalla_ancho * ZONA_LIBRE_BORDE) or curr_x > (pantalla_ancho * (1 - ZONA_LIBRE_BORDE))
+                    en_zona_segura_y = curr_y < (pantalla_alto * ZONA_LIBRE_BORDE) or curr_y > (pantalla_alto * (1 - ZONA_LIBRE_BORDE))
+
+                    # Aplicar límite de velocidad dinámico en zona de frenado SOLO si no estamos en zona segura
+                    if hacia_borde_x and dist_borde_x < DISTANCIA_FRENADO and not en_zona_segura_x:
                         # Velocidad máxima permitida disminuye conforme nos acercamos al borde
                         v_permitida = max(VEL_BASE, VEL_MAX * (dist_borde_x / DISTANCIA_FRENADO))
                         if abs(vx) > v_permitida:
@@ -508,7 +567,7 @@ def loop_movimiento_suave():
                             ctypes.windll.user32.SetCursorPos(int(nueva_x), int(curr_y))
                             curr_x = nueva_x
                             
-                    if hacia_borde_y and dist_borde_y < DISTANCIA_FRENADO:
+                    if hacia_borde_y and dist_borde_y < DISTANCIA_FRENADO and not en_zona_segura_y:
                         v_permitida_y = max(VEL_BASE, VEL_MAX * (dist_borde_y / DISTANCIA_FRENADO))
                         if abs(vy) > v_permitida_y:
                             nueva_y = last_y + (v_permitida_y * (1 if vy > 0 else -1))
@@ -519,6 +578,7 @@ def loop_movimiento_suave():
         else:
             last_x, last_y = curr_x, curr_y
             
+        prev_actual_x, prev_actual_y = curr_x, curr_y
         time.sleep(0.01)
 
 # ===============================================================
@@ -530,40 +590,50 @@ def wrap_loop():
         return ctypes.windll.user32.GetAsyncKeyState(0x01) & 0x8000 != 0
 
     ultimo_wrap = 0
+    last_x_wrap, last_y_wrap = pyautogui.position()
     while True:
         ahora = time.time()
-        # Solo actuar si no estamos en turbo (F22/F23) y ha pasado el cooldown
-        if not tecla_horiz_down and not tecla_vert_down and (ahora - ultimo_wrap > COOLDOWN_WRAP):
-            if not mouse.is_pressed("left") and not click_izquierdo_activo():
-                try:
-                    x, y = pyautogui.position()
+        
+        try:
+            x, y = pyautogui.position()
+            vx = x - last_x_wrap
+            vy = y - last_y_wrap
+            
+            # Solo actuar si no estamos en turbo (F22/F23) y ha pasado el cooldown
+            if not tecla_horiz_down and not tecla_vert_down and (ahora - ultimo_wrap > COOLDOWN_WRAP):
+                if not mouse.is_pressed("left") and not click_izquierdo_activo():
                     cambio = False
                     nx, ny = x, y
 
-                    if x <= 0:
+                    # Solo salta si el usuario empuja el ratón FÍSICAMENTE hacia el borde (vx > 1, etc.)
+                    # Evita que salte solo por estar quieto en el borde tras un viaje largo.
+                    if x <= 0 and vx < 0:
                         nx = pantalla_ancho - WRAP_MARGIN
                         cambio = True
-                    elif x >= pantalla_ancho - 1:
+                    elif x >= pantalla_ancho - 1 and vx > 0:
                         nx = WRAP_MARGIN
                         cambio = True
 
-                    if y <= 0:
+                    if y <= 0 and vy < 0:
                         ny = pantalla_alto - WRAP_MARGIN
                         cambio = True
-                    elif y >= pantalla_alto - 1:
+                    elif y >= pantalla_alto - 1 and vy > 0:
                         ny = WRAP_MARGIN
                         cambio = True
 
                     if cambio:
-                        # Añadimos una pequeña pausa antes del wrap normal para evitar el efecto "spin"
-                        time.sleep(0.2)
+                        # Reducido el delay para que sea instantáneo en zona segura
+                        time.sleep(0.02)
                         pyautogui.moveTo(nx, ny)
                         ultimo_wrap = time.time()
                         
                         # DISPARAR EFECTO VISUAL
                         root.after(0, lambda: efecto_onda(nx, ny))
-                except:
-                    pass
+                        
+            last_x_wrap, last_y_wrap = x, y
+        except:
+            pass
+            
         time.sleep(0.01)
 
 
