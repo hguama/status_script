@@ -333,8 +333,9 @@ def loop_movimiento_suave():
         ahora = time.time()
         
         # --- RASTREO UNIVERSAL DE ORIGEN (Manual + Turbo) ---
-        # Comparamos con la posición real anterior, no con la posición ordenada (last_x)
-        if abs(curr_x - prev_actual_x) > 0 or abs(curr_y - prev_actual_y) > 0:
+        # Comparamos con la posición real anterior. También comprobamos si el turbo está activo (speed > 0)
+        # para garantizar que el viaje no se corte por latencias del sistema.
+        if abs(curr_x - prev_actual_x) > 0 or abs(curr_y - prev_actual_y) > 0 or speed_x > 0 or speed_y > 0:
             tiempo_ultimo_movimiento = ahora
         elif ahora - tiempo_ultimo_movimiento > 0.15:
             # Si el ratón se detiene por 150ms, consideramos que empieza un nuevo "viaje"
@@ -380,9 +381,13 @@ def loop_movimiento_suave():
             else:
                 logger.debug(f"[SALTO LIBRE POR ZONA] X:{last_x}->{curr_x} | Viaje Corto (Dist: {dist_viajada_x})")
             
-            # Tras un salto, el nuevo origen es donde aterrizamos
-            origen_swipe_x = curr_x
-            last_x = curr_x
+            # Tras un salto, el nuevo origen es donde aterrizamos (o donde fuimos anclados)
+            if anclado_x:
+                origen_swipe_x = limite_x
+                last_x = limite_x
+            else:
+                origen_swipe_x = curr_x
+                last_x = curr_x
 
         if abs(curr_y - last_y) > (pantalla_alto // 2) and not anclado_y:
             dist_viajada_y = abs(last_y - origen_swipe_y)
@@ -402,33 +407,38 @@ def loop_movimiento_suave():
             else:
                 logger.debug(f"[SALTO LIBRE POR ZONA] Y:{last_y}->{curr_y} | Viaje Corto (Dist: {dist_viajada_y})")
                 
-            origen_swipe_y = curr_y
-            last_y = curr_y
+            if anclado_y:
+                origen_swipe_y = limite_y
+                last_y = limite_y
+            else:
+                origen_swipe_y = curr_y
+                last_y = curr_y
 
         # --- APLICAR ANCLAJE (FUERZA CONSTANTE) ---
         if anclado_x:
             if ahora - tiempo_anclaje_x > TIEMPO_ANCLAJE:
                 anclado_x = False
                 logger.debug("[MURO X LIBERADO por tiempo]")
-            else:
+            elif ahora - tiempo_anclaje_x > 0.05:
                 # Detectar si el usuario intenta alejarse del muro (movimiento fuerte opuesto)
+                # Esperamos 50ms tras anclar para ignorar la distancia del salto inicial
                 dx_manual = curr_x - last_x
                 if abs(dx_manual) >= 8: # Umbral alto para ignorar jitter
                     if (1 if dx_manual > 0 else -1) == -dir_anclaje_x:
                         anclado_x = False
                         logger.debug("[MURO X LIBERADO por movimiento opuesto]")
                 
-                if anclado_x:
-                    # FORZAR POSICIÓN CONSTANTE: No dejamos que QMK lo mueva ni 1 píxel
-                    ctypes.windll.user32.SetCursorPos(int(limite_x), int(curr_y))
-                    curr_x = limite_x
-                    speed_x = 0
+            if anclado_x:
+                # FORZAR POSICIÓN CONSTANTE: No dejamos que QMK lo mueva ni 1 píxel
+                ctypes.windll.user32.SetCursorPos(int(limite_x), int(curr_y))
+                curr_x = limite_x
+                speed_x = 0
 
         if anclado_y:
             if ahora - tiempo_anclaje_y > TIEMPO_ANCLAJE:
                 anclado_y = False
                 logger.debug("[MURO Y LIBERADO por tiempo]")
-            else:
+            elif ahora - tiempo_anclaje_y > 0.05:
                 dy_manual = curr_y - last_y
                 if abs(dy_manual) >= 8:
                     if (1 if dy_manual > 0 else -1) == -dir_anclaje_y:
