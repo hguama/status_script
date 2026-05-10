@@ -369,11 +369,12 @@ def loop_movimiento_suave():
                 tiempo_anclaje_x = ahora
                 dir_anclaje_x = direccion_fijada if direccion_fijada != 0 else (1 if curr_x < last_x else -1)
                 
-                # Para que se "quede en la pared" donde chocó, lo devolvemos al borde de la pantalla actual
+                # Para que se "quede en la pared" sin pelear con programas de envoltura externos,
+                # lo devolvemos 5 píxeles ANTES del borde absoluto.
                 if curr_x < last_x: # Cruzó el borde derecho hacia el izquierdo
-                    limite_x = pantalla_ancho - 1
+                    limite_x = pantalla_ancho - 5
                 else: # Cruzó el borde izquierdo hacia el derecho
-                    limite_x = 0
+                    limite_x = 5
                     
                 logger.debug(f"[SALTO PROTEGIDO EXT] X:{last_x}->{curr_x} | ANCLAJE EN BORDE: {limite_x} (Dist: {dist_viajada_x})")
             else:
@@ -393,9 +394,9 @@ def loop_movimiento_suave():
                 dir_anclaje_y = direccion_y_fijada if direccion_y_fijada != 0 else (1 if curr_y < last_y else -1)
                 
                 if curr_y < last_y:
-                    limite_y = pantalla_alto - 1
+                    limite_y = pantalla_alto - 5
                 else:
-                    limite_y = 0
+                    limite_y = 5
                     
                 logger.debug(f"[SALTO PROTEGIDO EXT] Y:{last_y}->{curr_y} | ANCLAJE EN BORDE: {limite_y} (Dist: {dist_viajada_y})")
             else:
@@ -515,19 +516,7 @@ def loop_movimiento_suave():
                     speed_x = VEL_BASE * 2
                     speed_y = VEL_BASE * 2
                     
-                    if final_x != nx:
-                        # Solo anclamos si es un viaje largo (NO viene de zona segura)
-                        if not es_viaje_corto:
-                            anclado_x = True
-                            tiempo_anclaje_x = ahora
-                            dir_anclaje_x = direccion_fijada
-                            limite_x = final_x + (dir_anclaje_x * (pantalla_ancho // 4))
-                    if final_y != ny:
-                        if not es_viaje_corto:
-                            anclado_y = True
-                            tiempo_anclaje_y = ahora
-                            dir_anclaje_y = direccion_y_fijada
-                            limite_y = final_y + (dir_anclaje_y * (pantalla_alto // 4))
+                    # No hay anclaje en salto interno porque solo ocurre en viajes cortos.
 
                     origen_swipe_x, origen_swipe_y = final_x, final_y
                     distancia_recorrida = 0 # Resetear tras salto
