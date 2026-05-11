@@ -76,7 +76,7 @@ ZONA_LIBRE_BORDE = 0.25  # 25% de la pantalla para permitir paso fluido sin bloq
 # ESTADOS GLOBALES
 # ===============================================================
 alt_tab_menu_visible = False
-INDICADOR_HABILITADO = False
+INDICADOR_HABILITADO = True
 
 tecla_horiz_down = False
 tecla_vert_down = False
@@ -130,47 +130,23 @@ canvas_mouse = tk.Canvas(mouse_win, width=PUNTO_MOUSE, height=PUNTO_MOUSE,
                          highlightthickness=0, bg="magenta")
 canvas_mouse.pack()
 
-# --- VENTANA PARA EFECTO PULSO ELEGANTE ---
-ripple_win = tk.Toplevel()
-ripple_win.overrideredirect(True)
-ripple_win.attributes("-topmost", True)
-ripple_win.config(bg="magenta")
-ripple_win.wm_attributes("-transparentcolor", "magenta")
-ripple_win.geometry("120x120+0+0")
-ripple_win.withdraw()
-
-canvas_ripple = tk.Canvas(ripple_win, width=120, height=120, bg="magenta", highlightthickness=0)
-canvas_ripple.pack()
+# --- VENTANA PARA EFECTO PULSO ELEGANTE (DESACTIVADO) ---
+# ripple_win = tk.Toplevel()
+# ripple_win.overrideredirect(True)
+# ripple_win.attributes("-topmost", True)
+# ripple_win.config(bg="magenta")
+# ripple_win.wm_attributes("-transparentcolor", "magenta")
+# ripple_win.geometry("120x120+0+0")
+# ripple_win.withdraw()
+# canvas_ripple = tk.Canvas(ripple_win, width=120, height=120, bg="magenta", highlightthickness=0)
+# canvas_ripple.pack()
 
 def efecto_onda(x, y):
-    """Muestra un pulso de diamante elegante y sutil SOLO si los indicadores están habilitados."""
-    if not INDICADOR_HABILITADO:
-        return
-        
-    ripple_win.geometry(f"120x120+{int(x-60)}+{int(y-60)}")
-    ripple_win.deiconify()
+    """Efecto desactivado a petición del usuario."""
+    pass
     
-    def animar_pulso(step):
-        canvas_ripple.delete("all")
-        if step < 12:
-            # El radio del diamante se expande
-            r = step * 4
-            # El color es el de la capa actual
-            color = color_actual
-            
-            # Dibujar un rombo (diamante) elegante que se expande
-            puntos = [60, 60-r, 60+r, 60, 60, 60+r, 60-r, 60]
-            canvas_ripple.create_polygon(puntos, outline=color, fill="", width=2)
-            
-            # Punto central fijo que se hace más pequeño
-            r_centro = max(1, 4 - (step // 3))
-            canvas_ripple.create_oval(60-r_centro, 60-r_centro, 60+r_centro, 60+r_centro, fill=color, outline="")
-            
-            ripple_win.after(15, lambda: animar_pulso(step + 1))
-        else:
-            ripple_win.withdraw()
-            
-    animar_pulso(0)
+# def animar_pulso(step):
+#    ... (resto de la función comentada lógicamente)
 
 def toggle_indicadores(e=None):
     """Alterna la bandera global de visibilidad de los indicadores."""
@@ -200,6 +176,7 @@ def actualizar_ui(capa_msg):
         canvas_mouse.delete("all")
         canvas_mouse.create_oval(0, 0, PUNTO_MOUSE, PUNTO_MOUSE, fill=c, outline="")
         indicador_visible_por_capa = True
+        logger.debug(f"[UI] Capa detectada: {clave} - Indicadores: {'ON' if INDICADOR_HABILITADO else 'OFF'}")
         
         if INDICADOR_HABILITADO:
             root.deiconify()
@@ -567,7 +544,7 @@ def loop_movimiento_suave():
                     distancia_recorrida = 0 # Resetear tras salto
                     pyautogui.moveTo(final_x, final_y)
                     last_x, last_y = final_x, final_y
-                    root.after(0, lambda: efecto_onda(final_x, final_y))
+                    # root.after(0, lambda: efecto_onda(final_x, final_y)) # Desactivado
                 else:
                     nx = max(0, min(pantalla_ancho - 1, nx))
                     ny = max(0, min(pantalla_alto - 1, ny))
@@ -607,7 +584,7 @@ def loop_movimiento_suave():
                     if hit_edge_manual:
                         origen_swipe_x = final_x_man
                         pyautogui.moveTo(final_x_man, curr_y)
-                        root.after(0, lambda: efecto_onda(final_x_man, curr_y))
+                        # root.after(0, lambda: efecto_onda(final_x_man, curr_y)) # Desactivado
                         curr_x = final_x_man
                         vx = 0
 
@@ -633,7 +610,7 @@ def loop_movimiento_suave():
                     if hit_edge_y_manual:
                         origen_swipe_y = final_y_man
                         pyautogui.moveTo(curr_x, final_y_man)
-                        root.after(0, lambda: efecto_onda(curr_x, final_y_man))
+                        # root.after(0, lambda: efecto_onda(curr_x, final_y_man)) # Desactivado
                         curr_y = final_y_man
                         vy = 0
 
@@ -718,8 +695,8 @@ def wrap_loop():
                         pyautogui.moveTo(nx, ny)
                         ultimo_wrap = time.time()
                         
-                        # DISPARAR EFECTO VISUAL
-                        root.after(0, lambda: efecto_onda(nx, ny))
+                        # DISPARAR EFECTO VISUAL (DESACTIVADO)
+                        # root.after(0, lambda: efecto_onda(nx, ny))
                         
             last_x_wrap, last_y_wrap = x, y
         except:
@@ -750,7 +727,7 @@ def ocultar_indicador_si_mouse_cerca():
 
             if distancia < RADIO_OCULTAR:
                 root.withdraw()
-            else:
+            elif INDICADOR_HABILITADO and indicador_visible_por_capa:
                 root.deiconify()
 
         except:

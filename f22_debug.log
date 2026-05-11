@@ -2341,3 +2341,58 @@
 11:40:39.619 INFO - SISTEMA REINICIADO CON DPI AWARENESS
 11:40:39.619 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
 11:40:39.619 INFO - ==========================================
+11:42:58.585 DEBUG - [SALTO LIBRE POR ZONA] X:1915->0 | Viaje Corto (Dist: 0)
+11:43:59.472 DEBUG - [SALTO LIBRE POR ZONA] Y:1150->77 | Viaje Corto (Dist: 415)
+11:44:33.731 DEBUG - [SALTO PROTEGIDO EXT] X:1870->73 | ANCLAJE EN BORDE: 1870 (Dist: 1168)
+11:44:34.235 DEBUG - [MURO X LIBERADO por tiempo]
+11:44:36.251 DEBUG - [SALTO PROTEGIDO EXT] X:1870->5 | ANCLAJE EN BORDE: 1870 (Dist: 1514)
+11:44:36.757 DEBUG - [MURO X LIBERADO por tiempo]
+11:44:37.374 DEBUG - [SALTO PROTEGIDO EXT] X:50->1915 | ANCLAJE EN BORDE: 50 (Dist: 1820)
+11:44:37.877 DEBUG - [MURO X LIBERADO por tiempo]
+11:44:44.029 DEBUG - [SALTO PROTEGIDO EXT] X:1870->41 | ANCLAJE EN BORDE: 1870 (Dist: 691)
+11:44:44.535 DEBUG - [MURO X LIBERADO por tiempo]
+11:44:44.967 DEBUG - [SALTO PROTEGIDO EXT] X:50->1811 | ANCLAJE EN BORDE: 50 (Dist: 1820)
+11:44:45.472 DEBUG - [MURO X LIBERADO por tiempo]
+11:44:45.843 DEBUG - [SALTO PROTEGIDO EXT] X:1870->5 | ANCLAJE EN BORDE: 1870 (Dist: 1820)
+11:44:46.348 DEBUG - [MURO X LIBERADO por tiempo]
+11:45:24.720 INFO - ==========================================
+11:45:24.720 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+11:45:24.720 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+11:45:24.720 INFO - ==========================================
+11:45:25.513 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:45:27.038 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:45:27.748 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:45:28.512 DEBUG - [SALTO PROTEGIDO EXT] X:1870->19 | ANCLAJE EN BORDE: 1870 (Dist: 1056)
+11:45:29.013 DEBUG - [MURO X LIBERADO por tiempo]
+11:45:37.031 DEBUG - [SALTO PROTEGIDO EXT] X:1870->5 | ANCLAJE EN BORDE: 1870 (Dist: 715)
+11:45:37.533 DEBUG - [MURO X LIBERADO por tiempo]
+11:47:07.106 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:08.504 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:08.900 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:59:38.554 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:59:39.409 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:59:39.924 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:59:41.020 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:59:41.642 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+12:00:03.287 INFO - ==========================================
+12:00:03.287 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+12:00:03.287 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+12:00:03.287 INFO - ==========================================
+12:00:04.557 DEBUG - [SALTO PROTEGIDO EXT] X:1870->5 | ANCLAJE EN BORDE: 1870 (Dist: 1158)
+12:00:05.059 DEBUG - [MURO X LIBERADO por tiempo]
+12:00:18.727 DEBUG - [SALTO PROTEGIDO EXT] Y:50->1195 | ANCLAJE EN BORDE: 50 (Dist: 1017)
+12:00:19.231 DEBUG - [MURO Y LIBERADO por tiempo]
+12:00:28.904 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+12:00:29.737 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+12:00:31.138 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+12:00:32.096 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+12:00:33.482 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+12:00:35.077 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+12:00:36.295 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+12:00:37.454 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+12:00:41.687 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+12:00:42.442 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+12:00:44.054 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+12:00:45.691 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+12:00:46.678 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+12:00:47.309 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
