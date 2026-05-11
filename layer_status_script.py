@@ -330,7 +330,8 @@ def loop_movimiento_suave():
     
     origen_swipe_x, origen_swipe_y = pyautogui.position()
     prev_actual_x, prev_actual_y = origen_swipe_x, origen_swipe_y
-    tiempo_ultimo_movimiento = time.time()
+    tiempo_ultimo_movimiento_x = time.time()
+    tiempo_ultimo_movimiento_y = time.time()
     
     while True:
         # --- OBTENER POSICIÓN REAL (Sin latencia de PyAutoGUI) ---
@@ -349,24 +350,32 @@ def loop_movimiento_suave():
                 anclado_y = False
                 logger.debug("[MURO Y LIBERADO por nueva pulsación]")
             forzar_nuevo_viaje = False
-            tiempo_ultimo_movimiento = ahora
+            tiempo_ultimo_movimiento_x = ahora
+            tiempo_ultimo_movimiento_y = ahora
         
-        # --- RASTREO UNIVERSAL DE ORIGEN (Manual + Turbo) ---
-        # Comparamos con la posición real anterior. También comprobamos si el turbo está activo (tecla presionada)
-        # para garantizar que el viaje no se corte artificialmente cuando el cursor se bloquea en el borde.
-        if abs(curr_x - prev_actual_x) > 0 or abs(curr_y - prev_actual_y) > 0 or tecla_horiz_down or tecla_vert_down or speed_x > 0 or speed_y > 0:
-            tiempo_ultimo_movimiento = ahora
-        elif ahora - tiempo_ultimo_movimiento > 0.15:
-            # Si el ratón se detiene por 150ms y se soltó la tecla turbo, empieza un nuevo "viaje"
-            if origen_swipe_x != curr_x or origen_swipe_y != curr_y:
-                origen_swipe_x, origen_swipe_y = curr_x, curr_y
-                # ¡NUEVO VIAJE! Liberamos los bloqueos para permitir el cruce
+        # --- RASTREO INDEPENDIENTE DE INACTIVIDAD (X e Y) ---
+        # Reseteamos el origen si no hay movimiento en ESE eje específico por 150ms.
+        # Esto evita que "deslizarse" verticalmente por el borde bloquee el reset horizontal.
+        
+        # Eje X
+        if abs(curr_x - prev_actual_x) > 0 or tecla_horiz_down or speed_x > 0:
+            tiempo_ultimo_movimiento_x = ahora
+        elif ahora - tiempo_ultimo_movimiento_x > 0.15:
+            if origen_swipe_x != curr_x:
+                origen_swipe_x = curr_x
                 if anclado_x:
                     anclado_x = False
-                    logger.debug("[MURO X LIBERADO por nuevo viaje]")
+                    logger.debug("[MURO X LIBERADO por inactividad horizontal]")
+        
+        # Eje Y
+        if abs(curr_y - prev_actual_y) > 0 or tecla_vert_down or speed_y > 0:
+            tiempo_ultimo_movimiento_y = ahora
+        elif ahora - tiempo_ultimo_movimiento_y > 0.15:
+            if origen_swipe_y != curr_y:
+                origen_swipe_y = curr_y
                 if anclado_y:
                     anclado_y = False
-                    logger.debug("[MURO Y LIBERADO por nuevo viaje]")
+                    logger.debug("[MURO Y LIBERADO por inactividad vertical]")
 
         # 1. DETECTAR DIRECCIÓN
         if tecla_horiz_down:
@@ -574,7 +583,7 @@ def loop_movimiento_suave():
                 es_viaje_corto_x = abs(curr_x - origen_swipe_x) < UMBRAL_VIAJE_LARGO
                 es_viaje_corto_y = abs(curr_y - origen_swipe_y) < UMBRAL_VIAJE_LARGO
 
-                # BLOQUEO DE POSICIÓN (50px para viajes largos)
+                # BLOQUEO DE POSICIÓN (Muro de 50px para viajes largos manuales)
                 if not es_viaje_corto_x:
                     if curr_x >= pantalla_ancho - MARGEN_BLOQUEO and vx > 0:
                         ctypes.windll.user32.SetCursorPos(int(pantalla_ancho - MARGEN_BLOQUEO), int(curr_y))
@@ -583,6 +592,23 @@ def loop_movimiento_suave():
                     elif curr_x <= MARGEN_BLOQUEO and vx < 0:
                         ctypes.windll.user32.SetCursorPos(int(MARGEN_BLOQUEO), int(curr_y))
                         curr_x = MARGEN_BLOQUEO
+                        vx = 0
+                else:
+                    # SALTO MANUAL AGRESIVO (Si es viaje corto y toca el borde físico, saltar ya)
+                    # Esto evita quedarse "pegado" al borde si la velocidad es muy baja
+                    hit_edge_manual = False
+                    if curr_x >= pantalla_ancho - 1 and vx >= 0:
+                        final_x_man = WRAP_MARGIN
+                        hit_edge_manual = True
+                    elif curr_x <= 0 and vx <= 0:
+                        final_x_man = pantalla_ancho - WRAP_MARGIN
+                        hit_edge_manual = True
+                    
+                    if hit_edge_manual:
+                        origen_swipe_x = final_x_man
+                        pyautogui.moveTo(final_x_man, curr_y)
+                        root.after(0, lambda: efecto_onda(final_x_man, curr_y))
+                        curr_x = final_x_man
                         vx = 0
 
                 if not es_viaje_corto_y:
@@ -593,6 +619,22 @@ def loop_movimiento_suave():
                     elif curr_y <= MARGEN_BLOQUEO and vy < 0:
                         ctypes.windll.user32.SetCursorPos(int(curr_x), int(MARGEN_BLOQUEO))
                         curr_y = MARGEN_BLOQUEO
+                        vy = 0
+                else:
+                    # SALTO VERTICAL MANUAL AGRESIVO
+                    hit_edge_y_manual = False
+                    if curr_y >= pantalla_alto - 1 and vy >= 0:
+                        final_y_man = WRAP_MARGIN
+                        hit_edge_y_manual = True
+                    elif curr_y <= 0 and vy <= 0:
+                        final_y_man = pantalla_alto - WRAP_MARGIN
+                        hit_edge_y_manual = True
+                    
+                    if hit_edge_y_manual:
+                        origen_swipe_y = final_y_man
+                        pyautogui.moveTo(curr_x, final_y_man)
+                        root.after(0, lambda: efecto_onda(curr_x, final_y_man))
+                        curr_y = final_y_man
                         vy = 0
 
                 if abs(vx) > 1 or abs(vy) > 1:
