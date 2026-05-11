@@ -59,12 +59,13 @@ VEL_MAX = 42.0
 ACEL_POR_FRAME = 0.65  # Incremento de velocidad por cada ciclo de 10ms
 PAUSA_BORDE_S = 0.6    # Pausa al tocar el borde antes de saltar
 COOLDOWN_WRAP = 0.5    # Tiempo mínimo entre saltos automáticos
-TIEMPO_ANCLAJE = 2   # Segundos que el mouse queda bloqueado tras un salto
+TIEMPO_ANCLAJE = 0.5   # Segundos que el mouse queda bloqueado tras un salto (reducido para mayor fluidez)
 pyautogui.PAUSE = 0    # Eliminar delay interno de pyautogui para máxima fluidez
 
 # --- PARÁMETROS DE PRECISIÓN EN BORDES ---
 MARGIN_ESQUINA = 100    # Píxeles desde las esquinas donde el muro es sólido (no salta)
 DISTANCIA_FRENADO = 500 # Píxeles antes del borde donde empieza a frenar dinámicamente
+MARGEN_BLOQUEO = 50     # Píxeles antes del borde donde el cursor choca y se detiene
 UMBRAL_VIAJE_LARGO = 450 # Distancia recorrida para activar el bloqueo de esquinas
 ZONA_LIBRE_BORDE = 0.25  # 25% de la pantalla para permitir paso fluido sin bloqueos
 
@@ -276,10 +277,14 @@ def seguimiento_mouse():
 # F22 / F23 – MOVIMIENTO SUAVE Y CONTROLADO
 # ===============================================================
 
+forzar_nuevo_viaje = False
+
 def presiona_f22(e):
-    global tecla_horiz_down
+    global tecla_horiz_down, forzar_nuevo_viaje
+    if not tecla_horiz_down:
+        forzar_nuevo_viaje = True
+        logger.debug("[TECLA F22 PRESIONADA] - NUEVO VIAJE FORZADO")
     tecla_horiz_down = True
-    logger.debug("[TECLA F22 PRESIONADA]")
 
 def suelta_f22(e):
     global tecla_horiz_down, direccion_fijada
@@ -288,9 +293,11 @@ def suelta_f22(e):
     logger.debug("[TECLA F22 SOLTADA]")
 
 def presiona_f23(e):
-    global tecla_vert_down
+    global tecla_vert_down, forzar_nuevo_viaje
+    if not tecla_vert_down:
+        forzar_nuevo_viaje = True
+        logger.debug("[TECLA F23 PRESIONADA] - NUEVO VIAJE FORZADO")
     tecla_vert_down = True
-    logger.debug("[TECLA F23 PRESIONADA]")
 
 def suelta_f23(e):
     global tecla_vert_down, direccion_y_fijada
@@ -332,14 +339,34 @@ def loop_movimiento_suave():
         curr_x, curr_y = pt.x, pt.y
         ahora = time.time()
         
+        global forzar_nuevo_viaje
+        if forzar_nuevo_viaje:
+            origen_swipe_x, origen_swipe_y = curr_x, curr_y
+            if anclado_x:
+                anclado_x = False
+                logger.debug("[MURO X LIBERADO por nueva pulsación]")
+            if anclado_y:
+                anclado_y = False
+                logger.debug("[MURO Y LIBERADO por nueva pulsación]")
+            forzar_nuevo_viaje = False
+            tiempo_ultimo_movimiento = ahora
+        
         # --- RASTREO UNIVERSAL DE ORIGEN (Manual + Turbo) ---
-        # Comparamos con la posición real anterior. También comprobamos si el turbo está activo (speed > 0)
-        # para garantizar que el viaje no se corte por latencias del sistema.
-        if abs(curr_x - prev_actual_x) > 0 or abs(curr_y - prev_actual_y) > 0 or speed_x > 0 or speed_y > 0:
+        # Comparamos con la posición real anterior. También comprobamos si el turbo está activo (tecla presionada)
+        # para garantizar que el viaje no se corte artificialmente cuando el cursor se bloquea en el borde.
+        if abs(curr_x - prev_actual_x) > 0 or abs(curr_y - prev_actual_y) > 0 or tecla_horiz_down or tecla_vert_down or speed_x > 0 or speed_y > 0:
             tiempo_ultimo_movimiento = ahora
         elif ahora - tiempo_ultimo_movimiento > 0.15:
-            # Si el ratón se detiene por 150ms, consideramos que empieza un nuevo "viaje"
-            origen_swipe_x, origen_swipe_y = curr_x, curr_y
+            # Si el ratón se detiene por 150ms y se soltó la tecla turbo, empieza un nuevo "viaje"
+            if origen_swipe_x != curr_x or origen_swipe_y != curr_y:
+                origen_swipe_x, origen_swipe_y = curr_x, curr_y
+                # ¡NUEVO VIAJE! Liberamos los bloqueos para permitir el cruce
+                if anclado_x:
+                    anclado_x = False
+                    logger.debug("[MURO X LIBERADO por nuevo viaje]")
+                if anclado_y:
+                    anclado_y = False
+                    logger.debug("[MURO Y LIBERADO por nuevo viaje]")
 
         # 1. DETECTAR DIRECCIÓN
         if tecla_horiz_down:
@@ -373,9 +400,9 @@ def loop_movimiento_suave():
                 # Para que se "quede en la pared" sin pelear con programas de envoltura externos,
                 # lo devolvemos 5 píxeles ANTES del borde absoluto.
                 if curr_x < last_x: # Cruzó el borde derecho hacia el izquierdo
-                    limite_x = pantalla_ancho - 5
+                    limite_x = pantalla_ancho - MARGEN_BLOQUEO
                 else: # Cruzó el borde izquierdo hacia el derecho
-                    limite_x = 5
+                    limite_x = MARGEN_BLOQUEO
                     
                 logger.debug(f"[SALTO PROTEGIDO EXT] X:{last_x}->{curr_x} | ANCLAJE EN BORDE: {limite_x} (Dist: {dist_viajada_x})")
             else:
@@ -399,9 +426,9 @@ def loop_movimiento_suave():
                 dir_anclaje_y = direccion_y_fijada if direccion_y_fijada != 0 else (1 if curr_y < last_y else -1)
                 
                 if curr_y < last_y:
-                    limite_y = pantalla_alto - 5
+                    limite_y = pantalla_alto - MARGEN_BLOQUEO
                 else:
-                    limite_y = 5
+                    limite_y = MARGEN_BLOQUEO
                     
                 logger.debug(f"[SALTO PROTEGIDO EXT] Y:{last_y}->{curr_y} | ANCLAJE EN BORDE: {limite_y} (Dist: {dist_viajada_y})")
             else:
@@ -469,50 +496,49 @@ def loop_movimiento_suave():
                 dist_borde_x = min(nx, pantalla_ancho - nx)
                 dist_borde_y = min(ny, pantalla_alto - ny)
                 
-                if dist_borde_x < DISTANCIA_FRENADO:
+                es_viaje_corto = abs(curr_x - origen_swipe_x) < UMBRAL_VIAJE_LARGO
+                es_viaje_corto_y = abs(curr_y - origen_swipe_y) < UMBRAL_VIAJE_LARGO
+                
+                if dist_borde_x < DISTANCIA_FRENADO and not es_viaje_corto:
                     # Frenado dinámico proporcional a la distancia al borde
                     factor_x = max(0.1, dist_borde_x / DISTANCIA_FRENADO)
                     speed_x = max(VEL_BASE, speed_x * factor_x)
                     nx = curr_x + (speed_x * direccion_fijada)
 
-                if dist_borde_y < DISTANCIA_FRENADO:
+                if dist_borde_y < DISTANCIA_FRENADO and not es_viaje_corto_y:
                     factor_y = max(0.1, dist_borde_y / DISTANCIA_FRENADO)
                     speed_y = max(VEL_BASE, speed_y * factor_y)
                     ny = curr_y + (speed_y * direccion_y_fijada)
-
-                es_viaje_corto = abs(curr_x - origen_swipe_x) < UMBRAL_VIAJE_LARGO
                 hit_edge = False
                 final_x, final_y = nx, ny
                 
-                if nx <= 0:
-                    if es_viaje_corto:
-                        final_x = pantalla_ancho - WRAP_MARGIN
-                        hit_edge = True
-                    else:
-                        nx = 0
-                        speed_x = 0 # Frena en seco contra la pared
-                elif nx >= pantalla_ancho - 1:
-                    if es_viaje_corto:
-                        final_x = WRAP_MARGIN
-                        hit_edge = True
-                    else:
-                        nx = pantalla_ancho - 1
-                        speed_x = 0
+                if nx <= MARGEN_BLOQUEO and not es_viaje_corto:
+                    nx = MARGEN_BLOQUEO
+                    speed_x = 0 # Frena antes del borde
+                elif nx <= 0 and es_viaje_corto:
+                    final_x = pantalla_ancho - WRAP_MARGIN
+                    hit_edge = True
+
+                elif nx >= pantalla_ancho - MARGEN_BLOQUEO and not es_viaje_corto:
+                    nx = pantalla_ancho - MARGEN_BLOQUEO
+                    speed_x = 0
+                elif nx >= pantalla_ancho - 1 and es_viaje_corto:
+                    final_x = WRAP_MARGIN
+                    hit_edge = True
                         
-                if ny <= 0:
-                    if es_viaje_corto:
-                        final_y = pantalla_alto - WRAP_MARGIN
-                        hit_edge = True
-                    else:
-                        ny = 0
-                        speed_y = 0
-                elif ny >= pantalla_alto - 1:
-                    if es_viaje_corto:
-                        final_y = WRAP_MARGIN
-                        hit_edge = True
-                    else:
-                        ny = pantalla_alto - 1
-                        speed_y = 0
+                if ny <= MARGEN_BLOQUEO and not es_viaje_corto:
+                    ny = MARGEN_BLOQUEO
+                    speed_y = 0
+                elif ny <= 0 and es_viaje_corto:
+                    final_y = pantalla_alto - WRAP_MARGIN
+                    hit_edge = True
+
+                elif ny >= pantalla_alto - MARGEN_BLOQUEO and not es_viaje_corto:
+                    ny = pantalla_alto - MARGEN_BLOQUEO
+                    speed_y = 0
+                elif ny >= pantalla_alto - 1 and es_viaje_corto:
+                    final_y = WRAP_MARGIN
+                    hit_edge = True
 
                 if hit_edge:
                     logger.debug(f"[SALTO INTERNO] nx:{nx} -> {final_x} | Viaje Corto: {es_viaje_corto} (Dist: {abs(curr_x - origen_swipe_x)})")
@@ -540,11 +566,35 @@ def loop_movimiento_suave():
                         pyautogui.moveTo(nx, ny)
                     last_x, last_y = nx, ny
             else:
-                # --- FRENO DE EMERGENCIA GLOBAL (Para teclas normales QMK) ---
+                # MOVIMIENTO MANUAL (Bloqueo de Posición y Freno)
                 vx = curr_x - last_x
                 vy = curr_y - last_y
                 
-                # Solo actuar si hay movimiento real (ignorar jitter)
+                # RASTREO DE VIAJE
+                es_viaje_corto_x = abs(curr_x - origen_swipe_x) < UMBRAL_VIAJE_LARGO
+                es_viaje_corto_y = abs(curr_y - origen_swipe_y) < UMBRAL_VIAJE_LARGO
+
+                # BLOQUEO DE POSICIÓN (50px para viajes largos)
+                if not es_viaje_corto_x:
+                    if curr_x >= pantalla_ancho - MARGEN_BLOQUEO and vx > 0:
+                        ctypes.windll.user32.SetCursorPos(int(pantalla_ancho - MARGEN_BLOQUEO), int(curr_y))
+                        curr_x = pantalla_ancho - MARGEN_BLOQUEO
+                        vx = 0
+                    elif curr_x <= MARGEN_BLOQUEO and vx < 0:
+                        ctypes.windll.user32.SetCursorPos(int(MARGEN_BLOQUEO), int(curr_y))
+                        curr_x = MARGEN_BLOQUEO
+                        vx = 0
+
+                if not es_viaje_corto_y:
+                    if curr_y >= pantalla_alto - MARGEN_BLOQUEO and vy > 0:
+                        ctypes.windll.user32.SetCursorPos(int(curr_x), int(pantalla_alto - MARGEN_BLOQUEO))
+                        curr_y = pantalla_alto - MARGEN_BLOQUEO
+                        vy = 0
+                    elif curr_y <= MARGEN_BLOQUEO and vy < 0:
+                        ctypes.windll.user32.SetCursorPos(int(curr_x), int(MARGEN_BLOQUEO))
+                        curr_y = MARGEN_BLOQUEO
+                        vy = 0
+
                 if abs(vx) > 1 or abs(vy) > 1:
                     dist_borde_x = min(curr_x, pantalla_ancho - curr_x)
                     dist_borde_y = min(curr_y, pantalla_alto - curr_y)
@@ -557,8 +607,8 @@ def loop_movimiento_suave():
                     en_zona_segura_x = curr_x < (pantalla_ancho * ZONA_LIBRE_BORDE) or curr_x > (pantalla_ancho * (1 - ZONA_LIBRE_BORDE))
                     en_zona_segura_y = curr_y < (pantalla_alto * ZONA_LIBRE_BORDE) or curr_y > (pantalla_alto * (1 - ZONA_LIBRE_BORDE))
 
-                    # Aplicar límite de velocidad dinámico en zona de frenado SOLO si no estamos en zona segura
-                    if hacia_borde_x and dist_borde_x < DISTANCIA_FRENADO and not en_zona_segura_x:
+                    # Aplicar límite de velocidad dinámico en zona de frenado SOLO si no estamos en zona segura y no es viaje corto
+                    if hacia_borde_x and dist_borde_x < DISTANCIA_FRENADO and not en_zona_segura_x and not es_viaje_corto_x:
                         # Velocidad máxima permitida disminuye conforme nos acercamos al borde
                         v_permitida = max(VEL_BASE, VEL_MAX * (dist_borde_x / DISTANCIA_FRENADO))
                         if abs(vx) > v_permitida:
@@ -566,7 +616,7 @@ def loop_movimiento_suave():
                             ctypes.windll.user32.SetCursorPos(int(nueva_x), int(curr_y))
                             curr_x = nueva_x
                             
-                    if hacia_borde_y and dist_borde_y < DISTANCIA_FRENADO and not en_zona_segura_y:
+                    if hacia_borde_y and dist_borde_y < DISTANCIA_FRENADO and not en_zona_segura_y and not es_viaje_corto_y:
                         v_permitida_y = max(VEL_BASE, VEL_MAX * (dist_borde_y / DISTANCIA_FRENADO))
                         if abs(vy) > v_permitida_y:
                             nueva_y = last_y + (v_permitida_y * (1 if vy > 0 else -1))
