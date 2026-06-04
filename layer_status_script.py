@@ -69,7 +69,11 @@ MARGEN_BLOQUEO = 50     # Píxeles antes del borde donde el cursor choca y se de
 UMBRAL_VIAJE_LARGO = 450 # Distancia recorrida para activar el bloqueo de esquinas
 ZONA_LIBRE_BORDE = 0.25  # 25% de la pantalla para permitir paso fluido sin bloqueos
 
-
+# --- PARAMETERS MOUSE WITH KEYBOARD---
+QMK_MOUSE_MAX_SPEED    = 7# Camos la velocidad máxima a la mitad (ya no saldrá disparado)
+QMK_MOUSE_TIME_TO_MAX  = 30 #  rampa
+QMK_MOUSE_INTERVAL     = 18 # Refresco de ~60Hz (estándar de monitores), movimiento muy progresivo
+QMK_MOUSE_MOVE_DELTA   = 1    # El paso mínimo posible por ciclo
 
 
 # ===============================================================
@@ -752,6 +756,25 @@ def check_single_instance():
         import sys
         sys.exit(0)
 
+def enviar_calibracion_qmk(dev):
+    """Construye el buffer HID con la firma 'M' y envía las variables al Corne."""
+    try:
+        # Creamos un buffer de 33 bytes (1 byte para Report ID + 32 bytes de datos estándar de QMK)
+        buf = [0] * 33
+        buf[0] = 0x00                     # Report ID (Requerido por Windows)
+        buf[1] = ord("M")                 # Firma 'M' que espera el 'if (data[0] == 'M')' en C
+        buf[2] = QMK_MOUSE_MAX_SPEED     # data[1] en QMK
+        buf[3] =  QMK_MOUSE_TIME_TO_MAX     # data[2] en QMK
+        buf[4] =   QMK_MOUSE_INTERVAL  # data[3] en QMK
+
+       # buf[5] =        # data[4] en QMK
+       # buf[6] = QMK_MOUSE_MOVE_DELTA     # data[5] en QMK
+
+        dev.write(buf)
+        logger.info(f"[HID] Calibración enviada con éxito al Corne.")
+    except Exception as e:
+        logger.error(f"[HID ERROR] No se pudieron enviar los valores de calibración: {e}")
+
 def main():
     check_single_instance()
     
@@ -764,6 +787,9 @@ def main():
     dev = hid.device()
     dev.open_path(path)
     dev.set_nonblocking(True)
+
+ # Enviamos los datos al teclado inmediatamente después de conectar
+    enviar_calibracion_qmk(dev)
 
     threading.Thread(target=escuchar_hid, args=(dev,), daemon=True).start()
     threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
