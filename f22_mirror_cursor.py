@@ -9,9 +9,18 @@ import ctypes
 # ==========================================
 DISTANCIA = 25          # Distancia de la línea respecto al puntero
 LADO = "derecha"        # Lado donde aparece el indicador: "izquierda" o "derecha"
-COLOR = "#00FFFF"       # Color del indicador (Ej: cyan)
-GROSOR = 2             # Grosor de la línea en píxeles
-ALTURA = 20            # Altura de la línea en píxeles
+
+# Banderas para activar/desactivar cada indicador
+MOSTRAR_PRINCIPAL = False  # Muestra la línea al lado de tu puntero actual
+MOSTRAR_DEST_H = True     # Muestra la línea fantasma de tu destino Horizontal
+MOSTRAR_DEST_V = True     # Muestra la línea fantasma de tu destino Vertical
+
+COLOR_PRINCIPAL = "#00FFFF" # Color del indicador principal (Ej: cyan)
+COLOR_DEST_H = "#FF9900"    # Color del destino Horizontal (Ej: Naranja)
+COLOR_DEST_V = "#00FF00"    # Color del destino Vertical (Ej: Verde)
+
+GROSOR = 2              # Grosor de las líneas en píxeles
+ALTURA = 20            # Altura de las líneas en píxeles
 
 # DPI awareness
 try:
@@ -28,33 +37,36 @@ class POINT(ctypes.Structure):
 class MirrorModeApp:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Mirror Indicator")
-        self.root.overrideredirect(True)
-        self.root.attributes("-topmost", True)
-        self.root.config(bg="magenta")
-        self.root.wm_attributes("-transparentcolor", "magenta")
+        self.root.withdraw() # Ocultamos la ventana principal base
         
         self.screen_width = self.root.winfo_screenwidth()
         self.screen_height = self.root.winfo_screenheight()
         
-        self.width = GROSOR
-        self.height = ALTURA
-        
-        self.root.geometry(f"{self.width}x{self.height}+0+0")
-        
-        self.canvas = tk.Canvas(self.root, width=self.width, height=self.height, highlightthickness=0, bg="magenta")
-        self.canvas.pack()
-        
-        # Dibujar la línea indicadora
-        self.canvas.create_line(self.width//2, 0, self.width//2, self.height, fill=COLOR, width=GROSOR)
+        # Crear 3 ventanitas (indicadores) sólo si la bandera correspondiente está en True
+        self.win_main = self.create_indicator_window(COLOR_PRINCIPAL) if MOSTRAR_PRINCIPAL else None
+        self.win_dest_h = self.create_indicator_window(COLOR_DEST_H) if MOSTRAR_DEST_H else None
+        self.win_dest_v = self.create_indicator_window(COLOR_DEST_V) if MOSTRAR_DEST_V else None
         
         # Atajos configurados por el usuario
         keyboard.on_press_key("f13", self.on_f13_press)
         keyboard.on_press_key("f14", self.on_f14_press)
         
-        # Hilo que mantiene la línea pegada al cursor constantemente
+        # Hilo que mantiene las líneas pegadas a sus posiciones constantemente
         self.update_thread = threading.Thread(target=self.track_mouse, daemon=True)
         self.update_thread.start()
+        
+    def create_indicator_window(self, color):
+        win = tk.Toplevel(self.root)
+        win.overrideredirect(True)
+        win.attributes("-topmost", True)
+        win.config(bg="magenta")
+        win.wm_attributes("-transparentcolor", "magenta")
+        win.geometry(f"{GROSOR}x{ALTURA}+0+0")
+        
+        canvas = tk.Canvas(win, width=GROSOR, height=ALTURA, highlightthickness=0, bg="magenta")
+        canvas.pack()
+        canvas.create_line(GROSOR//2, 0, GROSOR//2, ALTURA, fill=color, width=GROSOR)
+        return win
         
     def get_mouse_pos(self):
         pt = POINT()
@@ -86,21 +98,46 @@ class MirrorModeApp:
             try:
                 mx, my = self.get_mouse_pos()
                 
-                # Calcular posición constante al lado del puntero
+                # ---------------------------------------------------
+                # 1. Posición del Indicador Principal (donde está el mouse)
+                # ---------------------------------------------------
                 if LADO.lower() == "izquierda":
-                    win_x = mx - DISTANCIA - (self.width // 2)
+                    main_x = mx - DISTANCIA - (GROSOR // 2)
                 else:
-                    win_x = mx + DISTANCIA - (self.width // 2)
-                    
-                win_y = my - (self.height // 2)
+                    main_x = mx + DISTANCIA - (GROSOR // 2)
+                main_y = my - (ALTURA // 2)
                 
-                self.root.geometry(f"+{win_x}+{win_y}")
+                if self.win_main:
+                    self.win_main.geometry(f"+{main_x}+{main_y}")
+                
+                # ---------------------------------------------------
+                # 2. Posición del Destino Horizontal (Simetría en X)
+                # ---------------------------------------------------
+                if self.win_dest_h:
+                    dest_x = self.screen_width - mx
+                    if LADO.lower() == "izquierda":
+                        ghost_h_x = dest_x - DISTANCIA - (GROSOR // 2)
+                    else:
+                        ghost_h_x = dest_x + DISTANCIA - (GROSOR // 2)
+                        
+                    self.win_dest_h.geometry(f"+{ghost_h_x}+{main_y}")
+                
+                # ---------------------------------------------------
+                # 3. Posición del Destino Vertical (Simetría en Y)
+                # ---------------------------------------------------
+                if self.win_dest_v:
+                    dest_y = self.screen_height - my
+                    ghost_v_y = dest_y - (ALTURA // 2)
+                    
+                    self.win_dest_v.geometry(f"+{main_x}+{ghost_v_y}")
+                
             except Exception:
                 pass
             time.sleep(0.01)
 
 if __name__ == "__main__":
-    print("Módulo de Modo Espejo (Subproceso) iniciado.")
+    print("Módulo de Modo Espejo iniciado.")
+    print(f"Indicadores activos: Principal({MOSTRAR_PRINCIPAL}), Dest Horizontal({MOSTRAR_DEST_H}), Dest Vertical({MOSTRAR_DEST_V})")
     print(" - Ctrl+Shift+F13: Espejo Horizontal")
     print(" - Ctrl+Shift+F14: Espejo Vertical")
     app = MirrorModeApp()
