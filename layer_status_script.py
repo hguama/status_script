@@ -136,15 +136,70 @@ canvas_mouse = tk.Canvas(mouse_win, width=PUNTO_MOUSE, height=PUNTO_MOUSE,
 canvas_mouse.pack()
 
 # --- VENTANA PARA EFECTO PULSO ELEGANTE (DESACTIVADO) ---
-# ripple_win = tk.Toplevel()
-# ripple_win.overrideredirect(True)
-# ripple_win.attributes("-topmost", True)
-# ripple_win.config(bg="magenta")
-# ripple_win.wm_attributes("-transparentcolor", "magenta")
-# ripple_win.geometry("120x120+0+0")
-# ripple_win.withdraw()
-# canvas_ripple = tk.Canvas(ripple_win, width=120, height=120, bg="magenta", highlightthickness=0)
-# canvas_ripple.pack()
+# ripple_win = tk.Toplevel() ...
+
+# ==========================================
+# CONFIGURACIÓN DEL MODO ESPEJO (INTEGRADO)
+# ==========================================
+MIRROR_DISTANCIA = 25          
+MIRROR_LADO = "derecha"        
+MIRROR_MOSTRAR_PRINCIPAL = False  
+MIRROR_MOSTRAR_DEST_H = True     
+MIRROR_MOSTRAR_DEST_V = True     
+
+MIRROR_COLOR_PRINCIPAL = "#00FFFF" 
+MIRROR_COLOR_DEST_H = "#FF9900"    
+MIRROR_COLOR_DEST_V = "#00FF00"    
+
+MIRROR_GROSOR = 2              
+MIRROR_ALTURA = 20            
+
+def create_mirror_window(color):
+    win = tk.Toplevel(root)
+    win.overrideredirect(True)
+    win.attributes("-topmost", True)
+    win.config(bg="magenta")
+    win.wm_attributes("-transparentcolor", "magenta")
+    win.geometry(f"{MIRROR_GROSOR}x{MIRROR_ALTURA}+0+0")
+    win.withdraw()
+    canvas = tk.Canvas(win, width=MIRROR_GROSOR, height=MIRROR_ALTURA, highlightthickness=0, bg="magenta")
+    canvas.pack()
+    canvas.create_line(MIRROR_GROSOR//2, 0, MIRROR_GROSOR//2, MIRROR_ALTURA, fill=color, width=MIRROR_GROSOR)
+    return win
+
+win_mirror_main = create_mirror_window(MIRROR_COLOR_PRINCIPAL) if MIRROR_MOSTRAR_PRINCIPAL else None
+win_mirror_dest_h = create_mirror_window(MIRROR_COLOR_DEST_H) if MIRROR_MOSTRAR_DEST_H else None
+win_mirror_dest_v = create_mirror_window(MIRROR_COLOR_DEST_V) if MIRROR_MOSTRAR_DEST_V else None
+
+es_capa_mirror = False
+
+def ejecutar_teletransporte_horizontal():
+    if es_capa_mirror:
+        pt = POINT()
+        ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+        teleport_x = pantalla_ancho - pt.x
+        ctypes.windll.user32.SetCursorPos(teleport_x, pt.y)
+
+def ejecutar_teletransporte_vertical():
+    if es_capa_mirror:
+        pt = POINT()
+        ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+        teleport_y = pantalla_alto - pt.y
+        ctypes.windll.user32.SetCursorPos(pt.x, teleport_y)
+
+def on_f13_press(e):
+    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        logger.info("Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.")
+        ejecutar_teletransporte_horizontal()
+
+def on_f14_press(e):
+    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        logger.info("Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.")
+        ejecutar_teletransporte_vertical()
+
+keyboard.on_press_key("f13", on_f13_press)
+keyboard.on_press_key("f14", on_f14_press)
+
 
 def efecto_onda(x, y):
     """Efecto desactivado a petición del usuario."""
@@ -172,23 +227,25 @@ keyboard.on_press_key("f21", toggle_indicadores)
 mirror_process = None
 
 def actualizar_ui(capa_msg):
-    global indicador_visible_por_capa, color_actual, mirror_process
+    global indicador_visible_por_capa, color_actual, mirror_process, es_capa_mirror
 
     clave = next((k for k in colores if k in capa_msg), None)
     
-    # Manejar el subproceso del modo espejo (MIRROR)
+    # Manejar el modo espejo (MIRROR) nativamente en memoria
     if clave == "MIRROR":
-        if mirror_process is None:
-            script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "f22_mirror_cursor.py")
-            # Create subprocess with CREATE_NO_WINDOW if needed, but Popen is fine
-            # We use pythonw.exe to prevent a console window from popping up, or just python
-            mirror_process = subprocess.Popen(["python", script_path])
-            logger.info("Subproceso de MIRROR iniciado.")
+        if not es_capa_mirror:
+            es_capa_mirror = True
+            logger.info("===> [CAPA MIRROR] Activada instantáneamente en memoria.")
+            if win_mirror_main: win_mirror_main.deiconify()
+            if win_mirror_dest_h: win_mirror_dest_h.deiconify()
+            if win_mirror_dest_v: win_mirror_dest_v.deiconify()
     else:
-        if mirror_process is not None:
-            mirror_process.terminate()
-            mirror_process = None
-            logger.info("Subproceso de MIRROR terminado.")
+        if es_capa_mirror:
+            es_capa_mirror = False
+            logger.info("===> [CAPA MIRROR] Desactivada.")
+            if win_mirror_main: win_mirror_main.withdraw()
+            if win_mirror_dest_h: win_mirror_dest_h.withdraw()
+            if win_mirror_dest_v: win_mirror_dest_v.withdraw()
 
     if clave:
         color_actual = colores[clave]
@@ -234,6 +291,7 @@ def escuchar_hid(dev):
             nueva = next((n for n in nombres if n in msg), None)
 
             if nueva and nueva != capa_actual:
+                logger.info(f"======> [HID] CAMBIO DE CAPA DETECTADO: '{capa_actual}' -> '{nueva}'")
                 capa_actual = nueva
                 root.after(0, lambda c=capa_actual: actualizar_ui(c))
 
@@ -266,8 +324,35 @@ def detectar_clic_reset_alt(dev):
 def seguimiento_mouse():
     while True:
         try:
-            x, y = pyautogui.position()
+            pt = POINT()
+            ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+            x, y = pt.x, pt.y
             mouse_win.geometry(f"+{x-PUNTO_MOUSE//2}+{y+OFFSET_MOUSE}")
+            
+            # --- Actualización instantánea de los indicadores Mirror ---
+            if es_capa_mirror:
+                if MIRROR_LADO.lower() == "izquierda":
+                    main_x = x - MIRROR_DISTANCIA - (MIRROR_GROSOR // 2)
+                else:
+                    main_x = x + MIRROR_DISTANCIA - (MIRROR_GROSOR // 2)
+                main_y = y - (MIRROR_ALTURA // 2)
+                
+                if win_mirror_main:
+                    win_mirror_main.geometry(f"+{main_x}+{main_y}")
+                
+                if win_mirror_dest_h:
+                    dest_x = pantalla_ancho - x
+                    if MIRROR_LADO.lower() == "izquierda":
+                        ghost_h_x = dest_x - MIRROR_DISTANCIA - (MIRROR_GROSOR // 2)
+                    else:
+                        ghost_h_x = dest_x + MIRROR_DISTANCIA - (MIRROR_GROSOR // 2)
+                    win_mirror_dest_h.geometry(f"+{ghost_h_x}+{main_y}")
+                    
+                if win_mirror_dest_v:
+                    dest_y = pantalla_alto - y
+                    ghost_v_y = dest_y - (MIRROR_ALTURA // 2)
+                    win_mirror_dest_v.geometry(f"+{main_x}+{ghost_v_y}")
+
         except:
             pass
         time.sleep(0.01)

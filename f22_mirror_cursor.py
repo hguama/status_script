@@ -3,6 +3,15 @@ import threading
 import time
 import keyboard
 import ctypes
+import logging
+import os
+
+log_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "f22_debug.log")
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s - [MIRROR_APP] %(message)s', datefmt='%H:%M:%S', handlers=[
+    logging.FileHandler(log_path, encoding='utf-8', mode='a'),
+    logging.StreamHandler()
+])
+logger = logging.getLogger(__name__)
 
 # ==========================================
 # CONFIGURACIÓN DEL INDICADOR DE MODO ESPEJO
@@ -54,6 +63,7 @@ class MirrorModeApp:
         # Hilo que mantiene las líneas pegadas a sus posiciones constantemente
         self.update_thread = threading.Thread(target=self.track_mouse, daemon=True)
         self.update_thread.start()
+        logger.info("Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.")
         
     def create_indicator_window(self, color):
         win = tk.Toplevel(self.root)
@@ -74,13 +84,21 @@ class MirrorModeApp:
         return pt.x, pt.y
         
     def on_f13_press(self, e):
+        ctrl_pressed = keyboard.is_pressed("ctrl")
+        shift_pressed = keyboard.is_pressed("shift")
+        logger.info(f"-----> TECLA F13 DETECTADA. Modificadores: Ctrl={ctrl_pressed}, Shift={shift_pressed}")
         # Verificar que se presionan ctrl y shift
-        if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        if ctrl_pressed and shift_pressed:
+            logger.info("Ejecutando teletransporte HORIZONTAL")
             self.ejecutar_teletransporte_horizontal()
 
     def on_f14_press(self, e):
+        ctrl_pressed = keyboard.is_pressed("ctrl")
+        shift_pressed = keyboard.is_pressed("shift")
+        logger.info(f"-----> TECLA F14 DETECTADA. Modificadores: Ctrl={ctrl_pressed}, Shift={shift_pressed}")
         # Verificar que se presionan ctrl y shift
-        if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        if ctrl_pressed and shift_pressed:
+            logger.info("Ejecutando teletransporte VERTICAL")
             self.ejecutar_teletransporte_vertical()
 
     def ejecutar_teletransporte_horizontal(self):
@@ -136,6 +154,9 @@ class MirrorModeApp:
             time.sleep(0.01)
 
 if __name__ == "__main__":
+    logger.info("==========================================")
+    logger.info("Módulo de Modo Espejo (Subproceso) arrancando...")
+    logger.info("==========================================")
     print("Módulo de Modo Espejo iniciado.")
     print(f"Indicadores activos: Principal({MOSTRAR_PRINCIPAL}), Dest Horizontal({MOSTRAR_DEST_H}), Dest Vertical({MOSTRAR_DEST_V})")
     print(" - Ctrl+Shift+F13: Espejo Horizontal")

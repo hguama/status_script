@@ -73466,3 +73466,1242 @@
 11:34:22.842 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
 11:34:25.948 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
 11:34:26.795 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:34:35.375 INFO - ==========================================
+11:34:35.375 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+11:34:35.375 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+11:34:35.375 INFO - ==========================================
+11:34:35.482 INFO - [HID] Calibración enviada con éxito al Corne.
+11:34:36.521 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:34:37.591 INFO - Subproceso de MIRROR iniciado.
+11:34:37.591 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:38.640 INFO - Subproceso de MIRROR terminado.
+11:34:40.218 INFO - Subproceso de MIRROR iniciado.
+11:34:40.218 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:40.723 INFO - Subproceso de MIRROR terminado.
+11:34:41.347 INFO - Subproceso de MIRROR iniciado.
+11:34:41.347 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:42.167 INFO - Subproceso de MIRROR terminado.
+11:34:43.081 INFO - Subproceso de MIRROR iniciado.
+11:34:43.083 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:43.999 INFO - Subproceso de MIRROR terminado.
+11:34:44.539 INFO - Subproceso de MIRROR iniciado.
+11:34:44.540 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:46.908 INFO - Subproceso de MIRROR terminado.
+11:34:47.534 INFO - Subproceso de MIRROR iniciado.
+11:34:47.534 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:49.941 INFO - Subproceso de MIRROR terminado.
+11:34:50.654 INFO - Subproceso de MIRROR iniciado.
+11:34:50.658 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:52.633 INFO - Subproceso de MIRROR terminado.
+11:34:53.653 INFO - Subproceso de MIRROR iniciado.
+11:34:53.653 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:54.587 INFO - Subproceso de MIRROR terminado.
+11:34:55.447 INFO - Subproceso de MIRROR iniciado.
+11:34:55.447 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:56.056 DEBUG - [SALTO LIBRE POR ZONA] X:1441->479 | Viaje Corto (Dist: 0)
+11:34:56.427 INFO - Subproceso de MIRROR terminado.
+11:34:57.289 INFO - Subproceso de MIRROR iniciado.
+11:34:57.297 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:34:57.927 DEBUG - [SALTO LIBRE POR ZONA] X:479->1441 | Viaje Corto (Dist: 0)
+11:34:58.291 INFO - Subproceso de MIRROR terminado.
+11:34:59.239 INFO - Subproceso de MIRROR iniciado.
+11:34:59.249 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:00.648 INFO - Subproceso de MIRROR terminado.
+11:35:01.681 INFO - Subproceso de MIRROR iniciado.
+11:35:01.683 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:02.935 INFO - Subproceso de MIRROR terminado.
+11:35:03.727 INFO - Subproceso de MIRROR iniciado.
+11:35:03.734 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:04.740 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:35:05.126 INFO - Subproceso de MIRROR terminado.
+11:35:05.863 INFO - Subproceso de MIRROR iniciado.
+11:35:05.863 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:06.166 INFO - Subproceso de MIRROR terminado.
+11:35:07.234 INFO - Subproceso de MIRROR iniciado.
+11:35:07.239 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:07.880 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:35:08.314 INFO - Subproceso de MIRROR terminado.
+11:35:10.271 INFO - Subproceso de MIRROR iniciado.
+11:35:10.273 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:10.974 DEBUG - [SALTO LIBRE POR ZONA] X:374->1546 | Viaje Corto (Dist: 0)
+11:35:11.483 INFO - Subproceso de MIRROR terminado.
+11:35:12.566 INFO - Subproceso de MIRROR iniciado.
+11:35:12.566 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:13.079 INFO - Subproceso de MIRROR terminado.
+11:35:13.853 INFO - Subproceso de MIRROR iniciado.
+11:35:13.853 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:14.488 DEBUG - [SALTO LIBRE POR ZONA] X:1690->230 | Viaje Corto (Dist: 0)
+11:35:15.035 INFO - Subproceso de MIRROR terminado.
+11:35:16.008 INFO - Subproceso de MIRROR iniciado.
+11:35:16.008 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:18.448 INFO - Subproceso de MIRROR terminado.
+11:35:19.923 INFO - Subproceso de MIRROR iniciado.
+11:35:19.923 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:20.737 INFO - Subproceso de MIRROR terminado.
+11:35:22.262 INFO - Subproceso de MIRROR iniciado.
+11:35:22.263 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:22.872 DEBUG - [SALTO LIBRE POR ZONA] X:389->1531 | Viaje Corto (Dist: 0)
+11:35:23.287 INFO - Subproceso de MIRROR terminado.
+11:35:24.006 INFO - Subproceso de MIRROR iniciado.
+11:35:24.006 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:24.871 DEBUG - [SALTO LIBRE POR ZONA] Y:1006->194 | Viaje Corto (Dist: 0)
+11:35:25.508 INFO - Subproceso de MIRROR terminado.
+11:35:26.233 INFO - Subproceso de MIRROR iniciado.
+11:35:26.233 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:27.182 DEBUG - [SALTO LIBRE POR ZONA] Y:160->1040 | Viaje Corto (Dist: 0)
+11:35:27.670 INFO - Subproceso de MIRROR terminado.
+11:35:28.613 INFO - Subproceso de MIRROR iniciado.
+11:35:28.613 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:29.455 DEBUG - [SALTO LIBRE POR ZONA] Y:1040->160 | Viaje Corto (Dist: 0)
+11:35:29.894 DEBUG - [SALTO LIBRE POR ZONA] Y:160->1040 | Viaje Corto (Dist: 0)
+11:35:29.896 INFO - Subproceso de MIRROR terminado.
+11:35:31.542 INFO - Subproceso de MIRROR iniciado.
+11:35:31.543 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:33.153 INFO - Subproceso de MIRROR terminado.
+11:35:33.727 INFO - Subproceso de MIRROR iniciado.
+11:35:33.729 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:34.261 DEBUG - [SALTO LIBRE POR ZONA] Y:1040->160 | Viaje Corto (Dist: 0)
+11:35:34.764 INFO - Subproceso de MIRROR terminado.
+11:35:35.545 INFO - Subproceso de MIRROR iniciado.
+11:35:35.547 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:36.379 DEBUG - [SALTO LIBRE POR ZONA] Y:160->1040 | Viaje Corto (Dist: 0)
+11:35:37.396 INFO - Subproceso de MIRROR terminado.
+11:35:38.232 INFO - Subproceso de MIRROR iniciado.
+11:35:38.232 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:38.658 DEBUG - [SALTO LIBRE POR ZONA] Y:1040->160 | Viaje Corto (Dist: 0)
+11:35:39.212 INFO - Subproceso de MIRROR terminado.
+11:35:41.756 INFO - Subproceso de MIRROR iniciado.
+11:35:41.761 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:43.860 INFO - Subproceso de MIRROR terminado.
+11:35:44.878 INFO - Subproceso de MIRROR iniciado.
+11:35:44.878 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:45.605 DEBUG - [SALTO LIBRE POR ZONA] X:336->1584 | Viaje Corto (Dist: 0)
+11:35:46.075 INFO - Subproceso de MIRROR terminado.
+11:35:47.744 INFO - Subproceso de MIRROR iniciado.
+11:35:47.745 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:50.999 DEBUG - [SALTO LIBRE POR ZONA] X:1598->322 | Viaje Corto (Dist: 0)
+11:35:51.659 INFO - Subproceso de MIRROR terminado.
+11:35:52.539 INFO - Subproceso de MIRROR iniciado.
+11:35:52.539 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:53.302 DEBUG - [SALTO LIBRE POR ZONA] X:322->1598 | Viaje Corto (Dist: 0)
+11:35:53.639 INFO - Subproceso de MIRROR terminado.
+11:35:54.303 INFO - Subproceso de MIRROR iniciado.
+11:35:54.306 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:55.295 DEBUG - [SALTO LIBRE POR ZONA] Y:184->1016 | Viaje Corto (Dist: 0)
+11:35:56.202 INFO - Subproceso de MIRROR terminado.
+11:35:56.693 INFO - Subproceso de MIRROR iniciado.
+11:35:56.694 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:35:57.338 DEBUG - [SALTO LIBRE POR ZONA] Y:1054->146 | Viaje Corto (Dist: 0)
+11:35:57.740 INFO - Subproceso de MIRROR terminado.
+11:35:57.746 DEBUG - [SALTO LIBRE POR ZONA] X:1549->371 | Viaje Corto (Dist: 0)
+11:36:00.033 INFO - Subproceso de MIRROR iniciado.
+11:36:00.036 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:00.765 DEBUG - [SALTO LIBRE POR ZONA] X:432->1488 | Viaje Corto (Dist: 0)
+11:36:01.058 INFO - Subproceso de MIRROR terminado.
+11:36:02.173 INFO - Subproceso de MIRROR iniciado.
+11:36:02.175 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:02.885 DEBUG - [SALTO LIBRE POR ZONA] Y:147->1053 | Viaje Corto (Dist: 0)
+11:36:03.291 INFO - Subproceso de MIRROR terminado.
+11:36:04.240 INFO - Subproceso de MIRROR iniciado.
+11:36:04.240 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:04.951 DEBUG - [SALTO LIBRE POR ZONA] Y:1053->147 | Viaje Corto (Dist: 0)
+11:36:05.306 INFO - Subproceso de MIRROR terminado.
+11:36:07.316 INFO - Subproceso de MIRROR iniciado.
+11:36:07.316 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:08.105 DEBUG - [SALTO LIBRE POR ZONA] Y:185->1015 | Viaje Corto (Dist: 0)
+11:36:08.698 INFO - Subproceso de MIRROR terminado.
+11:36:09.798 INFO - Subproceso de MIRROR iniciado.
+11:36:09.799 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:10.067 INFO - Subproceso de MIRROR terminado.
+11:36:10.623 INFO - Subproceso de MIRROR iniciado.
+11:36:10.624 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:11.244 DEBUG - [SALTO LIBRE POR ZONA] Y:1055->145 | Viaje Corto (Dist: 0)
+11:36:11.345 INFO - Subproceso de MIRROR terminado.
+11:36:14.870 INFO - Subproceso de MIRROR iniciado.
+11:36:14.870 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:15.691 DEBUG - [SALTO LIBRE POR ZONA] X:468->1452 | Viaje Corto (Dist: 0)
+11:36:16.204 INFO - Subproceso de MIRROR terminado.
+11:36:16.787 INFO - Subproceso de MIRROR iniciado.
+11:36:16.787 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:17.596 DEBUG - [SALTO LIBRE POR ZONA] Y:919->281 | Viaje Corto (Dist: 0)
+11:36:17.964 DEBUG - [SALTO LIBRE POR ZONA] Y:281->919 | Viaje Corto (Dist: 0)
+11:36:17.965 INFO - Subproceso de MIRROR terminado.
+11:36:19.407 INFO - Subproceso de MIRROR iniciado.
+11:36:19.407 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:20.397 DEBUG - [SALTO LIBRE POR ZONA] X:1662->258 | Viaje Corto (Dist: 0)
+11:36:20.821 DEBUG - [SALTO LIBRE POR ZONA] Y:985->215 | Viaje Corto (Dist: 0)
+11:36:20.831 INFO - Subproceso de MIRROR terminado.
+11:36:23.497 INFO - Subproceso de MIRROR iniciado.
+11:36:23.501 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:24.887 DEBUG - [SALTO LIBRE POR ZONA] X:385->1535 | Viaje Corto (Dist: 0)
+11:36:26.423 DEBUG - [SALTO LIBRE POR ZONA] Y:906->294 | Viaje Corto (Dist: 0)
+11:36:26.898 INFO - Subproceso de MIRROR terminado.
+11:36:29.139 INFO - Subproceso de MIRROR iniciado.
+11:36:29.143 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:35.929 INFO - Subproceso de MIRROR terminado.
+11:36:37.089 INFO - Subproceso de MIRROR iniciado.
+11:36:37.091 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:36:41.408 INFO - Subproceso de MIRROR terminado.
+11:37:04.053 INFO - Subproceso de MIRROR iniciado.
+11:37:04.053 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:04.804 INFO - Subproceso de MIRROR terminado.
+11:37:05.831 INFO - Subproceso de MIRROR iniciado.
+11:37:05.831 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:06.533 INFO - Subproceso de MIRROR terminado.
+11:37:08.074 INFO - Subproceso de MIRROR iniciado.
+11:37:08.074 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:09.964 DEBUG - [SALTO LIBRE POR ZONA] Y:951->249 | Viaje Corto (Dist: 0)
+11:37:10.474 INFO - Subproceso de MIRROR terminado.
+11:37:11.056 INFO - Subproceso de MIRROR iniciado.
+11:37:11.056 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:13.563 INFO - Subproceso de MIRROR terminado.
+11:37:14.965 INFO - Subproceso de MIRROR iniciado.
+11:37:14.965 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:17.151 INFO - Subproceso de MIRROR terminado.
+11:37:17.839 INFO - Subproceso de MIRROR iniciado.
+11:37:17.839 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:19.250 INFO - Subproceso de MIRROR terminado.
+11:37:19.783 INFO - Subproceso de MIRROR iniciado.
+11:37:19.783 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:20.599 INFO - Subproceso de MIRROR terminado.
+11:37:21.249 INFO - Subproceso de MIRROR iniciado.
+11:37:21.250 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:22.076 INFO - Subproceso de MIRROR terminado.
+11:37:22.456 INFO - Subproceso de MIRROR iniciado.
+11:37:22.456 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:23.363 DEBUG - [SALTO LIBRE POR ZONA] Y:951->249 | Viaje Corto (Dist: 0)
+11:37:23.803 INFO - Subproceso de MIRROR terminado.
+11:37:24.432 INFO - Subproceso de MIRROR iniciado.
+11:37:24.434 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:25.484 DEBUG - [SALTO LIBRE POR ZONA] Y:215->985 | Viaje Corto (Dist: 0)
+11:37:25.946 INFO - Subproceso de MIRROR terminado.
+11:37:26.566 INFO - Subproceso de MIRROR iniciado.
+11:37:26.566 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:27.608 DEBUG - [SALTO LIBRE POR ZONA] Y:1015->185 | Viaje Corto (Dist: 0)
+11:37:27.608 INFO - Subproceso de MIRROR terminado.
+11:37:28.197 INFO - Subproceso de MIRROR iniciado.
+11:37:28.201 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:31.777 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:34.692 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:35.773 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:36.307 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:36.540 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:36.833 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:37.168 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:39.168 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:39.687 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:39.877 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:40.121 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:40.536 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:40.847 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:43.071 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:43.423 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:43.658 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:43.809 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:43.953 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:44.354 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:44.750 DEBUG - [SALTO LIBRE POR ZONA] Y:1049->151 | Viaje Corto (Dist: 0)
+11:37:45.082 INFO - Subproceso de MIRROR terminado.
+11:37:45.897 INFO - Subproceso de MIRROR iniciado.
+11:37:45.897 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:46.796 INFO - Subproceso de MIRROR terminado.
+11:37:47.322 INFO - Subproceso de MIRROR iniciado.
+11:37:47.322 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:47.686 DEBUG - [SALTO LIBRE POR ZONA] Y:151->1049 | Viaje Corto (Dist: 0)
+11:37:48.198 INFO - Subproceso de MIRROR terminado.
+11:37:49.123 INFO - Subproceso de MIRROR iniciado.
+11:37:49.123 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:50.055 INFO - Subproceso de MIRROR terminado.
+11:37:51.579 INFO - Subproceso de MIRROR iniciado.
+11:37:51.579 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:52.588 INFO - Subproceso de MIRROR terminado.
+11:37:53.785 INFO - Subproceso de MIRROR iniciado.
+11:37:53.785 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:55.196 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:37:55.816 INFO - Subproceso de MIRROR terminado.
+11:37:56.777 INFO - Subproceso de MIRROR iniciado.
+11:37:56.777 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:37:59.475 INFO - Subproceso de MIRROR terminado.
+11:38:00.223 INFO - Subproceso de MIRROR iniciado.
+11:38:00.223 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:01.004 DEBUG - [SALTO LIBRE POR ZONA] X:407->1513 | Viaje Corto (Dist: 0)
+11:38:01.347 INFO - Subproceso de MIRROR terminado.
+11:38:05.211 INFO - Subproceso de MIRROR iniciado.
+11:38:05.211 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:07.497 INFO - Subproceso de MIRROR terminado.
+11:38:08.520 INFO - Subproceso de MIRROR iniciado.
+11:38:08.520 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:09.381 INFO - Subproceso de MIRROR terminado.
+11:38:10.220 INFO - Subproceso de MIRROR iniciado.
+11:38:10.220 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:10.704 INFO - Subproceso de MIRROR terminado.
+11:38:17.314 INFO - Subproceso de MIRROR iniciado.
+11:38:17.314 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:24.009 INFO - Subproceso de MIRROR terminado.
+11:38:26.154 INFO - Subproceso de MIRROR iniciado.
+11:38:26.160 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:28.823 INFO - Subproceso de MIRROR terminado.
+11:38:29.501 INFO - Subproceso de MIRROR iniciado.
+11:38:29.504 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:31.262 INFO - Subproceso de MIRROR terminado.
+11:38:32.153 INFO - Subproceso de MIRROR iniciado.
+11:38:32.153 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:40.256 INFO - Subproceso de MIRROR terminado.
+11:38:41.556 INFO - Subproceso de MIRROR iniciado.
+11:38:41.556 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:42.770 DEBUG - [SALTO LIBRE POR ZONA] X:450->1470 | Viaje Corto (Dist: 0)
+11:38:44.311 INFO - Subproceso de MIRROR terminado.
+11:38:45.460 INFO - Subproceso de MIRROR iniciado.
+11:38:45.462 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:46.531 DEBUG - [SALTO LIBRE POR ZONA] X:1470->450 | Viaje Corto (Dist: 0)
+11:38:48.511 INFO - Subproceso de MIRROR terminado.
+11:38:49.895 INFO - Subproceso de MIRROR iniciado.
+11:38:49.895 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:38:50.862 DEBUG - [SALTO LIBRE POR ZONA] X:415->1505 | Viaje Corto (Dist: 0)
+11:38:56.381 INFO - Subproceso de MIRROR terminado.
+11:38:59.351 INFO - Subproceso de MIRROR iniciado.
+11:38:59.354 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:01.408 INFO - Subproceso de MIRROR terminado.
+11:39:02.468 INFO - Subproceso de MIRROR iniciado.
+11:39:02.468 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:04.606 DEBUG - [SALTO LIBRE POR ZONA] Y:903->297 | Viaje Corto (Dist: 0)
+11:39:05.422 INFO - Subproceso de MIRROR terminado.
+11:39:06.487 INFO - Subproceso de MIRROR iniciado.
+11:39:06.487 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:09.600 INFO - Subproceso de MIRROR terminado.
+11:39:10.289 INFO - Subproceso de MIRROR iniciado.
+11:39:10.289 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:11.042 DEBUG - [SALTO LIBRE POR ZONA] X:478->1442 | Viaje Corto (Dist: 0)
+11:39:11.537 DEBUG - [SALTO LIBRE POR ZONA] Y:907->293 | Viaje Corto (Dist: 0)
+11:39:12.261 INFO - Subproceso de MIRROR terminado.
+11:39:13.073 INFO - Subproceso de MIRROR iniciado.
+11:39:13.074 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:13.650 DEBUG - [SALTO LIBRE POR ZONA] X:1498->422 | Viaje Corto (Dist: 0)
+11:39:16.127 INFO - Subproceso de MIRROR terminado.
+11:39:17.637 INFO - Subproceso de MIRROR iniciado.
+11:39:17.637 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:18.430 DEBUG - [SALTO LIBRE POR ZONA] X:410->1510 | Viaje Corto (Dist: 0)
+11:39:18.962 DEBUG - [SALTO LIBRE POR ZONA] Y:908->292 | Viaje Corto (Dist: 0)
+11:39:20.579 INFO - Subproceso de MIRROR terminado.
+11:39:21.993 INFO - Subproceso de MIRROR iniciado.
+11:39:21.995 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:22.676 DEBUG - [SALTO LIBRE POR ZONA] X:1510->410 | Viaje Corto (Dist: 0)
+11:39:23.872 DEBUG - [SALTO LIBRE POR ZONA] Y:1026->174 | Viaje Corto (Dist: 0)
+11:39:24.517 INFO - Subproceso de MIRROR terminado.
+11:39:25.698 INFO - Subproceso de MIRROR iniciado.
+11:39:25.698 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:26.226 DEBUG - [SALTO LIBRE POR ZONA] X:410->1510 | Viaje Corto (Dist: 0)
+11:39:26.621 DEBUG - [SALTO LIBRE POR ZONA] Y:938->262 | Viaje Corto (Dist: 0)
+11:39:27.244 INFO - Subproceso de MIRROR terminado.
+11:39:28.815 INFO - Subproceso de MIRROR iniciado.
+11:39:28.815 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:39:29.739 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:31.148 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:31.346 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:31.632 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:32.058 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:32.926 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:33.115 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:33.283 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:33.441 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:33.578 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:33.725 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:33.884 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:34.029 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:34.175 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:34.310 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:34.810 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:35.126 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:35.567 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:36.061 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:36.281 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:36.791 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:36.931 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:37.056 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:37.471 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:38.207 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:38.375 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:39.973 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:40.108 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:41.265 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:41.412 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:41.567 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:41.703 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:41.840 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:41.965 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:42.101 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:42.486 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:42.943 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:43.182 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:43.985 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:44.168 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:44.274 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:44.410 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:44.559 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:44.697 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:45.072 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:45.340 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:45.862 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:46.008 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:46.144 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:46.291 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:46.877 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:46.993 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:47.880 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:47.993 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:48.614 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:48.718 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:49.301 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:49.407 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:50.101 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:50.186 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:50.753 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:50.836 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:51.448 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:51.552 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:52.118 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:52.193 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:52.779 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:52.852 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:53.378 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:53.446 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:53.908 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:54.002 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:54.530 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:54.614 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:55.052 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:55.115 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:55.523 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:55.598 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:56.090 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:56.174 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:56.956 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:57.040 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:57.828 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:57.891 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:58.545 DEBUG - [SALTO LIBRE POR ZONA] X:462->1458 | Viaje Corto (Dist: 0)
+11:39:58.639 DEBUG - [SALTO LIBRE POR ZONA] Y:998->202 | Viaje Corto (Dist: 0)
+11:39:59.091 DEBUG - [SALTO LIBRE POR ZONA] X:1458->462 | Viaje Corto (Dist: 0)
+11:39:59.185 DEBUG - [SALTO LIBRE POR ZONA] Y:202->998 | Viaje Corto (Dist: 0)
+11:39:59.663 INFO - Subproceso de MIRROR terminado.
+11:40:00.375 INFO - Subproceso de MIRROR iniciado.
+11:40:00.377 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:01.166 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:01.280 DEBUG - [SALTO LIBRE POR ZONA] Y:963->237 | Viaje Corto (Dist: 0)
+11:40:02.062 INFO - Subproceso de MIRROR terminado.
+11:40:02.574 INFO - Subproceso de MIRROR iniciado.
+11:40:02.576 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:04.183 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:40:04.288 DEBUG - [SALTO LIBRE POR ZONA] X:1485->435 | Viaje Corto (Dist: 0)
+11:40:05.018 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:05.123 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:40:07.205 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:40:07.360 DEBUG - [SALTO LIBRE POR ZONA] X:1485->435 | Viaje Corto (Dist: 0)
+11:40:08.323 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:08.396 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:40:11.379 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:40:11.515 DEBUG - [SALTO LIBRE POR ZONA] X:1485->435 | Viaje Corto (Dist: 0)
+11:40:12.513 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:12.597 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:40:13.424 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:40:13.498 DEBUG - [SALTO LIBRE POR ZONA] X:1485->435 | Viaje Corto (Dist: 0)
+11:40:14.604 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:14.703 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:40:15.263 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:40:15.326 DEBUG - [SALTO LIBRE POR ZONA] X:1485->435 | Viaje Corto (Dist: 0)
+11:40:15.865 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:15.961 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:40:16.641 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:40:16.735 DEBUG - [SALTO LIBRE POR ZONA] X:1485->435 | Viaje Corto (Dist: 0)
+11:40:17.389 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:17.473 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:40:18.765 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:40:18.836 DEBUG - [SALTO LIBRE POR ZONA] X:1485->435 | Viaje Corto (Dist: 0)
+11:40:19.886 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:19.969 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:40:20.706 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:40:20.769 DEBUG - [SALTO LIBRE POR ZONA] X:1485->435 | Viaje Corto (Dist: 0)
+11:40:21.327 INFO - Subproceso de MIRROR terminado.
+11:40:21.963 INFO - Subproceso de MIRROR iniciado.
+11:40:21.963 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:23.622 DEBUG - [SALTO LIBRE POR ZONA] X:435->1485 | Viaje Corto (Dist: 0)
+11:40:25.466 INFO - Subproceso de MIRROR terminado.
+11:40:27.035 INFO - Subproceso de MIRROR iniciado.
+11:40:27.035 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:28.907 INFO - Subproceso de MIRROR terminado.
+11:40:29.560 INFO - Subproceso de MIRROR iniciado.
+11:40:29.560 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:31.301 INFO - Subproceso de MIRROR terminado.
+11:40:31.860 INFO - Subproceso de MIRROR iniciado.
+11:40:31.862 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:35.768 INFO - Subproceso de MIRROR terminado.
+11:40:37.300 INFO - Subproceso de MIRROR iniciado.
+11:40:37.300 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:39.644 INFO - Subproceso de MIRROR terminado.
+11:40:40.283 INFO - Subproceso de MIRROR iniciado.
+11:40:40.283 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:42.126 INFO - Subproceso de MIRROR terminado.
+11:40:43.624 INFO - Subproceso de MIRROR iniciado.
+11:40:43.624 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:45.213 INFO - Subproceso de MIRROR terminado.
+11:40:45.908 INFO - Subproceso de MIRROR iniciado.
+11:40:45.908 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:46.840 DEBUG - [SALTO LIBRE POR ZONA] X:460->1460 | Viaje Corto (Dist: 0)
+11:40:49.201 INFO - Subproceso de MIRROR terminado.
+11:40:52.362 INFO - Subproceso de MIRROR iniciado.
+11:40:52.366 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:40:56.335 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:40:59.131 INFO - Subproceso de MIRROR terminado.
+11:40:59.742 INFO - Subproceso de MIRROR iniciado.
+11:40:59.742 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:41:00.454 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:01.567 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:02.884 INFO - Subproceso de MIRROR terminado.
+11:41:03.351 INFO - Subproceso de MIRROR iniciado.
+11:41:03.351 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:41:03.785 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:04.629 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:05.645 INFO - Subproceso de MIRROR terminado.
+11:41:06.152 INFO - Subproceso de MIRROR iniciado.
+11:41:06.156 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:41:07.645 INFO - Subproceso de MIRROR terminado.
+11:41:08.202 INFO - Subproceso de MIRROR iniciado.
+11:41:08.202 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:41:08.930 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:09.566 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:09.915 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:10.232 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:10.736 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:11.333 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:13.300 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:14.012 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:14.191 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:14.351 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:14.739 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:15.169 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:15.690 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:16.659 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:17.526 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:17.728 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:18.018 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:18.237 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:18.748 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:19.467 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:20.131 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:21.129 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:21.606 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:21.870 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:22.414 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:22.996 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:23.619 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:23.798 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:23.976 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:24.153 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:24.484 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:24.985 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:25.270 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:25.689 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:25.972 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:26.278 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:26.633 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:27.000 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:27.264 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:27.557 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:27.725 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:27.863 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:28.021 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:28.157 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:28.598 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:28.934 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:29.122 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:29.383 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:29.582 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:29.748 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:29.893 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:30.040 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:30.366 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:30.775 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:31.005 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:31.318 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:31.508 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:31.654 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:31.833 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:31.978 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:32.694 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:33.050 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:33.357 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:33.574 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:33.813 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:34.475 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:34.655 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:35.593 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:35.876 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:36.681 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:36.916 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:37.474 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:37.816 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:38.181 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:38.899 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:39.781 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:40.488 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:40.945 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:41.219 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:42.561 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:42.914 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:43.889 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:44.077 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:45.368 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:45.693 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:46.843 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:46.981 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:48.106 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:48.160 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:48.854 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:48.980 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:49.874 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:49.958 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:50.493 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:50.576 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:51.374 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:51.458 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:52.001 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:52.074 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:52.793 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:52.877 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:53.408 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:53.503 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:54.201 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:54.296 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:54.831 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:54.916 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:55.680 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:55.797 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:56.224 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:56.328 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:57.027 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:57.142 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:57.601 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:57.696 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:58.388 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:58.491 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:41:58.949 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:41:59.057 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:41:59.745 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:41:59.839 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:00.328 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:00.412 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:01.139 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:01.781 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:02.335 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:02.462 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:03.273 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:03.358 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:04.264 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:04.337 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:04.973 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:05.026 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:05.729 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:05.855 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:06.452 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:06.525 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:06.965 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:07.038 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:08.094 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:08.190 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:09.007 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:09.217 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:10.078 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:10.224 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:10.835 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:10.952 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:11.844 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:12.025 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:12.424 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:12.527 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:13.283 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:13.399 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:13.860 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:13.986 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:14.626 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:14.816 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:15.500 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:15.656 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:16.286 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:16.420 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:17.057 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:17.173 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:18.285 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:18.424 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:19.838 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:19.953 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:20.668 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:20.764 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:21.698 DEBUG - [SALTO LIBRE POR ZONA] X:436->1484 | Viaje Corto (Dist: 0)
+11:42:21.794 DEBUG - [SALTO LIBRE POR ZONA] Y:905->295 | Viaje Corto (Dist: 0)
+11:42:22.473 DEBUG - [SALTO LIBRE POR ZONA] Y:295->905 | Viaje Corto (Dist: 0)
+11:42:22.566 DEBUG - [SALTO LIBRE POR ZONA] X:1484->436 | Viaje Corto (Dist: 0)
+11:42:28.789 INFO - Subproceso de MIRROR terminado.
+11:43:15.563 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:43:19.323 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:43:42.716 INFO - Subproceso de MIRROR iniciado.
+11:43:42.717 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:43:43.974 INFO - Subproceso de MIRROR terminado.
+11:43:45.775 INFO - Subproceso de MIRROR iniciado.
+11:43:45.775 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:43:47.569 DEBUG - [SALTO LIBRE POR ZONA] X:209->1711 | Viaje Corto (Dist: 0)
+11:43:50.680 INFO - Subproceso de MIRROR terminado.
+11:43:51.227 INFO - Subproceso de MIRROR iniciado.
+11:43:51.227 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:43:51.909 INFO - Subproceso de MIRROR terminado.
+11:43:53.296 INFO - Subproceso de MIRROR iniciado.
+11:43:53.296 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:43:55.127 INFO - Subproceso de MIRROR terminado.
+11:43:55.899 INFO - Subproceso de MIRROR iniciado.
+11:43:55.903 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:43:56.883 INFO - Subproceso de MIRROR terminado.
+11:43:57.985 INFO - Subproceso de MIRROR iniciado.
+11:43:57.986 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:43:59.067 INFO - Subproceso de MIRROR terminado.
+11:44:00.742 INFO - Subproceso de MIRROR iniciado.
+11:44:00.744 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:04.690 INFO - Subproceso de MIRROR terminado.
+11:44:06.637 INFO - Subproceso de MIRROR iniciado.
+11:44:06.637 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:07.537 INFO - Subproceso de MIRROR terminado.
+11:44:08.333 INFO - Subproceso de MIRROR iniciado.
+11:44:08.336 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:09.022 INFO - Subproceso de MIRROR terminado.
+11:44:09.555 INFO - Subproceso de MIRROR iniciado.
+11:44:09.555 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:10.730 INFO - Subproceso de MIRROR terminado.
+11:44:11.507 INFO - Subproceso de MIRROR iniciado.
+11:44:11.509 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:13.570 INFO - Subproceso de MIRROR terminado.
+11:44:14.903 INFO - Subproceso de MIRROR iniciado.
+11:44:14.909 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:15.420 DEBUG - [SALTO LIBRE POR ZONA] X:347->1573 | Viaje Corto (Dist: 0)
+11:44:16.062 INFO - Subproceso de MIRROR terminado.
+11:44:16.545 INFO - Subproceso de MIRROR iniciado.
+11:44:16.548 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:17.339 DEBUG - [SALTO LIBRE POR ZONA] X:1573->347 | Viaje Corto (Dist: 0)
+11:44:17.746 INFO - Subproceso de MIRROR terminado.
+11:44:18.200 INFO - Subproceso de MIRROR iniciado.
+11:44:18.200 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:19.980 INFO - Subproceso de MIRROR terminado.
+11:44:22.351 INFO - Subproceso de MIRROR iniciado.
+11:44:22.352 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:23.130 DEBUG - [SALTO LIBRE POR ZONA] Y:248->952 | Viaje Corto (Dist: 0)
+11:44:23.835 INFO - Subproceso de MIRROR terminado.
+11:44:25.201 INFO - Subproceso de MIRROR iniciado.
+11:44:25.201 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:26.061 DEBUG - [SALTO LIBRE POR ZONA] Y:987->213 | Viaje Corto (Dist: 0)
+11:44:26.742 INFO - Subproceso de MIRROR terminado.
+11:44:29.073 INFO - Subproceso de MIRROR iniciado.
+11:44:29.073 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:29.805 DEBUG - [SALTO LIBRE POR ZONA] Y:117->1083 | Viaje Corto (Dist: 0)
+11:44:30.534 INFO - Subproceso de MIRROR terminado.
+11:44:31.824 INFO - Subproceso de MIRROR iniciado.
+11:44:31.826 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:32.408 DEBUG - [SALTO LIBRE POR ZONA] Y:1066->134 | Viaje Corto (Dist: 0)
+11:44:32.898 INFO - Subproceso de MIRROR terminado.
+11:44:33.538 INFO - Subproceso de MIRROR iniciado.
+11:44:33.538 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:33.859 INFO - Subproceso de MIRROR terminado.
+11:44:35.017 INFO - Subproceso de MIRROR iniciado.
+11:44:35.020 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:36.421 INFO - Subproceso de MIRROR terminado.
+11:44:37.261 INFO - Subproceso de MIRROR iniciado.
+11:44:37.268 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:37.967 DEBUG - [SALTO LIBRE POR ZONA] X:1703->217 | Viaje Corto (Dist: 0)
+11:44:39.028 DEBUG - [SALTO LIBRE POR ZONA] X:217->1703 | Viaje Corto (Dist: 0)
+11:44:39.456 INFO - Subproceso de MIRROR terminado.
+11:44:40.236 INFO - Subproceso de MIRROR iniciado.
+11:44:40.236 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:40.914 DEBUG - [SALTO LIBRE POR ZONA] Y:242->958 | Viaje Corto (Dist: 0)
+11:44:41.198 INFO - Subproceso de MIRROR terminado.
+11:44:42.387 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:44:42.604 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:44:42.793 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:44:43.341 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:44:43.415 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:44:46.542 INFO - Subproceso de MIRROR iniciado.
+11:44:46.543 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:47.993 INFO - Subproceso de MIRROR terminado.
+11:44:48.504 INFO - Subproceso de MIRROR iniciado.
+11:44:48.507 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:49.033 DEBUG - [SALTO LIBRE POR ZONA] X:1742->178 | Viaje Corto (Dist: 0)
+11:44:49.564 INFO - Subproceso de MIRROR terminado.
+11:44:50.144 INFO - Subproceso de MIRROR iniciado.
+11:44:50.146 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:50.907 DEBUG - [SALTO LIBRE POR ZONA] X:178->1742 | Viaje Corto (Dist: 0)
+11:44:51.303 INFO - Subproceso de MIRROR terminado.
+11:44:52.396 INFO - Subproceso de MIRROR iniciado.
+11:44:52.396 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:54.635 INFO - Subproceso de MIRROR terminado.
+11:44:55.541 INFO - Subproceso de MIRROR iniciado.
+11:44:55.546 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:55.599 INFO - Subproceso de MIRROR terminado.
+11:44:56.396 INFO - Subproceso de MIRROR iniciado.
+11:44:56.396 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:44:57.844 DEBUG - [SALTO LIBRE POR ZONA] X:1625->295 | Viaje Corto (Dist: 0)
+11:44:59.138 DEBUG - [SALTO LIBRE POR ZONA] X:295->1625 | Viaje Corto (Dist: 0)
+11:44:59.662 DEBUG - [SALTO LIBRE POR ZONA] Y:223->977 | Viaje Corto (Dist: 0)
+11:45:00.197 INFO - Subproceso de MIRROR terminado.
+11:45:25.804 INFO - Subproceso de MIRROR iniciado.
+11:45:25.806 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:45:26.573 INFO - Subproceso de MIRROR terminado.
+11:45:27.621 INFO - Subproceso de MIRROR iniciado.
+11:45:27.621 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:45:28.265 INFO - Subproceso de MIRROR terminado.
+11:45:28.902 INFO - Subproceso de MIRROR iniciado.
+11:45:28.902 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:45:29.392 INFO - Subproceso de MIRROR terminado.
+11:45:30.134 INFO - Subproceso de MIRROR iniciado.
+11:45:30.134 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:45:30.698 INFO - Subproceso de MIRROR terminado.
+11:45:31.100 INFO - Subproceso de MIRROR iniciado.
+11:45:31.100 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:45:31.624 INFO - Subproceso de MIRROR terminado.
+11:45:32.514 INFO - Subproceso de MIRROR iniciado.
+11:45:32.514 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:45:33.270 INFO - Subproceso de MIRROR terminado.
+11:46:52.482 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:46:53.337 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:46:54.174 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:46:54.747 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:47:31.582 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:39.533 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:40.119 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+11:47:40.220 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:42.844 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:43.789 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:51.856 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:55.365 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:56.481 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:47:57.155 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+11:47:57.728 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:48:05.336 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:48:07.288 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:48:12.420 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:50:22.823 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:52:36.175 INFO - ==========================================
+11:52:36.175 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+11:52:36.175 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+11:52:36.175 INFO - ==========================================
+11:52:36.287 INFO - [HID] Calibración enviada con éxito al Corne.
+11:52:37.845 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'ALFA'
+11:52:37.848 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:52:38.243 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+11:52:38.577 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+11:52:38.577 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:52:38.702 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+11:52:40.384 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:40.396 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:40.396 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:40.480 INFO - [MIRROR_APP] ==========================================
+11:52:40.480 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:40.486 INFO - [MIRROR_APP] ==========================================
+11:52:40.589 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:41.637 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:41.637 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:42.583 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:42.588 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:42.863 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:42.863 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:43.179 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:52:43.181 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:52:43.991 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:43.997 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:44.001 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:44.100 INFO - [MIRROR_APP] ==========================================
+11:52:44.100 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:44.100 INFO - [MIRROR_APP] ==========================================
+11:52:44.205 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:44.236 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:44.236 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:44.863 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:52:44.864 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:52:45.468 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:45.474 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:45.474 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:45.563 INFO - [MIRROR_APP] ==========================================
+11:52:45.563 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:45.563 INFO - [MIRROR_APP] ==========================================
+11:52:45.656 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:46.144 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:46.144 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:46.921 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:52:46.921 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:52:47.976 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:47.978 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:47.978 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:48.062 INFO - [MIRROR_APP] ==========================================
+11:52:48.067 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:48.067 INFO - [MIRROR_APP] ==========================================
+11:52:48.155 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:48.237 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:48.237 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:48.669 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:48.670 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:49.112 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:49.112 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:49.266 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:49.269 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:49.395 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:49.395 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:49.819 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:52:49.823 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:52:50.428 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:50.460 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:50.460 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:50.546 INFO - [MIRROR_APP] ==========================================
+11:52:50.547 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:50.547 INFO - [MIRROR_APP] ==========================================
+11:52:50.676 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:51.520 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:52:51.520 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:52:52.268 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:52.269 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:52.269 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:52.353 INFO - [MIRROR_APP] ==========================================
+11:52:52.353 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:52.353 INFO - [MIRROR_APP] ==========================================
+11:52:52.440 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:52.976 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:52:52.977 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:52:53.505 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:53.511 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:53.514 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:53.599 INFO - [MIRROR_APP] ==========================================
+11:52:53.599 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:53.599 INFO - [MIRROR_APP] ==========================================
+11:52:53.691 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:53.731 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:53.732 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:53.741 DEBUG - [SALTO LIBRE POR ZONA] X:452->1468 | Viaje Corto (Dist: 0)
+11:52:54.366 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:54.367 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:54.376 DEBUG - [SALTO LIBRE POR ZONA] X:1468->452 | Viaje Corto (Dist: 0)
+11:52:54.521 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:54.521 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:54.530 DEBUG - [SALTO LIBRE POR ZONA] X:452->1468 | Viaje Corto (Dist: 0)
+11:52:54.642 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:54.642 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:52:54.658 DEBUG - [SALTO LIBRE POR ZONA] X:1468->452 | Viaje Corto (Dist: 0)
+11:52:54.979 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:52:54.979 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:52:55.680 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:55.689 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:55.689 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:55.776 INFO - [MIRROR_APP] ==========================================
+11:52:55.776 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:55.776 INFO - [MIRROR_APP] ==========================================
+11:52:55.869 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:56.378 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:56.378 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:52:56.887 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:56.887 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:52:57.075 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:57.075 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:52:57.330 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:57.330 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:52:58.083 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:58.086 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:52:58.556 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:58.556 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:52:58.767 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:52:58.767 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:52:59.664 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:52:59.667 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:52:59.672 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:52:59.769 INFO - [MIRROR_APP] ==========================================
+11:52:59.769 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:52:59.769 INFO - [MIRROR_APP] ==========================================
+11:52:59.883 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:52:59.992 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:52:59.992 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:52:59.995 DEBUG - [SALTO LIBRE POR ZONA] Y:909->291 | Viaje Corto (Dist: 0)
+11:53:00.655 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:00.655 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:00.657 DEBUG - [SALTO LIBRE POR ZONA] Y:291->909 | Viaje Corto (Dist: 0)
+11:53:01.132 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:01.132 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:01.142 DEBUG - [SALTO LIBRE POR ZONA] Y:909->291 | Viaje Corto (Dist: 0)
+11:53:01.418 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:53:01.418 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:53:02.979 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:53:02.982 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:53:02.982 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:53:03.066 INFO - [MIRROR_APP] ==========================================
+11:53:03.066 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:53:03.066 INFO - [MIRROR_APP] ==========================================
+11:53:03.157 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:53:03.547 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:03.549 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:03.555 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:53:04.408 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:04.408 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:04.416 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:53:04.617 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:04.618 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:04.625 DEBUG - [SALTO LIBRE POR ZONA] Y:933->267 | Viaje Corto (Dist: 0)
+11:53:05.055 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:05.055 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:05.065 DEBUG - [SALTO LIBRE POR ZONA] Y:267->933 | Viaje Corto (Dist: 0)
+11:53:05.418 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:53:05.418 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:53:06.035 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:53:06.041 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:53:06.041 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:53:06.129 INFO - [MIRROR_APP] ==========================================
+11:53:06.129 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:53:06.129 INFO - [MIRROR_APP] ==========================================
+11:53:06.220 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:53:06.385 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:06.387 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:06.394 DEBUG - [SALTO LIBRE POR ZONA] Y:959->241 | Viaje Corto (Dist: 0)
+11:53:06.689 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:06.690 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:06.691 DEBUG - [SALTO LIBRE POR ZONA] Y:241->959 | Viaje Corto (Dist: 0)
+11:53:07.015 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:07.015 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:07.017 DEBUG - [SALTO LIBRE POR ZONA] Y:959->241 | Viaje Corto (Dist: 0)
+11:53:07.397 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:07.397 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:07.400 DEBUG - [SALTO LIBRE POR ZONA] Y:241->959 | Viaje Corto (Dist: 0)
+11:53:07.684 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:53:07.690 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:53:08.376 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:53:08.379 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:53:08.379 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:53:08.490 INFO - [MIRROR_APP] ==========================================
+11:53:08.497 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:53:08.498 INFO - [MIRROR_APP] ==========================================
+11:53:08.603 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:53:08.782 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:08.782 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:53:09.321 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:09.323 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:53:09.504 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:09.504 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:53:09.658 INFO - [MIRROR_APP] -----> TECLA F13 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:09.658 INFO - [MIRROR_APP] Ejecutando teletransporte HORIZONTAL
+11:53:10.001 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:10.002 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:10.016 DEBUG - [SALTO LIBRE POR ZONA] Y:947->253 | Viaje Corto (Dist: 0)
+11:53:10.028 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:53:10.068 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:53:10.577 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:53:10.589 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:53:10.589 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:53:10.675 INFO - [MIRROR_APP] ==========================================
+11:53:10.675 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:53:10.675 INFO - [MIRROR_APP] ==========================================
+11:53:10.795 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:53:10.961 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:53:10.964 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:53:13.298 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:53:13.307 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:53:13.310 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:53:13.393 INFO - [MIRROR_APP] ==========================================
+11:53:13.393 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:53:13.394 INFO - [MIRROR_APP] ==========================================
+11:53:13.501 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:53:13.651 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:13.651 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:13.662 DEBUG - [SALTO LIBRE POR ZONA] Y:948->252 | Viaje Corto (Dist: 0)
+11:53:14.474 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:14.474 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:14.479 DEBUG - [SALTO LIBRE POR ZONA] Y:252->948 | Viaje Corto (Dist: 0)
+11:53:14.645 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:14.645 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:14.653 DEBUG - [SALTO LIBRE POR ZONA] Y:948->252 | Viaje Corto (Dist: 0)
+11:53:14.785 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:14.785 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:14.789 DEBUG - [SALTO LIBRE POR ZONA] Y:252->948 | Viaje Corto (Dist: 0)
+11:53:15.174 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:53:15.174 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+11:53:15.741 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+11:53:15.762 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py INICIADO.
+11:53:15.762 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:53:15.860 INFO - [MIRROR_APP] ==========================================
+11:53:15.860 INFO - [MIRROR_APP] Módulo de Modo Espejo (Subproceso) arrancando...
+11:53:15.860 INFO - [MIRROR_APP] ==========================================
+11:53:15.982 INFO - [MIRROR_APP] Script f22_mirror_cursor (Subproceso) iniciado y escuchando F13/F14.
+11:53:16.572 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:16.572 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:16.583 DEBUG - [SALTO LIBRE POR ZONA] Y:948->252 | Viaje Corto (Dist: 0)
+11:53:16.851 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:16.851 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:16.854 DEBUG - [SALTO LIBRE POR ZONA] Y:252->948 | Viaje Corto (Dist: 0)
+11:53:17.013 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:17.013 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:17.024 DEBUG - [SALTO LIBRE POR ZONA] Y:948->252 | Viaje Corto (Dist: 0)
+11:53:17.155 INFO - [MIRROR_APP] -----> TECLA F14 DETECTADA. Modificadores: Ctrl=True, Shift=True
+11:53:17.155 INFO - [MIRROR_APP] Ejecutando teletransporte VERTICAL
+11:53:17.160 DEBUG - [SALTO LIBRE POR ZONA] Y:252->948 | Viaje Corto (Dist: 0)
+11:53:17.882 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+11:53:17.883 INFO - ===> [CAPA MIRROR] Subproceso de f22_mirror_cursor.py TERMINADO (salió de la capa).
+12:09:02.866 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+12:09:02.871 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+12:09:03.353 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+16:27:41.700 INFO - ==========================================
+16:27:41.700 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:27:41.700 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:27:41.700 INFO - ==========================================
+16:27:42.768 INFO - [HID] Calibración enviada con éxito al Corne.
+16:27:43.984 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'LAYER_BASE'
+16:27:44.726 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:27:44.734 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:27:46.266 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:27:47.825 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:27:47.826 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:27:47.834 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:27:48.469 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:27:48.469 INFO - ===> [CAPA MIRROR] Desactivada.
+16:27:49.158 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:27:49.158 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:27:49.172 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:27:49.770 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:27:49.770 INFO - ===> [CAPA MIRROR] Desactivada.
+16:27:52.256 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:27:52.256 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:27:52.262 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:27:52.873 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:27:52.875 INFO - ===> [CAPA MIRROR] Desactivada.
+16:27:54.937 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:27:54.942 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:27:54.944 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:27:54.949 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:27:55.710 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:27:55.714 INFO - ===> [CAPA MIRROR] Desactivada.
+16:27:56.349 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:27:56.354 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:27:56.359 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:27:56.411 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:27:57.007 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:27:57.007 INFO - ===> [CAPA MIRROR] Desactivada.
+16:27:57.996 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:27:57.996 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:27:57.999 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:27:58.000 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:27:58.815 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:27:58.815 INFO - ===> [CAPA MIRROR] Desactivada.
+16:27:59.626 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:27:59.628 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:27:59.630 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:27:59.637 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:00.169 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:00.169 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:01.114 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:01.117 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:01.118 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:01.128 DEBUG - [SALTO LIBRE POR ZONA] X:457->1463 | Viaje Corto (Dist: 0)
+16:28:01.128 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:01.814 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:01.820 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:02.533 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:02.533 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:02.542 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:03.145 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:03.145 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:03.676 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:03.685 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:03.690 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:04.054 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:04.750 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:04.901 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:05.207 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:05.211 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:05.949 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:05.949 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:05.951 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:05.959 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:05.965 DEBUG - [SALTO LIBRE POR ZONA] X:465->1455 | Viaje Corto (Dist: 0)
+16:28:06.673 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:06.674 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:07.848 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:07.853 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:07.855 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:07.864 DEBUG - [SALTO LIBRE POR ZONA] X:1455->465 | Viaje Corto (Dist: 0)
+16:28:07.864 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:08.674 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:08.683 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:11.306 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:11.306 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:11.310 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:11.315 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:11.320 DEBUG - [SALTO LIBRE POR ZONA] X:294->1626 | Viaje Corto (Dist: 0)
+16:28:11.889 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:11.889 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:12.397 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:12.398 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:12.408 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:12.525 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:28:12.531 DEBUG - [SALTO LIBRE POR ZONA] Y:911->289 | Viaje Corto (Dist: 0)
+16:28:12.930 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:12.930 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:13.542 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:13.545 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:28:13.547 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:13.554 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:14.072 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:14.073 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:14.782 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:14.782 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:14.785 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:14.789 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:14.798 DEBUG - [SALTO LIBRE POR ZONA] X:1465->455 | Viaje Corto (Dist: 0)
+16:28:15.354 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:15.354 INFO - ===> [CAPA MIRROR] Desactivada.
+16:28:16.669 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:28:16.669 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:28:16.672 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:28:16.675 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:28:16.679 DEBUG - [SALTO LIBRE POR ZONA] X:393->1527 | Viaje Corto (Dist: 0)
+16:28:17.235 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:28:17.235 INFO - ===> [CAPA MIRROR] Desactivada.
+16:30:09.734 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:30:09.734 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:30:09.743 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:30:11.703 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:30:11.708 INFO - ===> [CAPA MIRROR] Desactivada.
+16:30:12.991 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:30:12.991 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:30:12.998 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:30:15.569 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:30:15.569 INFO - ===> [CAPA MIRROR] Desactivada.
+16:31:20.502 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:31:20.502 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:31:22.172 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:31:22.341 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:31:22.341 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:31:24.156 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:31:28.630 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:31:28.630 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:31:29.163 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:31:29.370 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:31:29.371 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:31:29.977 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:31:29.981 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:31:30.293 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:31:30.295 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:31:31.278 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:31:32.108 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+16:31:32.110 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:31:34.523 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+16:31:35.026 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+16:31:35.026 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:31:35.549 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+16:31:35.887 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+16:31:35.887 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:31:36.781 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+16:31:48.973 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+16:31:48.973 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:32:32.493 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+16:32:32.551 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+16:32:32.586 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:32:33.888 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+16:35:11.316 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:35:11.316 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:35:23.038 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
