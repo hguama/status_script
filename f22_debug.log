@@ -72746,3 +72746,433 @@
 11:28:46.100 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
 11:28:47.912 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
 11:28:49.971 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:18:44.411 INFO - ==========================================
+16:18:44.411 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:18:44.411 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:18:44.427 INFO - ==========================================
+16:18:44.916 INFO - [HID] Calibración enviada con éxito al Corne.
+16:18:44.942 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:18:46.177 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:26.629 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:27.884 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:28.715 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:34.341 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:35.835 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:48.195 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:58.767 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:20:00.360 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:20:12.764 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:20:14.328 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:20:15.483 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:20:17.428 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:20:29.274 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:20:33.956 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:20:42.051 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:20:51.880 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:16.300 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:16.901 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:17.327 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:23:17.509 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:21.144 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:21.465 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:23:21.738 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:23.199 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:23.533 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:23:23.639 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:29.124 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:23:30.410 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:27:46.337 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:28:00.046 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:28:00.726 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:28:01.071 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:28:08.226 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:28:08.989 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:28:12.330 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:28:12.580 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:29:07.210 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:29:12.980 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:31:17.961 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:33:39.795 INFO - ==========================================
+16:33:39.795 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:33:39.795 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:33:39.795 INFO - ==========================================
+16:33:39.907 INFO - [HID] Calibración enviada con éxito al Corne.
+16:33:40.517 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:33:43.960 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:33:45.949 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:34:29.160 DEBUG - [TECLA F24 PRESIONADA] - NUEVO VIAJE FORZADO
+16:34:29.244 DEBUG - [TECLA F24 SOLTADA]
+16:38:46.099 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:38:48.483 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:38:54.942 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:39:06.739 DEBUG - [SALTO LIBRE POR ZONA] X:323->1905 | Viaje Corto (Dist: 0)
+16:39:11.164 DEBUG - [SALTO LIBRE POR ZONA] X:217->1905 | Viaje Corto (Dist: 22)
+16:39:14.508 DEBUG - [SALTO LIBRE POR ZONA] X:426->1905 | Viaje Corto (Dist: 57)
+16:39:21.380 DEBUG - [SALTO LIBRE POR ZONA] X:620->1905 | Viaje Corto (Dist: 0)
+09:41:26.024 INFO - ==========================================
+09:41:26.024 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+09:41:26.024 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+09:41:26.024 INFO - ==========================================
+09:41:26.129 INFO - [HID] Calibración enviada con éxito al Corne.
+09:41:26.654 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:41:27.704 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:41:28.744 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:42:06.646 INFO - ==========================================
+09:42:06.646 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+09:42:06.646 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+09:42:06.646 INFO - ==========================================
+09:42:06.776 INFO - [HID] Calibración enviada con éxito al Corne.
+09:42:07.616 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:42:10.555 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:42:11.304 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:43:00.257 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:43:05.217 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:43:18.153 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:43:42.125 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:43:43.928 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:43:44.777 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:43:48.854 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:43:56.004 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:44:57.198 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:44:57.874 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:45:02.952 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:45:04.504 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:45:09.254 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:45:31.732 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:46:20.385 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:46:22.909 INFO - ==========================================
+09:46:22.909 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+09:46:22.909 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+09:46:22.909 INFO - ==========================================
+09:46:23.023 INFO - [HID] Calibración enviada con éxito al Corne.
+09:46:25.216 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:46:34.023 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:46:34.716 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:46:35.945 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:46:37.006 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:47:07.992 INFO - ==========================================
+09:47:07.992 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+09:47:07.992 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+09:47:07.992 INFO - ==========================================
+09:47:08.098 INFO - [HID] Calibración enviada con éxito al Corne.
+09:47:08.930 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:47:11.090 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:47:12.553 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:47:16.364 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:47:18.205 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:47:20.133 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:47:33.029 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:47:45.737 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:47:53.248 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:00.158 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:01.679 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:24.974 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:28.100 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:30.266 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:32.598 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:33.872 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:38.243 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:48:39.058 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:48:43.369 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:48:45.480 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:48:48.157 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:48:51.821 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:48:57.586 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:49:37.971 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:50:19.205 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:50:39.251 INFO - ==========================================
+09:50:39.251 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+09:50:39.259 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+09:50:39.259 INFO - ==========================================
+09:50:39.373 INFO - [HID] Calibración enviada con éxito al Corne.
+09:50:39.624 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:50:40.238 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:50:40.905 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:50:43.057 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:50:44.436 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:50:45.917 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:51:52.385 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:52:36.498 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:52:38.098 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:52:38.676 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:53:20.442 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:54:08.973 INFO - ==========================================
+09:54:08.973 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+09:54:08.973 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+09:54:08.973 INFO - ==========================================
+09:54:09.082 INFO - [HID] Calibración enviada con éxito al Corne.
+09:54:10.140 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:54:10.674 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:54:11.669 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:13.258 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:14.908 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:54:15.639 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:54:16.370 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:17.795 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:18.552 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:19.418 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:30.291 DEBUG - [TECLA F24 PRESIONADA] - NUEVO VIAJE FORZADO
+09:54:30.377 DEBUG - [TECLA F24 SOLTADA]
+09:54:31.008 DEBUG - [TECLA F24 PRESIONADA] - NUEVO VIAJE FORZADO
+09:54:31.088 DEBUG - [TECLA F24 SOLTADA]
+09:54:31.389 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:54:32.069 DEBUG - [TECLA F24 PRESIONADA] - NUEVO VIAJE FORZADO
+09:54:32.139 DEBUG - [TECLA F24 SOLTADA]
+09:54:32.465 DEBUG - [TECLA F24 PRESIONADA] - NUEVO VIAJE FORZADO
+09:54:32.555 DEBUG - [TECLA F24 SOLTADA]
+09:54:36.704 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:39.401 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:45.625 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:47.373 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:54:48.101 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:55:02.609 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:55:04.836 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:55:05.746 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:55:07.903 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:55:10.017 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:55:11.790 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:55:13.688 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+09:55:14.067 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:55:20.609 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:55:23.954 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:55:25.623 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:55:28.228 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:55:29.620 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:55:31.161 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:55:33.012 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+09:55:38.248 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+09:56:20.015 INFO - ==========================================
+09:56:20.015 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+09:56:20.015 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+09:56:20.015 INFO - ==========================================
+09:56:20.123 INFO - [HID] Calibración enviada con éxito al Corne.
+09:56:20.603 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+09:56:26.650 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:11:56.265 INFO - ==========================================
+11:11:56.265 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+11:11:56.265 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+11:11:56.265 INFO - ==========================================
+11:11:56.376 INFO - [HID] Calibración enviada con éxito al Corne.
+11:11:57.372 INFO - Subproceso de MIRROR iniciado.
+11:11:57.372 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:11:57.925 INFO - Subproceso de MIRROR terminado.
+11:11:59.715 INFO - Subproceso de MIRROR iniciado.
+11:11:59.717 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:02.316 INFO - Subproceso de MIRROR terminado.
+11:12:03.848 INFO - Subproceso de MIRROR iniciado.
+11:12:03.849 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:04.769 INFO - Subproceso de MIRROR terminado.
+11:12:06.204 INFO - Subproceso de MIRROR iniciado.
+11:12:06.204 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:06.493 DEBUG - [SALTO LIBRE POR ZONA] X:377->1543 | Viaje Corto (Dist: 0)
+11:12:07.191 INFO - Subproceso de MIRROR terminado.
+11:12:07.897 INFO - Subproceso de MIRROR iniciado.
+11:12:07.899 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:09.835 INFO - Subproceso de MIRROR terminado.
+11:12:11.053 INFO - Subproceso de MIRROR iniciado.
+11:12:11.053 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:12.167 INFO - Subproceso de MIRROR terminado.
+11:12:12.996 INFO - Subproceso de MIRROR iniciado.
+11:12:12.997 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:14.384 DEBUG - [SALTO LIBRE POR ZONA] Y:904->296 | Viaje Corto (Dist: 0)
+11:12:14.994 INFO - Subproceso de MIRROR terminado.
+11:12:16.046 INFO - Subproceso de MIRROR iniciado.
+11:12:16.047 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:16.631 DEBUG - [SALTO LIBRE POR ZONA] Y:183->1017 | Viaje Corto (Dist: 0)
+11:12:17.028 INFO - Subproceso de MIRROR terminado.
+11:12:18.310 INFO - Subproceso de MIRROR iniciado.
+11:12:18.310 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:18.724 INFO - Subproceso de MIRROR terminado.
+11:12:19.607 INFO - Subproceso de MIRROR iniciado.
+11:12:19.610 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:20.381 DEBUG - [SALTO LIBRE POR ZONA] Y:1046->154 | Viaje Corto (Dist: 0)
+11:12:20.959 INFO - Subproceso de MIRROR terminado.
+11:12:21.510 INFO - Subproceso de MIRROR iniciado.
+11:12:21.510 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:21.871 DEBUG - [SALTO LIBRE POR ZONA] Y:203->997 | Viaje Corto (Dist: 0)
+11:12:22.247 INFO - Subproceso de MIRROR terminado.
+11:12:22.992 INFO - Subproceso de MIRROR iniciado.
+11:12:22.992 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:24.023 INFO - Subproceso de MIRROR terminado.
+11:12:25.221 INFO - Subproceso de MIRROR iniciado.
+11:12:25.223 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:25.823 DEBUG - [SALTO LIBRE POR ZONA] Y:1002->198 | Viaje Corto (Dist: 0)
+11:12:26.182 INFO - Subproceso de MIRROR terminado.
+11:12:27.635 INFO - Subproceso de MIRROR iniciado.
+11:12:27.636 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:28.032 DEBUG - [SALTO LIBRE POR ZONA] X:1538->382 | Viaje Corto (Dist: 0)
+11:12:28.616 INFO - Subproceso de MIRROR terminado.
+11:12:29.692 INFO - Subproceso de MIRROR iniciado.
+11:12:29.693 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:30.369 DEBUG - [SALTO LIBRE POR ZONA] X:326->1594 | Viaje Corto (Dist: 0)
+11:12:30.770 INFO - Subproceso de MIRROR terminado.
+11:12:31.580 INFO - Subproceso de MIRROR iniciado.
+11:12:31.581 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:32.612 DEBUG - [SALTO LIBRE POR ZONA] X:1641->279 | Viaje Corto (Dist: 0)
+11:12:33.023 INFO - Subproceso de MIRROR terminado.
+11:12:34.966 INFO - Subproceso de MIRROR iniciado.
+11:12:34.967 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:35.364 INFO - Subproceso de MIRROR terminado.
+11:12:38.342 INFO - Subproceso de MIRROR iniciado.
+11:12:38.342 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:38.545 DEBUG - [SALTO LIBRE POR ZONA] X:432->1488 | Viaje Corto (Dist: 0)
+11:12:39.279 INFO - Subproceso de MIRROR terminado.
+11:12:40.029 INFO - Subproceso de MIRROR iniciado.
+11:12:40.029 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:40.606 DEBUG - [SALTO LIBRE POR ZONA] X:1563->357 | Viaje Corto (Dist: 0)
+11:12:41.047 INFO - Subproceso de MIRROR terminado.
+11:12:42.039 INFO - Subproceso de MIRROR iniciado.
+11:12:42.039 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:42.800 DEBUG - [SALTO LIBRE POR ZONA] X:392->1528 | Viaje Corto (Dist: 0)
+11:12:43.190 INFO - Subproceso de MIRROR terminado.
+11:12:43.888 INFO - Subproceso de MIRROR iniciado.
+11:12:43.889 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:45.021 DEBUG - [SALTO LIBRE POR ZONA] X:1528->392 | Viaje Corto (Dist: 0)
+11:12:45.509 INFO - Subproceso de MIRROR terminado.
+11:12:46.639 INFO - Subproceso de MIRROR iniciado.
+11:12:46.639 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:47.247 DEBUG - [SALTO LIBRE POR ZONA] X:393->1527 | Viaje Corto (Dist: 0)
+11:12:47.644 INFO - Subproceso de MIRROR terminado.
+11:12:48.788 INFO - Subproceso de MIRROR iniciado.
+11:12:48.788 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:49.290 DEBUG - [SALTO LIBRE POR ZONA] X:1500->420 | Viaje Corto (Dist: 0)
+11:12:49.828 INFO - Subproceso de MIRROR terminado.
+11:12:50.542 INFO - Subproceso de MIRROR iniciado.
+11:12:50.542 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:51.075 DEBUG - [SALTO LIBRE POR ZONA] X:390->1530 | Viaje Corto (Dist: 0)
+11:12:51.493 INFO - Subproceso de MIRROR terminado.
+11:12:52.198 INFO - Subproceso de MIRROR iniciado.
+11:12:52.198 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:52.589 DEBUG - [SALTO LIBRE POR ZONA] X:1512->408 | Viaje Corto (Dist: 0)
+11:12:53.060 INFO - Subproceso de MIRROR terminado.
+11:12:53.917 INFO - Subproceso de MIRROR iniciado.
+11:12:53.917 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:54.969 DEBUG - [SALTO LIBRE POR ZONA] X:386->1534 | Viaje Corto (Dist: 0)
+11:12:55.423 INFO - Subproceso de MIRROR terminado.
+11:12:56.079 INFO - Subproceso de MIRROR iniciado.
+11:12:56.080 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:56.305 DEBUG - [SALTO LIBRE POR ZONA] X:1504->416 | Viaje Corto (Dist: 0)
+11:12:57.074 INFO - Subproceso de MIRROR terminado.
+11:12:57.714 INFO - Subproceso de MIRROR iniciado.
+11:12:57.716 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:12:57.914 DEBUG - [SALTO LIBRE POR ZONA] X:394->1526 | Viaje Corto (Dist: 0)
+11:12:58.631 DEBUG - [SALTO LIBRE POR ZONA] X:1526->394 | Viaje Corto (Dist: 0)
+11:12:59.343 INFO - Subproceso de MIRROR terminado.
+11:13:00.845 INFO - Subproceso de MIRROR iniciado.
+11:13:00.846 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:01.059 DEBUG - [SALTO LIBRE POR ZONA] X:394->1526 | Viaje Corto (Dist: 0)
+11:13:01.730 INFO - Subproceso de MIRROR terminado.
+11:13:02.791 INFO - Subproceso de MIRROR iniciado.
+11:13:02.792 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:05.206 INFO - Subproceso de MIRROR terminado.
+11:13:06.224 INFO - Subproceso de MIRROR iniciado.
+11:13:06.224 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:07.287 DEBUG - [SALTO LIBRE POR ZONA] Y:286->914 | Viaje Corto (Dist: 0)
+11:13:07.714 INFO - Subproceso de MIRROR terminado.
+11:13:08.483 INFO - Subproceso de MIRROR iniciado.
+11:13:08.485 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:11.799 INFO - Subproceso de MIRROR terminado.
+11:13:12.569 INFO - Subproceso de MIRROR iniciado.
+11:13:12.570 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:14.877 INFO - Subproceso de MIRROR terminado.
+11:13:15.687 INFO - Subproceso de MIRROR iniciado.
+11:13:15.688 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:16.918 DEBUG - [SALTO LIBRE POR ZONA] Y:264->936 | Viaje Corto (Dist: 0)
+11:13:17.670 INFO - Subproceso de MIRROR terminado.
+11:13:19.096 INFO - Subproceso de MIRROR iniciado.
+11:13:19.097 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:20.109 DEBUG - [SALTO LIBRE POR ZONA] Y:997->203 | Viaje Corto (Dist: 0)
+11:13:20.683 INFO - Subproceso de MIRROR terminado.
+11:13:21.614 INFO - Subproceso de MIRROR iniciado.
+11:13:21.615 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:22.725 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+11:13:23.114 INFO - Subproceso de MIRROR terminado.
+11:13:23.891 INFO - Subproceso de MIRROR iniciado.
+11:13:23.892 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:24.866 DEBUG - [SALTO LIBRE POR ZONA] Y:1023->177 | Viaje Corto (Dist: 0)
+11:13:25.272 INFO - Subproceso de MIRROR terminado.
+11:13:26.334 INFO - Subproceso de MIRROR iniciado.
+11:13:26.334 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:27.153 DEBUG - [SALTO LIBRE POR ZONA] Y:221->979 | Viaje Corto (Dist: 0)
+11:13:27.646 INFO - Subproceso de MIRROR terminado.
+11:13:28.455 INFO - Subproceso de MIRROR iniciado.
+11:13:28.456 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:29.364 DEBUG - [SALTO LIBRE POR ZONA] Y:1014->186 | Viaje Corto (Dist: 0)
+11:13:29.792 INFO - Subproceso de MIRROR terminado.
+11:13:30.935 INFO - Subproceso de MIRROR iniciado.
+11:13:30.935 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:31.548 DEBUG - [SALTO LIBRE POR ZONA] Y:160->1040 | Viaje Corto (Dist: 0)
+11:13:31.948 INFO - Subproceso de MIRROR terminado.
+11:13:35.905 INFO - Subproceso de MIRROR iniciado.
+11:13:35.905 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:36.991 INFO - Subproceso de MIRROR terminado.
+11:13:37.734 INFO - Subproceso de MIRROR iniciado.
+11:13:37.735 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:38.679 INFO - Subproceso de MIRROR terminado.
+11:13:39.557 INFO - Subproceso de MIRROR iniciado.
+11:13:39.557 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:39.955 DEBUG - [SALTO LIBRE POR ZONA] X:1441->479 | Viaje Corto (Dist: 0)
+11:13:40.334 INFO - Subproceso de MIRROR terminado.
+11:13:41.168 INFO - Subproceso de MIRROR iniciado.
+11:13:41.168 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:41.789 DEBUG - [SALTO LIBRE POR ZONA] X:450->1470 | Viaje Corto (Dist: 0)
+11:13:42.133 INFO - Subproceso de MIRROR terminado.
+11:13:42.904 INFO - Subproceso de MIRROR iniciado.
+11:13:42.904 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:43.763 DEBUG - [SALTO LIBRE POR ZONA] Y:904->296 | Viaje Corto (Dist: 0)
+11:13:44.464 INFO - Subproceso de MIRROR terminado.
+11:13:45.346 INFO - Subproceso de MIRROR iniciado.
+11:13:45.346 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:46.247 INFO - Subproceso de MIRROR terminado.
+11:13:46.835 INFO - Subproceso de MIRROR iniciado.
+11:13:46.835 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:47.891 INFO - Subproceso de MIRROR terminado.
+11:13:48.510 INFO - Subproceso de MIRROR iniciado.
+11:13:48.510 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:49.563 INFO - Subproceso de MIRROR terminado.
+11:13:50.217 INFO - Subproceso de MIRROR iniciado.
+11:13:50.218 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:51.872 INFO - Subproceso de MIRROR terminado.
+11:13:52.596 INFO - Subproceso de MIRROR iniciado.
+11:13:52.598 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:13:53.642 INFO - Subproceso de MIRROR terminado.
+11:13:58.717 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:13:59.384 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:14:00.200 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:14:00.803 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:14:01.388 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:14:02.260 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:14:02.814 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:14:03.789 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:14:04.330 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:14:20.543 DEBUG - [SALTO PROTEGIDO EXT] X:1870->49 | ANCLAJE EN BORDE: 1870 (Dist: 1071)
+11:14:21.046 DEBUG - [MURO X LIBERADO por tiempo]
+11:14:26.247 DEBUG - [SALTO PROTEGIDO EXT] X:1870->23 | ANCLAJE EN BORDE: 1870 (Dist: 1406)
+11:14:26.754 DEBUG - [MURO X LIBERADO por tiempo]
+11:14:36.189 DEBUG - [SALTO PROTEGIDO EXT] X:1870->5 | ANCLAJE EN BORDE: 1870 (Dist: 493)
+11:14:36.698 DEBUG - [MURO X LIBERADO por tiempo]
+11:15:26.428 DEBUG - [SALTO PROTEGIDO EXT] X:50->1915 | ANCLAJE EN BORDE: 50 (Dist: 721)
+11:15:26.931 DEBUG - [MURO X LIBERADO por tiempo]
+11:15:35.527 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+11:18:27.571 INFO - Subproceso de MIRROR iniciado.
+11:18:27.573 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:18:28.623 INFO - Subproceso de MIRROR terminado.
+11:18:29.886 INFO - Subproceso de MIRROR iniciado.
+11:18:29.887 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:18:30.722 INFO - Subproceso de MIRROR terminado.
+11:18:31.676 INFO - Subproceso de MIRROR iniciado.
+11:18:31.678 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:18:32.824 INFO - Subproceso de MIRROR terminado.
+11:18:34.772 INFO - Subproceso de MIRROR iniciado.
+11:18:34.773 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:18:35.857 INFO - Subproceso de MIRROR terminado.
+11:18:46.012 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:18:46.838 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:18:49.348 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:18:50.108 INFO - Subproceso de MIRROR iniciado.
+11:18:50.109 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+11:18:50.896 INFO - Subproceso de MIRROR terminado.
+11:18:53.611 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:18:54.318 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+11:18:55.048 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+11:18:55.536 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON

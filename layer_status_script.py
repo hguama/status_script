@@ -13,6 +13,7 @@ import utils.onenote_nav  # Integración OneNote Nav
 import logging
 import os
 import ctypes
+import subprocess
 
 # Hacer el proceso consciente de los DPI para que las coordenadas de pantalla coincidan
 try:
@@ -103,7 +104,7 @@ colores = {
     "MODE": "#8E24AA",
     "COMMIT": "#E53935",
     "NUMB": "#9E9E9E",
-    "MOUSE_1": "#8D6E63",
+    "MIRROR": "#8D6E63",
     "MOVE": "#FFEB3B",
 }
 
@@ -168,10 +169,27 @@ def toggle_indicadores(e=None):
 # Asignar F21 para alternar la visibilidad de las burbujas
 keyboard.on_press_key("f21", toggle_indicadores)
 
+mirror_process = None
+
 def actualizar_ui(capa_msg):
-    global indicador_visible_por_capa, color_actual
+    global indicador_visible_por_capa, color_actual, mirror_process
 
     clave = next((k for k in colores if k in capa_msg), None)
+    
+    # Manejar el subproceso del modo espejo (MIRROR)
+    if clave == "MIRROR":
+        if mirror_process is None:
+            script_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "f22_mirror_cursor.py")
+            # Create subprocess with CREATE_NO_WINDOW if needed, but Popen is fine
+            # We use pythonw.exe to prevent a console window from popping up, or just python
+            mirror_process = subprocess.Popen(["python", script_path])
+            logger.info("Subproceso de MIRROR iniciado.")
+    else:
+        if mirror_process is not None:
+            mirror_process.terminate()
+            mirror_process = None
+            logger.info("Subproceso de MIRROR terminado.")
+
     if clave:
         color_actual = colores[clave]
         c = color_actual
@@ -255,23 +273,23 @@ def seguimiento_mouse():
         time.sleep(0.01)
 
 # ===============================================================
-# F22 / F23 – MOVIMIENTO SUAVE Y CONTROLADO
+# F24 / F23 – MOVIMIENTO SUAVE Y CONTROLADO
 # ===============================================================
 
 forzar_nuevo_viaje = False
 
-def presiona_f22(e):
+def presiona_f24(e):
     global tecla_horiz_down, forzar_nuevo_viaje
     if not tecla_horiz_down:
         forzar_nuevo_viaje = True
-        logger.debug("[TECLA F22 PRESIONADA] - NUEVO VIAJE FORZADO")
+        logger.debug("[TECLA F24 PRESIONADA] - NUEVO VIAJE FORZADO")
     tecla_horiz_down = True
 
-def suelta_f22(e):
+def suelta_f24(e):
     global tecla_horiz_down, direccion_fijada
     tecla_horiz_down = False
     direccion_fijada = 0
-    logger.debug("[TECLA F22 SOLTADA]")
+    logger.debug("[TECLA F24 SOLTADA]")
 
 def presiona_f23(e):
     global tecla_vert_down, forzar_nuevo_viaje
@@ -286,8 +304,8 @@ def suelta_f23(e):
     direccion_y_fijada = 0
     logger.debug("[TECLA F23 SOLTADA]")
 
-keyboard.on_press_key("f22", presiona_f22)
-keyboard.on_release_key("f22", suelta_f22)
+keyboard.on_press_key("f24", presiona_f24)
+keyboard.on_release_key("f24", suelta_f24)
 keyboard.on_press_key("f23", presiona_f23)
 keyboard.on_release_key("f23", suelta_f23)
 
@@ -671,7 +689,7 @@ def wrap_loop():
             vx = x - last_x_wrap
             vy = y - last_y_wrap
             
-            # Solo actuar si no estamos en turbo (F22/F23) y ha pasado el cooldown
+            # Solo actuar si no estamos en turbo (F24/F23) y ha pasado el cooldown
             if not tecla_horiz_down and not tecla_vert_down and (ahora - ultimo_wrap > COOLDOWN_WRAP):
                 if not mouse.is_pressed("left") and not click_izquierdo_activo():
                     cambio = False
