@@ -74705,3 +74705,561 @@
 16:35:11.316 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
 16:35:11.316 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
 16:35:23.038 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:06.464 INFO - ==========================================
+16:37:06.464 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:37:06.464 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:37:06.464 INFO - ==========================================
+16:37:06.575 INFO - [HID] Calibración enviada con éxito al Corne.
+16:37:07.726 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'ALFA'
+16:37:07.726 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:08.189 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:08.465 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:37:08.465 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:08.845 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:11.877 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:11.877 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:11.887 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:12.199 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:12.204 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:20.813 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:20.813 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:20.823 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:20.887 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:37:22.041 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:22.041 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:23.524 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:37:23.527 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:23.839 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'MOVE'
+16:37:23.840 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:37:24.063 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'ALFA'
+16:37:24.063 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:24.397 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'MOVE'
+16:37:24.397 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:37:24.433 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'ALFA'
+16:37:24.436 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:24.668 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'MOVE'
+16:37:24.668 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:37:25.010 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'ALFA'
+16:37:25.010 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:25.284 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:25.368 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:37:25.372 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:25.860 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'MOVE'
+16:37:25.860 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:37:26.361 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'ALFA'
+16:37:26.361 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:26.570 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:28.369 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:37:28.371 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:28.902 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:29.289 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:37:29.289 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:29.407 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:29.749 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+16:37:29.749 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:37:30.046 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+16:37:30.288 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:37:30.288 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:30.723 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:30.724 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MOVE'
+16:37:30.724 DEBUG - [UI] Capa detectada: MOVE - Indicadores: ON
+16:37:31.267 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MOVE' -> 'LAYER_BASE'
+16:37:31.268 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:37:31.268 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:37:31.670 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:37:32.489 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:32.489 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:32.497 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:32.932 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:32.932 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:33.537 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:33.537 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:33.544 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:37:33.546 DEBUG - [SALTO LIBRE POR ZONA] X:434->1486 | Viaje Corto (Dist: 0)
+16:37:33.551 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:34.215 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:34.215 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:35.449 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:35.449 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:35.453 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:37:35.460 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:35.465 DEBUG - [SALTO LIBRE POR ZONA] X:1486->434 | Viaje Corto (Dist: 0)
+16:37:36.040 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:36.043 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:37.397 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:37.399 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:37.400 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:37:37.403 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:37.411 DEBUG - [SALTO LIBRE POR ZONA] X:377->1543 | Viaje Corto (Dist: 0)
+16:37:37.978 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:37.980 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:38.856 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:38.856 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:38.869 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:39.080 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:37:39.085 DEBUG - [SALTO LIBRE POR ZONA] X:1473->447 | Viaje Corto (Dist: 0)
+16:37:39.366 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:39.366 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:40.251 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:40.251 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:40.254 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:40.687 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:37:40.695 DEBUG - [SALTO LIBRE POR ZONA] X:359->1561 | Viaje Corto (Dist: 0)
+16:37:40.925 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:40.928 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:42.125 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:42.130 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:42.134 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:43.353 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:37:43.366 DEBUG - [SALTO LIBRE POR ZONA] X:1591->329 | Viaje Corto (Dist: 0)
+16:37:43.698 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:43.698 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:45.182 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:45.182 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:45.188 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:45.520 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:37:45.526 DEBUG - [SALTO LIBRE POR ZONA] X:377->1543 | Viaje Corto (Dist: 0)
+16:37:46.580 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:37:46.584 DEBUG - [SALTO LIBRE POR ZONA] Y:931->269 | Viaje Corto (Dist: 0)
+16:37:46.990 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:37:47.000 DEBUG - [SALTO LIBRE POR ZONA] Y:269->931 | Viaje Corto (Dist: 0)
+16:37:47.440 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:47.442 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:48.249 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:48.249 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:48.251 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:37:48.251 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:48.262 DEBUG - [SALTO LIBRE POR ZONA] Y:931->269 | Viaje Corto (Dist: 0)
+16:37:49.195 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:49.195 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:51.573 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:51.573 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:51.574 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:51.594 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:37:51.604 DEBUG - [SALTO LIBRE POR ZONA] Y:282->918 | Viaje Corto (Dist: 0)
+16:37:52.299 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:52.299 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:53.396 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:53.397 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:53.403 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:53.694 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:37:53.703 DEBUG - [SALTO LIBRE POR ZONA] Y:1005->195 | Viaje Corto (Dist: 0)
+16:37:54.247 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:54.250 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:56.212 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:56.215 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:56.217 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:56.358 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:37:56.367 DEBUG - [SALTO LIBRE POR ZONA] Y:217->983 | Viaje Corto (Dist: 0)
+16:37:56.923 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:56.923 INFO - ===> [CAPA MIRROR] Desactivada.
+16:37:58.511 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:37:58.511 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:37:58.518 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:37:58.850 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:37:58.855 DEBUG - [SALTO LIBRE POR ZONA] Y:1088->112 | Viaje Corto (Dist: 0)
+16:37:59.412 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:37:59.412 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:00.978 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:00.981 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:00.981 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:00.988 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:00.992 DEBUG - [SALTO LIBRE POR ZONA] Y:95->1105 | Viaje Corto (Dist: 0)
+16:38:01.598 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:01.599 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:03.362 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:03.362 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:03.367 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:03.383 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:03.953 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:03.953 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:06.148 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:06.148 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:06.150 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:06.194 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:06.199 DEBUG - [SALTO LIBRE POR ZONA] X:1460->460 | Viaje Corto (Dist: 0)
+16:38:06.595 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:06.595 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:09.528 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:09.531 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:09.539 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:10.073 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:10.073 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:12.919 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:12.919 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:12.927 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:13.241 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:13.620 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:13.621 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:15.201 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:15.201 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:15.201 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:15.498 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:15.893 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:15.893 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:16.899 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:16.899 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:16.908 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:18.095 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:18.535 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:18.535 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:19.969 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:19.969 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:19.977 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:20.354 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:20.357 DEBUG - [SALTO LIBRE POR ZONA] X:269->1651 | Viaje Corto (Dist: 0)
+16:38:20.681 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:20.681 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:22.181 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:22.181 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:22.195 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:22.681 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:23.078 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:23.078 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:26.813 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:26.814 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:26.816 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:27.362 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:27.370 DEBUG - [SALTO LIBRE POR ZONA] X:369->1551 | Viaje Corto (Dist: 0)
+16:38:27.679 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:27.679 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:31.827 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:31.827 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:31.830 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:32.742 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:32.744 DEBUG - [SALTO LIBRE POR ZONA] X:1552->368 | Viaje Corto (Dist: 0)
+16:38:33.150 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:33.152 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:34.264 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:34.264 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:34.266 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:34.274 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:34.275 DEBUG - [SALTO LIBRE POR ZONA] X:406->1514 | Viaje Corto (Dist: 0)
+16:38:35.200 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:35.211 DEBUG - [SALTO LIBRE POR ZONA] Y:984->216 | Viaje Corto (Dist: 0)
+16:38:35.646 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:35.646 INFO - ===> [CAPA MIRROR] Desactivada.
+16:38:36.281 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:38:36.284 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:38:36.286 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:38:38.266 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:38.277 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:38.499 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:38.507 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:39.535 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:39.540 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:39.661 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:39.664 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:41.306 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:41.307 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:41.417 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:41.422 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:42.701 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:42.708 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:42.827 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:42.834 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:43.790 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:43.796 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:44.004 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:44.016 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:44.967 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:44.974 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:45.064 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:45.068 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:45.733 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:45.740 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:45.795 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:45.806 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:47.291 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:47.294 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:47.365 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:47.367 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:47.986 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:47.996 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:48.070 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:48.081 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:48.538 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:48.548 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:48.645 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:48.653 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:49.250 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:49.261 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:49.288 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:49.292 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:49.758 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:49.762 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:49.846 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:49.855 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:50.357 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:50.365 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:50.434 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:50.439 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:50.918 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:50.928 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:51.036 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:51.044 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:51.744 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:51.752 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:51.835 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:51.845 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:52.323 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:52.336 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:52.404 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:52.410 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:52.997 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:53.003 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:53.130 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:53.137 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:53.682 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:53.698 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:53.763 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:53.773 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:54.398 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:54.402 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:54.439 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:54.446 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:54.909 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:54.915 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:54.987 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:54.997 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:55.527 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:55.537 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:55.591 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:55.601 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:56.096 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:56.107 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:56.167 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:56.170 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:56.658 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:56.666 DEBUG - [SALTO LIBRE POR ZONA] X:1541->379 | Viaje Corto (Dist: 0)
+16:38:56.737 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:56.739 DEBUG - [SALTO LIBRE POR ZONA] Y:273->927 | Viaje Corto (Dist: 0)
+16:38:57.195 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:38:57.197 DEBUG - [SALTO LIBRE POR ZONA] X:379->1541 | Viaje Corto (Dist: 0)
+16:38:57.276 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:38:57.281 DEBUG - [SALTO LIBRE POR ZONA] Y:927->273 | Viaje Corto (Dist: 0)
+16:38:57.616 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:38:57.616 INFO - ===> [CAPA MIRROR] Desactivada.
+16:39:02.470 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:39:02.470 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:39:02.474 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:39:02.814 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:39:03.526 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:39:03.526 INFO - ===> [CAPA MIRROR] Desactivada.
+16:39:04.714 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:39:04.714 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:39:04.723 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:39:07.231 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:39:07.231 INFO - ===> [CAPA MIRROR] Desactivada.
+16:39:07.942 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:39:07.945 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:39:07.949 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:39:10.661 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:39:11.218 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:39:11.218 INFO - ===> [CAPA MIRROR] Desactivada.
+16:39:11.787 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:39:11.787 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:39:11.792 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:39:11.798 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:39:13.885 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:39:14.109 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:39:14.109 INFO - ===> [CAPA MIRROR] Desactivada.
+16:39:16.685 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:39:16.685 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:39:16.690 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:39:17.273 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:39:17.278 INFO - ===> [CAPA MIRROR] Desactivada.
+16:39:17.764 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:39:17.764 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:39:17.770 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:39:19.899 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:39:19.903 INFO - ===> [CAPA MIRROR] Desactivada.
+16:39:41.197 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:39:41.198 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:39:41.200 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:39:42.344 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:42.351 DEBUG - [SALTO LIBRE POR ZONA] X:412->1508 | Viaje Corto (Dist: 0)
+16:39:42.635 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:42.641 DEBUG - [SALTO LIBRE POR ZONA] X:1508->412 | Viaje Corto (Dist: 0)
+16:39:43.397 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:43.403 DEBUG - [SALTO LIBRE POR ZONA] X:412->1508 | Viaje Corto (Dist: 0)
+16:39:43.544 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:43.549 DEBUG - [SALTO LIBRE POR ZONA] X:1508->412 | Viaje Corto (Dist: 0)
+16:39:44.404 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:44.412 DEBUG - [SALTO LIBRE POR ZONA] X:412->1508 | Viaje Corto (Dist: 0)
+16:39:44.664 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:44.675 DEBUG - [SALTO LIBRE POR ZONA] X:1508->412 | Viaje Corto (Dist: 0)
+16:39:45.944 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:45.955 DEBUG - [SALTO LIBRE POR ZONA] X:412->1508 | Viaje Corto (Dist: 0)
+16:39:46.104 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:46.106 DEBUG - [SALTO LIBRE POR ZONA] X:1508->412 | Viaje Corto (Dist: 0)
+16:39:46.574 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:46.577 DEBUG - [SALTO LIBRE POR ZONA] X:412->1508 | Viaje Corto (Dist: 0)
+16:39:46.795 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:46.803 DEBUG - [SALTO LIBRE POR ZONA] X:1508->412 | Viaje Corto (Dist: 0)
+16:39:48.216 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:48.228 DEBUG - [SALTO LIBRE POR ZONA] X:412->1508 | Viaje Corto (Dist: 0)
+16:39:48.476 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:39:48.486 DEBUG - [SALTO LIBRE POR ZONA] X:1508->412 | Viaje Corto (Dist: 0)
+16:39:52.519 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:39:52.520 INFO - ===> [CAPA MIRROR] Desactivada.
+16:39:58.497 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:39:58.497 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:39:58.504 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:40:00.657 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:40:00.657 INFO - ===> [CAPA MIRROR] Desactivada.
+16:40:08.048 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:40:08.048 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:40:08.056 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:40:08.430 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:40:08.435 DEBUG - [SALTO LIBRE POR ZONA] X:413->1507 | Viaje Corto (Dist: 0)
+16:40:09.253 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:40:09.257 DEBUG - [SALTO LIBRE POR ZONA] X:1507->413 | Viaje Corto (Dist: 0)
+16:40:09.480 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:40:09.487 DEBUG - [SALTO LIBRE POR ZONA] X:413->1507 | Viaje Corto (Dist: 0)
+16:40:09.823 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:40:09.830 DEBUG - [SALTO LIBRE POR ZONA] X:1507->413 | Viaje Corto (Dist: 0)
+16:40:10.375 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:40:10.375 INFO - ===> [CAPA MIRROR] Desactivada.
+16:40:46.679 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:40:46.679 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:40:46.679 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:40:51.412 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:40:51.412 INFO - ===> [CAPA MIRROR] Desactivada.
+16:40:52.576 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:40:52.576 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:40:52.586 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:40:55.294 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:40:55.295 INFO - ===> [CAPA MIRROR] Desactivada.
+16:40:56.223 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:40:56.223 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:40:56.232 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:40:57.064 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:40:57.064 INFO - ===> [CAPA MIRROR] Desactivada.
+16:40:57.659 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:40:57.659 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:40:57.668 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:00.396 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:00.396 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:09.608 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:09.608 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:09.608 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:11.869 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:11.869 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:12.447 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:12.456 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:12.461 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:16.608 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:16.608 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:18.175 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:18.176 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:18.178 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:19.585 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:19.585 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:24.138 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:24.138 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:24.145 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:25.295 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:25.295 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:33.718 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:33.718 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:33.726 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:34.949 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:34.949 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:39.513 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:39.513 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:39.522 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:42.129 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:42.131 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:42.820 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:42.820 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:42.824 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:44.156 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:44.156 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:44.858 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:44.858 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:44.867 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:44.979 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:44.981 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:45.992 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:45.995 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:45.997 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:41:46.001 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:47.122 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:41:47.268 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:41:47.698 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:41:47.945 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:41:48.377 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:41:48.796 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:41:48.961 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:41:49.110 INFO - Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.
+16:41:49.636 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:41:50.016 INFO - Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.
+16:41:50.448 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:50.450 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:51.728 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:51.728 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:51.731 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:41:54.337 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:41:54.337 INFO - ===> [CAPA MIRROR] Desactivada.
+16:41:55.078 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:41:55.079 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:41:55.087 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:05.590 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:05.590 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:06.349 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:06.349 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:06.354 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:07.813 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:07.813 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:09.012 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:09.012 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:09.016 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:11.157 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:11.158 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:11.977 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:11.977 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:11.984 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:14.261 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:14.261 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:15.224 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:15.225 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:15.225 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:19.897 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:19.899 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:39.264 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:39.264 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:39.271 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:40.027 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:40.027 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:42.460 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:42.460 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:42.464 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:44.753 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:44.753 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:46.229 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:46.231 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:46.233 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:47.822 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:47.823 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:50.314 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:50.318 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:50.323 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:54.743 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:54.745 INFO - ===> [CAPA MIRROR] Desactivada.
+16:42:56.884 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:42:56.884 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:42:56.889 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:42:57.362 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:42:57.362 INFO - ===> [CAPA MIRROR] Desactivada.
+16:43:57.008 DEBUG - [TECLA F24 PRESIONADA] - NUEVO VIAJE FORZADO
+16:43:57.098 DEBUG - [TECLA F24 SOLTADA]
+16:46:17.556 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:46:17.558 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:46:21.412 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:46:22.018 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:46:22.019 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:46:23.239 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:46:23.577 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:46:23.577 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:46:26.068 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
