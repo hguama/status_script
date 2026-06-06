@@ -144,8 +144,8 @@ canvas_mouse.pack()
 MIRROR_DISTANCIA = 25          
 MIRROR_LADO = "derecha"        
 MIRROR_MOSTRAR_PRINCIPAL = False  
-MIRROR_MOSTRAR_DEST_H = True     
-MIRROR_MOSTRAR_DEST_V = True     
+MIRROR_MOSTRAR_DEST_H = False     
+MIRROR_MOSTRAR_DEST_V = False     
 
 MIRROR_COLOR_PRINCIPAL = "#00FFFF" 
 MIRROR_COLOR_DEST_H = "#FF9900"    
@@ -199,6 +199,217 @@ def on_f14_press(e):
 
 keyboard.on_press_key("f13", on_f13_press)
 keyboard.on_press_key("f14", on_f14_press)
+
+# ==========================================
+# CONFIGURACIÓN DE SALTOS POR ZONA LIBRE (F15 / F16)
+# ==========================================
+ZONA_MARGEN_PORCENTAJE = 0.10  # 10% de margen en los extremos de la pantalla
+ZONA_UMBRAL_CENTRO = 0.05      # 5% de tolerancia para considerar que se está "en el centro"
+
+# Historial de dirección para saber hacia dónde continuar el salto (1 = Adelante/Derecha/Abajo, -1 = Atrás/Izquierda/Arriba)
+_last_h_dir = 0
+_last_v_dir = 0
+_last_d1_dir = 0
+_last_d2_dir = 0
+
+# Variables para el comportamiento por defecto en el centro (sin historial)
+# Para F17 (Diagonal 1: Arriba-Izq a Abajo-Der): 1 = Abajo-Der, -1 = Arriba-Izq
+ZONA_DIAG1_DEFAULT_DIR = -1 
+# Para F18 (Diagonal 2: Abajo-Izq a Arriba-Der): 1 = Arriba-Der, -1 = Abajo-Izq
+ZONA_DIAG2_DEFAULT_DIR = 1
+
+def ejecutar_salto_zona_horizontal():
+    global _last_h_dir
+    pt = POINT()
+    ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+    x, y = pt.x, pt.y
+    w = pantalla_ancho
+    
+    margen_px = w * ZONA_MARGEN_PORCENTAJE
+    L = margen_px
+    C = w * 0.5
+    R = w - margen_px
+    
+    zona_izq = w * (0.5 - ZONA_UMBRAL_CENTRO)
+    zona_der = w * (0.5 + ZONA_UMBRAL_CENTRO)
+    
+    if x < zona_izq:
+        target_x = C
+        _last_h_dir = 1
+        logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Izq->Centro")
+    elif x > zona_der:
+        target_x = C
+        _last_h_dir = -1
+        logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Der->Centro")
+    else:
+        # Estamos en la zona central
+        if _last_h_dir == 1:
+            target_x = R
+            logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Centro->Der")
+        elif _last_h_dir == -1:
+            target_x = L
+            logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Centro->Izq")
+        else:
+            # Si no hay historial, saltar al extremo opuesto de donde estemos inclinados
+            if x < C:
+                target_x = R
+                _last_h_dir = 1
+            else:
+                target_x = L
+                _last_h_dir = -1
+            logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Centro->Extremo (Sin historial)")
+            
+    ctypes.windll.user32.SetCursorPos(int(target_x), int(y))
+
+def ejecutar_salto_zona_vertical():
+    global _last_v_dir
+    pt = POINT()
+    ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+    x, y = pt.x, pt.y
+    h = pantalla_alto
+    
+    margen_px = h * ZONA_MARGEN_PORCENTAJE
+    T = margen_px
+    C = h * 0.5
+    B = h - margen_px
+    
+    zona_arr = h * (0.5 - ZONA_UMBRAL_CENTRO)
+    zona_aba = h * (0.5 + ZONA_UMBRAL_CENTRO)
+    
+    if y < zona_arr:
+        target_y = C
+        _last_v_dir = 1
+        logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Arr->Centro")
+    elif y > zona_aba:
+        target_y = C
+        _last_v_dir = -1
+        logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Aba->Centro")
+    else:
+        if _last_v_dir == 1:
+            target_y = B
+            logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Centro->Aba")
+        elif _last_v_dir == -1:
+            target_y = T
+            logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Centro->Arr")
+        else:
+            if y < C:
+                target_y = B
+                _last_v_dir = 1
+            else:
+                target_y = T
+                _last_v_dir = -1
+            logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Centro->Extremo (Sin historial)")
+            
+    ctypes.windll.user32.SetCursorPos(int(x), int(target_y))
+
+def ejecutar_salto_zona_diagonal_1():
+    global _last_d1_dir
+    pt = POINT()
+    ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+    x, y = pt.x, pt.y
+    w, h = pantalla_ancho, pantalla_alto
+    
+    margen_x = w * ZONA_MARGEN_PORCENTAJE
+    margen_y = h * ZONA_MARGEN_PORCENTAJE
+    
+    C_x, C_y = w * 0.5, h * 0.5
+    TL_x, TL_y = margen_x, margen_y
+    BR_x, BR_y = w - margen_x, h - margen_y
+    
+    umbral_x = w * ZONA_UMBRAL_CENTRO
+    umbral_y = h * ZONA_UMBRAL_CENTRO
+    
+    es_centro = (abs(x - C_x) < umbral_x) and (abs(y - C_y) < umbral_y)
+    
+    if not es_centro:
+        if x < C_x and y < C_y:
+            target_x, target_y = C_x, C_y
+            _last_d1_dir = 1
+        elif x >= C_x and y >= C_y:
+            target_x, target_y = C_x, C_y
+            _last_d1_dir = -1
+        else:
+            target_x, target_y = C_x, C_y
+            _last_d1_dir = ZONA_DIAG1_DEFAULT_DIR
+    else:
+        dir_to_use = _last_d1_dir if _last_d1_dir != 0 else ZONA_DIAG1_DEFAULT_DIR
+        if dir_to_use == 1:
+            target_x, target_y = BR_x, BR_y
+            _last_d1_dir = 1
+        else:
+            target_x, target_y = TL_x, TL_y
+            _last_d1_dir = -1
+            
+    ctypes.windll.user32.SetCursorPos(int(target_x), int(target_y))
+    logger.debug(f"[SALTO DIAG 1] (X:{x},Y:{y}) -> (X:{target_x},Y:{target_y})")
+
+def ejecutar_salto_zona_diagonal_2():
+    global _last_d2_dir
+    pt = POINT()
+    ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+    x, y = pt.x, pt.y
+    w, h = pantalla_ancho, pantalla_alto
+    
+    margen_x = w * ZONA_MARGEN_PORCENTAJE
+    margen_y = h * ZONA_MARGEN_PORCENTAJE
+    
+    C_x, C_y = w * 0.5, h * 0.5
+    BL_x, BL_y = margen_x, h - margen_y
+    TR_x, TR_y = w - margen_x, margen_y
+    
+    umbral_x = w * ZONA_UMBRAL_CENTRO
+    umbral_y = h * ZONA_UMBRAL_CENTRO
+    
+    es_centro = (abs(x - C_x) < umbral_x) and (abs(y - C_y) < umbral_y)
+    
+    if not es_centro:
+        if x < C_x and y > C_y:
+            target_x, target_y = C_x, C_y
+            _last_d2_dir = 1
+        elif x >= C_x and y <= C_y:
+            target_x, target_y = C_x, C_y
+            _last_d2_dir = -1
+        else:
+            target_x, target_y = C_x, C_y
+            _last_d2_dir = ZONA_DIAG2_DEFAULT_DIR
+    else:
+        dir_to_use = _last_d2_dir if _last_d2_dir != 0 else ZONA_DIAG2_DEFAULT_DIR
+        if dir_to_use == 1:
+            target_x, target_y = TR_x, TR_y
+            _last_d2_dir = 1
+        else:
+            target_x, target_y = BL_x, BL_y
+            _last_d2_dir = -1
+            
+    ctypes.windll.user32.SetCursorPos(int(target_x), int(target_y))
+    logger.debug(f"[SALTO DIAG 2] (X:{x},Y:{y}) -> (X:{target_x},Y:{target_y})")
+
+def on_f15_press(e):
+    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        logger.info("Salto por Zonas HORIZONTAL (Ctrl+Shift+F15) solicitado.")
+        ejecutar_salto_zona_horizontal()
+
+def on_f16_press(e):
+    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        logger.info("Salto por Zonas VERTICAL (Ctrl+Shift+F16) solicitado.")
+        ejecutar_salto_zona_vertical()
+
+# Registrar teclas para el modo de saltos por zona
+keyboard.on_press_key("f15", on_f15_press)
+keyboard.on_press_key("f16", on_f16_press)
+
+def on_f17_press(e):
+    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        logger.info("Salto DIAGONAL 1 (Ctrl+Shift+F17) solicitado.")
+        ejecutar_salto_zona_diagonal_1()
+
+def on_f18_press(e):
+    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        logger.info("Salto DIAGONAL 2 (Ctrl+Shift+F18) solicitado.")
+        ejecutar_salto_zona_diagonal_2()
+
+keyboard.on_press_key("f17", on_f17_press)
+keyboard.on_press_key("f18", on_f18_press)
 
 
 def efecto_onda(x, y):
