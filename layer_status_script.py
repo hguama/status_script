@@ -46,6 +46,11 @@ pyautogui.FAILSAFE = False
 # ===============================================================
 VID, PID = 0x4653, 0x0001
 
+# MODO 2: Activación del salto por pausa y empuje
+MODO_WRAP_DELAY_HABILITADO = True
+WRAP_MARGEN_PORCENTAJE = 0.02    # 1% del tamaño de la pantalla
+WRAP_DELAY_MS = 0.2              # 200ms
+
 DISTANCIA_SALTO = 450
 PAUSA_ENTRE_SALTOS = 0.3
 UMBRAL_CAMBIO_DIR = 15 # Reducido para mayor sensibilidad
@@ -628,6 +633,11 @@ def loop_movimiento_suave():
     tiempo_ultimo_movimiento_x = time.time()
     tiempo_ultimo_movimiento_y = time.time()
     
+    tiempo_choque_x = 0
+    tiempo_choque_y = 0
+    borde_activo_x = 0
+    borde_activo_y = 0
+    
     while True:
         # --- OBTENER POSICIÓN REAL (Sin latencia de PyAutoGUI) ---
         pt = POINT()
@@ -896,6 +906,81 @@ def loop_movimiento_suave():
         else:
             last_x, last_y = curr_x, curr_y
             
+        if MODO_WRAP_DELAY_HABILITADO:
+            margen_x = int(pantalla_ancho * WRAP_MARGEN_PORCENTAJE)
+            margen_y = int(pantalla_alto * WRAP_MARGEN_PORCENTAJE)
+            
+            vx_wrap = curr_x - prev_actual_x
+            vy_wrap = curr_y - prev_actual_y
+            
+            # --- EVALUAR EJE X ---
+            if curr_x >= pantalla_ancho - margen_x - 1:
+                ctypes.windll.user32.SetCursorPos(pantalla_ancho - margen_x - 1, int(curr_y))
+                curr_x = pantalla_ancho - margen_x - 1
+                if vx_wrap > 0:
+                    if borde_activo_x != 1:
+                        borde_activo_x = 1
+                        tiempo_choque_x = ahora
+                    elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
+                        nuevo_x = margen_x + 5
+                        ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
+                        curr_x = nuevo_x
+                        borde_activo_x = 0
+                        tiempo_choque_x = ahora + 0.5
+                elif vx_wrap < 0:
+                    borde_activo_x = 0
+            elif curr_x <= margen_x:
+                ctypes.windll.user32.SetCursorPos(margen_x, int(curr_y))
+                curr_x = margen_x
+                if vx_wrap < 0:
+                    if borde_activo_x != -1:
+                        borde_activo_x = -1
+                        tiempo_choque_x = ahora
+                    elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
+                        nuevo_x = pantalla_ancho - margen_x - 5
+                        ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
+                        curr_x = nuevo_x
+                        borde_activo_x = 0
+                        tiempo_choque_x = ahora + 0.5
+                elif vx_wrap > 0:
+                    borde_activo_x = 0
+            else:
+                borde_activo_x = 0
+                
+            # --- EVALUAR EJE Y ---
+            if curr_y >= pantalla_alto - margen_y - 1:
+                ctypes.windll.user32.SetCursorPos(int(curr_x), pantalla_alto - margen_y - 1)
+                curr_y = pantalla_alto - margen_y - 1
+                if vy_wrap > 0:
+                    if borde_activo_y != 1:
+                        borde_activo_y = 1
+                        tiempo_choque_y = ahora
+                    elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
+                        nuevo_y = margen_y + 5
+                        ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
+                        curr_y = nuevo_y
+                        borde_activo_y = 0
+                        tiempo_choque_y = ahora + 0.5
+                elif vy_wrap < 0:
+                    borde_activo_y = 0
+            elif curr_y <= margen_y:
+                ctypes.windll.user32.SetCursorPos(int(curr_x), margen_y)
+                curr_y = margen_y
+                if vy_wrap < 0:
+                    if borde_activo_y != -1:
+                        borde_activo_y = -1
+                        tiempo_choque_y = ahora
+                    elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
+                        nuevo_y = pantalla_alto - margen_y - 5
+                        ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
+                        curr_y = nuevo_y
+                        borde_activo_y = 0
+                        tiempo_choque_y = ahora + 0.5
+                elif vy_wrap > 0:
+                    borde_activo_y = 0
+            else:
+                borde_activo_y = 0
+                
         prev_actual_x, prev_actual_y = curr_x, curr_y
         time.sleep(0.01)
 
