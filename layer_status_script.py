@@ -813,62 +813,25 @@ def loop_movimiento_suave():
                     factor_y = max(0.1, dist_borde_y / DISTANCIA_FRENADO)
                     speed_y = max(VEL_BASE, speed_y * factor_y)
                     ny = curr_y + (speed_y * direccion_y_fijada)
-                hit_edge = False
-                final_x, final_y = nx, ny
-                
                 if nx <= MARGEN_BLOQUEO and not es_viaje_corto:
                     nx = MARGEN_BLOQUEO
                     speed_x = 0 # Frena antes del borde
-                elif nx <= 0 and es_viaje_corto:
-                    final_x = pantalla_ancho - WRAP_MARGIN
-                    hit_edge = True
-
                 elif nx >= pantalla_ancho - MARGEN_BLOQUEO and not es_viaje_corto:
                     nx = pantalla_ancho - MARGEN_BLOQUEO
                     speed_x = 0
-                elif nx >= pantalla_ancho - 1 and es_viaje_corto:
-                    final_x = WRAP_MARGIN
-                    hit_edge = True
                         
                 if ny <= MARGEN_BLOQUEO and not es_viaje_corto:
                     ny = MARGEN_BLOQUEO
                     speed_y = 0
-                elif ny <= 0 and es_viaje_corto:
-                    final_y = pantalla_alto - WRAP_MARGIN
-                    hit_edge = True
-
                 elif ny >= pantalla_alto - MARGEN_BLOQUEO and not es_viaje_corto:
                     ny = pantalla_alto - MARGEN_BLOQUEO
                     speed_y = 0
-                elif ny >= pantalla_alto - 1 and es_viaje_corto:
-                    final_y = WRAP_MARGIN
-                    hit_edge = True
 
-                if hit_edge:
-                    logger.debug(f"[SALTO INTERNO] nx:{nx} -> {final_x} | Viaje Corto: {es_viaje_corto} (Dist: {abs(curr_x - origen_swipe_x)})")
-                    
-                    # Si es un viaje corto (empezó cerca del borde), no hay pausa ni anclaje
-                    if not es_viaje_corto:
-                        pause_until = ahora + PAUSA_BORDE_S
-                    else:
-                        pause_until = ahora + 0.05 # Pausa mínima para evitar rebotes
-                    
-                    speed_x = VEL_BASE * 2
-                    speed_y = VEL_BASE * 2
-                    
-                    # No hay anclaje en salto interno porque solo ocurre en viajes cortos.
-
-                    origen_swipe_x, origen_swipe_y = final_x, final_y
-                    distancia_recorrida = 0 # Resetear tras salto
-                    pyautogui.moveTo(final_x, final_y)
-                    last_x, last_y = final_x, final_y
-                    # root.after(0, lambda: efecto_onda(final_x, final_y)) # Desactivado
-                else:
-                    nx = max(0, min(pantalla_ancho - 1, nx))
-                    ny = max(0, min(pantalla_alto - 1, ny))
-                    if nx != curr_x or ny != curr_y:
-                        pyautogui.moveTo(nx, ny)
-                    last_x, last_y = nx, ny
+                nx = max(0, min(pantalla_ancho - 1, nx))
+                ny = max(0, min(pantalla_alto - 1, ny))
+                if nx != curr_x or ny != curr_y:
+                    pyautogui.moveTo(nx, ny)
+                last_x, last_y = nx, ny
             else:
                 # MOVIMIENTO MANUAL (Bloqueo de Posición y Freno)
                 vx = curr_x - last_x
@@ -888,23 +851,7 @@ def loop_movimiento_suave():
                         ctypes.windll.user32.SetCursorPos(int(MARGEN_BLOQUEO), int(curr_y))
                         curr_x = MARGEN_BLOQUEO
                         vx = 0
-                else:
-                    # SALTO MANUAL AGRESIVO (Si es viaje corto y toca el borde físico, saltar ya)
-                    # Esto evita quedarse "pegado" al borde si la velocidad es muy baja
-                    hit_edge_manual = False
-                    if curr_x >= pantalla_ancho - 1 and vx >= 0:
-                        final_x_man = WRAP_MARGIN
-                        hit_edge_manual = True
-                    elif curr_x <= 0 and vx <= 0:
-                        final_x_man = pantalla_ancho - WRAP_MARGIN
-                        hit_edge_manual = True
-                    
-                    if hit_edge_manual:
-                        origen_swipe_x = final_x_man
-                        pyautogui.moveTo(final_x_man, curr_y)
-                        # root.after(0, lambda: efecto_onda(final_x_man, curr_y)) # Desactivado
-                        curr_x = final_x_man
-                        vx = 0
+
 
                 if not es_viaje_corto_y:
                     if curr_y >= pantalla_alto - MARGEN_BLOQUEO and vy > 0:
@@ -915,22 +862,7 @@ def loop_movimiento_suave():
                         ctypes.windll.user32.SetCursorPos(int(curr_x), int(MARGEN_BLOQUEO))
                         curr_y = MARGEN_BLOQUEO
                         vy = 0
-                else:
-                    # SALTO VERTICAL MANUAL AGRESIVO
-                    hit_edge_y_manual = False
-                    if curr_y >= pantalla_alto - 1 and vy >= 0:
-                        final_y_man = WRAP_MARGIN
-                        hit_edge_y_manual = True
-                    elif curr_y <= 0 and vy <= 0:
-                        final_y_man = pantalla_alto - WRAP_MARGIN
-                        hit_edge_y_manual = True
-                    
-                    if hit_edge_y_manual:
-                        origen_swipe_y = final_y_man
-                        pyautogui.moveTo(curr_x, final_y_man)
-                        # root.after(0, lambda: efecto_onda(curr_x, final_y_man)) # Desactivado
-                        curr_y = final_y_man
-                        vy = 0
+
 
                 if abs(vx) > 1 or abs(vy) > 1:
                     dist_borde_x = min(curr_x, pantalla_ancho - curr_x)
@@ -967,60 +899,7 @@ def loop_movimiento_suave():
         prev_actual_x, prev_actual_y = curr_x, curr_y
         time.sleep(0.01)
 
-# ===============================================================
-# WRAP AROUND (PROTEGIDO)
-# ===============================================================
 
-def wrap_loop():
-    def click_izquierdo_activo():
-        return ctypes.windll.user32.GetAsyncKeyState(0x01) & 0x8000 != 0
-
-    ultimo_wrap = 0
-    last_x_wrap, last_y_wrap = pyautogui.position()
-    while True:
-        ahora = time.time()
-        
-        try:
-            x, y = pyautogui.position()
-            vx = x - last_x_wrap
-            vy = y - last_y_wrap
-            
-            # Solo actuar si no estamos en turbo (F24/F23) y ha pasado el cooldown
-            if not tecla_horiz_down and not tecla_vert_down and (ahora - ultimo_wrap > COOLDOWN_WRAP):
-                if not mouse.is_pressed("left") and not click_izquierdo_activo():
-                    cambio = False
-                    nx, ny = x, y
-
-                    # Solo salta si el usuario empuja el ratón FÍSICAMENTE hacia el borde (vx > 1, etc.)
-                    # Evita que salte solo por estar quieto en el borde tras un viaje largo.
-                    if x <= 0 and vx < 0:
-                        nx = pantalla_ancho - WRAP_MARGIN
-                        cambio = True
-                    elif x >= pantalla_ancho - 1 and vx > 0:
-                        nx = WRAP_MARGIN
-                        cambio = True
-
-                    if y <= 0 and vy < 0:
-                        ny = pantalla_alto - WRAP_MARGIN
-                        cambio = True
-                    elif y >= pantalla_alto - 1 and vy > 0:
-                        ny = WRAP_MARGIN
-                        cambio = True
-
-                    if cambio:
-                        # Reducido el delay para que sea instantáneo en zona segura
-                        time.sleep(0.02)
-                        pyautogui.moveTo(nx, ny)
-                        ultimo_wrap = time.time()
-                        
-                        # DISPARAR EFECTO VISUAL (DESACTIVADO)
-                        # root.after(0, lambda: efecto_onda(nx, ny))
-                        
-            last_x_wrap, last_y_wrap = x, y
-        except:
-            pass
-            
-        time.sleep(0.01)
 
 
 # ===============================================================
@@ -1109,7 +988,7 @@ def main():
     threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
     threading.Thread(target=seguimiento_mouse, daemon=True).start()
     threading.Thread(target=loop_movimiento_suave, daemon=True).start()
-    threading.Thread(target=wrap_loop, daemon=True).start()
+    # threading.Thread(target=wrap_loop, daemon=True).start()
     threading.Thread(target=ocultar_indicador_si_mouse_cerca, daemon=True).start()
     
     # Inicia la captura de Alt para OneNote 2016
