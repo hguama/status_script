@@ -88698,3 +88698,1800 @@
 16:13:05.837 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
 16:13:05.837 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
 16:13:11.321 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:13:39.004 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:13:39.004 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:13:41.257 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:13:41.504 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:13:41.507 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:13:45.625 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:13:53.582 DEBUG - [SALTO LIBRE POR ZONA] X:36->1877 | Viaje Corto (Dist: 2)
+16:14:02.376 DEBUG - [SALTO LIBRE POR ZONA] X:37->1877 | Viaje Corto (Dist: 8)
+16:14:03.692 DEBUG - [SALTO LIBRE POR ZONA] X:1889->54 | Viaje Corto (Dist: 8)
+16:14:08.528 DEBUG - [SALTO LIBRE POR ZONA] X:36->1876 | Viaje Corto (Dist: 2)
+16:14:09.624 DEBUG - [SALTO LIBRE POR ZONA] X:1885->51 | Viaje Corto (Dist: 103)
+16:14:10.410 DEBUG - [SALTO LIBRE POR ZONA] X:37->1875 | Viaje Corto (Dist: 134)
+16:14:12.138 DEBUG - [SALTO LIBRE POR ZONA] X:1883->46 | Viaje Corto (Dist: 2)
+16:14:12.477 DEBUG - [SALTO LIBRE POR ZONA] X:35->1868 | Viaje Corto (Dist: 11)
+16:14:13.529 DEBUG - [SALTO LIBRE POR ZONA] X:1884->48 | Viaje Corto (Dist: 3)
+16:14:14.188 DEBUG - [SALTO LIBRE POR ZONA] X:37->1875 | Viaje Corto (Dist: 146)
+16:14:26.161 DEBUG - [SALTO LIBRE POR ZONA] X:36->1877 | Viaje Corto (Dist: 2)
+16:14:27.002 DEBUG - [SALTO LIBRE POR ZONA] X:1882->46 | Viaje Corto (Dist: 48)
+16:14:34.201 DEBUG - [SALTO LIBRE POR ZONA] X:37->1872 | Viaje Corto (Dist: 1)
+16:14:35.581 DEBUG - [SALTO LIBRE POR ZONA] X:1882->43 | Viaje Corto (Dist: 12)
+16:14:35.900 DEBUG - [SALTO LIBRE POR ZONA] X:37->1877 | Viaje Corto (Dist: 6)
+16:14:37.516 DEBUG - [SALTO LIBRE POR ZONA] X:1883->44 | Viaje Corto (Dist: 10)
+16:14:40.825 DEBUG - [SALTO LIBRE POR ZONA] X:37->1874 | Viaje Corto (Dist: 1)
+16:14:41.753 DEBUG - [SALTO LIBRE POR ZONA] X:1884->43 | Viaje Corto (Dist: 17)
+16:14:42.778 DEBUG - [SALTO LIBRE POR ZONA] X:37->1877 | Viaje Corto (Dist: 59)
+16:14:44.042 DEBUG - [SALTO LIBRE POR ZONA] X:1882->43 | Viaje Corto (Dist: 19)
+16:14:47.791 DEBUG - [SALTO LIBRE POR ZONA] X:37->1877 | Viaje Corto (Dist: 1)
+16:14:48.861 DEBUG - [SALTO LIBRE POR ZONA] X:1882->48 | Viaje Corto (Dist: 1)
+16:14:50.196 DEBUG - [SALTO LIBRE POR ZONA] X:37->1877 | Viaje Corto (Dist: 7)
+16:14:50.969 DEBUG - [SALTO LIBRE POR ZONA] X:1882->44 | Viaje Corto (Dist: 5)
+16:14:53.211 DEBUG - [SALTO LIBRE POR ZONA] X:36->1877 | Viaje Corto (Dist: 2)
+16:14:55.251 DEBUG - [SALTO LIBRE POR ZONA] X:1883->45 | Viaje Corto (Dist: 2)
+16:15:12.703 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:15:12.706 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:15:14.251 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:15:14.436 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:15:14.438 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:15:14.799 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:15:14.804 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:15:15.103 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:15:15.103 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:15:15.267 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:15:22.005 INFO - ==========================================
+16:15:22.005 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:15:22.005 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:15:22.005 INFO - ==========================================
+16:15:22.122 INFO - [HID] Calibración enviada con éxito al Corne.
+16:15:23.816 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'ALFA'
+16:15:23.823 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:15:24.207 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:15:25.313 DEBUG - [SALTO LIBRE POR ZONA] X:18->1896 | Viaje Corto (Dist: 32)
+16:15:26.222 DEBUG - [SALTO LIBRE POR ZONA] X:1901->26 | Viaje Corto (Dist: 11)
+16:15:38.515 DEBUG - [SALTO LIBRE POR ZONA] X:18->1894 | Viaje Corto (Dist: 1)
+16:15:39.407 DEBUG - [SALTO LIBRE POR ZONA] X:1901->26 | Viaje Corto (Dist: 1)
+16:15:40.434 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:15:41.058 DEBUG - [SALTO LIBRE POR ZONA] X:1901->24 | Viaje Corto (Dist: 43)
+16:15:43.766 DEBUG - [SALTO LIBRE POR ZONA] X:18->1896 | Viaje Corto (Dist: 1)
+16:15:44.639 DEBUG - [SALTO LIBRE POR ZONA] X:1902->24 | Viaje Corto (Dist: 6)
+16:15:59.463 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:16:01.811 DEBUG - [SALTO LIBRE POR ZONA] X:1901->24 | Viaje Corto (Dist: 13)
+16:16:03.528 DEBUG - [SALTO LIBRE POR ZONA] X:16->1896 | Viaje Corto (Dist: 3)
+16:16:04.488 DEBUG - [SALTO LIBRE POR ZONA] X:1905->40 | Viaje Corto (Dist: 5)
+16:16:09.129 DEBUG - [SALTO LIBRE POR ZONA] X:16->1891 | Viaje Corto (Dist: 3)
+16:16:10.522 DEBUG - [SALTO LIBRE POR ZONA] X:1901->24 | Viaje Corto (Dist: 38)
+16:16:11.922 DEBUG - [SALTO LIBRE POR ZONA] X:18->1896 | Viaje Corto (Dist: 22)
+16:16:14.848 DEBUG - [SALTO LIBRE POR ZONA] X:1901->35 | Viaje Corto (Dist: 1)
+16:16:16.430 DEBUG - [SALTO LIBRE POR ZONA] X:18->1893 | Viaje Corto (Dist: 1)
+16:16:17.013 DEBUG - [SALTO LIBRE POR ZONA] X:1901->26 | Viaje Corto (Dist: 27)
+16:16:17.822 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:16:18.802 DEBUG - [SALTO LIBRE POR ZONA] X:1903->37 | Viaje Corto (Dist: 3)
+16:16:21.694 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:16:23.941 DEBUG - [SALTO LIBRE POR ZONA] X:1908->33 | Viaje Corto (Dist: 8)
+16:16:29.809 DEBUG - [SALTO LIBRE POR ZONA] X:18->1896 | Viaje Corto (Dist: 1)
+16:16:32.383 DEBUG - [SALTO LIBRE POR ZONA] Y:0->1168 | Viaje Corto (Dist: 12)
+16:16:34.495 DEBUG - [SALTO LIBRE POR ZONA] Y:1189->20 | Viaje Corto (Dist: 2)
+16:16:36.943 DEBUG - [SALTO LIBRE POR ZONA] Y:10->1183 | Viaje Corto (Dist: 119)
+16:16:37.339 DEBUG - [SALTO LIBRE POR ZONA] Y:1198->20 | Viaje Corto (Dist: 15)
+16:16:52.377 DEBUG - [SALTO LIBRE POR ZONA] Y:10->1183 | Viaje Corto (Dist: 127)
+16:16:53.364 DEBUG - [SALTO LIBRE POR ZONA] Y:1189->18 | Viaje Corto (Dist: 6)
+16:17:04.696 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:17:04.696 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:06.418 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:17:06.568 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:17:06.568 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:07.444 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:17:07.445 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:17:07.626 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:17:07.626 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:07.936 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:17:11.134 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'MIRROR'
+16:17:11.135 INFO - ===> [CAPA MIRROR] Activada instantáneamente en memoria.
+16:17:11.135 DEBUG - [UI] Capa detectada: MIRROR - Indicadores: ON
+16:17:11.311 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'MIRROR' -> 'LAYER_BASE'
+16:17:11.312 INFO - ===> [CAPA MIRROR] Desactivada.
+16:17:11.964 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:17:11.965 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:12.375 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:17:13.033 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:17:13.033 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:13.352 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:17:13.352 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:17:13.797 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:17:13.798 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:14.065 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:17:20.363 INFO - ==========================================
+16:17:20.363 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:17:20.363 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:17:20.363 INFO - ==========================================
+16:17:20.483 INFO - [HID] Calibración enviada con éxito al Corne.
+16:17:20.965 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'LAYER_BASE'
+16:17:24.513 DEBUG - [SALTO LIBRE POR ZONA] X:36->1874 | Viaje Corto (Dist: 2)
+16:17:26.177 DEBUG - [SALTO LIBRE POR ZONA] X:1884->44 | Viaje Corto (Dist: 18)
+16:17:28.184 DEBUG - [SALTO LIBRE POR ZONA] X:37->1877 | Viaje Corto (Dist: 1)
+16:17:29.718 DEBUG - [SALTO LIBRE POR ZONA] X:1895->49 | Viaje Corto (Dist: 40)
+16:17:32.031 DEBUG - [SALTO LIBRE POR ZONA] X:36->1877 | Viaje Corto (Dist: 2)
+16:17:33.020 DEBUG - [SALTO LIBRE POR ZONA] X:1884->49 | Viaje Corto (Dist: 11)
+16:17:37.687 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:17:37.688 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:38.170 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:17:38.878 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:17:38.878 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:40.797 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:17:40.801 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:17:41.445 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:17:41.446 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:41.757 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:17:41.843 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:17:41.844 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:42.196 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:17:42.196 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:17:43.200 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:17:43.202 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:17:43.360 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:17:49.794 INFO - ==========================================
+16:17:49.794 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:17:49.794 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:17:49.794 INFO - ==========================================
+16:17:49.913 INFO - [HID] Calibración enviada con éxito al Corne.
+16:17:50.233 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'LAYER_BASE'
+16:17:57.024 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:17:58.723 DEBUG - [SALTO LIBRE POR ZONA] X:1908->35 | Viaje Corto (Dist: 8)
+16:18:01.118 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:18:02.089 DEBUG - [SALTO LIBRE POR ZONA] X:1906->32 | Viaje Corto (Dist: 16)
+16:18:16.737 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:18:18.578 DEBUG - [SALTO LIBRE POR ZONA] X:1902->24 | Viaje Corto (Dist: 2)
+16:18:20.015 DEBUG - [SALTO LIBRE POR ZONA] X:15->1891 | Viaje Corto (Dist: 4)
+16:18:21.164 DEBUG - [SALTO LIBRE POR ZONA] X:1902->30 | Viaje Corto (Dist: 56)
+16:18:25.374 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:18:25.377 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:18:25.767 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:18:26.153 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:18:26.155 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:18:26.470 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:18:26.471 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:18:26.743 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:18:26.744 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:18:27.412 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:18:27.567 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:18:27.567 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:18:28.479 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:18:28.479 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:18:28.693 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:18:28.693 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:18:28.834 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:18:35.477 INFO - ==========================================
+16:18:35.477 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:18:35.477 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:18:35.477 INFO - ==========================================
+16:18:35.597 INFO - [HID] Calibración enviada con éxito al Corne.
+16:18:35.706 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'LAYER_BASE'
+16:18:50.181 DEBUG - [SALTO LIBRE POR ZONA] Y:10->1182 | Viaje Corto (Dist: 2)
+16:18:52.267 DEBUG - [SALTO LIBRE POR ZONA] Y:1195->25 | Viaje Corto (Dist: 8)
+16:18:53.815 DEBUG - [SALTO LIBRE POR ZONA] Y:9->1183 | Viaje Corto (Dist: 3)
+16:18:55.265 DEBUG - [SALTO LIBRE POR ZONA] Y:1193->21 | Viaje Corto (Dist: 6)
+16:18:56.905 DEBUG - [SALTO LIBRE POR ZONA] Y:11->1181 | Viaje Corto (Dist: 1)
+16:18:58.431 DEBUG - [SALTO LIBRE POR ZONA] Y:1192->18 | Viaje Corto (Dist: 5)
+16:18:59.934 DEBUG - [SALTO LIBRE POR ZONA] Y:10->1183 | Viaje Corto (Dist: 2)
+16:19:01.419 DEBUG - [SALTO LIBRE POR ZONA] Y:1190->20 | Viaje Corto (Dist: 3)
+16:19:03.014 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:19:04.686 DEBUG - [SALTO LIBRE POR ZONA] X:1902->28 | Viaje Corto (Dist: 2)
+16:19:06.527 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:19:08.300 DEBUG - [SALTO LIBRE POR ZONA] X:1919->38 | Viaje Corto (Dist: 19)
+16:19:09.684 DEBUG - [SALTO LIBRE POR ZONA] X:18->1896 | Viaje Corto (Dist: 1)
+16:19:11.214 DEBUG - [SALTO LIBRE POR ZONA] X:1909->37 | Viaje Corto (Dist: 9)
+16:19:15.522 DEBUG - [SALTO LIBRE POR ZONA] Y:1->1178 | Viaje Corto (Dist: 11)
+16:19:18.032 DEBUG - [SALTO LIBRE POR ZONA] Y:1188->22 | Viaje Corto (Dist: 1)
+16:19:19.309 DEBUG - [SALTO LIBRE POR ZONA] Y:6->1180 | Viaje Corto (Dist: 6)
+16:19:22.195 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:19:22.196 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:23.240 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:19:23.756 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:19:23.762 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:25.867 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:19:25.868 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:19:26.549 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:19:26.549 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:19:26.862 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:19:34.848 INFO - ==========================================
+16:19:34.848 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:19:34.848 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:19:34.848 INFO - ==========================================
+16:19:34.963 INFO - [HID] Calibración enviada con éxito al Corne.
+16:19:35.817 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'LAYER_BASE'
+16:19:40.931 DEBUG - [SALTO LIBRE POR ZONA] Y:11->1183 | Viaje Corto (Dist: 1)
+16:19:42.003 DEBUG - [SALTO LIBRE POR ZONA] Y:1189->27 | Viaje Corto (Dist: 6)
+16:19:43.329 DEBUG - [SALTO LIBRE POR ZONA] Y:10->1183 | Viaje Corto (Dist: 2)
+16:19:43.915 DEBUG - [SALTO LIBRE POR ZONA] Y:1188->19 | Viaje Corto (Dist: 1)
+16:19:44.699 DEBUG - [SALTO LIBRE POR ZONA] Y:7->1178 | Viaje Corto (Dist: 5)
+16:19:51.875 DEBUG - [SALTO LIBRE POR ZONA] X:16->1893 | Viaje Corto (Dist: 3)
+16:19:52.836 DEBUG - [SALTO LIBRE POR ZONA] X:1919->41 | Viaje Corto (Dist: 19)
+16:19:54.120 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:19:55.246 DEBUG - [SALTO LIBRE POR ZONA] X:1903->28 | Viaje Corto (Dist: 3)
+16:20:00.903 DEBUG - [SALTO LIBRE POR ZONA] X:18->1896 | Viaje Corto (Dist: 1)
+16:20:02.010 DEBUG - [SALTO LIBRE POR ZONA] X:1901->24 | Viaje Corto (Dist: 7)
+16:21:16.379 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:21:16.380 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:21:16.978 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:21:17.856 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:21:17.860 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:21:19.641 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:21:19.645 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:21:20.072 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:21:20.073 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:21:20.266 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:21:25.567 INFO - ==========================================
+16:21:25.567 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:21:25.567 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:21:25.567 INFO - ==========================================
+16:21:25.684 INFO - [HID] Calibración enviada con éxito al Corne.
+16:21:26.016 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'LAYER_BASE'
+16:21:36.198 DEBUG - [SALTO LIBRE POR ZONA] Y:11->1181 | Viaje Corto (Dist: 1)
+16:21:37.843 DEBUG - [SALTO LIBRE POR ZONA] Y:1190->19 | Viaje Corto (Dist: 3)
+16:21:39.389 DEBUG - [SALTO LIBRE POR ZONA] Y:11->1183 | Viaje Corto (Dist: 1)
+16:21:40.971 DEBUG - [SALTO LIBRE POR ZONA] Y:1192->18 | Viaje Corto (Dist: 5)
+16:21:42.459 DEBUG - [SALTO LIBRE POR ZONA] Y:11->1183 | Viaje Corto (Dist: 1)
+16:21:44.592 DEBUG - [SALTO LIBRE POR ZONA] Y:1189->17 | Viaje Corto (Dist: 2)
+16:21:46.635 DEBUG - [SALTO LIBRE POR ZONA] X:1901->24 | Viaje Corto (Dist: 1)
+16:21:49.541 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:21:51.390 DEBUG - [SALTO LIBRE POR ZONA] X:1918->36 | Viaje Corto (Dist: 18)
+16:21:53.231 DEBUG - [SALTO LIBRE POR ZONA] X:18->1896 | Viaje Corto (Dist: 1)
+16:21:55.014 DEBUG - [SALTO LIBRE POR ZONA] X:1906->55 | Viaje Corto (Dist: 6)
+16:22:04.898 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:22:04.900 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:22:05.832 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:22:06.261 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+16:22:06.261 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:22:06.756 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+16:22:06.759 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+16:22:07.239 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+16:22:07.240 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:22:07.730 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:22:15.077 INFO - ==========================================
+16:22:15.077 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:22:15.077 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:22:15.077 INFO - ==========================================
+16:22:15.195 INFO - [HID] Calibración enviada con éxito al Corne.
+16:22:16.123 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'LAYER_BASE'
+16:22:20.746 DEBUG - [SALTO LIBRE POR ZONA] Y:7->1175 | Viaje Corto (Dist: 5)
+16:22:22.436 DEBUG - [SALTO LIBRE POR ZONA] Y:1189->28 | Viaje Corto (Dist: 2)
+16:22:24.051 DEBUG - [SALTO LIBRE POR ZONA] Y:11->1173 | Viaje Corto (Dist: 1)
+16:22:36.568 DEBUG - [SALTO LIBRE POR ZONA] Y:1190->25 | Viaje Corto (Dist: 3)
+16:22:38.602 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+16:26:12.686 INFO - ==========================================
+16:26:12.686 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+16:26:12.686 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+16:26:12.686 INFO - ==========================================
+16:26:12.804 INFO - [HID] Calibración enviada con éxito al Corne.
+16:26:13.243 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'ALFA'
+16:26:13.245 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+16:26:13.561 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+16:26:16.672 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -21, vy_wrap: -8
+16:26:17.099 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.43s
+16:26:17.111 DEBUG - [SALTO LIBRE POR ZONA] X:10->1893 | Viaje Corto (Dist: 9)
+16:26:17.727 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 8, vy_wrap: 2
+16:26:18.141 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.41s
+16:26:18.157 DEBUG - [SALTO LIBRE POR ZONA] X:1907->38 | Viaje Corto (Dist: 7)
+16:26:19.495 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: -1
+16:26:19.721 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: 0
+16:26:19.857 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 22
+16:26:19.857 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 22, vx_wrap: -4
+16:26:19.880 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 17
+16:26:19.880 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -2
+16:26:19.892 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:26:19.892 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:26:22.402 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 16
+16:26:22.402 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -2
+16:26:22.425 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 28
+16:26:22.425 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -2
+16:26:22.436 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 17
+16:26:22.438 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -3
+16:26:22.452 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 34
+16:26:22.452 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 34, vx_wrap: -2
+16:26:22.474 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 31
+16:26:22.475 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -3
+16:26:22.487 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 17
+16:26:22.488 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -2
+16:26:22.499 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 24
+16:26:22.499 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -2
+16:26:22.531 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+16:26:22.532 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+16:26:22.554 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+16:26:22.557 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+16:26:22.802 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:26:22.804 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:26:22.827 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:26:22.827 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:26:22.870 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 7
+16:26:22.871 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -1
+16:26:24.040 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 3
+16:26:24.051 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -4
+16:26:24.063 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: 7
+16:26:24.473 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.41s
+16:26:24.484 DEBUG - [SALTO LIBRE POR ZONA] X:16->1894 | Viaje Corto (Dist: 3)
+16:26:25.311 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 34, vy_wrap: 0
+16:26:25.814 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.50s
+16:26:25.825 DEBUG - [SALTO LIBRE POR ZONA] X:1907->29 | Viaje Corto (Dist: 7)
+16:26:26.836 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -9, vy_wrap: 0
+16:26:27.257 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.42s
+16:26:27.269 DEBUG - [SALTO LIBRE POR ZONA] X:18->1890 | Viaje Corto (Dist: 1)
+16:26:28.227 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 43, vy_wrap: 0
+16:26:28.618 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.39s
+16:26:28.629 DEBUG - [SALTO LIBRE POR ZONA] X:1902->35 | Viaje Corto (Dist: 2)
+16:26:29.122 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 11, vy_wrap: -21
+16:26:29.133 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 20, vy_wrap: -12
+16:26:29.144 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 6, vy_wrap: -8
+16:26:29.473 INFO - [WRAP Y] ¡SALTO ARRIBA ejecutado! Tiempo empujando: 0.33s
+16:26:29.485 DEBUG - [SALTO LIBRE POR ZONA] Y:10->1183 | Viaje Corto (Dist: 2)
+16:26:30.516 INFO - [WRAP Y] Iniciando empuje ABAJO. vx_wrap: -1, vy_wrap: 10
+16:26:31.097 INFO - [WRAP Y] ¡SALTO ABAJO ejecutado! Tiempo empujando: 0.58s
+16:26:31.113 DEBUG - [SALTO LIBRE POR ZONA] Y:1191->26 | Viaje Corto (Dist: 4)
+16:26:31.659 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 0, vy_wrap: -8
+16:26:32.059 INFO - [WRAP Y] ¡SALTO ARRIBA ejecutado! Tiempo empujando: 0.40s
+16:26:32.071 DEBUG - [SALTO LIBRE POR ZONA] Y:11->1176 | Viaje Corto (Dist: 1)
+16:26:32.500 INFO - [WRAP Y] Iniciando empuje ABAJO. vx_wrap: -2, vy_wrap: 15
+16:26:32.800 INFO - [WRAP Y] ¡SALTO ABAJO ejecutado! Tiempo empujando: 0.30s
+16:26:32.813 DEBUG - [SALTO LIBRE POR ZONA] Y:1191->23 | Viaje Corto (Dist: 67)
+16:26:33.272 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 0, vy_wrap: -5
+16:26:36.835 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -8, vy_wrap: -3
+16:26:36.837 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -8, vy_wrap: -3
+16:26:36.862 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -8, vy_wrap: -2
+16:26:36.862 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -8, vy_wrap: -2
+16:26:36.915 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -4, vy_wrap: -2
+16:26:36.916 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -4, vy_wrap: -2
+16:26:36.927 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -6, vy_wrap: -2
+16:26:36.927 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -6, vy_wrap: -2
+16:26:36.938 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -7, vy_wrap: -2
+16:26:36.938 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -7, vy_wrap: -2
+16:26:36.949 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -4
+16:26:36.949 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -4
+16:26:36.970 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -14, vy_wrap: -2
+16:26:36.973 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -14, vy_wrap: -2
+16:26:37.342 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -11, vy_wrap: -2
+16:26:37.343 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -11, vy_wrap: -2
+16:26:37.407 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -21, vy_wrap: -2
+16:26:37.408 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -21, vy_wrap: -2
+16:26:37.767 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -8, vy_wrap: -2
+16:26:37.767 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -8, vy_wrap: -2
+16:26:37.799 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -5, vy_wrap: -2
+16:26:37.799 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -5, vy_wrap: -2
+16:26:38.148 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -15, vy_wrap: -2
+16:26:38.149 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -15, vy_wrap: -2
+16:26:39.123 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 12, vy_wrap: -2
+16:26:39.125 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 12, vy_wrap: -2
+16:26:39.139 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 34, vy_wrap: -2
+16:26:39.140 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 34, vy_wrap: -2
+16:26:39.151 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 24, vy_wrap: -3
+16:26:39.152 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 24, vy_wrap: -3
+16:26:39.165 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 44, vy_wrap: -3
+16:26:39.165 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 44, vy_wrap: -3
+16:26:39.358 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 0, vy_wrap: -1
+16:26:39.402 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 5, vy_wrap: -2
+16:26:39.412 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 13, vy_wrap: -2
+16:26:39.414 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 13, vy_wrap: -2
+16:26:39.435 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 11, vy_wrap: -2
+16:26:39.435 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 11, vy_wrap: -2
+16:26:39.676 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 3, vy_wrap: -2
+16:26:39.676 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 3, vy_wrap: -2
+16:26:39.981 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -7, vy_wrap: -2
+16:26:39.981 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -7, vy_wrap: -2
+16:26:39.992 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -11, vy_wrap: -2
+16:26:39.992 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -11, vy_wrap: -2
+16:26:40.002 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -31, vy_wrap: -3
+16:26:40.002 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -31, vy_wrap: -3
+16:26:40.327 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -14, vy_wrap: -2
+16:26:40.327 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -14, vy_wrap: -2
+16:26:40.339 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -44, vy_wrap: -2
+16:26:40.339 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -44, vy_wrap: -2
+16:26:40.351 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -24, vy_wrap: -3
+16:26:40.351 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -24, vy_wrap: -3
+16:26:40.627 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -3, vy_wrap: -1
+16:26:40.630 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -3, vy_wrap: -1
+16:26:40.641 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -22, vy_wrap: -4
+16:26:40.641 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -22, vy_wrap: -4
+16:26:40.654 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -34, vy_wrap: -2
+16:26:40.656 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -34, vy_wrap: -2
+16:26:40.939 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -2, vy_wrap: -2
+16:26:40.950 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -4, vy_wrap: 0
+16:26:40.965 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -16, vy_wrap: -2
+16:26:40.965 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -16, vy_wrap: -2
+16:26:41.537 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 7, vy_wrap: -2
+16:26:41.537 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 7, vy_wrap: -2
+16:26:41.548 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 35, vy_wrap: -12
+16:26:41.548 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 35, vy_wrap: -12
+16:26:41.559 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 21, vy_wrap: -8
+16:26:41.559 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 21, vy_wrap: -8
+16:26:41.572 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 41, vy_wrap: -8
+16:26:41.572 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 41, vy_wrap: -8
+16:26:41.594 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 21, vy_wrap: -3
+16:26:41.594 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 21, vy_wrap: -3
+16:26:41.605 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 27, vy_wrap: -2
+16:26:41.606 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 27, vy_wrap: -2
+16:26:41.790 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 4, vy_wrap: -1
+16:26:41.792 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 4, vy_wrap: -1
+16:26:41.803 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 5, vy_wrap: -4
+16:26:41.806 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 5, vy_wrap: -4
+16:26:41.817 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 22, vy_wrap: -4
+16:26:41.817 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 22, vy_wrap: -4
+16:26:42.048 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 5, vy_wrap: -6
+16:26:42.059 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 8, vy_wrap: -4
+16:26:42.071 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 25, vy_wrap: -4
+16:26:42.072 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 25, vy_wrap: -4
+16:26:42.082 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 14, vy_wrap: -2
+16:26:42.082 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 14, vy_wrap: -2
+16:26:42.093 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 17, vy_wrap: -3
+16:26:42.093 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 17, vy_wrap: -3
+16:26:42.347 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 0, vy_wrap: -1
+16:26:42.379 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -21, vy_wrap: -4
+16:26:42.400 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -27, vy_wrap: -3
+16:26:42.400 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -27, vy_wrap: -3
+16:26:42.936 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -38, vy_wrap: -5
+16:26:42.937 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -38, vy_wrap: -5
+16:26:42.948 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -26, vy_wrap: -3
+16:26:42.948 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -26, vy_wrap: -3
+16:26:42.970 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -21, vy_wrap: -3
+16:26:42.970 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -21, vy_wrap: -3
+16:26:43.182 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -5, vy_wrap: -1
+16:26:43.182 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -5, vy_wrap: -1
+16:26:43.195 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -21, vy_wrap: -2
+16:26:43.195 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -21, vy_wrap: -2
+16:26:43.216 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -28, vy_wrap: -3
+16:26:43.216 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -28, vy_wrap: -3
+16:26:43.586 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 14
+16:26:43.587 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -3
+16:26:43.598 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 31
+16:26:43.598 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -2
+16:26:43.621 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 21
+16:26:43.622 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -2
+16:26:43.633 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:26:43.633 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:26:43.865 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:26:43.866 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:26:43.888 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 18
+16:26:43.888 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -3
+16:26:43.910 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 21
+16:26:43.911 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -2
+16:26:43.931 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:26:43.932 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:26:43.953 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:26:43.953 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:26:43.976 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 13
+16:26:43.977 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -2
+16:26:44.207 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 16
+16:26:44.208 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -2
+16:26:44.219 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 16
+16:26:44.221 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -2
+16:26:44.232 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 31
+16:26:44.232 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -3
+16:26:44.254 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:26:44.255 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:26:44.266 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 31
+16:26:44.266 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -2
+16:26:44.288 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 27
+16:26:44.289 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 27, vx_wrap: -3
+16:26:44.300 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:44.301 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:44.311 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 18
+16:26:44.311 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -2
+16:26:44.343 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 9
+16:26:44.343 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -1
+16:26:44.760 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:26:44.760 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:26:44.773 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+16:26:44.773 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+16:26:44.795 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 21
+16:26:44.796 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -2
+16:26:44.807 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 14
+16:26:44.807 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -3
+16:26:44.829 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 24
+16:26:44.830 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -2
+16:26:44.851 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 16
+16:26:44.852 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -2
+16:26:44.898 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+16:26:44.899 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+16:26:46.392 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 22
+16:26:46.392 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 22, vx_wrap: -4
+16:26:46.402 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:46.404 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:46.415 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+16:26:46.415 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+16:26:46.658 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 9
+16:26:46.658 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -2
+16:26:46.679 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:46.679 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:46.690 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 27
+16:26:46.690 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 27, vx_wrap: -2
+16:26:46.701 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 17
+16:26:46.703 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -3
+16:26:46.716 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 28
+16:26:46.716 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -2
+16:26:46.728 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:26:46.728 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:26:46.739 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 24
+16:26:46.739 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -2
+16:26:46.772 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+16:26:46.772 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+16:26:46.783 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:26:46.783 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:26:46.827 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 2
+16:26:47.032 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+16:26:47.066 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:47.068 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:47.081 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 24
+16:26:47.081 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -2
+16:26:47.091 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 28
+16:26:47.091 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -2
+16:26:47.115 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 31
+16:26:47.115 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -3
+16:26:47.136 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:26:47.137 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:26:47.148 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 21
+16:26:47.148 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -2
+16:26:47.180 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:26:47.181 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:26:47.192 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:26:47.192 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:26:47.216 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 10
+16:26:47.216 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 10, vx_wrap: -2
+16:26:47.404 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:47.405 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:47.417 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:26:47.417 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:26:47.427 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 18
+16:26:47.427 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -2
+16:26:47.439 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 40
+16:26:47.439 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 40, vx_wrap: -5
+16:26:47.450 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 24
+16:26:47.450 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -5
+16:26:47.461 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 24
+16:26:47.461 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -3
+16:26:47.472 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 54
+16:26:47.472 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 54, vx_wrap: -5
+16:26:47.483 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 27
+16:26:47.483 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 27, vx_wrap: -3
+16:26:47.494 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 23
+16:26:47.494 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 23, vx_wrap: -3
+16:26:47.506 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 44
+16:26:47.507 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 44, vx_wrap: -5
+16:26:47.520 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 31
+16:26:47.521 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -5
+16:26:47.754 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:26:47.754 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:26:47.809 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 11
+16:26:47.809 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -1
+16:26:47.895 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 1
+16:26:47.906 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+16:26:49.268 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -20, vy_wrap: -7
+16:26:49.311 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -4, vx_wrap: 0
+16:26:50.781 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 25
+16:26:50.782 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -3
+16:26:50.806 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:26:50.807 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:26:50.819 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 25
+16:26:50.819 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -4
+16:26:50.842 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 10
+16:26:50.842 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 10, vx_wrap: -2
+16:26:50.863 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 18
+16:26:50.864 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -2
+16:26:50.895 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:26:50.896 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:26:51.106 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 19
+16:26:51.107 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 19, vx_wrap: -4
+16:26:51.120 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 28
+16:26:51.122 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -5
+16:26:51.133 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:26:51.133 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:26:51.144 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 14
+16:26:51.144 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -3
+16:26:51.167 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:51.167 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:51.178 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 25
+16:26:51.178 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -3
+16:26:51.203 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 15
+16:26:51.205 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -1
+16:26:51.227 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 10
+16:26:51.228 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 10, vx_wrap: -2
+16:26:51.534 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 4
+16:26:51.535 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -2
+16:26:51.572 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:26:51.573 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:26:51.595 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:51.596 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:51.628 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 9
+16:26:51.628 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -1
+16:26:51.988 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -21
+16:26:51.988 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -21, vx_wrap: -3
+16:26:52.009 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -14
+16:26:52.009 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -2
+16:26:53.119 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 51
+16:26:53.119 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 51, vx_wrap: -5
+16:26:53.132 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 27
+16:26:53.132 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 27, vx_wrap: -3
+16:26:53.143 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 23
+16:26:53.144 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 23, vx_wrap: -3
+16:26:53.155 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 44
+16:26:53.155 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 44, vx_wrap: -5
+16:26:53.177 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 33
+16:26:53.177 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 33, vx_wrap: -5
+16:26:53.199 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 18
+16:26:53.199 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -2
+16:26:53.210 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:26:53.210 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:26:53.420 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:53.420 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:53.432 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:53.432 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:53.443 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 31
+16:26:53.443 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -2
+16:26:53.454 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 20
+16:26:53.454 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 20, vx_wrap: -3
+16:26:53.465 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 37
+16:26:53.465 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 37, vx_wrap: -2
+16:26:53.476 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 17
+16:26:53.476 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -3
+16:26:53.487 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 18
+16:26:53.487 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -2
+16:26:53.498 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 24
+16:26:53.498 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -2
+16:26:53.540 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 0
+16:26:53.761 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+16:26:54.030 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 0
+16:26:54.549 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.52s
+16:26:54.560 DEBUG - [SALTO LIBRE POR ZONA] X:16->1893 | Viaje Corto (Dist: 3)
+16:26:55.559 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 13, vy_wrap: 0
+16:26:56.039 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.48s
+16:26:56.050 DEBUG - [SALTO LIBRE POR ZONA] X:1907->27 | Viaje Corto (Dist: 7)
+16:26:56.732 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: -25
+16:26:56.732 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -25, vx_wrap: -11
+16:26:56.744 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -8
+16:26:56.744 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -8, vx_wrap: -4
+16:26:56.755 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -36
+16:26:56.756 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -36, vx_wrap: -19
+16:26:56.768 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -15
+16:26:56.770 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -15, vx_wrap: -5
+16:26:56.781 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -13
+16:26:56.781 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -13, vx_wrap: -6
+16:26:57.005 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -9
+16:26:57.005 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -9, vx_wrap: -2
+16:26:58.255 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 17
+16:26:58.255 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -3
+16:26:58.267 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 17
+16:26:58.267 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -2
+16:26:58.289 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:58.289 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:58.300 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 21
+16:26:58.300 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -2
+16:26:58.332 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 13
+16:26:58.332 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -2
+16:26:58.353 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:26:58.353 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:26:58.594 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:26:58.594 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:26:58.615 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:26:58.615 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:26:58.648 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:26:58.648 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:26:58.681 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 13
+16:26:58.681 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -2
+16:26:58.704 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 11
+16:26:58.707 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -1
+16:27:00.116 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -5
+16:27:00.116 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -5, vx_wrap: -2
+16:27:01.050 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:27:01.050 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:27:01.071 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 18
+16:27:01.071 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -2
+16:27:01.093 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:27:01.093 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:27:01.178 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 0
+16:27:01.335 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+16:27:01.357 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+16:27:01.357 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+16:27:01.369 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 28
+16:27:01.369 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -3
+16:27:01.390 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 13
+16:27:01.392 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -2
+16:27:01.404 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 24
+16:27:01.404 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -2
+16:27:01.415 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:27:01.415 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:27:01.437 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 11
+16:27:01.438 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -3
+16:27:01.461 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+16:27:01.461 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+16:27:01.505 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 3
+16:27:01.507 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -1
+16:27:01.726 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:27:01.732 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:27:01.742 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 21
+16:27:01.742 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -2
+16:27:01.766 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 28
+16:27:01.766 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -3
+16:27:01.787 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:27:01.787 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:27:01.808 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:27:01.808 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:27:01.849 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 1
+16:27:02.071 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: 0
+16:27:02.083 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:27:02.083 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:27:02.094 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 8
+16:27:02.096 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -4
+16:27:02.107 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -16, vy_wrap: 23
+16:27:02.107 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 23, vx_wrap: -16
+16:27:02.121 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 15
+16:27:02.121 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -7
+16:27:02.133 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 18
+16:27:02.133 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -5
+16:27:02.144 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 35
+16:27:02.144 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 35, vx_wrap: -8
+16:27:02.155 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 20
+16:27:02.155 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 20, vx_wrap: -2
+16:27:02.166 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 17
+16:27:02.166 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -3
+16:27:02.178 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 28
+16:27:02.178 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -5
+16:27:02.189 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:27:02.189 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:27:02.200 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+16:27:02.201 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+16:27:02.222 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:27:02.223 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:27:03.154 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 0
+16:27:03.231 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -2
+16:27:03.242 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 4
+16:27:03.242 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -2
+16:27:03.253 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:27:03.254 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:27:03.264 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 9
+16:27:03.264 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -3
+16:27:03.287 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 4
+16:27:03.290 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -2
+16:27:03.310 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 4
+16:27:03.311 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -2
+16:27:03.322 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+16:27:03.322 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+16:27:03.344 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 7
+16:27:03.345 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -1
+16:27:03.366 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+16:27:03.366 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+16:27:03.378 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 10
+16:27:03.378 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 10, vx_wrap: -2
+16:27:03.388 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+16:27:03.388 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+16:27:03.410 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+16:27:03.410 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+16:27:03.431 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 4
+16:27:03.431 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -1
+16:27:03.455 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 1
+16:27:03.466 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: 0
+16:27:03.477 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 4
+16:27:03.477 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -1
+16:27:03.499 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:27:03.499 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:27:03.521 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 4
+16:27:03.521 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -1
+16:27:03.532 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 3
+16:27:03.533 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -2
+16:27:03.544 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 4
+16:27:03.556 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -3
+16:27:03.567 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 1
+16:27:03.578 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:27:03.590 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 1
+16:27:03.601 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+16:27:03.944 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -9
+16:27:03.944 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -9, vx_wrap: -2
+16:27:03.954 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -14
+16:27:03.954 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -3
+16:27:03.965 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: -47
+16:27:03.965 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -47, vx_wrap: -7
+16:27:03.976 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -27
+16:27:03.976 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -27, vx_wrap: -3
+16:27:03.987 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -44
+16:27:03.987 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -44, vx_wrap: -5
+16:27:03.998 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -8
+16:27:03.998 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -8, vx_wrap: -2
+16:27:04.019 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -14
+16:27:04.021 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -3
+16:27:04.262 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: -2
+16:27:04.272 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -10, vx_wrap: -4
+16:27:04.283 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: -14
+16:27:04.283 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -7
+16:27:04.294 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: -28
+16:27:04.294 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -28, vx_wrap: -8
+16:27:04.305 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -17, vy_wrap: -64
+16:27:04.306 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -64, vx_wrap: -17
+16:27:04.317 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -37
+16:27:04.317 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -37, vx_wrap: -6
+16:27:04.328 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: -45
+16:27:04.330 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -45, vx_wrap: -8
+16:27:04.340 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -27
+16:27:04.340 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -27, vx_wrap: -2
+16:27:04.352 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -31
+16:27:04.353 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -31, vx_wrap: -5
+16:27:04.607 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -4
+16:27:04.607 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -4, vx_wrap: -2
+16:27:04.618 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: -31
+16:27:04.618 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -31, vx_wrap: -7
+16:27:04.630 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: -25
+16:27:04.630 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -25, vx_wrap: -8
+16:27:04.642 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -17, vy_wrap: -61
+16:27:04.642 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -61, vx_wrap: -17
+16:27:04.653 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: -30
+16:27:04.653 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -30, vx_wrap: -11
+16:27:04.664 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: -28
+16:27:04.664 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -28, vx_wrap: -11
+16:27:04.676 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -26
+16:27:04.677 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -26, vx_wrap: -19
+16:27:04.688 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -14
+16:27:04.689 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -4
+16:27:04.703 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -19
+16:27:04.705 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -19, vx_wrap: -2
+16:27:04.939 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -8
+16:27:04.939 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -8, vx_wrap: -4
+16:27:04.950 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -14
+16:27:04.952 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -2
+16:27:04.963 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: -41
+16:27:04.963 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -41, vx_wrap: -11
+16:27:04.974 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -21
+16:27:04.974 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -21, vx_wrap: -5
+16:27:04.984 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -21
+16:27:04.984 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -21, vx_wrap: -5
+16:27:04.995 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -9, vy_wrap: -23
+16:27:04.995 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -23, vx_wrap: -9
+16:27:05.006 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -13
+16:27:05.006 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -13, vx_wrap: -5
+16:27:05.016 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -8
+16:27:05.020 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -8, vx_wrap: -2
+16:27:05.031 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -13
+16:27:05.031 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -13, vx_wrap: -2
+16:27:05.339 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 6
+16:27:05.339 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -1
+16:27:05.351 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: 51
+16:27:05.352 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 51, vx_wrap: -11
+16:27:05.363 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: 30
+16:27:05.363 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 30, vx_wrap: -6
+16:27:05.375 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 77
+16:27:05.375 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 77, vx_wrap: -19
+16:27:05.387 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -12, vy_wrap: 35
+16:27:05.388 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 35, vx_wrap: -12
+16:27:05.399 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 66
+16:27:05.399 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 66, vx_wrap: -19
+16:27:05.410 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 27
+16:27:05.410 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 27, vx_wrap: -8
+16:27:05.421 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 38
+16:27:05.421 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 38, vx_wrap: -8
+16:27:05.432 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:27:05.432 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:27:05.443 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+16:27:05.444 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+16:27:05.465 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 0
+16:27:05.643 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:27:05.654 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 10
+16:27:05.655 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 10, vx_wrap: -4
+16:27:05.666 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -16, vy_wrap: 36
+16:27:05.667 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 36, vx_wrap: -16
+16:27:05.678 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: 27
+16:27:05.678 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 27, vx_wrap: -11
+16:27:05.689 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 62
+16:27:05.689 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 62, vx_wrap: -19
+16:27:05.700 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -14, vy_wrap: 31
+16:27:05.701 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -14
+16:27:05.712 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -14, vy_wrap: 31
+16:27:05.712 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -14
+16:27:05.723 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 48
+16:27:05.723 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 48, vx_wrap: -19
+16:27:05.734 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 15
+16:27:05.734 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -7
+16:27:05.745 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 16
+16:27:05.746 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -2
+16:27:05.757 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+16:27:05.757 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+16:27:05.915 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 5
+16:27:05.915 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -3
+16:27:05.926 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 16
+16:27:05.926 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -7
+16:27:05.940 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 35.952
+16:27:05.940 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 35.952, vx_wrap: -19
+16:27:05.951 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -14, vy_wrap: 24.048000000000002
+16:27:05.953 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24.048000000000002, vx_wrap: -14
+16:27:05.964 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 29.73599999999999
+16:27:05.964 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 29.73599999999999, vx_wrap: -19
+16:27:05.976 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -14, vy_wrap: 26.26400000000001
+16:27:05.976 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 26.26400000000001, vx_wrap: -14
+16:27:05.987 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 25.368000000000052
+16:27:05.987 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25.368000000000052, vx_wrap: -19
+16:27:05.998 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 17.631999999999948
+16:27:05.998 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17.631999999999948, vx_wrap: -7
+16:27:06.010 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: 17
+16:27:06.010 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -6
+16:27:06.022 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 18
+16:27:06.022 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -8
+16:27:06.034 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:27:06.034 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:27:06.047 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 9
+16:27:06.047 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -2
+16:27:06.195 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 11
+16:27:06.196 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -3
+16:27:06.207 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 13
+16:27:06.207 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -7
+16:27:06.220 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 46
+16:27:06.223 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 46, vx_wrap: -19
+16:27:06.234 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -14, vy_wrap: 24
+16:27:06.237 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 24, vx_wrap: -14
+16:27:06.248 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 59
+16:27:06.248 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 59, vx_wrap: -19
+16:27:06.261 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -16, vy_wrap: 48
+16:27:06.261 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 48, vx_wrap: -16
+16:27:06.273 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 6
+16:27:06.273 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -5
+16:27:06.285 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 0
+16:27:06.475 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -9, vx_wrap: -4
+16:27:06.487 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -44
+16:27:06.487 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -44, vx_wrap: -3
+16:27:06.498 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -43
+16:27:06.498 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -43, vx_wrap: -6
+16:27:06.509 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -12, vy_wrap: -89
+16:27:06.509 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -89, vx_wrap: -12
+16:27:06.520 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -33
+16:27:06.520 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -33, vx_wrap: -3
+16:27:06.531 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -28
+16:27:06.531 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -28, vx_wrap: -6
+16:27:06.542 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -40
+16:27:06.542 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -40, vx_wrap: -2
+16:27:06.784 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -83
+16:27:06.785 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -83, vx_wrap: -3
+16:27:06.798 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: -58
+16:27:06.798 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -58, vx_wrap: -7
+16:27:06.809 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -13, vy_wrap: -89
+16:27:06.809 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -89, vx_wrap: -13
+16:27:06.820 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -30
+16:27:06.820 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -30, vx_wrap: -6
+16:27:06.831 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -32
+16:27:06.831 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -32, vx_wrap: -4
+16:27:06.843 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -17
+16:27:06.843 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -17, vx_wrap: -3
+16:27:07.043 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -18
+16:27:07.043 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -18, vx_wrap: -2
+16:27:07.056 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -38
+16:27:07.058 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -38, vx_wrap: -6
+16:27:07.070 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -10, vy_wrap: -94
+16:27:07.072 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -94, vx_wrap: -10
+16:27:07.087 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: -69
+16:27:07.088 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -69, vx_wrap: -11
+16:27:07.099 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: -48
+16:27:07.099 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -48, vx_wrap: -11
+16:27:07.120 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -11
+16:27:07.120 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -11, vx_wrap: -2
+16:27:07.340 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -38
+16:27:07.340 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -38, vx_wrap: -3
+16:27:07.343 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -3, vy_wrap: -38
+16:27:07.364 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: -12
+16:27:07.364 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -12, vx_wrap: -7
+16:27:07.397 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -6
+16:27:07.397 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -6, vx_wrap: -2
+16:27:07.599 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 10
+16:27:07.600 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 10, vx_wrap: -3
+16:27:07.611 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 17
+16:27:07.613 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -3
+16:27:07.624 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -13, vy_wrap: 48
+16:27:07.624 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 48, vx_wrap: -13
+16:27:07.638 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 77
+16:27:07.640 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 77, vx_wrap: -19
+16:27:07.652 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -10, vy_wrap: 46
+16:27:07.654 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 46, vx_wrap: -10
+16:27:07.665 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 110
+16:27:07.665 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 110, vx_wrap: -19
+16:27:07.676 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -9, vy_wrap: 46
+16:27:07.676 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 46, vx_wrap: -9
+16:27:07.688 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -15, vy_wrap: 67
+16:27:07.689 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 67, vx_wrap: -15
+16:27:07.700 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 21
+16:27:07.700 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -5
+16:27:07.711 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 19
+16:27:07.711 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 19, vx_wrap: -4
+16:27:07.736 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+16:27:07.736 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+16:27:07.884 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 2
+16:27:07.896 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 38, vx_wrap: -19
+16:27:07.907 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 51
+16:27:07.907 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 51, vx_wrap: -19
+16:27:07.920 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 52
+16:27:07.920 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 52, vx_wrap: -19
+16:27:07.931 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -12, vy_wrap: 39
+16:27:07.931 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 39, vx_wrap: -12
+16:27:07.942 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -13, vy_wrap: 40.99199999999996
+16:27:07.942 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 40.99199999999996, vx_wrap: -13
+16:27:07.954 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -17, vy_wrap: 35.53200000000004
+16:27:07.955 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 35.53200000000004, vx_wrap: -17
+16:27:07.966 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 29.476
+16:27:07.967 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 29.476, vx_wrap: -2
+16:27:07.978 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 31.836000000000013
+16:27:07.978 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31.836000000000013, vx_wrap: -8
+16:27:07.999 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 14
+16:27:07.999 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -3
+16:27:08.125 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 3
+16:27:08.125 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -1
+16:27:08.138 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 48
+16:27:08.139 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 48, vx_wrap: -19
+16:27:08.150 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -14, vy_wrap: 25
+16:27:08.150 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -14
+16:27:08.161 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -17, vy_wrap: 61
+16:27:08.162 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 61, vx_wrap: -17
+16:27:08.173 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 30
+16:27:08.173 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 30, vx_wrap: -5
+16:27:08.187 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 58
+16:27:08.188 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 58, vx_wrap: -8
+16:27:08.199 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 23
+16:27:08.199 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 23, vx_wrap: -3
+16:27:08.210 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 37
+16:27:08.211 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 37, vx_wrap: -2
+16:27:08.233 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 0
+17:00:36.823 DEBUG - [SALTO LIBRE POR ZONA] Y:1150->0 | Viaje Corto (Dist: 0)
+17:00:36.823 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 2008.59s
+17:00:36.824 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -1150
+17:00:36.836 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1896, vy_wrap: -12
+17:00:36.836 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -1896, vy_wrap: -12
+17:00:36.853 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.853 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.864 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.864 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.875 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.875 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.886 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.886 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.897 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.899 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.910 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.912 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.924 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.925 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.935 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.936 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.946 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.946 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.957 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.957 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.968 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.968 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.979 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.979 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:36.991 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:36.991 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.002 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.002 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.013 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.013 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.024 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.024 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.035 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.035 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.046 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.046 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.057 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.057 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.068 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.068 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.079 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.079 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.090 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.090 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.101 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.101 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.111 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.111 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.124 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.124 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.135 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.135 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.146 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.31s
+17:00:37.146 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.146 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.157 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1896, vy_wrap: -12
+17:00:37.157 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -1896, vy_wrap: -12
+17:00:37.158 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -1896, vy_wrap: -12
+17:00:37.169 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.169 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.179 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.179 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.190 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.190 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.201 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.201 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.213 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.213 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.224 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.224 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.235 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.236 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.247 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.247 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.258 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.258 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.269 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.269 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.280 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.280 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.291 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.291 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.302 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.302 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.313 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.313 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.324 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.324 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.335 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.336 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.346 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.346 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.357 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.357 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.368 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.368 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.380 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.380 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.391 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.391 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.402 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.402 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.413 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.413 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.425 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.425 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.436 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.436 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.447 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.448 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.459 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.30s
+17:00:37.460 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.460 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.471 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1896, vy_wrap: -12
+17:00:37.471 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -1896, vy_wrap: -12
+17:00:37.471 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -1896, vy_wrap: -12
+17:00:37.483 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.483 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.494 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.494 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.508 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.508 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.522 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -12
+17:00:37.523 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -12
+17:00:37.534 DEBUG - [SALTO LIBRE POR ZONA] Y:0->1150 | Viaje Corto (Dist: 0)
+17:00:37.535 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 1138, vx_wrap: 0
+17:00:38.740 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 6
+17:00:38.762 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 43, vx_wrap: -19
+17:00:38.762 INFO - [WRAP Y] Iniciando empuje ABAJO. vx_wrap: -19, vy_wrap: 43
+17:00:38.971 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -9, vy_wrap: -21
+17:00:38.971 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -21, vx_wrap: -9
+17:00:38.982 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -48
+17:00:38.982 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -48, vx_wrap: -19
+17:00:38.993 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -46
+17:00:38.993 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -46, vx_wrap: -19
+17:00:39.004 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -24
+17:00:39.004 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -24, vx_wrap: -19
+17:00:39.015 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -22
+17:00:39.015 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -22, vx_wrap: -19
+17:00:39.026 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -22
+17:00:39.026 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -22, vx_wrap: -19
+17:00:39.037 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -39
+17:00:39.038 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -39, vx_wrap: -19
+17:00:39.050 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -19
+17:00:39.060 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -33, vx_wrap: -19
+17:00:39.071 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: -17
+17:00:39.092 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -24, vx_wrap: -14
+17:00:39.104 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -7
+17:00:39.104 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -7, vx_wrap: -2
+17:00:39.841 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -35, vy_wrap: 9
+17:00:39.854 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 20, vx_wrap: -19
+17:00:39.865 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 11
+17:00:39.875 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -19
+17:00:39.886 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 14
+17:00:39.908 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 31, vx_wrap: -19
+17:00:39.919 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -19, vy_wrap: 13
+17:00:40.470 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.55s
+17:00:40.480 DEBUG - [SALTO LIBRE POR ZONA] X:18->1892 | Viaje Corto (Dist: 1)
+17:00:41.205 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 58, vy_wrap: -22
+17:00:41.230 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -42, vx_wrap: 19
+17:00:41.243 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 19, vy_wrap: -25
+17:00:41.243 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -25, vx_wrap: 19
+17:00:41.256 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 19, vy_wrap: -10
+17:00:41.669 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.41s
+17:00:41.681 DEBUG - [SALTO LIBRE POR ZONA] X:1902->24 | Viaje Corto (Dist: 2)
+17:00:42.796 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+17:00:42.798 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+17:00:43.946 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+17:00:43.947 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+17:00:43.969 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 18
+17:00:43.969 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -2
+17:00:43.990 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+17:00:43.993 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+17:00:44.010 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+17:00:44.013 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+17:00:44.771 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -9
+17:00:44.777 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -9, vx_wrap: -6
+17:00:44.789 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -14, vy_wrap: -21
+17:00:44.789 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -21, vx_wrap: -14
+17:00:44.800 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: -9
+17:00:44.800 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -9, vx_wrap: -7
+17:00:44.811 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -8
+17:00:44.811 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -8, vx_wrap: -6
+17:00:44.822 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -1
+17:00:45.188 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.37s
+17:00:45.199 DEBUG - [SALTO LIBRE POR ZONA] X:18->1894 | Viaje Corto (Dist: 1)
+17:00:46.782 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 6, vy_wrap: 4
+17:00:47.070 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+17:00:47.170 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 2, vy_wrap: 9
+17:00:47.170 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: 2
+17:00:47.180 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 2, vy_wrap: 5
+17:00:47.180 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: 2
+17:00:47.192 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 2, vy_wrap: 4
+17:00:47.192 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: 2
+17:00:47.203 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 7, vy_wrap: 7
+17:00:47.759 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.56s
+17:00:47.770 DEBUG - [SALTO LIBRE POR ZONA] X:1901->26 | Viaje Corto (Dist: 1)
+17:00:49.346 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 21
+17:00:49.346 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -2
+17:00:49.692 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+17:00:49.692 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+17:00:49.715 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+17:00:49.715 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+17:00:50.036 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -37
+17:00:50.037 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -37, vx_wrap: -4
+17:00:50.060 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -38
+17:00:50.061 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -38, vx_wrap: -5
+17:00:50.083 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -14
+17:00:50.083 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -2
+17:00:50.095 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -18
+17:00:50.096 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -18, vx_wrap: -2
+17:00:50.309 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -5
+17:00:50.310 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -5, vx_wrap: -2
+17:00:50.321 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: -24
+17:00:50.321 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -24, vx_wrap: -7
+17:00:50.332 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -18
+17:00:50.333 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -18, vx_wrap: -5
+17:00:50.345 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -34
+17:00:50.345 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -34, vx_wrap: -2
+17:00:59.145 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -21, vy_wrap: 21
+17:00:59.156 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 12, vx_wrap: -7
+17:00:59.166 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: 9
+17:00:59.167 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -6
+17:00:59.177 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -9, vy_wrap: 16
+17:00:59.177 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -9
+17:00:59.189 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+17:00:59.189 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+17:00:59.200 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 11
+17:00:59.200 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -1
+17:00:59.408 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -3
+17:00:59.408 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -3, vx_wrap: -2
+17:00:59.420 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -12, vy_wrap: -12
+17:00:59.801 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.38s
+17:00:59.814 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+17:01:00.478 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 2, vy_wrap: 0
+17:01:00.982 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.50s
+17:01:01.003 DEBUG - [SALTO LIBRE POR ZONA] X:1901->24 | Viaje Corto (Dist: 1)
+17:01:03.037 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 2
+17:01:03.048 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+17:01:03.080 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+17:01:03.080 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+17:01:03.122 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+17:01:03.122 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+17:01:03.843 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -8
+17:01:03.844 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -8, vx_wrap: -4
+17:01:04.064 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -14
+17:01:04.064 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -3
+17:01:04.076 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -14
+17:01:04.077 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -2
+17:01:04.088 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -17
+17:01:04.088 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -17, vx_wrap: -4
+17:01:04.110 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -13
+17:01:04.111 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -13, vx_wrap: -2
+17:01:04.924 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 5
+17:01:04.926 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -3
+17:01:04.947 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 3
+17:01:05.053 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+17:01:05.086 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 4
+17:01:05.086 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -2
+17:01:05.160 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 3
+17:01:05.160 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -1
+17:01:05.244 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 4
+17:01:05.244 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -2
+17:01:05.551 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 9
+17:01:05.553 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -1
+17:01:05.585 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+17:01:05.586 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+17:01:05.629 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+17:01:05.629 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+17:01:06.521 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 1
+17:01:06.532 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+17:01:06.573 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+17:01:06.575 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+17:01:06.585 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+17:01:06.585 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+17:01:06.732 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+17:01:06.732 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+17:01:06.764 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 6
+17:01:06.764 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -1
+17:01:06.797 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+17:01:06.797 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+17:01:06.829 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+17:01:06.829 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+17:01:06.864 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+17:01:06.865 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+17:01:06.896 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 5
+17:01:06.896 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+17:01:07.175 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 5
+17:01:07.175 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -1
+17:01:07.219 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+17:01:07.221 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+17:01:07.265 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+17:01:07.268 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+17:01:07.364 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 12
+17:01:07.364 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 12, vx_wrap: -2
+17:01:07.397 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+17:01:07.397 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+17:01:07.419 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+17:01:07.419 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+17:01:07.430 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+17:01:07.431 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+17:01:07.452 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 4
+17:01:07.452 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -1
+17:01:07.486 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+17:01:07.486 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+17:01:07.780 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -24
+17:01:07.780 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -24, vx_wrap: -4
+17:01:07.791 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: -41
+17:01:07.792 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -41, vx_wrap: -8
+17:01:07.803 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -14
+17:01:07.804 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -2
+17:01:07.815 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -14
+17:01:07.815 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -14, vx_wrap: -2
+17:01:08.048 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -22
+17:01:08.049 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -22, vx_wrap: -4
+17:01:08.060 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -17
+17:01:08.060 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -17, vx_wrap: -3
+17:01:08.072 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -44
+17:01:08.072 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -44, vx_wrap: -5
+17:01:08.371 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: -20
+17:01:08.371 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -20, vx_wrap: -1
+17:01:09.588 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 9
+17:01:09.588 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -2
+17:01:09.916 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 4
+17:01:09.916 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -2
+17:01:10.082 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+17:01:10.082 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+17:01:10.103 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+17:01:10.103 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+17:01:10.114 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 21
+17:01:10.114 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -2
+17:01:10.136 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 16
+17:01:10.136 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -2
+17:01:10.168 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 3
+17:01:10.168 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -2
+17:01:10.232 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 5
+17:01:10.232 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -1
+17:01:11.201 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -7
+17:01:11.201 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -7, vx_wrap: -5
+17:01:11.214 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: -1
+17:01:11.540 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.33s
+17:01:11.553 DEBUG - [SALTO LIBRE POR ZONA] X:17->1896 | Viaje Corto (Dist: 2)
+17:01:12.546 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 13, vy_wrap: -4
+17:01:12.848 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.30s
+17:01:12.861 DEBUG - [SALTO LIBRE POR ZONA] X:1906->33 | Viaje Corto (Dist: 25)
+17:01:13.999 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 6, vy_wrap: -9
+17:01:14.021 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 18, vy_wrap: -12
+17:01:14.032 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 11, vy_wrap: -7
+17:01:14.034 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 11, vy_wrap: -7
+17:01:14.045 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 17, vy_wrap: -8
+17:01:14.045 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 17, vy_wrap: -8
+17:01:14.058 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 11, vy_wrap: -7
+17:01:14.058 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 11, vy_wrap: -7
+17:01:14.070 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 17, vy_wrap: -8
+17:01:14.071 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 17, vy_wrap: -8
+17:01:14.081 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 11, vy_wrap: -5
+17:01:14.082 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 11, vy_wrap: -5
+17:01:14.092 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 9, vy_wrap: -5
+17:01:14.093 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 9, vy_wrap: -5
+17:01:14.104 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 6, vy_wrap: -4
+17:01:14.104 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 6, vy_wrap: -4
+17:01:14.116 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 9, vy_wrap: -5
+17:01:14.116 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 9, vy_wrap: -5
+17:01:14.127 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 6, vy_wrap: -4
+17:01:14.127 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 6, vy_wrap: -4
+17:01:14.138 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 3, vy_wrap: -2
+17:01:14.138 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 3, vy_wrap: -2
+17:01:14.149 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 9, vy_wrap: -5
+17:01:14.150 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 9, vy_wrap: -5
+17:01:14.161 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 3, vy_wrap: -2
+17:01:14.162 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 3, vy_wrap: -2
+17:01:14.173 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 9, vy_wrap: -4
+17:01:14.174 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 9, vy_wrap: -4
+17:01:14.186 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 6, vy_wrap: -1
+17:01:14.186 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 6, vy_wrap: -1
+17:01:14.197 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 9, vy_wrap: -4
+17:01:14.197 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 9, vy_wrap: -4
+17:01:14.208 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 5, vy_wrap: -2
+17:01:14.208 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 5, vy_wrap: -2
+17:01:14.219 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 2, vy_wrap: -1
+17:01:14.271 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 3, vy_wrap: -2
+17:01:14.314 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 2, vy_wrap: -1
+17:01:15.228 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 2, vy_wrap: -15
+17:01:15.844 INFO - [WRAP Y] ¡SALTO ARRIBA ejecutado! Tiempo empujando: 0.62s
+17:01:15.855 DEBUG - [SALTO LIBRE POR ZONA] Y:10->1180 | Viaje Corto (Dist: 2)
+17:01:16.575 INFO - [WRAP Y] Iniciando empuje ABAJO. vx_wrap: 0, vy_wrap: 1
+17:01:16.881 INFO - [WRAP Y] ¡SALTO ABAJO ejecutado! Tiempo empujando: 0.31s
+17:01:16.893 DEBUG - [SALTO LIBRE POR ZONA] Y:1188->19 | Viaje Corto (Dist: 20)
+17:01:17.404 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 5, vy_wrap: -2
+17:01:17.404 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 5, vy_wrap: -2
+17:01:17.416 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 1, vy_wrap: -1
+17:01:17.824 INFO - [WRAP Y] ¡SALTO ARRIBA ejecutado! Tiempo empujando: 0.41s
+17:01:17.836 DEBUG - [SALTO LIBRE POR ZONA] Y:8->1178 | Viaje Corto (Dist: 4)
+17:01:19.110 INFO - [WRAP Y] Iniciando empuje ABAJO. vx_wrap: -2, vy_wrap: 6
+17:01:19.418 INFO - [WRAP Y] ¡SALTO ABAJO ejecutado! Tiempo empujando: 0.31s
+17:01:19.430 DEBUG - [SALTO LIBRE POR ZONA] Y:1188->20 | Viaje Corto (Dist: 5)
+17:01:20.300 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 7, vy_wrap: -2
+17:01:20.300 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 7, vy_wrap: -2
+17:01:20.311 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 8, vy_wrap: -2
+17:01:20.312 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 8, vy_wrap: -2
+17:01:20.324 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 28, vy_wrap: -4
+17:01:20.325 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 28, vy_wrap: -4
+17:01:20.336 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 38, vy_wrap: -5
+17:01:20.336 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 38, vy_wrap: -5
+17:01:20.368 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 37, vy_wrap: -3
+17:01:20.369 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 37, vy_wrap: -3
+17:01:21.007 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -51, vy_wrap: -2
+17:01:21.007 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -51, vy_wrap: -2
+17:01:21.257 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -9, vy_wrap: -2
+17:01:21.258 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -9, vy_wrap: -2
+17:01:21.281 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -38, vy_wrap: -5
+17:01:21.281 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -38, vy_wrap: -5
+17:01:21.308 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -34, vy_wrap: -2
+17:01:21.309 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -34, vy_wrap: -2
+17:01:23.138 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -10, vy_wrap: -3
+17:01:23.138 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -10, vy_wrap: -3
+17:01:23.422 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -8, vy_wrap: -1
+17:01:23.422 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -8, vy_wrap: -1
+17:01:23.433 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -21, vy_wrap: -2
+17:01:23.434 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -21, vy_wrap: -2
+17:01:26.260 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 3, vy_wrap: -1
+17:01:26.261 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 3, vy_wrap: -1
+17:01:26.272 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 1, vy_wrap: -2
+17:01:26.597 INFO - [WRAP Y] ¡SALTO ARRIBA ejecutado! Tiempo empujando: 0.33s
+17:01:26.612 DEBUG - [SALTO LIBRE POR ZONA] Y:11->1181 | Viaje Corto (Dist: 1)
+17:01:27.349 INFO - [WRAP Y] Iniciando empuje ABAJO. vx_wrap: 0, vy_wrap: 4
+17:01:27.658 INFO - [WRAP Y] ¡SALTO ABAJO ejecutado! Tiempo empujando: 0.31s
+17:01:27.669 DEBUG - [SALTO LIBRE POR ZONA] Y:1190->19 | Viaje Corto (Dist: 11)
+17:01:31.208 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 0, vy_wrap: -1
+17:01:31.219 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 3, vy_wrap: 0
+17:01:44.515 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+17:01:44.517 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+17:01:45.786 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+17:01:45.941 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+17:01:45.943 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+17:01:46.328 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+17:01:46.328 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+17:01:46.562 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+17:01:46.564 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+17:01:46.709 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+17:01:53.666 INFO - ==========================================
+17:01:53.666 INFO - SISTEMA REINICIADO CON DPI AWARENESS
+17:01:53.666 INFO - ARCHIVO DE LOGS: D:\scripts\status script\f22_debug.log
+17:01:53.666 INFO - ==========================================
+17:01:53.782 INFO - [HID] Calibración enviada con éxito al Corne.
+17:01:54.529 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'None' -> 'LAYER_BASE'
+17:01:56.828 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 8, vy_wrap: -21
+17:02:01.279 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -2, vy_wrap: -2
+17:02:01.311 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -5, vy_wrap: -2
+17:02:01.332 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -3, vy_wrap: -1
+17:02:01.332 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -3, vy_wrap: -1
+17:02:01.753 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 7, vy_wrap: -2
+17:02:01.757 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 7, vy_wrap: -2
+17:02:01.778 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 34, vy_wrap: -3
+17:02:01.778 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 34, vy_wrap: -3
+17:02:02.392 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: 6, vy_wrap: -2
+17:02:02.394 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: 6, vy_wrap: -2
+17:02:02.596 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -3, vy_wrap: -1
+17:02:02.596 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -3, vy_wrap: -1
+17:02:02.608 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -6, vy_wrap: -2
+17:02:02.609 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -6, vy_wrap: -2
+17:02:02.620 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -10, vy_wrap: -4
+17:02:02.620 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -10, vy_wrap: -4
+17:02:02.641 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -18, vy_wrap: -2
+17:02:02.642 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -18, vy_wrap: -2
+17:02:02.664 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -35, vy_wrap: -2
+17:02:02.665 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -35, vy_wrap: -2
+17:02:02.908 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -15, vy_wrap: -2
+17:02:02.908 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -15, vy_wrap: -2
+17:02:02.930 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -21, vy_wrap: -3
+17:02:02.930 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -21, vy_wrap: -3
+17:02:02.941 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -14, vy_wrap: -2
+17:02:02.941 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -14, vy_wrap: -2
+17:02:03.205 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -9, vy_wrap: -1
+17:02:03.206 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -9, vy_wrap: -1
+17:02:03.218 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -3, vy_wrap: -2
+17:02:03.218 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -3, vy_wrap: -2
+17:02:03.229 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -19, vy_wrap: -4
+17:02:03.229 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -19, vy_wrap: -4
+17:02:03.251 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -11, vy_wrap: -2
+17:02:03.251 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -11, vy_wrap: -2
+17:02:03.262 INFO - [WRAP Y] Iniciando empuje ARRIBA. vx_wrap: -24, vy_wrap: -2
+17:02:03.262 INFO - [WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: -24, vy_wrap: -2
+17:02:03.603 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 8
+17:02:03.603 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -7
+17:02:03.614 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 22
+17:02:03.614 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 22, vx_wrap: -7
+17:02:03.626 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 12
+17:02:03.627 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 12, vx_wrap: -4
+17:02:03.640 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+17:02:03.640 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+17:02:03.652 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+17:02:03.652 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+17:02:03.662 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 22
+17:02:03.665 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 22, vx_wrap: -7
+17:02:03.683 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 19
+17:02:03.684 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 19, vx_wrap: -4
+17:02:03.701 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: 14
+17:02:03.702 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -6
+17:02:03.714 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+17:02:03.714 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+17:02:04.009 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 13
+17:02:04.009 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -2
+17:02:04.044 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 13
+17:02:04.044 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -2
+17:02:04.075 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+17:02:04.075 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+17:02:04.097 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 15
+17:02:04.098 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -2
+17:02:04.132 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 13
+17:02:04.134 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -2
+17:02:04.178 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 6
+17:02:04.178 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -1
+17:02:04.399 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 6
+17:02:04.399 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -4
+17:02:04.412 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 4
+17:02:04.413 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -1
+17:02:04.425 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 8
+17:02:04.425 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -4
+17:02:04.436 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 20
+17:02:04.436 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 20, vx_wrap: -7
+17:02:04.447 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 14
+17:02:04.447 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -5
+17:02:04.461 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 28
+17:02:04.461 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -7
+17:02:04.473 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+17:02:04.473 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+17:02:04.485 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 25
+17:02:04.486 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -5
+17:02:04.496 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 15
+17:02:04.496 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -4
+17:02:04.508 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 28
+17:02:04.510 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -7
+17:02:04.524 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 11
+17:02:04.524 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -3
+17:02:04.535 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: 19
+17:02:04.535 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 19, vx_wrap: -6
+17:02:04.547 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+17:02:04.547 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+17:02:04.559 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+17:02:04.561 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+17:02:04.571 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+17:02:04.571 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+17:02:04.588 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 3
+17:02:04.588 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -2
+17:02:04.774 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 5
+17:02:04.774 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -1
+17:02:04.786 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 1
+17:02:04.798 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 5, vx_wrap: -2
+17:02:04.811 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+17:02:04.811 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+17:02:04.823 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+17:02:04.824 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+17:02:04.835 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 25
+17:02:04.835 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -7
+17:02:04.848 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 29
+17:02:04.848 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 29, vx_wrap: -7
+17:02:04.863 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 13
+17:02:04.864 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -5
+17:02:04.875 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 28
+17:02:04.875 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -4
+17:02:04.886 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 15
+17:02:04.886 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -5
+17:02:04.898 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: 22
+17:02:04.898 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 22, vx_wrap: -7
+17:02:04.911 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 7
+17:02:04.912 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -2
+17:02:04.923 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+17:02:04.923 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+17:02:04.945 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+17:02:04.946 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+17:02:06.428 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 25
+17:02:06.429 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -4
+17:02:06.442 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 14
+17:02:06.442 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -5
+17:02:06.454 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 18
+17:02:06.454 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -5
+17:02:06.466 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 28
+17:02:06.468 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 28, vx_wrap: -8
+17:02:06.479 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 18
+17:02:06.479 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 18, vx_wrap: -2
+17:02:06.491 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 15
+17:02:06.491 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -4
+17:02:06.506 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+17:02:06.507 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+17:02:06.518 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 8
+17:02:06.518 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -2
+17:02:06.532 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 19
+17:02:06.532 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 19, vx_wrap: -4
+17:02:06.554 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 6
+17:02:06.556 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -2
+17:02:06.775 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 4
+17:02:06.776 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -2
+17:02:06.790 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 8
+17:02:06.790 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: -4
+17:02:06.801 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 13
+17:02:06.802 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -8
+17:02:06.814 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -9, vy_wrap: 23
+17:02:06.816 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 23, vx_wrap: -9
+17:02:06.827 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 14
+17:02:06.827 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -4
+17:02:06.838 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -13, vy_wrap: 33
+17:02:06.838 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 33, vx_wrap: -13
+17:02:06.850 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 21
+17:02:06.850 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -8
+17:02:06.861 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 20
+17:02:06.861 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 20, vx_wrap: -5
+17:02:06.877 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -10, vy_wrap: 39
+17:02:06.879 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 39, vx_wrap: -10
+17:02:06.892 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 37
+17:02:06.892 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 37, vx_wrap: -5
+17:02:06.904 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 25
+17:02:06.904 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 25, vx_wrap: -2
+17:02:07.122 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 2
+17:02:07.134 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -4
+17:02:07.147 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: 9
+17:02:07.147 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 9, vx_wrap: -6
+17:02:07.160 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: 23
+17:02:07.160 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 23, vx_wrap: -11
+17:02:07.174 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -10, vy_wrap: 15
+17:02:07.174 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 15, vx_wrap: -10
+17:02:07.186 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -18, vy_wrap: 36
+17:02:07.187 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 36, vx_wrap: -18
+17:02:07.198 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -11, vy_wrap: 21
+17:02:07.198 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 21, vx_wrap: -11
+17:02:07.210 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -16, vy_wrap: 45
+17:02:07.210 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 45, vx_wrap: -16
+17:02:07.224 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -13, vy_wrap: 42
+17:02:07.224 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 42, vx_wrap: -13
+17:02:07.235 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 17
+17:02:07.236 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -5
+17:02:07.247 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 14
+17:02:07.248 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -2
+17:02:07.259 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 11
+17:02:07.260 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: -2
+17:02:07.451 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 0
+17:02:07.474 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -2
+17:02:07.486 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 2
+17:02:07.508 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -2
+17:02:07.520 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -14, vy_wrap: 17
+17:02:07.521 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -14
+17:02:07.532 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -10, vy_wrap: 17
+17:02:07.532 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 17, vx_wrap: -10
+17:02:07.544 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -10, vy_wrap: 14
+17:02:07.544 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 14, vx_wrap: -10
+17:02:07.557 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -15, vy_wrap: 38
+17:02:07.559 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 38, vx_wrap: -15
+17:02:07.570 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: 35
+17:02:07.570 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 35, vx_wrap: -8
+17:02:07.581 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 6
+17:02:07.581 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: -1
+17:02:07.591 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: 13
+17:02:07.591 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: -3
+17:02:07.612 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 16
+17:02:07.612 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 16, vx_wrap: -2
+17:02:07.836 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 3
+17:02:07.872 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -3
+17:02:07.885 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: 7
+17:02:07.886 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: -6
+17:02:07.896 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: 4
+17:02:07.918 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 4, vx_wrap: -3
+17:02:07.929 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: 4
+17:02:07.951 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -2
+17:02:07.972 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: 0
+17:02:08.119 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: -1
+17:02:08.140 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 1
+17:02:08.151 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 0
+17:02:08.463 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -1, vy_wrap: -3
+17:02:08.463 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -3, vx_wrap: -1
+17:02:08.476 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -4
+17:02:08.497 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -4, vx_wrap: -2
+17:02:08.508 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -6
+17:02:08.508 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -6, vx_wrap: -3
+17:02:08.519 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -11
+17:02:08.519 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -11, vx_wrap: -2
+17:02:08.849 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 0
+17:02:08.892 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -22, vx_wrap: -13
+17:02:08.904 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: -18
+17:02:08.904 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -18, vx_wrap: -8
+17:02:08.915 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -8, vy_wrap: -21
+17:02:08.915 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -21, vx_wrap: -8
+17:02:08.926 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -13, vy_wrap: -39
+17:02:08.926 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -39, vx_wrap: -13
+17:02:08.938 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -20
+17:02:08.938 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -20, vx_wrap: -2
+17:02:08.949 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -35
+17:02:08.949 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -35, vx_wrap: -5
+17:02:09.409 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -15
+17:02:09.410 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -15, vx_wrap: -5
+17:02:09.421 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -13, vy_wrap: -21
+17:02:09.421 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -21, vx_wrap: -13
+17:02:09.433 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -9, vy_wrap: -19
+17:02:09.433 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -19, vx_wrap: -9
+17:02:09.444 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -7, vy_wrap: -15
+17:02:09.445 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -15, vx_wrap: -7
+17:02:09.456 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -10, vy_wrap: -29
+17:02:09.456 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -29, vx_wrap: -10
+17:02:09.467 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -11
+17:02:09.467 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -11, vx_wrap: -4
+17:02:09.478 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -8
+17:02:09.478 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -8, vx_wrap: -2
+17:02:09.491 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -4, vy_wrap: -13
+17:02:09.492 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -13, vx_wrap: -4
+17:02:09.735 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -7
+17:02:09.736 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -7, vx_wrap: -2
+17:02:09.747 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -3, vy_wrap: -31
+17:02:09.747 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -31, vx_wrap: -3
+17:02:09.759 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -20
+17:02:09.760 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -20, vx_wrap: -2
+17:02:09.777 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -5, vy_wrap: -48
+17:02:09.777 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -48, vx_wrap: -5
+17:02:09.788 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: -44
+17:02:09.788 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -44, vx_wrap: -6
+17:02:09.799 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -17
+17:02:09.799 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -17, vx_wrap: -2
+17:02:09.819 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: -19
+17:02:09.819 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: -19, vx_wrap: -2
+17:02:10.051 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -2, vy_wrap: 0
+17:02:10.458 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.41s
+17:02:10.469 DEBUG - [SALTO LIBRE POR ZONA] X:37->1875 | Viaje Corto (Dist: 1)
+17:02:11.053 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 11, vy_wrap: 0
+17:02:11.391 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.34s
+17:02:11.403 DEBUG - [SALTO LIBRE POR ZONA] X:1884->51 | Viaje Corto (Dist: 3)
+17:02:12.052 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -9, vy_wrap: 0
+17:02:12.777 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.72s
+17:02:12.789 DEBUG - [SALTO LIBRE POR ZONA] X:37->1875 | Viaje Corto (Dist: 1)
+17:02:13.154 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 15, vy_wrap: 0
+17:02:13.501 INFO - [WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: 0.35s
+17:02:13.512 DEBUG - [SALTO LIBRE POR ZONA] X:1882->48 | Viaje Corto (Dist: 1)
+17:02:13.789 INFO - [WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: -6, vy_wrap: 0
+17:02:14.332 INFO - [WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: 0.54s
+17:02:14.344 DEBUG - [SALTO LIBRE POR ZONA] X:35->1876 | Viaje Corto (Dist: 3)
+17:02:14.804 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 1, vy_wrap: 3
+17:02:14.804 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 1
+17:02:14.815 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 6, vy_wrap: 11
+17:02:14.816 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: 6
+17:02:14.827 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 6, vy_wrap: 6
+17:02:14.912 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 12, vx_wrap: 10
+17:02:15.137 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 1, vy_wrap: 0
+17:02:15.160 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 7, vx_wrap: 6
+17:02:15.172 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 2, vy_wrap: 3
+17:02:15.172 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 3, vx_wrap: 2
+17:02:15.185 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 2, vy_wrap: 6
+17:02:15.185 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 6, vx_wrap: 2
+17:02:15.196 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 4, vy_wrap: 13
+17:02:15.196 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 13, vx_wrap: 4
+17:02:15.217 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 2, vy_wrap: 8
+17:02:15.217 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 8, vx_wrap: 2
+17:02:15.228 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 1, vy_wrap: 11
+17:02:15.228 INFO - [WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: 11, vx_wrap: 1
+17:02:15.308 INFO - [WRAP X] Iniciando empuje DERECHA. vx_wrap: 3, vy_wrap: 0
+17:02:15.982 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+17:02:15.984 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+17:02:16.907 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'
+17:02:17.096 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'LAYER_BASE' -> 'ALFA'
+17:02:17.096 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+17:02:17.545 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'NUMB'
+17:02:17.546 DEBUG - [UI] Capa detectada: NUMB - Indicadores: ON
+17:02:17.846 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'NUMB' -> 'ALFA'
+17:02:17.846 DEBUG - [UI] Capa detectada: ALFA - Indicadores: ON
+17:02:18.020 INFO - ======> [HID] CAMBIO DE CAPA DETECTADO: 'ALFA' -> 'LAYER_BASE'

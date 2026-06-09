@@ -48,8 +48,8 @@ VID, PID = 0x4653, 0x0001
 
 # MODO 2: Activación del salto por pausa y empuje
 MODO_WRAP_DELAY_HABILITADO = True
-WRAP_MARGEN_PORCENTAJE = 0.02    # 1% del tamaño de la pantalla
-WRAP_DELAY_MS = 0.2              # 200ms
+WRAP_MARGEN_PORCENTAJE = 0.01   # 1% del tamaño de la pantalla
+WRAP_DELAY_MS = 0.3           # 200ms tiempo para empujar el salto tras entrar en la zona de wrap
 
 DISTANCIA_SALTO = 450
 PAUSA_ENTRE_SALTOS = 0.3
@@ -921,14 +921,24 @@ def loop_movimiento_suave():
                     if borde_activo_x != 1:
                         borde_activo_x = 1
                         tiempo_choque_x = ahora
+                        logger.info(f"[WRAP X] Iniciando empuje DERECHA. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
+                        logger.info(f"[WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: {ahora - tiempo_choque_x:.2f}s")
                         nuevo_x = margen_x + 5
                         ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
                         curr_x = nuevo_x
                         borde_activo_x = 0
                         tiempo_choque_x = ahora + 0.5
                 elif vx_wrap < 0:
+                    if borde_activo_x == 1:
+                        logger.info(f"[WRAP X] Cancelado por movimiento a la IZQUIERDA. vx_wrap: {vx_wrap}")
                     borde_activo_x = 0
+                
+                # Cancelar si el movimiento es predominantemente vertical (scrolling)
+                if borde_activo_x == 1 and abs(vy_wrap) > 2 and abs(vy_wrap) > abs(vx_wrap):
+                    logger.info(f"[WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: {vy_wrap}, vx_wrap: {vx_wrap}")
+                    borde_activo_x = 0
+                    
             elif curr_x <= margen_x:
                 ctypes.windll.user32.SetCursorPos(margen_x, int(curr_y))
                 curr_x = margen_x
@@ -936,13 +946,22 @@ def loop_movimiento_suave():
                     if borde_activo_x != -1:
                         borde_activo_x = -1
                         tiempo_choque_x = ahora
+                        logger.info(f"[WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
+                        logger.info(f"[WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: {ahora - tiempo_choque_x:.2f}s")
                         nuevo_x = pantalla_ancho - margen_x - 5
                         ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
                         curr_x = nuevo_x
                         borde_activo_x = 0
                         tiempo_choque_x = ahora + 0.5
                 elif vx_wrap > 0:
+                    if borde_activo_x == -1:
+                        logger.info(f"[WRAP X] Cancelado por movimiento a la DERECHA. vx_wrap: {vx_wrap}")
+                    borde_activo_x = 0
+                
+                # Cancelar si el movimiento es predominantemente vertical (scrolling)
+                if borde_activo_x == -1 and abs(vy_wrap) > 2 and abs(vy_wrap) > abs(vx_wrap):
+                    logger.info(f"[WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: {vy_wrap}, vx_wrap: {vx_wrap}")
                     borde_activo_x = 0
             else:
                 borde_activo_x = 0
@@ -955,14 +974,24 @@ def loop_movimiento_suave():
                     if borde_activo_y != 1:
                         borde_activo_y = 1
                         tiempo_choque_y = ahora
+                        logger.info(f"[WRAP Y] Iniciando empuje ABAJO. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
+                        logger.info(f"[WRAP Y] ¡SALTO ABAJO ejecutado! Tiempo empujando: {ahora - tiempo_choque_y:.2f}s")
                         nuevo_y = margen_y + 5
                         ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
                         curr_y = nuevo_y
                         borde_activo_y = 0
                         tiempo_choque_y = ahora + 0.5
                 elif vy_wrap < 0:
+                    if borde_activo_y == 1:
+                        logger.info(f"[WRAP Y] Cancelado por movimiento hacia ARRIBA. vy_wrap: {vy_wrap}")
                     borde_activo_y = 0
+                
+                # Cancelar si el movimiento es predominantemente horizontal
+                if borde_activo_y == 1 and abs(vx_wrap) > 2 and abs(vx_wrap) > abs(vy_wrap):
+                    logger.info(f"[WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
+                    borde_activo_y = 0
+                    
             elif curr_y <= margen_y:
                 ctypes.windll.user32.SetCursorPos(int(curr_x), margen_y)
                 curr_y = margen_y
@@ -970,13 +999,22 @@ def loop_movimiento_suave():
                     if borde_activo_y != -1:
                         borde_activo_y = -1
                         tiempo_choque_y = ahora
+                        logger.info(f"[WRAP Y] Iniciando empuje ARRIBA. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
+                        logger.info(f"[WRAP Y] ¡SALTO ARRIBA ejecutado! Tiempo empujando: {ahora - tiempo_choque_y:.2f}s")
                         nuevo_y = pantalla_alto - margen_y - 5
                         ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
                         curr_y = nuevo_y
                         borde_activo_y = 0
                         tiempo_choque_y = ahora + 0.5
                 elif vy_wrap > 0:
+                    if borde_activo_y == -1:
+                        logger.info(f"[WRAP Y] Cancelado por movimiento hacia ABAJO. vy_wrap: {vy_wrap}")
+                    borde_activo_y = 0
+                
+                # Cancelar si el movimiento es predominantemente horizontal
+                if borde_activo_y == -1 and abs(vx_wrap) > 2 and abs(vx_wrap) > abs(vy_wrap):
+                    logger.info(f"[WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     borde_activo_y = 0
             else:
                 borde_activo_y = 0
