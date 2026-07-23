@@ -58,18 +58,32 @@ def _scroll_lock_loop(is_mirror_active):
 
                 dy = lock_y - curr_y
                 dx = curr_x - lock_x
-                direction = "vertical" if abs(dy) >= abs(dx) else "horizontal"
+                abs_dx = abs(dx)
+                abs_dy = abs(dy)
+                direction = None
 
-                if direction != last_direction:
+                if last_direction is None:
+                    if abs_dx >= SCROLL_THRESHOLD_X or abs_dy >= SCROLL_THRESHOLD_Y:
+                        direction = "horizontal" if abs_dx > abs_dy else "vertical"
+                else:
+                    if last_direction == "vertical" and abs_dx > abs_dy + 10:
+                        direction = "horizontal"
+                    elif last_direction == "horizontal" and abs_dy > abs_dx + 10:
+                        direction = "vertical"
+
+                if direction is None:
+                    direction = last_direction
+                elif direction != last_direction:
                     if direction == "vertical":
                         accum_x = 0
                     else:
                         accum_y = 0
                     last_direction = direction
+                    logger.debug("[SCROLL LOCK] Cambio de eje a %s", direction)
 
-                if direction == "vertical":
+                if last_direction == "vertical":
                     accum_y += dy
-                else:
+                elif last_direction == "horizontal":
                     accum_x += dx
 
                 ctypes.windll.user32.SetCursorPos(lock_x, lock_y)
