@@ -90,16 +90,12 @@ def _scroll_lock_loop(is_mirror_active):
                 direction = None
 
                 if abs_dx >= SCROLL_THRESHOLD_X or abs_dy >= SCROLL_THRESHOLD_Y:
-                    current_dominant = "horizontal" if abs_dx > abs_dy else "vertical"
-                    if last_direction is None:
-                        direction = current_dominant
-                    elif current_dominant != last_direction:
-                        if current_dominant == "horizontal" and abs_dx > abs_dy * 1.1 + 2:
-                            direction = "horizontal"
-                        elif current_dominant == "vertical" and abs_dy > abs_dx * 1.1 + 2:
-                            direction = "vertical"
-                        else:
-                            direction = last_direction
+                    if abs_dx > abs_dy + 2 and abs_dx >= SCROLL_THRESHOLD_X:
+                        direction = "horizontal"
+                    elif abs_dy > abs_dx + 2 and abs_dy >= SCROLL_THRESHOLD_Y:
+                        direction = "vertical"
+                    elif last_direction is None:
+                        direction = "horizontal" if abs_dx > abs_dy else "vertical"
                     else:
                         direction = last_direction
                 else:
