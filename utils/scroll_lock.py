@@ -8,6 +8,29 @@ import pyautogui
 logger = logging.getLogger(__name__)
 
 
+def _safe_horizontal_scroll(delta, MOUSEEVENTF_HWHEEL):
+    try:
+        pyautogui.hscroll(delta)
+        logger.debug("[SCROLL LOCK] Enviado pyautogui.hscroll(%d)", delta)
+        return
+    except Exception as e:
+        logger.debug("[SCROLL LOCK] pyautogui.hscroll falló: %s", e)
+
+    try:
+        ctypes.windll.user32.mouse_event(MOUSEEVENTF_HWHEEL, 0, 0, delta, 0)
+        logger.debug("[SCROLL LOCK] Enviado mouse_event HWHEEL(%d)", delta)
+        return
+    except Exception as e:
+        logger.debug("[SCROLL LOCK] mouse_event HWHEEL falló: %s", e)
+
+    try:
+        keyboard.press("shift")
+        pyautogui.scroll(delta)
+        logger.debug("[SCROLL LOCK] Enviado scroll vertical con Shift(%d) como fallback horizontal", delta)
+    finally:
+        keyboard.release("shift")
+
+
 class POINT(ctypes.Structure):
     _fields_ = [("x", ctypes.c_long), ("y", ctypes.c_long)]
 
@@ -113,10 +136,7 @@ def _scroll_lock_loop(is_mirror_active):
                 if abs(accum_x) >= SCROLL_THRESHOLD_X:
                     steps = int(accum_x / SCROLL_THRESHOLD_X)
                     delta = steps * SCROLL_DELTA
-                    try:
-                        pyautogui.hscroll(delta)
-                    except Exception:
-                        ctypes.windll.user32.mouse_event(MOUSEEVENTF_HWHEEL, 0, 0, delta, 0)
+                    _safe_horizontal_scroll(delta, MOUSEEVENTF_HWHEEL)
                     accum_x -= steps * SCROLL_THRESHOLD_X
                     logger.debug(
                         "[SCROLL LOCK] Scroll horizontal %s (%d pasos)",
