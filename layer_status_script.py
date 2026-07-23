@@ -199,7 +199,7 @@ def activar_modo_mirror():
     global es_capa_mirror
     if not es_capa_mirror:
         es_capa_mirror = True
-        logger.info("===> [MODO MIRROR] Activado por F15.")
+        logger.info("===> [MODO MIRROR] Activado por Ctrl+Shift+F15.")
 
 
 def desactivar_modo_mirror():
@@ -407,9 +407,9 @@ def ejecutar_salto_zona_diagonal_2():
 
 def on_f15_press(e):
     global f15_down
-    if not f15_down:
+    if not f15_down and keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
         f15_down = True
-        logger.info("F15: activando funcionalidad MIRROR.")
+        logger.info("Ctrl+Shift+F15: activando funcionalidad MIRROR.")
         activar_modo_mirror()
 
 
