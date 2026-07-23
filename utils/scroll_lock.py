@@ -23,12 +23,16 @@ def _safe_horizontal_scroll(delta, MOUSEEVENTF_HWHEEL):
     except Exception as e:
         logger.debug("[SCROLL LOCK] mouse_event HWHEEL falló: %s", e)
 
-    try:
+    pressed_shift = False
+    if not keyboard.is_pressed("shift"):
         keyboard.press("shift")
+        pressed_shift = True
+    try:
         pyautogui.scroll(delta)
         logger.debug("[SCROLL LOCK] Enviado scroll vertical con Shift(%d) como fallback horizontal", delta)
     finally:
-        keyboard.release("shift")
+        if pressed_shift:
+            keyboard.release("shift")
 
 
 class POINT(ctypes.Structure):
@@ -111,13 +115,13 @@ def _scroll_lock_loop(is_mirror_active):
 
                 ctypes.windll.user32.SetCursorPos(lock_x, lock_y)
 
-                if abs(accum_y) >= SCROLL_THRESHOLD_Y or abs(accum_x) >= SCROLL_THRESHOLD_X:
+                if abs(accum_y) >= SCROLL_THRESHOLD_Y:
                     if keyboard.is_pressed("ctrl"):
                         keyboard.release("ctrl")
                         logger.debug("[SCROLL LOCK] Liberando Ctrl para enviar scroll sin zoom")
                     if keyboard.is_pressed("shift"):
                         keyboard.release("shift")
-                        logger.debug("[SCROLL LOCK] Liberando Shift para enviar scroll")
+                        logger.debug("[SCROLL LOCK] Liberando Shift para enviar scroll vertical")
 
                 if abs(accum_y) >= SCROLL_THRESHOLD_Y:
                     steps = int(accum_y / SCROLL_THRESHOLD_Y)
@@ -134,6 +138,9 @@ def _scroll_lock_loop(is_mirror_active):
                     )
 
                 if abs(accum_x) >= SCROLL_THRESHOLD_X:
+                    if keyboard.is_pressed("ctrl"):
+                        keyboard.release("ctrl")
+                        logger.debug("[SCROLL LOCK] Liberando Ctrl para enviar scroll sin zoom")
                     steps = int(accum_x / SCROLL_THRESHOLD_X)
                     delta = steps * SCROLL_DELTA
                     _safe_horizontal_scroll(delta, MOUSEEVENTF_HWHEEL)
