@@ -2,6 +2,8 @@ import ctypes
 import time
 import threading
 import logging
+import keyboard
+import pyautogui
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +29,7 @@ def _scroll_lock_loop(is_mirror_active):
     accum_y = 0
     accum_x = 0
     active = False
+    last_direction = None
 
     MOUSEEVENTF_WHEEL = 0x0800
     MOUSEEVENTF_HWHEEL = 0x1000
@@ -45,6 +48,7 @@ def _scroll_lock_loop(is_mirror_active):
                     lock_y = curr_y
                     accum_y = 0
                     accum_x = 0
+                    last_direction = None
                     active = True
                     logger.info(
                         "[SCROLL LOCK] Activado - cursor anclado en (%d, %d)",
@@ -54,18 +58,37 @@ def _scroll_lock_loop(is_mirror_active):
 
                 dy = lock_y - curr_y
                 dx = curr_x - lock_x
+                direction = "vertical" if abs(dy) >= abs(dx) else "horizontal"
 
-                if abs(dy) >= abs(dx):
+                if direction != last_direction:
+                    if direction == "vertical":
+                        accum_x = 0
+                    else:
+                        accum_y = 0
+                    last_direction = direction
+
+                if direction == "vertical":
                     accum_y += dy
-                if abs(dx) > abs(dy):
+                else:
                     accum_x += dx
 
                 ctypes.windll.user32.SetCursorPos(lock_x, lock_y)
 
+                if abs(accum_y) >= SCROLL_THRESHOLD_Y or abs(accum_x) >= SCROLL_THRESHOLD_X:
+                    if keyboard.is_pressed("ctrl"):
+                        keyboard.release("ctrl")
+                        logger.debug("[SCROLL LOCK] Liberando Ctrl para enviar scroll sin zoom")
+                    if keyboard.is_pressed("shift"):
+                        keyboard.release("shift")
+                        logger.debug("[SCROLL LOCK] Liberando Shift para enviar scroll")
+
                 if abs(accum_y) >= SCROLL_THRESHOLD_Y:
                     steps = int(accum_y / SCROLL_THRESHOLD_Y)
                     delta = steps * SCROLL_DELTA
-                    ctypes.windll.user32.mouse_event(MOUSEEVENTF_WHEEL, 0, 0, delta, 0)
+                    try:
+                        pyautogui.scroll(delta)
+                    except Exception:
+                        ctypes.windll.user32.mouse_event(MOUSEEVENTF_WHEEL, 0, 0, delta, 0)
                     accum_y -= steps * SCROLL_THRESHOLD_Y
                     logger.debug(
                         "[SCROLL LOCK] Scroll vertical %s (%d pasos)",
@@ -76,7 +99,10 @@ def _scroll_lock_loop(is_mirror_active):
                 if abs(accum_x) >= SCROLL_THRESHOLD_X:
                     steps = int(accum_x / SCROLL_THRESHOLD_X)
                     delta = steps * SCROLL_DELTA
-                    ctypes.windll.user32.mouse_event(MOUSEEVENTF_HWHEEL, 0, 0, delta, 0)
+                    try:
+                        pyautogui.hscroll(delta)
+                    except Exception:
+                        ctypes.windll.user32.mouse_event(MOUSEEVENTF_HWHEEL, 0, 0, delta, 0)
                     accum_x -= steps * SCROLL_THRESHOLD_X
                     logger.debug(
                         "[SCROLL LOCK] Scroll horizontal %s (%d pasos)",

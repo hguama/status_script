@@ -94,6 +94,7 @@ tecla_vert_down = False
 direccion_fijada = 0
 direccion_y_fijada = 0
 pos_y_referencia = 0
+f15_down = False
 
 color_actual = "#FFFFFF"
 wrap_enabled = threading.Event()
@@ -198,7 +199,7 @@ def activar_modo_mirror():
     global es_capa_mirror
     if not es_capa_mirror:
         es_capa_mirror = True
-        logger.info("===> [MODO MIRROR] Activado por Ctrl+Shift+F15.")
+        logger.info("===> [MODO MIRROR] Activado por F15.")
 
 
 def desactivar_modo_mirror():
@@ -405,19 +406,24 @@ def ejecutar_salto_zona_diagonal_2():
     logger.debug(f"[SALTO DIAG 2] (X:{x},Y:{y}) -> (X:{target_x},Y:{target_y})")
 
 def on_f15_press(e):
-    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-       logger.info("Ctrl+Shift+F15: activando funcionalidad MIRROR.")
-       activar_modo_mirror()
+    global f15_down
+    if not f15_down:
+        f15_down = True
+        logger.info("F15: activando funcionalidad MIRROR.")
+        activar_modo_mirror()
 
 
 def on_f15_release(e):
-   desactivar_modo_mirror()
+    global f15_down
+    if f15_down:
+        f15_down = False
+        desactivar_modo_mirror()
 
 
 def on_f16_press(e):
-   if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-       logger.info("Salto por Zonas VERTICAL (Ctrl+Shift+F16) solicitado.")
-       ejecutar_salto_zona_vertical()
+    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+        logger.info("Salto por Zonas VERTICAL (Ctrl+Shift+F16) solicitado.")
+        ejecutar_salto_zona_vertical()
 
 # Registrar teclas para el modo de saltos por zona
 keyboard.on_press_key("f15", on_f15_press)
