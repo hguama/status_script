@@ -155,12 +155,12 @@ def _scroll_lock_loop(is_mirror_active):
                         keyboard.release("ctrl")
                         logger.debug("[SCROLL LOCK] Liberando Ctrl para enviar scroll sin zoom")
                     steps = int(accum_x / SCROLL_THRESHOLD_X)
-                    delta = steps * SCROLL_DELTA
+                    delta = -steps * SCROLL_DELTA
                     _safe_horizontal_scroll(delta, MOUSEEVENTF_HWHEEL)
                     accum_x -= steps * SCROLL_THRESHOLD_X
                     logger.debug(
                         "[SCROLL LOCK] Scroll horizontal %s (%d pasos)",
-                        "derecha" if delta > 0 else "izquierda",
+                        "derecha" if steps > 0 else "izquierda",
                         abs(steps),
                     )
 
