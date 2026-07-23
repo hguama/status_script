@@ -57,6 +57,8 @@ def _scroll_lock_loop(is_mirror_active):
     accum_x = 0
     active = False
     last_direction = None
+    recent_dx = 0.0
+    recent_dy = 0.0
 
     MOUSEEVENTF_WHEEL = 0x0800
     MOUSEEVENTF_HWHEEL = 0x1000
@@ -87,17 +89,24 @@ def _scroll_lock_loop(is_mirror_active):
                 dx = curr_x - lock_x
                 abs_dx = abs(dx)
                 abs_dy = abs(dy)
+                recent_dx = recent_dx * 0.82 + abs_dx
+                recent_dy = recent_dy * 0.82 + abs_dy
                 direction = None
 
-                if abs_dx >= SCROLL_THRESHOLD_X or abs_dy >= SCROLL_THRESHOLD_Y:
-                    if abs_dx > abs_dy:
+                if last_direction is None:
+                    if recent_dx > recent_dy + 10:
                         direction = "horizontal"
-                    elif abs_dy > abs_dx:
+                    elif recent_dy > recent_dx + 10:
+                        direction = "vertical"
+                    elif abs_dx >= SCROLL_THRESHOLD_X or abs_dy >= SCROLL_THRESHOLD_Y:
+                        direction = "horizontal" if abs_dx > abs_dy else "vertical"
+                else:
+                    if last_direction == "vertical" and recent_dx > recent_dy + 10:
+                        direction = "horizontal"
+                    elif last_direction == "horizontal" and recent_dy > recent_dx + 10:
                         direction = "vertical"
                     else:
                         direction = last_direction
-                else:
-                    direction = last_direction
 
                 if direction is not None and direction != last_direction:
                     if direction == "vertical":
@@ -105,7 +114,7 @@ def _scroll_lock_loop(is_mirror_active):
                     else:
                         accum_y = 0
                     last_direction = direction
-                    logger.debug("[SCROLL LOCK] Cambio de eje a %s", direction)
+                    logger.debug("[SCROLL LOCK] Cambio de eje a %s (recent_dx=%.1f recent_dy=%.1f)", direction, recent_dx, recent_dy)
 
                 if direction == "vertical":
                     accum_y += dy
