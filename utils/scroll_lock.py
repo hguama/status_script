@@ -10,18 +10,18 @@ logger = logging.getLogger(__name__)
 
 def _safe_horizontal_scroll(delta, MOUSEEVENTF_HWHEEL):
     try:
-        pyautogui.hscroll(delta)
-        logger.debug("[SCROLL LOCK] Enviado pyautogui.hscroll(%d)", delta)
-        return
-    except Exception as e:
-        logger.debug("[SCROLL LOCK] pyautogui.hscroll falló: %s", e)
-
-    try:
         ctypes.windll.user32.mouse_event(MOUSEEVENTF_HWHEEL, 0, 0, delta, 0)
         logger.debug("[SCROLL LOCK] Enviado mouse_event HWHEEL(%d)", delta)
         return
     except Exception as e:
         logger.debug("[SCROLL LOCK] mouse_event HWHEEL falló: %s", e)
+
+    try:
+        pyautogui.hscroll(delta)
+        logger.debug("[SCROLL LOCK] Enviado pyautogui.hscroll(%d) como fallback", delta)
+        return
+    except Exception as e:
+        logger.debug("[SCROLL LOCK] pyautogui.hscroll falló: %s", e)
 
     pressed_shift = False
     if not keyboard.is_pressed("shift"):
