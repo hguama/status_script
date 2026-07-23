@@ -9,6 +9,7 @@ import ctypes # Añade esto al inicio de tu archivo
 
 from datetime import datetime
 import utils.onenote_nav  # Integración OneNote Nav
+import utils.scroll_lock as scroll_lock
 
 import logging
 import os
@@ -48,8 +49,8 @@ VID, PID = 0x4653, 0x0001
 
 # MODO 2: Activación del salto por pausa y empuje
 MODO_WRAP_DELAY_HABILITADO = True
-WRAP_MARGEN_PORCENTAJE = 0.01   # 1% del tamaño de la pantalla
-WRAP_DELAY_MS = 0.3           # 200ms tiempo para empujar el salto tras entrar en la zona de wrap
+WRAP_MARGEN_PORCENTAJE = 0.02    # 1% del tamaño de la pantalla
+WRAP_DELAY_MS = 0.2              # 200ms
 
 DISTANCIA_SALTO = 450
 PAUSA_ENTRE_SALTOS = 0.3
@@ -192,11 +193,25 @@ def ejecutar_teletransporte_vertical():
         teleport_y = pantalla_alto - pt.y
         ctypes.windll.user32.SetCursorPos(pt.x, teleport_y)
 
+
+def activar_modo_mirror():
+    global es_capa_mirror
+    if not es_capa_mirror:
+        es_capa_mirror = True
+        logger.info("===> [MODO MIRROR] Activado por Ctrl+Shift+F15.")
+
+
+def desactivar_modo_mirror():
+    global es_capa_mirror
+    if es_capa_mirror:
+        es_capa_mirror = False
+        logger.info("===> [MODO MIRROR] Desactivado.")
+
+
 def on_f13_press(e):
     if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
         logger.info("Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.")
         ejecutar_teletransporte_horizontal()
-
 def on_f14_press(e):
     if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
         logger.info("Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.")
@@ -391,16 +406,22 @@ def ejecutar_salto_zona_diagonal_2():
 
 def on_f15_press(e):
     if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-        logger.info("Salto por Zonas HORIZONTAL (Ctrl+Shift+F15) solicitado.")
-        ejecutar_salto_zona_horizontal()
+       logger.info("Ctrl+Shift+F15: activando funcionalidad MIRROR.")
+       activar_modo_mirror()
+
+
+def on_f15_release(e):
+   desactivar_modo_mirror()
+
 
 def on_f16_press(e):
-    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-        logger.info("Salto por Zonas VERTICAL (Ctrl+Shift+F16) solicitado.")
-        ejecutar_salto_zona_vertical()
+   if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
+       logger.info("Salto por Zonas VERTICAL (Ctrl+Shift+F16) solicitado.")
+       ejecutar_salto_zona_vertical()
 
 # Registrar teclas para el modo de saltos por zona
 keyboard.on_press_key("f15", on_f15_press)
+keyboard.on_release_key("f15", on_f15_release)
 keyboard.on_press_key("f16", on_f16_press)
 
 def on_f17_press(e):
@@ -447,21 +468,9 @@ def actualizar_ui(capa_msg):
 
     clave = next((k for k in colores if k in capa_msg), None)
     
-    # Manejar el modo espejo (MIRROR) nativamente en memoria
+    # La capa MIRROR ya no activa la funcionalidad.
     if clave == "MIRROR":
-        if not es_capa_mirror:
-            es_capa_mirror = True
-            logger.info("===> [CAPA MIRROR] Activada instantáneamente en memoria.")
-            if win_mirror_main: win_mirror_main.deiconify()
-            if win_mirror_dest_h: win_mirror_dest_h.deiconify()
-            if win_mirror_dest_v: win_mirror_dest_v.deiconify()
-    else:
-        if es_capa_mirror:
-            es_capa_mirror = False
-            logger.info("===> [CAPA MIRROR] Desactivada.")
-            if win_mirror_main: win_mirror_main.withdraw()
-            if win_mirror_dest_h: win_mirror_dest_h.withdraw()
-            if win_mirror_dest_v: win_mirror_dest_v.withdraw()
+        logger.info("===> [CAPA MIRROR] Detectada, pero no activa el modo manual de scroll lock.")
 
     if clave:
         color_actual = colores[clave]
@@ -921,24 +930,14 @@ def loop_movimiento_suave():
                     if borde_activo_x != 1:
                         borde_activo_x = 1
                         tiempo_choque_x = ahora
-                        logger.info(f"[WRAP X] Iniciando empuje DERECHA. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
-                        logger.info(f"[WRAP X] ¡SALTO DERECHA ejecutado! Tiempo empujando: {ahora - tiempo_choque_x:.2f}s")
                         nuevo_x = margen_x + 5
                         ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
                         curr_x = nuevo_x
                         borde_activo_x = 0
                         tiempo_choque_x = ahora + 0.5
                 elif vx_wrap < 0:
-                    if borde_activo_x == 1:
-                        logger.info(f"[WRAP X] Cancelado por movimiento a la IZQUIERDA. vx_wrap: {vx_wrap}")
                     borde_activo_x = 0
-                
-                # Cancelar si el movimiento es predominantemente vertical (scrolling)
-                if borde_activo_x == 1 and abs(vy_wrap) > 2 and abs(vy_wrap) > abs(vx_wrap):
-                    logger.info(f"[WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: {vy_wrap}, vx_wrap: {vx_wrap}")
-                    borde_activo_x = 0
-                    
             elif curr_x <= margen_x:
                 ctypes.windll.user32.SetCursorPos(margen_x, int(curr_y))
                 curr_x = margen_x
@@ -946,22 +945,13 @@ def loop_movimiento_suave():
                     if borde_activo_x != -1:
                         borde_activo_x = -1
                         tiempo_choque_x = ahora
-                        logger.info(f"[WRAP X] Iniciando empuje IZQUIERDA. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
-                        logger.info(f"[WRAP X] ¡SALTO IZQUIERDA ejecutado! Tiempo empujando: {ahora - tiempo_choque_x:.2f}s")
                         nuevo_x = pantalla_ancho - margen_x - 5
                         ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
                         curr_x = nuevo_x
                         borde_activo_x = 0
                         tiempo_choque_x = ahora + 0.5
                 elif vx_wrap > 0:
-                    if borde_activo_x == -1:
-                        logger.info(f"[WRAP X] Cancelado por movimiento a la DERECHA. vx_wrap: {vx_wrap}")
-                    borde_activo_x = 0
-                
-                # Cancelar si el movimiento es predominantemente vertical (scrolling)
-                if borde_activo_x == -1 and abs(vy_wrap) > 2 and abs(vy_wrap) > abs(vx_wrap):
-                    logger.info(f"[WRAP X] Cancelado por DESPLAZAMIENTO VERTICAL. vy_wrap: {vy_wrap}, vx_wrap: {vx_wrap}")
                     borde_activo_x = 0
             else:
                 borde_activo_x = 0
@@ -974,24 +964,14 @@ def loop_movimiento_suave():
                     if borde_activo_y != 1:
                         borde_activo_y = 1
                         tiempo_choque_y = ahora
-                        logger.info(f"[WRAP Y] Iniciando empuje ABAJO. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
-                        logger.info(f"[WRAP Y] ¡SALTO ABAJO ejecutado! Tiempo empujando: {ahora - tiempo_choque_y:.2f}s")
                         nuevo_y = margen_y + 5
                         ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
                         curr_y = nuevo_y
                         borde_activo_y = 0
                         tiempo_choque_y = ahora + 0.5
                 elif vy_wrap < 0:
-                    if borde_activo_y == 1:
-                        logger.info(f"[WRAP Y] Cancelado por movimiento hacia ARRIBA. vy_wrap: {vy_wrap}")
                     borde_activo_y = 0
-                
-                # Cancelar si el movimiento es predominantemente horizontal
-                if borde_activo_y == 1 and abs(vx_wrap) > 2 and abs(vx_wrap) > abs(vy_wrap):
-                    logger.info(f"[WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
-                    borde_activo_y = 0
-                    
             elif curr_y <= margen_y:
                 ctypes.windll.user32.SetCursorPos(int(curr_x), margen_y)
                 curr_y = margen_y
@@ -999,22 +979,13 @@ def loop_movimiento_suave():
                     if borde_activo_y != -1:
                         borde_activo_y = -1
                         tiempo_choque_y = ahora
-                        logger.info(f"[WRAP Y] Iniciando empuje ARRIBA. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
-                        logger.info(f"[WRAP Y] ¡SALTO ARRIBA ejecutado! Tiempo empujando: {ahora - tiempo_choque_y:.2f}s")
                         nuevo_y = pantalla_alto - margen_y - 5
                         ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
                         curr_y = nuevo_y
                         borde_activo_y = 0
                         tiempo_choque_y = ahora + 0.5
                 elif vy_wrap > 0:
-                    if borde_activo_y == -1:
-                        logger.info(f"[WRAP Y] Cancelado por movimiento hacia ABAJO. vy_wrap: {vy_wrap}")
-                    borde_activo_y = 0
-                
-                # Cancelar si el movimiento es predominantemente horizontal
-                if borde_activo_y == -1 and abs(vx_wrap) > 2 and abs(vx_wrap) > abs(vy_wrap):
-                    logger.info(f"[WRAP Y] Cancelado por DESPLAZAMIENTO HORIZONTAL. vx_wrap: {vx_wrap}, vy_wrap: {vy_wrap}")
                     borde_activo_y = 0
             else:
                 borde_activo_y = 0
@@ -1116,6 +1087,7 @@ def main():
     
     # Inicia la captura de Alt para OneNote 2016
     utils.onenote_nav.run_in_background()
+    scroll_lock.run_in_background(lambda: es_capa_mirror)
 
     print("========================================")
     print("  CORNELL READY – SALTO + WRAP INTEGRADO ")
