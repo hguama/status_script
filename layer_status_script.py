@@ -47,10 +47,10 @@ pyautogui.FAILSAFE = False
 # ===============================================================
 VID, PID = 0x4653, 0x0001
 
-# MODO 2: Activación del salto por pausa y empuje
+# MODO 2 (WRAP): Activación del salto por pausa y empuje
 MODO_WRAP_DELAY_HABILITADO = True
-WRAP_MARGEN_PORCENTAJE = 0.02    # 1% del tamaño de la pantalla
-WRAP_DELAY_MS = 0.2              # 200ms
+WRAP_MARGEN_PORCENTAJE = 0.005   # 0.5% del tamaño de la pantalla (~10px en 1920px)
+WRAP_DELAY_MS = 0.05             # 50ms - Reducido para wrap más rápido
 
 DISTANCIA_SALTO = 450
 PAUSA_ENTRE_SALTOS = 0.3
@@ -72,7 +72,7 @@ pyautogui.PAUSE = 0    # Eliminar delay interno de pyautogui para máxima fluide
 # --- PARÁMETROS DE PRECISIÓN EN BORDES ---
 MARGIN_ESQUINA = 100    # Píxeles desde las esquinas donde el muro es sólido (no salta)
 DISTANCIA_FRENADO = 500 # Píxeles antes del borde donde empieza a frenar dinámicamente
-MARGEN_BLOQUEO = 50     # Píxeles antes del borde donde el cursor choca y se detiene
+MARGEN_BLOQUEO = 10     # Píxeles antes del borde donde el cursor choca y se detiene
 UMBRAL_VIAJE_LARGO = 450 # Distancia recorrida para activar el bloqueo de esquinas
 ZONA_LIBRE_BORDE = 0.25  # 25% de la pantalla para permitir paso fluido sin bloqueos
 
@@ -928,11 +928,16 @@ def loop_movimiento_suave():
             vx_wrap = curr_x - prev_actual_x
             vy_wrap = curr_y - prev_actual_y
             
-            # --- EVALUAR EJE X ---
+            # --- DETECCIÓN DE INTENCIÓN: el wrap se activa inmediatamente si hay movimiento
+            #     en el eje correcto. Se bloquea SOLO si hay movimiento intencional en el
+            #     eje perpendicular (navegación por iconos) ---
+            UMBRAL_MOVIMIENTO_WRAP = 1  # Píxeles mínimos para considerar movimiento intencional
+            
+            # --- EVALUAR EJE X (solo si movimiento horizontal intencional) ---
             if curr_x >= pantalla_ancho - margen_x - 1:
                 ctypes.windll.user32.SetCursorPos(pantalla_ancho - margen_x - 1, int(curr_y))
                 curr_x = pantalla_ancho - margen_x - 1
-                if vx_wrap > 0:
+                if vx_wrap > UMBRAL_MOVIMIENTO_WRAP and abs(vy_wrap) <= UMBRAL_MOVIMIENTO_WRAP:
                     if borde_activo_x != 1:
                         borde_activo_x = 1
                         tiempo_choque_x = ahora
@@ -942,12 +947,12 @@ def loop_movimiento_suave():
                         curr_x = nuevo_x
                         borde_activo_x = 0
                         tiempo_choque_x = ahora + 0.5
-                elif vx_wrap < 0:
+                else:
                     borde_activo_x = 0
             elif curr_x <= margen_x:
                 ctypes.windll.user32.SetCursorPos(margen_x, int(curr_y))
                 curr_x = margen_x
-                if vx_wrap < 0:
+                if vx_wrap < -UMBRAL_MOVIMIENTO_WRAP and abs(vy_wrap) <= UMBRAL_MOVIMIENTO_WRAP:
                     if borde_activo_x != -1:
                         borde_activo_x = -1
                         tiempo_choque_x = ahora
@@ -957,16 +962,16 @@ def loop_movimiento_suave():
                         curr_x = nuevo_x
                         borde_activo_x = 0
                         tiempo_choque_x = ahora + 0.5
-                elif vx_wrap > 0:
+                else:
                     borde_activo_x = 0
             else:
                 borde_activo_x = 0
                 
-            # --- EVALUAR EJE Y ---
+            # --- EVALUAR EJE Y (solo si movimiento vertical intencional) ---
             if curr_y >= pantalla_alto - margen_y - 1:
                 ctypes.windll.user32.SetCursorPos(int(curr_x), pantalla_alto - margen_y - 1)
                 curr_y = pantalla_alto - margen_y - 1
-                if vy_wrap > 0:
+                if vy_wrap > UMBRAL_MOVIMIENTO_WRAP and abs(vx_wrap) <= UMBRAL_MOVIMIENTO_WRAP:
                     if borde_activo_y != 1:
                         borde_activo_y = 1
                         tiempo_choque_y = ahora
@@ -976,12 +981,12 @@ def loop_movimiento_suave():
                         curr_y = nuevo_y
                         borde_activo_y = 0
                         tiempo_choque_y = ahora + 0.5
-                elif vy_wrap < 0:
+                else:
                     borde_activo_y = 0
             elif curr_y <= margen_y:
                 ctypes.windll.user32.SetCursorPos(int(curr_x), margen_y)
                 curr_y = margen_y
-                if vy_wrap < 0:
+                if vy_wrap < -UMBRAL_MOVIMIENTO_WRAP and abs(vx_wrap) <= UMBRAL_MOVIMIENTO_WRAP:
                     if borde_activo_y != -1:
                         borde_activo_y = -1
                         tiempo_choque_y = ahora
@@ -991,7 +996,7 @@ def loop_movimiento_suave():
                         curr_y = nuevo_y
                         borde_activo_y = 0
                         tiempo_choque_y = ahora + 0.5
-                elif vy_wrap > 0:
+                else:
                     borde_activo_y = 0
             else:
                 borde_activo_y = 0
