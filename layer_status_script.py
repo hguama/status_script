@@ -145,303 +145,39 @@ canvas_mouse.pack()
 # --- VENTANA PARA EFECTO PULSO ELEGANTE (DESACTIVADO) ---
 # ripple_win = tk.Toplevel() ...
 
-# ==========================================
-# CONFIGURACIÓN DEL MODO ESPEJO (INTEGRADO)
-# ==========================================
-MIRROR_DISTANCIA = 25          
-MIRROR_LADO = "derecha"        
-MIRROR_MOSTRAR_PRINCIPAL = False  
-MIRROR_MOSTRAR_DEST_H = False     
-MIRROR_MOSTRAR_DEST_V = False     
+scroll_lock_activo = False
 
-MIRROR_COLOR_PRINCIPAL = "#00FFFF" 
-MIRROR_COLOR_DEST_H = "#FF9900"    
-MIRROR_COLOR_DEST_V = "#00FF00"    
-
-MIRROR_GROSOR = 2              
-MIRROR_ALTURA = 20            
-
-def create_mirror_window(color):
-    win = tk.Toplevel(root)
-    win.overrideredirect(True)
-    win.attributes("-topmost", True)
-    win.config(bg="magenta")
-    win.wm_attributes("-transparentcolor", "magenta")
-    win.geometry(f"{MIRROR_GROSOR}x{MIRROR_ALTURA}+0+0")
-    win.withdraw()
-    canvas = tk.Canvas(win, width=MIRROR_GROSOR, height=MIRROR_ALTURA, highlightthickness=0, bg="magenta")
-    canvas.pack()
-    canvas.create_line(MIRROR_GROSOR//2, 0, MIRROR_GROSOR//2, MIRROR_ALTURA, fill=color, width=MIRROR_GROSOR)
-    return win
-
-win_mirror_main = create_mirror_window(MIRROR_COLOR_PRINCIPAL) if MIRROR_MOSTRAR_PRINCIPAL else None
-win_mirror_dest_h = create_mirror_window(MIRROR_COLOR_DEST_H) if MIRROR_MOSTRAR_DEST_H else None
-win_mirror_dest_v = create_mirror_window(MIRROR_COLOR_DEST_V) if MIRROR_MOSTRAR_DEST_V else None
-
-es_capa_mirror = False
-
-def ejecutar_teletransporte_horizontal():
-    if es_capa_mirror:
-        pt = POINT()
-        ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-        teleport_x = pantalla_ancho - pt.x
-        ctypes.windll.user32.SetCursorPos(teleport_x, pt.y)
-
-def ejecutar_teletransporte_vertical():
-    if es_capa_mirror:
-        pt = POINT()
-        ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-        teleport_y = pantalla_alto - pt.y
-        ctypes.windll.user32.SetCursorPos(pt.x, teleport_y)
+def activar_scroll_lock():
+    global scroll_lock_activo
+    if not scroll_lock_activo:
+        scroll_lock_activo = True
+        logger.info("===> [SCROLL LOCK] Activado por Ctrl+Shift+F15.")
 
 
-def activar_modo_mirror():
-    global es_capa_mirror
-    if not es_capa_mirror:
-        es_capa_mirror = True
-        logger.info("===> [MODO MIRROR] Activado por Ctrl+Shift+F15.")
+def desactivar_scroll_lock():
+    global scroll_lock_activo
+    if scroll_lock_activo:
+        scroll_lock_activo = False
+        logger.info("===> [SCROLL LOCK] Desactivado.")
 
-
-def desactivar_modo_mirror():
-    global es_capa_mirror
-    if es_capa_mirror:
-        es_capa_mirror = False
-        logger.info("===> [MODO MIRROR] Desactivado.")
-
-
-def on_f13_press(e):
-    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-        logger.info("Teletransporte HORIZONTAL (Ctrl+Shift+F13) solicitado de forma nativa.")
-        ejecutar_teletransporte_horizontal()
-def on_f14_press(e):
-    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-        logger.info("Teletransporte VERTICAL (Ctrl+Shift+F14) solicitado de forma nativa.")
-        ejecutar_teletransporte_vertical()
-
-keyboard.on_press_key("f13", on_f13_press)
-keyboard.on_press_key("f14", on_f14_press)
-
-# ==========================================
-# CONFIGURACIÓN DE SALTOS POR ZONA LIBRE (F15 / F16)
-# ==========================================
-ZONA_MARGEN_PORCENTAJE = 0.10  # 10% de margen en los extremos de la pantalla
-ZONA_UMBRAL_CENTRO = 0.05      # 5% de tolerancia para considerar que se está "en el centro"
-
-# Historial de dirección para saber hacia dónde continuar el salto (1 = Adelante/Derecha/Abajo, -1 = Atrás/Izquierda/Arriba)
-_last_h_dir = 0
-_last_v_dir = 0
-_last_d1_dir = 0
-_last_d2_dir = 0
-
-# Variables para el comportamiento por defecto en el centro (sin historial)
-# Para F17 (Diagonal 1: Arriba-Izq a Abajo-Der): 1 = Abajo-Der, -1 = Arriba-Izq
-ZONA_DIAG1_DEFAULT_DIR = -1 
-# Para F18 (Diagonal 2: Abajo-Izq a Arriba-Der): 1 = Arriba-Der, -1 = Abajo-Izq
-ZONA_DIAG2_DEFAULT_DIR = 1
-
-def ejecutar_salto_zona_horizontal():
-    global _last_h_dir
-    pt = POINT()
-    ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-    x, y = pt.x, pt.y
-    w = pantalla_ancho
-    
-    margen_px = w * ZONA_MARGEN_PORCENTAJE
-    L = margen_px
-    C = w * 0.5
-    R = w - margen_px
-    
-    zona_izq = w * (0.5 - ZONA_UMBRAL_CENTRO)
-    zona_der = w * (0.5 + ZONA_UMBRAL_CENTRO)
-    
-    if x < zona_izq:
-        target_x = C
-        _last_h_dir = 1
-        logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Izq->Centro")
-    elif x > zona_der:
-        target_x = C
-        _last_h_dir = -1
-        logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Der->Centro")
-    else:
-        # Estamos en la zona central
-        if _last_h_dir == 1:
-            target_x = R
-            logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Centro->Der")
-        elif _last_h_dir == -1:
-            target_x = L
-            logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Centro->Izq")
-        else:
-            # Si no hay historial, saltar al extremo opuesto de donde estemos inclinados
-            if x < C:
-                target_x = R
-                _last_h_dir = 1
-            else:
-                target_x = L
-                _last_h_dir = -1
-            logger.debug(f"[SALTO LIBRE POR ZONA] X:{x}->{target_x} | Centro->Extremo (Sin historial)")
-            
-    ctypes.windll.user32.SetCursorPos(int(target_x), int(y))
-
-def ejecutar_salto_zona_vertical():
-    global _last_v_dir
-    pt = POINT()
-    ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-    x, y = pt.x, pt.y
-    h = pantalla_alto
-    
-    margen_px = h * ZONA_MARGEN_PORCENTAJE
-    T = margen_px
-    C = h * 0.5
-    B = h - margen_px
-    
-    zona_arr = h * (0.5 - ZONA_UMBRAL_CENTRO)
-    zona_aba = h * (0.5 + ZONA_UMBRAL_CENTRO)
-    
-    if y < zona_arr:
-        target_y = C
-        _last_v_dir = 1
-        logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Arr->Centro")
-    elif y > zona_aba:
-        target_y = C
-        _last_v_dir = -1
-        logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Aba->Centro")
-    else:
-        if _last_v_dir == 1:
-            target_y = B
-            logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Centro->Aba")
-        elif _last_v_dir == -1:
-            target_y = T
-            logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Centro->Arr")
-        else:
-            if y < C:
-                target_y = B
-                _last_v_dir = 1
-            else:
-                target_y = T
-                _last_v_dir = -1
-            logger.debug(f"[SALTO LIBRE POR ZONA] Y:{y}->{target_y} | Centro->Extremo (Sin historial)")
-            
-    ctypes.windll.user32.SetCursorPos(int(x), int(target_y))
-
-def ejecutar_salto_zona_diagonal_1():
-    global _last_d1_dir
-    pt = POINT()
-    ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-    x, y = pt.x, pt.y
-    w, h = pantalla_ancho, pantalla_alto
-    
-    margen_x = w * ZONA_MARGEN_PORCENTAJE
-    margen_y = h * ZONA_MARGEN_PORCENTAJE
-    
-    C_x, C_y = w * 0.5, h * 0.5
-    TL_x, TL_y = margen_x, margen_y
-    BR_x, BR_y = w - margen_x, h - margen_y
-    
-    umbral_x = w * ZONA_UMBRAL_CENTRO
-    umbral_y = h * ZONA_UMBRAL_CENTRO
-    
-    es_centro = (abs(x - C_x) < umbral_x) and (abs(y - C_y) < umbral_y)
-    
-    if not es_centro:
-        if x < C_x and y < C_y:
-            target_x, target_y = C_x, C_y
-            _last_d1_dir = 1
-        elif x >= C_x and y >= C_y:
-            target_x, target_y = C_x, C_y
-            _last_d1_dir = -1
-        else:
-            target_x, target_y = C_x, C_y
-            _last_d1_dir = ZONA_DIAG1_DEFAULT_DIR
-    else:
-        dir_to_use = _last_d1_dir if _last_d1_dir != 0 else ZONA_DIAG1_DEFAULT_DIR
-        if dir_to_use == 1:
-            target_x, target_y = BR_x, BR_y
-            _last_d1_dir = 1
-        else:
-            target_x, target_y = TL_x, TL_y
-            _last_d1_dir = -1
-            
-    ctypes.windll.user32.SetCursorPos(int(target_x), int(target_y))
-    logger.debug(f"[SALTO DIAG 1] (X:{x},Y:{y}) -> (X:{target_x},Y:{target_y})")
-
-def ejecutar_salto_zona_diagonal_2():
-    global _last_d2_dir
-    pt = POINT()
-    ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-    x, y = pt.x, pt.y
-    w, h = pantalla_ancho, pantalla_alto
-    
-    margen_x = w * ZONA_MARGEN_PORCENTAJE
-    margen_y = h * ZONA_MARGEN_PORCENTAJE
-    
-    C_x, C_y = w * 0.5, h * 0.5
-    BL_x, BL_y = margen_x, h - margen_y
-    TR_x, TR_y = w - margen_x, margen_y
-    
-    umbral_x = w * ZONA_UMBRAL_CENTRO
-    umbral_y = h * ZONA_UMBRAL_CENTRO
-    
-    es_centro = (abs(x - C_x) < umbral_x) and (abs(y - C_y) < umbral_y)
-    
-    if not es_centro:
-        if x < C_x and y > C_y:
-            target_x, target_y = C_x, C_y
-            _last_d2_dir = 1
-        elif x >= C_x and y <= C_y:
-            target_x, target_y = C_x, C_y
-            _last_d2_dir = -1
-        else:
-            target_x, target_y = C_x, C_y
-            _last_d2_dir = ZONA_DIAG2_DEFAULT_DIR
-    else:
-        dir_to_use = _last_d2_dir if _last_d2_dir != 0 else ZONA_DIAG2_DEFAULT_DIR
-        if dir_to_use == 1:
-            target_x, target_y = TR_x, TR_y
-            _last_d2_dir = 1
-        else:
-            target_x, target_y = BL_x, BL_y
-            _last_d2_dir = -1
-            
-    ctypes.windll.user32.SetCursorPos(int(target_x), int(target_y))
-    logger.debug(f"[SALTO DIAG 2] (X:{x},Y:{y}) -> (X:{target_x},Y:{target_y})")
 
 def on_f15_press(e):
     global f15_down
     if not f15_down and keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
         f15_down = True
-        logger.info("Ctrl+Shift+F15: activando funcionalidad MIRROR.")
-        activar_modo_mirror()
+        logger.info("Ctrl+Shift+F15: activando funcionalidad SCROLL LOCK.")
+        activar_scroll_lock()
 
 
 def on_f15_release(e):
     global f15_down
     if f15_down:
         f15_down = False
-        desactivar_modo_mirror()
+        desactivar_scroll_lock()
 
 
-def on_f16_press(e):
-    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-        logger.info("Salto por Zonas VERTICAL (Ctrl+Shift+F16) solicitado.")
-        ejecutar_salto_zona_vertical()
-
-# Registrar teclas para el modo de saltos por zona
 keyboard.on_press_key("f15", on_f15_press)
 keyboard.on_release_key("f15", on_f15_release)
-keyboard.on_press_key("f16", on_f16_press)
-
-def on_f17_press(e):
-    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-        logger.info("Salto DIAGONAL 1 (Ctrl+Shift+F17) solicitado.")
-        ejecutar_salto_zona_diagonal_1()
-
-def on_f18_press(e):
-    if keyboard.is_pressed("ctrl") and keyboard.is_pressed("shift"):
-        logger.info("Salto DIAGONAL 2 (Ctrl+Shift+F18) solicitado.")
-        ejecutar_salto_zona_diagonal_2()
-
-keyboard.on_press_key("f17", on_f17_press)
-keyboard.on_press_key("f18", on_f18_press)
 
 
 def efecto_onda(x, y):
@@ -467,16 +203,10 @@ def toggle_indicadores(e=None):
 # Asignar F21 para alternar la visibilidad de las burbujas
 keyboard.on_press_key("f21", toggle_indicadores)
 
-mirror_process = None
-
 def actualizar_ui(capa_msg):
-    global indicador_visible_por_capa, color_actual, mirror_process, es_capa_mirror
+    global indicador_visible_por_capa, color_actual, scroll_lock_activo
 
     clave = next((k for k in colores if k in capa_msg), None)
-    
-    # La capa MIRROR ya no activa la funcionalidad.
-    if clave == "MIRROR":
-        logger.info("===> [CAPA MIRROR] Detectada, pero no activa el modo manual de scroll lock.")
 
     if clave:
         color_actual = colores[clave]
@@ -560,30 +290,6 @@ def seguimiento_mouse():
             x, y = pt.x, pt.y
             mouse_win.geometry(f"+{x-PUNTO_MOUSE//2}+{y+OFFSET_MOUSE}")
             
-            # --- Actualización instantánea de los indicadores Mirror ---
-            if es_capa_mirror:
-                if MIRROR_LADO.lower() == "izquierda":
-                    main_x = x - MIRROR_DISTANCIA - (MIRROR_GROSOR // 2)
-                else:
-                    main_x = x + MIRROR_DISTANCIA - (MIRROR_GROSOR // 2)
-                main_y = y - (MIRROR_ALTURA // 2)
-                
-                if win_mirror_main:
-                    win_mirror_main.geometry(f"+{main_x}+{main_y}")
-                
-                if win_mirror_dest_h:
-                    dest_x = pantalla_ancho - x
-                    if MIRROR_LADO.lower() == "izquierda":
-                        ghost_h_x = dest_x - MIRROR_DISTANCIA - (MIRROR_GROSOR // 2)
-                    else:
-                        ghost_h_x = dest_x + MIRROR_DISTANCIA - (MIRROR_GROSOR // 2)
-                    win_mirror_dest_h.geometry(f"+{ghost_h_x}+{main_y}")
-                    
-                if win_mirror_dest_v:
-                    dest_y = pantalla_alto - y
-                    ghost_v_y = dest_y - (MIRROR_ALTURA // 2)
-                    win_mirror_dest_v.geometry(f"+{main_x}+{ghost_v_y}")
-
         except:
             pass
         time.sleep(0.01)
@@ -1098,7 +804,7 @@ def main():
     
     # Inicia la captura de Alt para OneNote 2016
     utils.onenote_nav.run_in_background()
-    scroll_lock.run_in_background(lambda: es_capa_mirror)
+    scroll_lock.run_in_background(lambda: scroll_lock_activo)
 
     print("========================================")
     print("  CORNELL READY – SALTO + WRAP INTEGRADO ")
