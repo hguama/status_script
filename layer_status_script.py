@@ -105,6 +105,7 @@ indicador_visible_por_capa = False
 # ===============================================================
 # --- UI CONFIG ---
 DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 30, 10, 22
+TAMANO_SCROLL, COLOR_SCROLL = 24, "#00FFFF"
 
 colores = {
     "ALFA": "#66BB6A",    # Verde claro / Menta (Material Green 400)
@@ -142,6 +143,17 @@ canvas_mouse = tk.Canvas(mouse_win, width=PUNTO_MOUSE, height=PUNTO_MOUSE,
                          highlightthickness=0, bg="magenta")
 canvas_mouse.pack()
 
+scroll_lock_win = tk.Toplevel()
+scroll_lock_win.overrideredirect(True)
+scroll_lock_win.attributes("-topmost", True)
+scroll_lock_win.config(bg="magenta")
+scroll_lock_win.wm_attributes("-transparentcolor", "magenta")
+scroll_lock_win.geometry(f"{TAMANO_SCROLL}x{TAMANO_SCROLL}+{(pantalla_ancho-DIAMETRO)//2 + DIAMETRO + 4}+5")
+
+canvas_scroll = tk.Canvas(scroll_lock_win, width=TAMANO_SCROLL, height=TAMANO_SCROLL,
+                          highlightthickness=0, bg="magenta")
+canvas_scroll.pack()
+
 # --- VENTANA PARA EFECTO PULSO ELEGANTE (DESACTIVADO) ---
 # ripple_win = tk.Toplevel() ...
 
@@ -152,6 +164,7 @@ def activar_scroll_lock():
     if not scroll_lock_activo:
         scroll_lock_activo = True
         logger.info("===> [SCROLL LOCK] Activado por Ctrl+Shift+F15.")
+        root.after(0, actualizar_scroll_lock_ui)
 
 
 def desactivar_scroll_lock():
@@ -159,6 +172,7 @@ def desactivar_scroll_lock():
     if scroll_lock_activo:
         scroll_lock_activo = False
         logger.info("===> [SCROLL LOCK] Desactivado.")
+        root.after(0, actualizar_scroll_lock_ui)
 
 
 def on_f15_press(e):
@@ -196,9 +210,12 @@ def toggle_indicadores(e=None):
     if not INDICADOR_HABILITADO:
         root.withdraw()
         mouse_win.withdraw()
+        scroll_lock_win.withdraw()
     elif indicador_visible_por_capa:
         root.deiconify()
         mouse_win.deiconify()
+    
+    root.after(0, actualizar_scroll_lock_ui)
 
 # Asignar F21 para alternar la visibilidad de las burbujas
 keyboard.on_press_key("f21", toggle_indicadores)
@@ -225,6 +242,19 @@ def actualizar_ui(capa_msg):
         indicador_visible_por_capa = False
         root.withdraw()
         mouse_win.withdraw()
+
+    actualizar_scroll_lock_ui()
+
+
+def actualizar_scroll_lock_ui():
+    global scroll_lock_activo
+    if scroll_lock_activo and INDICADOR_HABILITADO:
+        canvas_scroll.delete("all")
+        canvas_scroll.create_rectangle(2, 2, TAMANO_SCROLL-2, TAMANO_SCROLL-2, fill=COLOR_SCROLL, outline="")
+        scroll_lock_win.deiconify()
+    else:
+        canvas_scroll.delete("all")
+        scroll_lock_win.withdraw()
 
 
 # ===============================================================
@@ -719,24 +749,33 @@ def loop_movimiento_suave():
 def ocultar_indicador_si_mouse_cerca():
     while True:
         try:
-            if not indicador_visible_por_capa:
+            if not indicador_visible_por_capa and not scroll_lock_activo:
                 time.sleep(0.05)
                 continue
 
             mx, my = pyautogui.position()
 
-            # Centro del indicador superior
             cx = pantalla_ancho // 2
             cy = 5 + DIAMETRO // 2
-
             dx = mx - cx
             dy = my - cy
             distancia = (dx*dx + dy*dy) ** 0.5
 
-            if distancia < RADIO_OCULTAR:
+            cx_scroll = (pantalla_ancho - DIAMETRO)//2 + DIAMETRO + TAMANO_SCROLL//2
+            cy_scroll = 5 + TAMANO_SCROLL//2
+            dxs = mx - cx_scroll
+            dys = my - cy_scroll
+            distancia_scroll = (dxs*dxs + dys*dys) ** 0.5
+
+            ocultar = distancia < RADIO_OCULTAR or distancia_scroll < RADIO_OCULTAR
+
+            if ocultar:
                 root.withdraw()
-            elif INDICADOR_HABILITADO and indicador_visible_por_capa:
-                root.deiconify()
+                scroll_lock_win.withdraw()
+            else:
+                if INDICADOR_HABILITADO and indicador_visible_por_capa:
+                    root.deiconify()
+                root.after(0, actualizar_scroll_lock_ui)
 
         except:
             pass
