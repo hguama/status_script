@@ -105,7 +105,7 @@ indicador_visible_por_capa = False
 # ===============================================================
 # --- UI CONFIG ---
 DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 30, 10, 22
-TAMANO_SCROLL, COLOR_SCROLL = 24, "#00FFFF"
+TAMANO_SCROLL, COLOR_SCROLL = 18, "#2982F0"
 
 colores = {
     "ALFA": "#66BB6A",    # Verde claro / Menta (Material Green 400)
