@@ -10,6 +10,7 @@ import ctypes # Añade esto al inicio de tu archivo
 from datetime import datetime
 import utils.onenote_nav  # Integración OneNote Nav
 import utils.scroll_lock as scroll_lock
+import utils.qmk_calibracion as qmk_cal
 
 import logging
 import os
@@ -57,12 +58,8 @@ WRAP_DELAY_MS = 0.05             # 50ms de pausa en el borde antes de saltar
 COOLDOWN_WRAP = 0.5              # Tiempo mínimo entre saltos automáticos
 
 # --- PARAMETERS MOUSE WITH KEYBOARD ---
-# Estos valores se envían al firmware QMK vía HID raw
-# Orden en QMK: data[0]='M', [1]=mk_delay, [2]=mk_max_speed, [3]=mk_time_to_max, [4]=mk_interval
-QMK_MOUSE_DELAY        = 5   # mk_delay      — retardo inicial antes de repetir (ms, 0-255)
-QMK_MOUSE_MAX_SPEED    = 22  # mk_max_speed  — velocidad máxima estable (1-255)
-QMK_MOUSE_TIME_TO_MAX  = 10  # mk_time_to_max — eventos para alcanzar velocidad máxima (1-255)
-QMK_MOUSE_INTERVAL     = 6   # mk_interval   — intervalo entre eventos de repetición (ms, 1-255)
+# Estos valores ahora se manejan en utils/qmk_calibracion/__init__.py
+# Importarlos desde allí permite activar/desactivar el envío con la bandera HABILITADA
 
 
 # ===============================================================
@@ -474,12 +471,8 @@ def log_configuracion():
     logger.info("┌─ TECLADO")
     logger.info(f"│  VID = 0x{VID:04X}  |  PID = 0x{PID:04X}")
 
-    # ── QMK Mouse (enviado al firmware) ──
-    logger.info("├─ QMK MOUSE (→ firmware vía HID raw)")
-    logger.info(f"│  mk_delay       = {QMK_MOUSE_DELAY:>3} ms   (retardo inicial)")
-    logger.info(f"│  mk_max_speed   = {QMK_MOUSE_MAX_SPEED:>3}       (velocidad máxima, 1-255)")
-    logger.info(f"│  mk_time_to_max = {QMK_MOUSE_TIME_TO_MAX:>3}       (eventos hasta vel. máx.)")
-    logger.info(f"│  mk_interval    = {QMK_MOUSE_INTERVAL:>3} ms   (intervalo entre eventos)")
+    # ── QMK Mouse (→ módulo independiente) ──
+    qmk_cal.log_configuracion()
 
     # ── Wrap-around ──
     logger.info("├─ WRAP-AROUND")
@@ -493,30 +486,6 @@ def log_configuracion():
     logger.info(f"│  RADIO_OCULTAR    = {RADIO_OCULTAR} px")
     logger.info(sep)
 
-
-def enviar_calibracion_qmk(dev):
-    """Construye el buffer HID con la firma 'M' y envía las variables al Corne."""
-    try:
-        # Buffer de 33 bytes: [0]=Report ID (stripped by OS), [1..32]=payload de 32 bytes para QMK
-        # QMK raw_hid_receive recibe data[0..31], por eso buf[1] → data[0] en firmware
-        buf = [0] * 33
-        buf[0] = 0x00                     # Report ID (requerido por Windows, eliminado antes de llegar a QMK)
-        buf[1] = ord("M")                 # data[0] = 'M'  — firma de comando
-        buf[2] = QMK_MOUSE_DELAY          # data[1] = mk_delay
-        buf[3] = QMK_MOUSE_MAX_SPEED      # data[2] = mk_max_speed
-        buf[4] = QMK_MOUSE_TIME_TO_MAX    # data[3] = mk_time_to_max
-        buf[5] = QMK_MOUSE_INTERVAL       # data[4] = mk_interval
-
-        dev.write(buf)
-        logger.info("=" * 55)
-        logger.info("  ✅ CALIBRACIÓN QMK ENVIADA AL CORNE")
-        logger.info(f"  mk_delay       = {QMK_MOUSE_DELAY} ms")
-        logger.info(f"  mk_max_speed   = {QMK_MOUSE_MAX_SPEED}")
-        logger.info(f"  mk_time_to_max = {QMK_MOUSE_TIME_TO_MAX}")
-        logger.info(f"  mk_interval    = {QMK_MOUSE_INTERVAL} ms")
-        logger.info("=" * 55)
-    except Exception as e:
-        logger.error(f"[HID ERROR] No se pudieron enviar los valores de calibración: {e}")
 
 def main():
     check_single_instance()
@@ -534,8 +503,8 @@ def main():
     # ── Volcar toda la configuración al log ──
     log_configuracion()
 
-    # ── Enviamos los datos al teclado inmediatamente después de conectar ──
-    enviar_calibracion_qmk(dev)
+    # ── Enviar calibración de mouse keys al firmware (solo si HABILITADA = True) ──
+    qmk_cal.enviar_calibracion(dev)
 
     threading.Thread(target=escuchar_hid, args=(dev,), daemon=True).start()
     threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
