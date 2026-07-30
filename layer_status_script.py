@@ -35,10 +35,10 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(level
     logging.StreamHandler()
 ])
 logger = logging.getLogger(__name__)
-logger.info("==========================================")
-logger.info("SISTEMA REINICIADO CON DPI AWARENESS")
-logger.info(f"ARCHIVO DE LOGS: {log_path}")
-logger.info("==========================================")
+logger.info("=" * 55)
+logger.info("  SISTEMA INICIADO — DPI AWARENESS ACTIVO")
+logger.info(f"  LOGS → {log_path}")
+logger.info("=" * 55)
 
 pyautogui.FAILSAFE = False
 
@@ -47,40 +47,22 @@ pyautogui.FAILSAFE = False
 # ===============================================================
 VID, PID = 0x4653, 0x0001
 
-# MODO 2 (WRAP): Activación del salto por pausa y empuje
-MODO_WRAP_DELAY_HABILITADO = True
-WRAP_MARGEN_PORCENTAJE = 0.005   # 0.5% del tamaño de la pantalla (~10px en 1920px)
-WRAP_DELAY_MS = 0.05             # 50ms - Reducido para wrap más rápido
-
-DISTANCIA_SALTO = 450
-PAUSA_ENTRE_SALTOS = 0.3
-UMBRAL_CAMBIO_DIR = 15 # Reducido para mayor sensibilidad
-TURBO_MARGIN = 25
-WRAP_MARGIN = 5
-VENTANA_GESTO_MS = 0.1  # Aumentado a 100ms
 RADIO_OCULTAR = 80
-
-# --- NUEVOS PARÁMETROS DE SUAVIDAD ---
-VEL_BASE = 3.0
-VEL_MAX = 42.0
-ACEL_POR_FRAME = 0.65  # Incremento de velocidad por cada ciclo de 10ms
-PAUSA_BORDE_S = 0.6    # Pausa al tocar el borde antes de saltar
-COOLDOWN_WRAP = 0.5    # Tiempo mínimo entre saltos automáticos
-TIEMPO_ANCLAJE = 0.5   # Segundos que el mouse queda bloqueado tras un salto (reducido para mayor fluidez)
 pyautogui.PAUSE = 0    # Eliminar delay interno de pyautogui para máxima fluidez
 
-# --- PARÁMETROS DE PRECISIÓN EN BORDES ---
-MARGIN_ESQUINA = 100    # Píxeles desde las esquinas donde el muro es sólido (no salta)
-DISTANCIA_FRENADO = 500 # Píxeles antes del borde donde empieza a frenar dinámicamente
-MARGEN_BLOQUEO = 10     # Píxeles antes del borde donde el cursor choca y se detiene
-UMBRAL_VIAJE_LARGO = 450 # Distancia recorrida para activar el bloqueo de esquinas
-ZONA_LIBRE_BORDE = 0.25  # 25% de la pantalla para permitir paso fluido sin bloqueos
+# --- WRAP-AROUND (salto de borde a borde) ---
+MODO_WRAP_DELAY_HABILITADO = True
+WRAP_MARGEN_PORCENTAJE = 0.005   # 0.5% del tamaño de la pantalla (~10px en 1920px)
+WRAP_DELAY_MS = 0.05             # 50ms de pausa en el borde antes de saltar
+COOLDOWN_WRAP = 0.5              # Tiempo mínimo entre saltos automáticos
 
-# --- PARAMETERS MOUSE WITH KEYBOARD---
-QMK_MOUSE_MAX_SPEED    = 7# Camos la velocidad máxima a la mitad (ya no saldrá disparado)
-QMK_MOUSE_TIME_TO_MAX  = 30 #  rampa
-QMK_MOUSE_INTERVAL     = 18 # Refresco de ~60Hz (estándar de monitores), movimiento muy progresivo
-QMK_MOUSE_MOVE_DELTA   = 1    # El paso mínimo posible por ciclo
+# --- PARAMETERS MOUSE WITH KEYBOARD ---
+# Estos valores se envían al firmware QMK vía HID raw
+# Orden en QMK: data[0]='M', [1]=mk_delay, [2]=mk_max_speed, [3]=mk_time_to_max, [4]=mk_interval
+QMK_MOUSE_DELAY        = 5   # mk_delay      — retardo inicial antes de repetir (ms, 0-255)
+QMK_MOUSE_MAX_SPEED    = 22  # mk_max_speed  — velocidad máxima estable (1-255)
+QMK_MOUSE_TIME_TO_MAX  = 10  # mk_time_to_max — eventos para alcanzar velocidad máxima (1-255)
+QMK_MOUSE_INTERVAL     = 6   # mk_interval   — intervalo entre eventos de repetición (ms, 1-255)
 
 
 # ===============================================================
@@ -88,17 +70,9 @@ QMK_MOUSE_MOVE_DELTA   = 1    # El paso mínimo posible por ciclo
 # ===============================================================
 alt_tab_menu_visible = False
 INDICADOR_HABILITADO = True
-
-tecla_horiz_down = False
-tecla_vert_down = False
-direccion_fijada = 0
-direccion_y_fijada = 0
-pos_y_referencia = 0
 f15_down = False
 
 color_actual = "#FFFFFF"
-wrap_enabled = threading.Event()
-wrap_enabled.set()
 indicador_visible_por_capa = False
 
 
@@ -325,422 +299,112 @@ def seguimiento_mouse():
         time.sleep(0.01)
 
 # ===============================================================
-# F24 / F23 – MOVIMIENTO SUAVE Y CONTROLADO
+# WRAP-AROUND — Salto de borde a borde de pantalla
 # ===============================================================
 
-forzar_nuevo_viaje = False
+def wrap_loop():
+    """
+    Detecta cuando el cursor llega al borde de la pantalla y lo
+    transporta automáticamente al borde opuesto (wrap-around).
+    Funciona con cualquier fuente de movimiento (QMK nativo, ratón físico, etc.).
+    """
+    logger.info("🖱️  WRAP-AROUND: Hilo iniciado.")
 
-def presiona_f24(e):
-    global tecla_horiz_down, forzar_nuevo_viaje
-    if not tecla_horiz_down:
-        forzar_nuevo_viaje = True
-        logger.debug("[TECLA F24 PRESIONADA] - NUEVO VIAJE FORZADO")
-    tecla_horiz_down = True
-
-def suelta_f24(e):
-    global tecla_horiz_down, direccion_fijada
-    tecla_horiz_down = False
-    direccion_fijada = 0
-    logger.debug("[TECLA F24 SOLTADA]")
-
-def presiona_f23(e):
-    global tecla_vert_down, forzar_nuevo_viaje
-    if not tecla_vert_down:
-        forzar_nuevo_viaje = True
-        logger.debug("[TECLA F23 PRESIONADA] - NUEVO VIAJE FORZADO")
-    tecla_vert_down = True
-
-def suelta_f23(e):
-    global tecla_vert_down, direccion_y_fijada
-    tecla_vert_down = False
-    direccion_y_fijada = 0
-    logger.debug("[TECLA F23 SOLTADA]")
-
-keyboard.on_press_key("f24", presiona_f24)
-keyboard.on_release_key("f24", suelta_f24)
-keyboard.on_press_key("f23", presiona_f23)
-keyboard.on_release_key("f23", suelta_f23)
-
-def loop_movimiento_suave():
-    global direccion_fijada, direccion_y_fijada
-    
-    speed_x = 0
-    speed_y = 0
-    pause_until = 0
-    distancia_recorrida = 0
-    anclado_x = False
-    anclado_y = False
-    limite_x = 0
-    limite_y = 0
-    dir_anclaje_x = 0
-    dir_anclaje_y = 0
-    tiempo_anclaje_x = 0
-    tiempo_anclaje_y = 0
-    
-    last_x, last_y = pyautogui.position()
-    
-    origen_swipe_x, origen_swipe_y = pyautogui.position()
-    prev_actual_x, prev_actual_y = origen_swipe_x, origen_swipe_y
-    tiempo_ultimo_movimiento_x = time.time()
-    tiempo_ultimo_movimiento_y = time.time()
-    
-    tiempo_choque_x = 0
-    tiempo_choque_y = 0
     borde_activo_x = 0
     borde_activo_y = 0
-    
+    tiempo_choque_x = 0
+    tiempo_choque_y = 0
+    prev_x, prev_y = 0, 0
+
     while True:
-        # --- OBTENER POSICIÓN REAL (Sin latencia de PyAutoGUI) ---
-        pt = POINT()
-        ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-        curr_x, curr_y = pt.x, pt.y
-        ahora = time.time()
-        
-        global forzar_nuevo_viaje
-        if forzar_nuevo_viaje:
-            origen_swipe_x, origen_swipe_y = curr_x, curr_y
-            if anclado_x:
-                anclado_x = False
-                logger.debug("[MURO X LIBERADO por nueva pulsación]")
-            if anclado_y:
-                anclado_y = False
-                logger.debug("[MURO Y LIBERADO por nueva pulsación]")
-            forzar_nuevo_viaje = False
-            tiempo_ultimo_movimiento_x = ahora
-            tiempo_ultimo_movimiento_y = ahora
-        
-        # --- RASTREO INDEPENDIENTE DE INACTIVIDAD (X e Y) ---
-        # Reseteamos el origen si no hay movimiento en ESE eje específico por 150ms.
-        # Esto evita que "deslizarse" verticalmente por el borde bloquee el reset horizontal.
-        
-        # Eje X
-        if abs(curr_x - prev_actual_x) > 0 or tecla_horiz_down or speed_x > 0:
-            tiempo_ultimo_movimiento_x = ahora
-        elif ahora - tiempo_ultimo_movimiento_x > 0.15:
-            if origen_swipe_x != curr_x:
-                origen_swipe_x = curr_x
-                if anclado_x:
-                    anclado_x = False
-                    logger.debug("[MURO X LIBERADO por inactividad horizontal]")
-        
-        # Eje Y
-        if abs(curr_y - prev_actual_y) > 0 or tecla_vert_down or speed_y > 0:
-            tiempo_ultimo_movimiento_y = ahora
-        elif ahora - tiempo_ultimo_movimiento_y > 0.15:
-            if origen_swipe_y != curr_y:
-                origen_swipe_y = curr_y
-                if anclado_y:
-                    anclado_y = False
-                    logger.debug("[MURO Y LIBERADO por inactividad vertical]")
+        try:
+            pt = POINT()
+            ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
+            curr_x, curr_y = pt.x, pt.y
+            ahora = time.time()
 
-        # 1. DETECTAR DIRECCIÓN
-        if tecla_horiz_down:
-            dx = curr_x - last_x
-            if 2 <= abs(dx) < (pantalla_ancho // 2):
-                direccion_fijada = 1 if dx > 0 else -1
-        else:
-            direccion_fijada = 0
-            speed_x = 0
-            
-        if tecla_vert_down:
-            dy = curr_y - last_y
-            if 2 <= abs(dy) < (pantalla_alto // 2):
-                direccion_y_fijada = 1 if dy > 0 else -1
-        else:
-            direccion_y_fijada = 0
-            speed_y = 0
+            if MODO_WRAP_DELAY_HABILITADO:
+                margen_x = int(pantalla_ancho * WRAP_MARGEN_PORCENTAJE)
+                margen_y = int(pantalla_alto * WRAP_MARGEN_PORCENTAJE)
 
-        # DETECTAR SALTO EXTERNO (Con Filtro de Zonas del 25% y Distancia de Viaje)
-        if abs(curr_x - last_x) > (pantalla_ancho // 2) and not anclado_x:
-            # Determinamos si fue un viaje largo basándonos en el origen real del swipe (universal)
-            dist_viajada_x = abs(last_x - origen_swipe_x)
-            es_viaje_corto = dist_viajada_x < UMBRAL_VIAJE_LARGO
-            
-            # Solo anclamos si NO es un viaje corto
-            if not es_viaje_corto: 
-                anclado_x = True
-                tiempo_anclaje_x = ahora
-                dir_anclaje_x = direccion_fijada if direccion_fijada != 0 else (1 if curr_x < last_x else -1)
-                
-                # Para que se "quede en la pared" sin pelear con programas de envoltura externos,
-                # lo devolvemos 5 píxeles ANTES del borde absoluto.
-                if curr_x < last_x: # Cruzó el borde derecho hacia el izquierdo
-                    limite_x = pantalla_ancho - MARGEN_BLOQUEO
-                else: # Cruzó el borde izquierdo hacia el derecho
-                    limite_x = MARGEN_BLOQUEO
-                    
-                logger.debug(f"[SALTO PROTEGIDO EXT] X:{last_x}->{curr_x} | ANCLAJE EN BORDE: {limite_x} (Dist: {dist_viajada_x})")
-            else:
-                logger.debug(f"[SALTO LIBRE POR ZONA] X:{last_x}->{curr_x} | Viaje Corto (Dist: {dist_viajada_x})")
-            
-            # Tras un salto, el nuevo origen es donde aterrizamos (o donde fuimos anclados)
-            if anclado_x:
-                origen_swipe_x = limite_x
-                last_x = limite_x
-            else:
-                origen_swipe_x = curr_x
-                last_x = curr_x
+                vx = curr_x - prev_x
+                vy = curr_y - prev_y
+                UMBRAL_MOV = 1  # Píxeles mínimos para considerar movimiento intencional
 
-        if abs(curr_y - last_y) > (pantalla_alto // 2) and not anclado_y:
-            dist_viajada_y = abs(last_y - origen_swipe_y)
-            es_viaje_corto_y = dist_viajada_y < UMBRAL_VIAJE_LARGO
-                
-            if not es_viaje_corto_y:
-                anclado_y = True
-                tiempo_anclaje_y = ahora
-                dir_anclaje_y = direccion_y_fijada if direccion_y_fijada != 0 else (1 if curr_y < last_y else -1)
-                
-                if curr_y < last_y:
-                    limite_y = pantalla_alto - MARGEN_BLOQUEO
-                else:
-                    limite_y = MARGEN_BLOQUEO
-                    
-                logger.debug(f"[SALTO PROTEGIDO EXT] Y:{last_y}->{curr_y} | ANCLAJE EN BORDE: {limite_y} (Dist: {dist_viajada_y})")
-            else:
-                logger.debug(f"[SALTO LIBRE POR ZONA] Y:{last_y}->{curr_y} | Viaje Corto (Dist: {dist_viajada_y})")
-                
-            if anclado_y:
-                origen_swipe_y = limite_y
-                last_y = limite_y
-            else:
-                origen_swipe_y = curr_y
-                last_y = curr_y
-
-        # --- APLICAR ANCLAJE (FUERZA CONSTANTE) ---
-        if anclado_x:
-            if ahora - tiempo_anclaje_x > TIEMPO_ANCLAJE:
-                anclado_x = False
-                logger.debug("[MURO X LIBERADO por tiempo]")
-            elif ahora - tiempo_anclaje_x > 0.05:
-                # Detectar si el usuario intenta alejarse del muro (movimiento fuerte opuesto)
-                # Esperamos 50ms tras anclar para ignorar la distancia del salto inicial
-                dx_manual = curr_x - last_x
-                if abs(dx_manual) >= 8: # Umbral alto para ignorar jitter
-                    if (1 if dx_manual > 0 else -1) == -dir_anclaje_x:
-                        anclado_x = False
-                        logger.debug("[MURO X LIBERADO por movimiento opuesto]")
-                
-            if anclado_x:
-                # FORZAR POSICIÓN CONSTANTE: No dejamos que QMK lo mueva ni 1 píxel
-                ctypes.windll.user32.SetCursorPos(int(limite_x), int(curr_y))
-                curr_x = limite_x
-                speed_x = 0
-
-        if anclado_y:
-            if ahora - tiempo_anclaje_y > TIEMPO_ANCLAJE:
-                anclado_y = False
-                logger.debug("[MURO Y LIBERADO por tiempo]")
-            elif ahora - tiempo_anclaje_y > 0.05:
-                dy_manual = curr_y - last_y
-                if abs(dy_manual) >= 8:
-                    if (1 if dy_manual > 0 else -1) == -dir_anclaje_y:
-                        anclado_y = False
-                        logger.debug("[MURO Y LIBERADO por movimiento opuesto]")
-                
-                if anclado_y:
-                    ctypes.windll.user32.SetCursorPos(int(curr_x), int(limite_y))
-                    curr_y = limite_y
-                    speed_y = 0
-
-        # 2. PROCESAR MOVIMIENTO ACELERADO
-        if ahora > pause_until:
-            if direccion_fijada != 0 or direccion_y_fijada != 0:
-                if direccion_fijada != 0:
-                    speed_x = min(VEL_MAX, (speed_x if speed_x > 0 else VEL_BASE) + ACEL_POR_FRAME)
-                if direccion_y_fijada != 0:
-                    speed_y = min(VEL_MAX, (speed_y if speed_y > 0 else VEL_BASE) + ACEL_POR_FRAME)
-                
-                step_x = speed_x * direccion_fijada
-                step_y = speed_y * direccion_y_fijada
-                distancia_recorrida += (abs(step_x) + abs(step_y))
-
-                nx = curr_x + step_x
-                ny = curr_y + step_y
-                
-                # --- LÓGICA DE FRENADO Y BORDES ---
-                dist_borde_x = min(nx, pantalla_ancho - nx)
-                dist_borde_y = min(ny, pantalla_alto - ny)
-                
-                es_viaje_corto = abs(curr_x - origen_swipe_x) < UMBRAL_VIAJE_LARGO
-                es_viaje_corto_y = abs(curr_y - origen_swipe_y) < UMBRAL_VIAJE_LARGO
-                
-                if dist_borde_x < DISTANCIA_FRENADO and not es_viaje_corto:
-                    # Frenado dinámico proporcional a la distancia al borde
-                    factor_x = max(0.1, dist_borde_x / DISTANCIA_FRENADO)
-                    speed_x = max(VEL_BASE, speed_x * factor_x)
-                    nx = curr_x + (speed_x * direccion_fijada)
-
-                if dist_borde_y < DISTANCIA_FRENADO and not es_viaje_corto_y:
-                    factor_y = max(0.1, dist_borde_y / DISTANCIA_FRENADO)
-                    speed_y = max(VEL_BASE, speed_y * factor_y)
-                    ny = curr_y + (speed_y * direccion_y_fijada)
-                if nx <= MARGEN_BLOQUEO and not es_viaje_corto:
-                    nx = MARGEN_BLOQUEO
-                    speed_x = 0 # Frena antes del borde
-                elif nx >= pantalla_ancho - MARGEN_BLOQUEO and not es_viaje_corto:
-                    nx = pantalla_ancho - MARGEN_BLOQUEO
-                    speed_x = 0
-                        
-                if ny <= MARGEN_BLOQUEO and not es_viaje_corto:
-                    ny = MARGEN_BLOQUEO
-                    speed_y = 0
-                elif ny >= pantalla_alto - MARGEN_BLOQUEO and not es_viaje_corto:
-                    ny = pantalla_alto - MARGEN_BLOQUEO
-                    speed_y = 0
-
-                nx = max(0, min(pantalla_ancho - 1, nx))
-                ny = max(0, min(pantalla_alto - 1, ny))
-                if nx != curr_x or ny != curr_y:
-                    pyautogui.moveTo(nx, ny)
-                last_x, last_y = nx, ny
-            else:
-                # MOVIMIENTO MANUAL (Bloqueo de Posición y Freno)
-                vx = curr_x - last_x
-                vy = curr_y - last_y
-                
-                # RASTREO DE VIAJE
-                es_viaje_corto_x = abs(curr_x - origen_swipe_x) < UMBRAL_VIAJE_LARGO
-                es_viaje_corto_y = abs(curr_y - origen_swipe_y) < UMBRAL_VIAJE_LARGO
-
-                # BLOQUEO DE POSICIÓN (Muro de 50px para viajes largos manuales)
-                if not es_viaje_corto_x:
-                    if curr_x >= pantalla_ancho - MARGEN_BLOQUEO and vx > 0:
-                        ctypes.windll.user32.SetCursorPos(int(pantalla_ancho - MARGEN_BLOQUEO), int(curr_y))
-                        curr_x = pantalla_ancho - MARGEN_BLOQUEO
-                        vx = 0
-                    elif curr_x <= MARGEN_BLOQUEO and vx < 0:
-                        ctypes.windll.user32.SetCursorPos(int(MARGEN_BLOQUEO), int(curr_y))
-                        curr_x = MARGEN_BLOQUEO
-                        vx = 0
-
-
-                if not es_viaje_corto_y:
-                    if curr_y >= pantalla_alto - MARGEN_BLOQUEO and vy > 0:
-                        ctypes.windll.user32.SetCursorPos(int(curr_x), int(pantalla_alto - MARGEN_BLOQUEO))
-                        curr_y = pantalla_alto - MARGEN_BLOQUEO
-                        vy = 0
-                    elif curr_y <= MARGEN_BLOQUEO and vy < 0:
-                        ctypes.windll.user32.SetCursorPos(int(curr_x), int(MARGEN_BLOQUEO))
-                        curr_y = MARGEN_BLOQUEO
-                        vy = 0
-
-
-                if abs(vx) > 1 or abs(vy) > 1:
-                    dist_borde_x = min(curr_x, pantalla_ancho - curr_x)
-                    dist_borde_y = min(curr_y, pantalla_alto - curr_y)
-                    
-                    # Detectar si se mueve HACIA el borde
-                    hacia_borde_x = (vx > 0 and curr_x > pantalla_ancho // 2) or (vx < 0 and curr_x < pantalla_ancho // 2)
-                    hacia_borde_y = (vy > 0 and curr_y > pantalla_alto // 2) or (vy < 0 and curr_y < pantalla_alto // 2)
-                    
-                    # Detectar si estamos en zona segura (25% lateral) para desactivar el freno
-                    en_zona_segura_x = curr_x < (pantalla_ancho * ZONA_LIBRE_BORDE) or curr_x > (pantalla_ancho * (1 - ZONA_LIBRE_BORDE))
-                    en_zona_segura_y = curr_y < (pantalla_alto * ZONA_LIBRE_BORDE) or curr_y > (pantalla_alto * (1 - ZONA_LIBRE_BORDE))
-
-                    # Aplicar límite de velocidad dinámico en zona de frenado SOLO si no estamos en zona segura y no es viaje corto
-                    if hacia_borde_x and dist_borde_x < DISTANCIA_FRENADO and not en_zona_segura_x and not es_viaje_corto_x:
-                        # Velocidad máxima permitida disminuye conforme nos acercamos al borde
-                        v_permitida = max(VEL_BASE, VEL_MAX * (dist_borde_x / DISTANCIA_FRENADO))
-                        if abs(vx) > v_permitida:
-                            nueva_x = last_x + (v_permitida * (1 if vx > 0 else -1))
-                            ctypes.windll.user32.SetCursorPos(int(nueva_x), int(curr_y))
-                            curr_x = nueva_x
-                            
-                    if hacia_borde_y and dist_borde_y < DISTANCIA_FRENADO and not en_zona_segura_y and not es_viaje_corto_y:
-                        v_permitida_y = max(VEL_BASE, VEL_MAX * (dist_borde_y / DISTANCIA_FRENADO))
-                        if abs(vy) > v_permitida_y:
-                            nueva_y = last_y + (v_permitida_y * (1 if vy > 0 else -1))
-                            ctypes.windll.user32.SetCursorPos(int(curr_x), int(nueva_y))
-                            curr_y = nueva_y
-                            
-                last_x, last_y = curr_x, curr_y
-        else:
-            last_x, last_y = curr_x, curr_y
-            
-        if MODO_WRAP_DELAY_HABILITADO:
-            margen_x = int(pantalla_ancho * WRAP_MARGEN_PORCENTAJE)
-            margen_y = int(pantalla_alto * WRAP_MARGEN_PORCENTAJE)
-            
-            vx_wrap = curr_x - prev_actual_x
-            vy_wrap = curr_y - prev_actual_y
-            
-            # --- DETECCIÓN DE INTENCIÓN: el wrap se activa inmediatamente si hay movimiento
-            #     en el eje correcto. Se bloquea SOLO si hay movimiento intencional en el
-            #     eje perpendicular (navegación por iconos) ---
-            UMBRAL_MOVIMIENTO_WRAP = 1  # Píxeles mínimos para considerar movimiento intencional
-            
-            # --- EVALUAR EJE X (solo si movimiento horizontal intencional) ---
-            if curr_x >= pantalla_ancho - margen_x - 1:
-                ctypes.windll.user32.SetCursorPos(pantalla_ancho - margen_x - 1, int(curr_y))
-                curr_x = pantalla_ancho - margen_x - 1
-                if vx_wrap > UMBRAL_MOVIMIENTO_WRAP and abs(vy_wrap) <= UMBRAL_MOVIMIENTO_WRAP:
-                    if borde_activo_x != 1:
-                        borde_activo_x = 1
-                        tiempo_choque_x = ahora
-                    elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
-                        nuevo_x = margen_x + 5
-                        ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
-                        curr_x = nuevo_x
+                # ── EJE X ──
+                if curr_x >= pantalla_ancho - margen_x - 1:
+                    ctypes.windll.user32.SetCursorPos(pantalla_ancho - margen_x - 1, int(curr_y))
+                    curr_x = pantalla_ancho - margen_x - 1
+                    if vx > UMBRAL_MOV and abs(vy) <= UMBRAL_MOV:
+                        if borde_activo_x != 1:
+                            borde_activo_x = 1
+                            tiempo_choque_x = ahora
+                        elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
+                            nuevo_x = margen_x + 5
+                            ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
+                            curr_x = nuevo_x
+                            borde_activo_x = 0
+                            tiempo_choque_x = ahora + COOLDOWN_WRAP
+                    else:
                         borde_activo_x = 0
-                        tiempo_choque_x = ahora + 0.5
+                elif curr_x <= margen_x:
+                    ctypes.windll.user32.SetCursorPos(margen_x, int(curr_y))
+                    curr_x = margen_x
+                    if vx < -UMBRAL_MOV and abs(vy) <= UMBRAL_MOV:
+                        if borde_activo_x != -1:
+                            borde_activo_x = -1
+                            tiempo_choque_x = ahora
+                        elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
+                            nuevo_x = pantalla_ancho - margen_x - 5
+                            ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
+                            curr_x = nuevo_x
+                            borde_activo_x = 0
+                            tiempo_choque_x = ahora + COOLDOWN_WRAP
+                    else:
+                        borde_activo_x = 0
                 else:
                     borde_activo_x = 0
-            elif curr_x <= margen_x:
-                ctypes.windll.user32.SetCursorPos(margen_x, int(curr_y))
-                curr_x = margen_x
-                if vx_wrap < -UMBRAL_MOVIMIENTO_WRAP and abs(vy_wrap) <= UMBRAL_MOVIMIENTO_WRAP:
-                    if borde_activo_x != -1:
-                        borde_activo_x = -1
-                        tiempo_choque_x = ahora
-                    elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
-                        nuevo_x = pantalla_ancho - margen_x - 5
-                        ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
-                        curr_x = nuevo_x
-                        borde_activo_x = 0
-                        tiempo_choque_x = ahora + 0.5
-                else:
-                    borde_activo_x = 0
-            else:
-                borde_activo_x = 0
-                
-            # --- EVALUAR EJE Y (solo si movimiento vertical intencional) ---
-            if curr_y >= pantalla_alto - margen_y - 1:
-                ctypes.windll.user32.SetCursorPos(int(curr_x), pantalla_alto - margen_y - 1)
-                curr_y = pantalla_alto - margen_y - 1
-                if vy_wrap > UMBRAL_MOVIMIENTO_WRAP and abs(vx_wrap) <= UMBRAL_MOVIMIENTO_WRAP:
-                    if borde_activo_y != 1:
-                        borde_activo_y = 1
-                        tiempo_choque_y = ahora
-                    elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
-                        nuevo_y = margen_y + 5
-                        ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
-                        curr_y = nuevo_y
+
+                # ── EJE Y ──
+                if curr_y >= pantalla_alto - margen_y - 1:
+                    ctypes.windll.user32.SetCursorPos(int(curr_x), pantalla_alto - margen_y - 1)
+                    curr_y = pantalla_alto - margen_y - 1
+                    if vy > UMBRAL_MOV and abs(vx) <= UMBRAL_MOV:
+                        if borde_activo_y != 1:
+                            borde_activo_y = 1
+                            tiempo_choque_y = ahora
+                        elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
+                            nuevo_y = margen_y + 5
+                            ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
+                            curr_y = nuevo_y
+                            borde_activo_y = 0
+                            tiempo_choque_y = ahora + COOLDOWN_WRAP
+                    else:
                         borde_activo_y = 0
-                        tiempo_choque_y = ahora + 0.5
+                elif curr_y <= margen_y:
+                    ctypes.windll.user32.SetCursorPos(int(curr_x), margen_y)
+                    curr_y = margen_y
+                    if vy < -UMBRAL_MOV and abs(vx) <= UMBRAL_MOV:
+                        if borde_activo_y != -1:
+                            borde_activo_y = -1
+                            tiempo_choque_y = ahora
+                        elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
+                            nuevo_y = pantalla_alto - margen_y - 5
+                            ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
+                            curr_y = nuevo_y
+                            borde_activo_y = 0
+                            tiempo_choque_y = ahora + COOLDOWN_WRAP
+                    else:
+                        borde_activo_y = 0
                 else:
                     borde_activo_y = 0
-            elif curr_y <= margen_y:
-                ctypes.windll.user32.SetCursorPos(int(curr_x), margen_y)
-                curr_y = margen_y
-                if vy_wrap < -UMBRAL_MOVIMIENTO_WRAP and abs(vx_wrap) <= UMBRAL_MOVIMIENTO_WRAP:
-                    if borde_activo_y != -1:
-                        borde_activo_y = -1
-                        tiempo_choque_y = ahora
-                    elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
-                        nuevo_y = pantalla_alto - margen_y - 5
-                        ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
-                        curr_y = nuevo_y
-                        borde_activo_y = 0
-                        tiempo_choque_y = ahora + 0.5
-                else:
-                    borde_activo_y = 0
-            else:
-                borde_activo_y = 0
-                
-        prev_actual_x, prev_actual_y = curr_x, curr_y
+
+            prev_x, prev_y = curr_x, curr_y
+
+        except Exception as e:
+            logger.debug(f"[WRAP ERROR] {e}")
+
         time.sleep(0.01)
-
-
 
 
 # ===============================================================
@@ -799,22 +463,58 @@ def check_single_instance():
         import sys
         sys.exit(0)
 
+def log_configuracion():
+    """Vuelca todos los parámetros de configuración al log para diagnóstico."""
+    sep = "─" * 55
+    logger.info(sep)
+    logger.info("📋 CONFIGURACIÓN DEL SISTEMA")
+    logger.info(sep)
+
+    # ── Identificación del teclado ──
+    logger.info("┌─ TECLADO")
+    logger.info(f"│  VID = 0x{VID:04X}  |  PID = 0x{PID:04X}")
+
+    # ── QMK Mouse (enviado al firmware) ──
+    logger.info("├─ QMK MOUSE (→ firmware vía HID raw)")
+    logger.info(f"│  mk_delay       = {QMK_MOUSE_DELAY:>3} ms   (retardo inicial)")
+    logger.info(f"│  mk_max_speed   = {QMK_MOUSE_MAX_SPEED:>3}       (velocidad máxima, 1-255)")
+    logger.info(f"│  mk_time_to_max = {QMK_MOUSE_TIME_TO_MAX:>3}       (eventos hasta vel. máx.)")
+    logger.info(f"│  mk_interval    = {QMK_MOUSE_INTERVAL:>3} ms   (intervalo entre eventos)")
+
+    # ── Wrap-around ──
+    logger.info("├─ WRAP-AROUND")
+    logger.info(f"│  MODO_WRAP        = {'ACTIVO' if MODO_WRAP_DELAY_HABILITADO else 'INACTIVO'}")
+    logger.info(f"│  WRAP_MARGEN      = {int(WRAP_MARGEN_PORCENTAJE * 10000) / 100:.1f}%")
+    logger.info(f"│  WRAP_DELAY       = {WRAP_DELAY_MS * 1000:.0f} ms")
+    logger.info(f"│  COOLDOWN_WRAP    = {COOLDOWN_WRAP:.2f} s")
+
+    # ── Otros ──
+    logger.info("├─ OTROS")
+    logger.info(f"│  RADIO_OCULTAR    = {RADIO_OCULTAR} px")
+    logger.info(sep)
+
+
 def enviar_calibracion_qmk(dev):
     """Construye el buffer HID con la firma 'M' y envía las variables al Corne."""
     try:
-        # Creamos un buffer de 33 bytes (1 byte para Report ID + 32 bytes de datos estándar de QMK)
+        # Buffer de 33 bytes: [0]=Report ID (stripped by OS), [1..32]=payload de 32 bytes para QMK
+        # QMK raw_hid_receive recibe data[0..31], por eso buf[1] → data[0] en firmware
         buf = [0] * 33
-        buf[0] = 0x00                     # Report ID (Requerido por Windows)
-        buf[1] = ord("M")                 # Firma 'M' que espera el 'if (data[0] == 'M')' en C
-        buf[2] = QMK_MOUSE_MAX_SPEED     # data[1] en QMK
-        buf[3] =  QMK_MOUSE_TIME_TO_MAX     # data[2] en QMK
-        buf[4] =   QMK_MOUSE_INTERVAL  # data[3] en QMK
-
-       # buf[5] =        # data[4] en QMK
-       # buf[6] = QMK_MOUSE_MOVE_DELTA     # data[5] en QMK
+        buf[0] = 0x00                     # Report ID (requerido por Windows, eliminado antes de llegar a QMK)
+        buf[1] = ord("M")                 # data[0] = 'M'  — firma de comando
+        buf[2] = QMK_MOUSE_DELAY          # data[1] = mk_delay
+        buf[3] = QMK_MOUSE_MAX_SPEED      # data[2] = mk_max_speed
+        buf[4] = QMK_MOUSE_TIME_TO_MAX    # data[3] = mk_time_to_max
+        buf[5] = QMK_MOUSE_INTERVAL       # data[4] = mk_interval
 
         dev.write(buf)
-        logger.info(f"[HID] Calibración enviada con éxito al Corne.")
+        logger.info("=" * 55)
+        logger.info("  ✅ CALIBRACIÓN QMK ENVIADA AL CORNE")
+        logger.info(f"  mk_delay       = {QMK_MOUSE_DELAY} ms")
+        logger.info(f"  mk_max_speed   = {QMK_MOUSE_MAX_SPEED}")
+        logger.info(f"  mk_time_to_max = {QMK_MOUSE_TIME_TO_MAX}")
+        logger.info(f"  mk_interval    = {QMK_MOUSE_INTERVAL} ms")
+        logger.info("=" * 55)
     except Exception as e:
         logger.error(f"[HID ERROR] No se pudieron enviar los valores de calibración: {e}")
 
@@ -831,23 +531,28 @@ def main():
     dev.open_path(path)
     dev.set_nonblocking(True)
 
- # Enviamos los datos al teclado inmediatamente después de conectar
+    # ── Volcar toda la configuración al log ──
+    log_configuracion()
+
+    # ── Enviamos los datos al teclado inmediatamente después de conectar ──
     enviar_calibracion_qmk(dev)
 
     threading.Thread(target=escuchar_hid, args=(dev,), daemon=True).start()
     threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
     threading.Thread(target=seguimiento_mouse, daemon=True).start()
-    threading.Thread(target=loop_movimiento_suave, daemon=True).start()
-    # threading.Thread(target=wrap_loop, daemon=True).start()
+    threading.Thread(target=wrap_loop, daemon=True).start()
     threading.Thread(target=ocultar_indicador_si_mouse_cerca, daemon=True).start()
     
     # Inicia la captura de Alt para OneNote 2016
     utils.onenote_nav.run_in_background()
     scroll_lock.run_in_background(lambda: scroll_lock_activo)
 
-    print("========================================")
-    print("  CORNELL READY – SALTO + WRAP INTEGRADO ")
-    print("========================================")
+    logger.info("=" * 55)
+    logger.info("  🎯 CORNELL READY — SALTO + WRAP INTEGRADO")
+    logger.info("=" * 55)
+    print("=" * 40)
+    print("  CORNELL READY")
+    print("=" * 40)
 
     root.mainloop()
 
