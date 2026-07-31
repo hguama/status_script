@@ -24,7 +24,8 @@ de cursor, scroll lock por gesto, y más.
 ```
 status script/
 ├── layer_status_script.py          ← Script principal
-├── launcher.py                     ← Launcher (atalho)
+├── close_start_status.bat          ← 🎯 Reinicio completo (mata Python + inicia)
+├── Arranque rápido.bat             ← 🚀 Solo inicia (sin matar nada)
 ├── utils/
 │   ├── qmk_calibracion/            ← Calibración QMK (independiente)
 │   │   └── __init__.py
@@ -44,14 +45,29 @@ status script/
 
 ## 🚀 Ejecución
 
-```sh
-python "layer_status_script.py"
-```
+### 🧪 Después de hacer cambios (ciclo de desarrollo)
 
-O mediante el archivo `.bat`:
+> **Regla:** cada vez que modifiques el código y quieras probar,
+> ejecuta `close_start_status.bat`. Esto mata todas las instancias
+> de Python y lanza el script desde cero, garantizando que los
+> cambios se apliquen limpiamente.
 
 ```bat
-script.bat
+close_start_status.bat
+```
+
+### 🚀 Arranque rápido (sin necesidad de reiniciar)
+
+Si el script no está corriendo y solo querés iniciarlo:
+
+```bat
+Arranque rápido.bat
+```
+
+### ⌨️ Desde terminal
+
+```sh
+python "layer_status_script.py"
 ```
 
 ---
