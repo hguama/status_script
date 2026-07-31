@@ -1,21 +1,22 @@
 @echo off
-REM -----------------------------------------
-REM Cerrar layer_status_script.py (aunque no tenga ventana)
-REM -----------------------------------------
-powershell -NoProfile -ExecutionPolicy Bypass -Command "Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like '*layer_status_script.py*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }"
+REM ========================================
+REM  Cornell Ready — Reinicio completo
+REM  1. Mata TODAS las instancias de Python
+REM  2. Lanza el script principal desde cero
+REM ========================================
 
-REM -----------------------------------------
-REM Ir a la carpeta del script
-REM -----------------------------------------
+echo 🔄 Cerrando todas las instancias de Python...
+taskkill /F /IM python.exe >nul 2>&1
+taskkill /F /IM pythonw.exe >nul 2>&1
+
+timeout /t 1 /nobreak >nul
+
+echo 🚀 Iniciando Cornell Ready...
 cd /d "%~dp0"
-
-REM -----------------------------------------
-REM Iniciar nuevamente la aplicación
-REM -----------------------------------------
 start "" python layer_status_script.py
 
-
-
+echo ✅ Listo.
+exit
 
 
 
