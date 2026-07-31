@@ -11,7 +11,7 @@ de cursor, scroll lock por gesto, y más.
 | # | Funcionalidad | Archivo fuente | Documentación |
 |---|---|---|---|
 | 1 | **QMK Calibración** — envía parámetros de mouse keys al firmware | `utils/qmk_calibracion/` | [`qmk_calibracion.md`](qmk_calibracion.md) |
-| 2 | **Wrap-around** — cursor salta de borde a borde | `layer_status_script.py` → `wrap_loop()` | *(pendiente)* |
+| 2 | **Wrap-around** — cursor salta de borde a borde | `layer_status_script.py` → `wrap_loop()` | [`wrap_around.md`](wrap_around.md) |
 | 3 | **Scroll Lock** — convierte movimiento del mouse en scroll | `utils/scroll_lock.py` | *(pendiente)* |
 | 4 | **Overlay de capas** — indicador visual de la capa QMK activa | `layer_status_script.py` | *(pendiente)* |
 | 5 | **Alt-Tab reset** — detecta Alt-Tab y libera la tecla Alt | `layer_status_script.py` → `detectar_clic_reset_alt()` | *(pendiente)* |
@@ -61,3 +61,16 @@ script.bat
 | Activar/desactivar envío a QMK | `utils/qmk_calibracion/__init__.py` → `HABILITADA` |
 | Wrap-around (márgenes, delay) | `layer_status_script.py` → `WRAP_*` (línea ~55) |
 | Radio para ocultar overlay | `layer_status_script.py` → `RADIO_OCULTAR` |
+
+---
+
+## 📊 Módulos independientes
+
+| Módulo | Extraído | Bandera | Doc |
+|---|---|---|---|
+| QMK Calibración | ✅ | `HABILITADA` | [`qmk_calibracion.md`](qmk_calibracion.md) |
+| WRAP-AROUND | ✅ | `HABILITADA` | [`wrap_around.md`](wrap_around.md) |
+| Scroll Lock | ❌ | — | *(pendiente)* |
+| OneNote Nav | ❌ | — | *(pendiente)* |
+| Overlay capas | ❌ | — | *(pendiente)* |
+| Alt-Tab reset | ❌ | — | *(pendiente)* |

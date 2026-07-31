@@ -11,6 +11,7 @@ from datetime import datetime
 import utils.onenote_nav  # Integración OneNote Nav
 import utils.scroll_lock as scroll_lock
 import utils.qmk_calibracion as qmk_cal
+import utils.wrap_around as wrap_around
 
 import logging
 import os
@@ -51,11 +52,8 @@ VID, PID = 0x4653, 0x0001
 RADIO_OCULTAR = 80
 pyautogui.PAUSE = 0    # Eliminar delay interno de pyautogui para máxima fluidez
 
-# --- WRAP-AROUND (salto de borde a borde) ---
-MODO_WRAP_DELAY_HABILITADO = True
-WRAP_MARGEN_PORCENTAJE = 0.005   # 0.5% del tamaño de la pantalla (~10px en 1920px)
-WRAP_DELAY_MS = 0.05             # 50ms de pausa en el borde antes de saltar
-COOLDOWN_WRAP = 0.5              # Tiempo mínimo entre saltos automáticos
+# --- WRAP-AROUND ---
+# Ahora en utils/wrap_around/__init__.py (bandera HABILITADA)
 
 # --- PARAMETERS MOUSE WITH KEYBOARD ---
 # Estos valores ahora se manejan en utils/qmk_calibracion/__init__.py
@@ -85,6 +83,7 @@ colores = {
     "NUMB": "#9E9E9E",    # Gris neutro / Medio (Material Grey 500)
     "SCROLL": "#24A4F2",  # Azul celeste / Vivo
     "MOVE": "#FFEB3B",    # Amarillo brillante (Material Yellow 500)
+    "AI": "#9C24ED",    # purpura
 }
 
 root = tk.Tk()
@@ -296,115 +295,6 @@ def seguimiento_mouse():
         time.sleep(0.01)
 
 # ===============================================================
-# WRAP-AROUND — Salto de borde a borde de pantalla
-# ===============================================================
-
-def wrap_loop():
-    """
-    Detecta cuando el cursor llega al borde de la pantalla y lo
-    transporta automáticamente al borde opuesto (wrap-around).
-    Funciona con cualquier fuente de movimiento (QMK nativo, ratón físico, etc.).
-    """
-    logger.info("🖱️  WRAP-AROUND: Hilo iniciado.")
-
-    borde_activo_x = 0
-    borde_activo_y = 0
-    tiempo_choque_x = 0
-    tiempo_choque_y = 0
-    prev_x, prev_y = 0, 0
-
-    while True:
-        try:
-            pt = POINT()
-            ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-            curr_x, curr_y = pt.x, pt.y
-            ahora = time.time()
-
-            if MODO_WRAP_DELAY_HABILITADO:
-                margen_x = int(pantalla_ancho * WRAP_MARGEN_PORCENTAJE)
-                margen_y = int(pantalla_alto * WRAP_MARGEN_PORCENTAJE)
-
-                vx = curr_x - prev_x
-                vy = curr_y - prev_y
-                UMBRAL_MOV = 1  # Píxeles mínimos para considerar movimiento intencional
-
-                # ── EJE X ──
-                if curr_x >= pantalla_ancho - margen_x - 1:
-                    ctypes.windll.user32.SetCursorPos(pantalla_ancho - margen_x - 1, int(curr_y))
-                    curr_x = pantalla_ancho - margen_x - 1
-                    if vx > UMBRAL_MOV and abs(vy) <= UMBRAL_MOV:
-                        if borde_activo_x != 1:
-                            borde_activo_x = 1
-                            tiempo_choque_x = ahora
-                        elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
-                            nuevo_x = margen_x + 5
-                            ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
-                            curr_x = nuevo_x
-                            borde_activo_x = 0
-                            tiempo_choque_x = ahora + COOLDOWN_WRAP
-                    else:
-                        borde_activo_x = 0
-                elif curr_x <= margen_x:
-                    ctypes.windll.user32.SetCursorPos(margen_x, int(curr_y))
-                    curr_x = margen_x
-                    if vx < -UMBRAL_MOV and abs(vy) <= UMBRAL_MOV:
-                        if borde_activo_x != -1:
-                            borde_activo_x = -1
-                            tiempo_choque_x = ahora
-                        elif ahora - tiempo_choque_x >= WRAP_DELAY_MS:
-                            nuevo_x = pantalla_ancho - margen_x - 5
-                            ctypes.windll.user32.SetCursorPos(nuevo_x, int(curr_y))
-                            curr_x = nuevo_x
-                            borde_activo_x = 0
-                            tiempo_choque_x = ahora + COOLDOWN_WRAP
-                    else:
-                        borde_activo_x = 0
-                else:
-                    borde_activo_x = 0
-
-                # ── EJE Y ──
-                if curr_y >= pantalla_alto - margen_y - 1:
-                    ctypes.windll.user32.SetCursorPos(int(curr_x), pantalla_alto - margen_y - 1)
-                    curr_y = pantalla_alto - margen_y - 1
-                    if vy > UMBRAL_MOV and abs(vx) <= UMBRAL_MOV:
-                        if borde_activo_y != 1:
-                            borde_activo_y = 1
-                            tiempo_choque_y = ahora
-                        elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
-                            nuevo_y = margen_y + 5
-                            ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
-                            curr_y = nuevo_y
-                            borde_activo_y = 0
-                            tiempo_choque_y = ahora + COOLDOWN_WRAP
-                    else:
-                        borde_activo_y = 0
-                elif curr_y <= margen_y:
-                    ctypes.windll.user32.SetCursorPos(int(curr_x), margen_y)
-                    curr_y = margen_y
-                    if vy < -UMBRAL_MOV and abs(vx) <= UMBRAL_MOV:
-                        if borde_activo_y != -1:
-                            borde_activo_y = -1
-                            tiempo_choque_y = ahora
-                        elif ahora - tiempo_choque_y >= WRAP_DELAY_MS:
-                            nuevo_y = pantalla_alto - margen_y - 5
-                            ctypes.windll.user32.SetCursorPos(int(curr_x), nuevo_y)
-                            curr_y = nuevo_y
-                            borde_activo_y = 0
-                            tiempo_choque_y = ahora + COOLDOWN_WRAP
-                    else:
-                        borde_activo_y = 0
-                else:
-                    borde_activo_y = 0
-
-            prev_x, prev_y = curr_x, curr_y
-
-        except Exception as e:
-            logger.debug(f"[WRAP ERROR] {e}")
-
-        time.sleep(0.01)
-
-
-# ===============================================================
 # ocultar indicador
 # ===============================================================
 def ocultar_indicador_si_mouse_cerca():
@@ -474,12 +364,14 @@ def log_configuracion():
     # ── QMK Mouse (→ módulo independiente) ──
     qmk_cal.log_configuracion()
 
-    # ── Wrap-around ──
-    logger.info("├─ WRAP-AROUND")
-    logger.info(f"│  MODO_WRAP        = {'ACTIVO' if MODO_WRAP_DELAY_HABILITADO else 'INACTIVO'}")
-    logger.info(f"│  WRAP_MARGEN      = {int(WRAP_MARGEN_PORCENTAJE * 10000) / 100:.1f}%")
-    logger.info(f"│  WRAP_DELAY       = {WRAP_DELAY_MS * 1000:.0f} ms")
-    logger.info(f"│  COOLDOWN_WRAP    = {COOLDOWN_WRAP:.2f} s")
+    # ── Wrap-around (→ módulo independiente) ──
+    wrap_around.log_configuracion()
+
+    # ── Resumen de módulos activos ──
+    modulos = []
+    if qmk_cal.HABILITADA:     modulos.append("QMK calibración")
+    if wrap_around.HABILITADA: modulos.append("WRAP-AROUND")
+    logger.info("├─ MÓDULOS ACTIVOS: %s", ", ".join(modulos) if modulos else "(ninguno)")
 
     # ── Otros ──
     logger.info("├─ OTROS")
@@ -509,7 +401,8 @@ def main():
     threading.Thread(target=escuchar_hid, args=(dev,), daemon=True).start()
     threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
     threading.Thread(target=seguimiento_mouse, daemon=True).start()
-    threading.Thread(target=wrap_loop, daemon=True).start()
+    threading.Thread(target=wrap_around.wrap_loop,
+                     args=(pantalla_ancho, pantalla_alto), daemon=True).start()
     threading.Thread(target=ocultar_indicador_si_mouse_cerca, daemon=True).start()
     
     # Inicia la captura de Alt para OneNote 2016
