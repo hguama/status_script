@@ -1,4 +1,31 @@
 import hid
+
+# Compat HID: cython-hidapi expone hid.device (minúsculas); pyhidapi (dep de qmk)
+# expone hid.Device y puede sombrear al anterior. Normalizar a hid.device.
+if not hasattr(hid, "device"):
+    _PyHidDevice = hid.Device
+
+    class _CompatHidDevice:
+        def __init__(self):
+            self._d = None
+
+        def open_path(self, path):
+            self._d = _PyHidDevice(path=path)
+
+        def set_nonblocking(self, value):
+            self._d.nonblocking = 1 if value else 0
+
+        def read(self, size, timeout_ms=500):
+            return self._d.read(size, timeout_ms)
+
+        def write(self, data):
+            return self._d.write(bytes(bytearray(data)))
+
+        def close(self):
+            self._d.close()
+
+    hid.device = _CompatHidDevice
+
 import tkinter as tk
 import threading
 import pyautogui

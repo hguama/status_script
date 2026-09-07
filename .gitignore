@@ -1,3 +1,6 @@
 ﻿f22_debug.log
 __pycache__/
 *.pyc
+# DLL nativa local para pyhidapi (hid 1.0.9): no versionar el binario.
+# Se obtiene de hidapi-win.zip (x64/hidapi.dll) de libusb/hidapi.
+hidapi.dll
