@@ -46,9 +46,9 @@ HABILITADA = True
 #   - ¿Muy brusco?      → baja MAX_SPEED, sube TIME_TO_MAX, sube INTERVAL
 
 MK_DELAY       = 5   # Retardo inicial (ms)
-MK_MAX_SPEED   = 22  # Velocidad máxima
-MK_TIME_TO_MAX = 10  # Eventos hasta vel. máxima
-MK_INTERVAL    = 6   # Intervalo entre eventos (ms)
+MK_MAX_SPEED   = 40  # Velocidad máxima
+MK_TIME_TO_MAX = 20  # Eventos hasta vel. máxima
+MK_INTERVAL    = 16   # Intervalo entre eventos (ms)
 
 
 # ═══════════════════════════════════════════════════════════════════

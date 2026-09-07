@@ -78,12 +78,13 @@ TAMANO_SCROLL, COLOR_SCROLL = 18, "#2982F0"
 
 colores = {
     "ALFA": "#66BB6A",    # Verde claro / Menta (Material Green 400)
-    "MODE": "#8E24AA",    # Púrpura / Morado (Material Purple 600)
+    "MOVEWIN": "#8E24AA",    # Púrpura / Morado (Material Purple 600)
     "FAST": "#E53935",    # Rojo intenso / Carmesí (Material Red 600)
     "NUMB": "#9E9E9E",    # Gris neutro / Medio (Material Grey 500)
-    "SCROLL": "#24A4F2",  # Azul celeste / Vivo
+    "SCROLL": "#24A4F2",  # tomate / SIN USAR
     "MOVE": "#FFEB3B",    # Amarillo brillante (Material Yellow 500)
-    "AI": "#9C24ED",    # purpura
+    "AI": "#429C9E",    # purpura
+    "MOUSE": "#202D80",    # azul
 }
 
 root = tk.Tk()
