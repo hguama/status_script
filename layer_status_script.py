@@ -39,6 +39,7 @@ import utils.onenote_nav  # Integración OneNote Nav
 import utils.scroll_lock as scroll_lock
 import utils.qmk_calibracion as qmk_cal
 import utils.wrap_around as wrap_around
+import utils.captura as captura
 
 import logging
 import os
@@ -271,6 +272,10 @@ def escuchar_hid(dev):
 
             msg = "".join(chr(b) for b in data if 31 < b < 127).strip()
 
+            if msg.startswith("CAP_") or msg.startswith("VER_CAPTURE"):
+                captura.notificar_cap(msg)
+                continue
+
             if "AT_ON" in msg:
                 alt_tab_menu_visible = True
             elif "AT_OFF" in msg:
@@ -301,7 +306,8 @@ def detectar_clic_reset_alt(dev):
             try:
                 buf = [0]*33
                 buf[1] = ord("R")
-                dev.write(buf)
+                with captura.WRITE_LOCK:
+                    dev.write(buf)
             except:
                 pass
             alt_tab_menu_visible = False
@@ -428,6 +434,7 @@ def main():
 
     threading.Thread(target=escuchar_hid, args=(dev,), daemon=True).start()
     threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
+    threading.Thread(target=captura.hilo_overlay, args=(dev,), daemon=True).start()
     threading.Thread(target=seguimiento_mouse, daemon=True).start()
     threading.Thread(target=wrap_around.wrap_loop,
                      args=(pantalla_ancho, pantalla_alto), daemon=True).start()
