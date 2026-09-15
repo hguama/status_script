@@ -1,3 +1,4 @@
 Set WshShell = CreateObject("WScript.Shell")
-WshShell.Run chr(34) & "D:\scripts\status script\script.bat" & chr(34), 0
+WshShell.CurrentDirectory = "D:\scripts\status script"
+WshShell.Run "python layer_status_script.py", 0, False
 Set WshShell = Nothing
