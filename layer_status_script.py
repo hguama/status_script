@@ -59,15 +59,18 @@ class POINT(ctypes.Structure):
     _fields_ = [("x", ctypes.c_long), ("y", ctypes.c_long)]
 
 # Configuración de logs con ruta absoluta
+DEBUG_LOG_ENABLED = False  # True = escribe f22_debug.log en disco; False = solo consola (modo pruebas)
+
 log_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "f22_debug.log")
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s - %(message)s', datefmt='%H:%M:%S', handlers=[
-    logging.FileHandler(log_path, encoding='utf-8', mode='a'),
-    logging.StreamHandler()
-])
+log_handlers = [logging.StreamHandler()]
+if DEBUG_LOG_ENABLED:
+    log_handlers.insert(0, logging.FileHandler(log_path, encoding='utf-8', mode='a'))
+
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s - %(message)s', datefmt='%H:%M:%S', handlers=log_handlers)
 logger = logging.getLogger(__name__)
 logger.info("=" * 55)
 logger.info("  SISTEMA INICIADO — DPI AWARENESS ACTIVO")
-logger.info(f"  LOGS → {log_path}")
+logger.info(f"  LOGS → {log_path if DEBUG_LOG_ENABLED else '(archivo desactivado, solo consola)'}")
 logger.info("=" * 55)
 
 pyautogui.FAILSAFE = False
