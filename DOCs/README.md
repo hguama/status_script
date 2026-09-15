@@ -24,8 +24,8 @@ de cursor, scroll lock por gesto, y más.
 ```
 status script/
 ├── layer_status_script.py          ← Script principal
-├── close_start_status.bat          ← 🎯 Reinicio completo (mata Python + inicia)
-├── Arranque rápido.bat             ← 🚀 Solo inicia (sin matar nada)
+├── restart_status_test.bat          ← 🧪 Mata Python + inicia con consola (pruebas / debug)
+├── start_status_silent.vbs          ← 🤫 Solo inicia, sin ventana (uso diario / autoarranque)
 ├── utils/
 │   ├── qmk_calibracion/            ← Calibración QMK (independiente)
 │   │   └── __init__.py
@@ -45,23 +45,25 @@ status script/
 
 ## 🚀 Ejecución
 
-### 🧪 Después de hacer cambios (ciclo de desarrollo)
+### 🧪 Pruebas / debug (ciclo de desarrollo)
 
-> **Regla:** cada vez que modifiques el código y quieras probar,
-> ejecuta `close_start_status.bat`. Esto mata todas las instancias
-> de Python y lanza el script desde cero, garantizando que los
-> cambios se apliquen limpiamente.
+> **Regla:** cada vez que modifiques el código, o si el script ya está
+> corriendo en modo silencioso y querés pasarlo a modo pruebas, ejecuta
+> `restart_status_test.bat`. Esto mata todas las instancias de Python
+> (estén en modo silencioso o no) y lanza el script desde cero con la
+> consola visible, para ver los logs en vivo.
 
 ```bat
-close_start_status.bat
+restart_status_test.bat
 ```
 
-### 🚀 Arranque rápido (sin necesidad de reiniciar)
+### 🤫 Arranque silencioso (uso normal)
 
-Si el script no está corriendo y solo querés iniciarlo:
+Mismo script, pero sin ventana de consola. Es el que usa la tarea
+programada de Windows para arrancarlo automáticamente al iniciar sesión:
 
-```bat
-Arranque rápido.bat
+```
+start_status_silent.vbs
 ```
 
 ### ⌨️ Desde terminal
