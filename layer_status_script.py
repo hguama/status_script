@@ -35,7 +35,11 @@ import keyboard
 import ctypes # Añade esto al inicio de tu archivo
 
 from datetime import datetime
-import utils.onenote_nav  # Integración OneNote Nav
+import utils
+try:
+    import utils.onenote_nav  # Integración OneNote Nav — usa ctypes.windll, solo Windows
+except AttributeError:
+    utils.onenote_nav = None
 import utils.scroll_lock as scroll_lock
 import utils.qmk_calibracion as qmk_cal
 import utils.wrap_around as wrap_around
@@ -127,7 +131,6 @@ pantalla_alto = root.winfo_screenheight()
 root.overrideredirect(True)
 root.attributes("-topmost", True)
 root.config(bg="magenta")
-root.wm_attributes("-transparentcolor", "magenta")
 root.geometry(f"{DIAMETRO}x{DIAMETRO}+{(pantalla_ancho-DIAMETRO)//2}+5")
 
 canvas = tk.Canvas(root, width=DIAMETRO, height=DIAMETRO,
@@ -138,8 +141,7 @@ mouse_win = tk.Toplevel()
 mouse_win.overrideredirect(True)
 mouse_win.attributes("-topmost", True)
 mouse_win.config(bg="magenta")
-mouse_win.wm_attributes("-transparentcolor", "magenta")
-mouse_win.geometry(f"{PUNTO_MOUSE}x{PUNTO_MOUSE}+0+0")
+mouse_win.geometry(f"{PUNTO_MOUSE}x{PUNTO_MOUSE}+{(pantalla_ancho-PUNTO_MOUSE)//2}+{(pantalla_alto-PUNTO_MOUSE)//2}")
 
 canvas_mouse = tk.Canvas(mouse_win, width=PUNTO_MOUSE, height=PUNTO_MOUSE,
                          highlightthickness=0, bg="magenta")
@@ -149,7 +151,6 @@ scroll_lock_win = tk.Toplevel()
 scroll_lock_win.overrideredirect(True)
 scroll_lock_win.attributes("-topmost", True)
 scroll_lock_win.config(bg="magenta")
-scroll_lock_win.wm_attributes("-transparentcolor", "magenta")
 scroll_lock_win.geometry(f"{TAMANO_SCROLL}x{TAMANO_SCROLL}+{(pantalla_ancho-DIAMETRO)//2 + DIAMETRO + 4}+5")
 
 canvas_scroll = tk.Canvas(scroll_lock_win, width=TAMANO_SCROLL, height=TAMANO_SCROLL,
@@ -192,8 +193,10 @@ def on_f15_release(e):
         desactivar_scroll_lock()
 
 
-keyboard.on_press_key("f15", on_f15_press)
-keyboard.on_release_key("f15", on_f15_release)
+# F15 (Scroll Lock): deshabilitado en Linux — requiere la librería `keyboard`,
+# que exige ejecutar como root. Ver decisión en README_LINUX.
+# keyboard.on_press_key("f15", on_f15_press)
+# keyboard.on_release_key("f15", on_f15_release)
 
 
 def efecto_onda(x, y):
@@ -219,8 +222,8 @@ def toggle_indicadores(e=None):
     
     root.after(0, actualizar_scroll_lock_ui)
 
-# Asignar F21 para alternar la visibilidad de las burbujas
-keyboard.on_press_key("f21", toggle_indicadores)
+# F21 (toggle indicadores): deshabilitado en Linux — misma razón que F15.
+# keyboard.on_press_key("f21", toggle_indicadores)
 
 def actualizar_ui(capa_msg):
     global indicador_visible_por_capa, color_actual, scroll_lock_activo
@@ -239,6 +242,9 @@ def actualizar_ui(capa_msg):
         
         if INDICADOR_HABILITADO:
             root.deiconify()
+            # Reafirmar posición: en KWin, la geometría pedida antes de mapear
+            # la ventana (overrideredirect + withdraw) no siempre se respeta.
+            root.geometry(f"{DIAMETRO}x{DIAMETRO}+{(pantalla_ancho-DIAMETRO)//2}+5")
             mouse_win.deiconify()
     else:
         indicador_visible_por_capa = False
@@ -322,11 +328,9 @@ def detectar_clic_reset_alt(dev):
 def seguimiento_mouse():
     while True:
         try:
-            pt = POINT()
-            ctypes.windll.user32.GetCursorPos(ctypes.byref(pt))
-            x, y = pt.x, pt.y
+            x, y = pyautogui.position()
             mouse_win.geometry(f"+{x-PUNTO_MOUSE//2}+{y+OFFSET_MOUSE}")
-            
+
         except:
             pass
         time.sleep(0.01)
@@ -374,17 +378,20 @@ def ocultar_indicador_si_mouse_cerca():
 # MAIN
 # ===============================================================
 
-# Global reference to avoid Garbage Collection of the mutex
-_mutex_ref = None
+# Global reference to avoid Garbage Collection del file descriptor del lock
+_lock_fd = None
 
 def check_single_instance():
-    global _mutex_ref
-    kernel32 = ctypes.windll.kernel32
-    mutex_name = "LAYER_STATUS_SCRIPT_UNIQUE_MUTEX_123"
-    _mutex_ref = kernel32.CreateMutexW(None, False, mutex_name)
-    if kernel32.GetLastError() == 183: # ERROR_ALREADY_EXISTS
+    """Instancia única en Linux vía flock (reemplaza el mutex de Windows)."""
+    global _lock_fd
+    import fcntl
+    import sys
+    lock_path = "/tmp/layer_status_script.lock"
+    _lock_fd = open(lock_path, "w")
+    try:
+        fcntl.flock(_lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
         print("❌ Ya hay una instancia de este script ejecutándose. Saliendo para evitar conflictos...")
-        import sys
         sys.exit(0)
 
 def log_configuracion():
@@ -419,8 +426,12 @@ def log_configuracion():
 def main():
     check_single_instance()
     
+    # usage_page 0xFF60 = interfaz raw HID de QMK (VIA), por donde el firmware
+    # manda los mensajes de capa. En Linux hid.enumerate() no la devuelve
+    # primero (a diferencia de Windows), hay que filtrar explícitamente.
     path = next((d["path"] for d in hid.enumerate()
-                if d["vendor_id"] == VID and d["product_id"] == PID), None)
+                if d["vendor_id"] == VID and d["product_id"] == PID
+                and d.get("usage_page") == 0xFF60), None)
     if not path:
         print("❌ Teclado no encontrado")
         return
@@ -436,16 +447,25 @@ def main():
     qmk_cal.enviar_calibracion(dev)
 
     threading.Thread(target=escuchar_hid, args=(dev,), daemon=True).start()
-    threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
-    threading.Thread(target=captura.hilo_overlay, args=(dev,), daemon=True).start()
-    threading.Thread(target=seguimiento_mouse, daemon=True).start()
-    threading.Thread(target=wrap_around.wrap_loop,
-                     args=(pantalla_ancho, pantalla_alto), daemon=True).start()
-    threading.Thread(target=ocultar_indicador_si_mouse_cerca, daemon=True).start()
-    
-    # Inicia la captura de Alt para OneNote 2016
-    utils.onenote_nav.run_in_background()
-    scroll_lock.run_in_background(lambda: scroll_lock_activo)
+    # Alt-Tab reset: deshabilitado en Linux — requiere `keyboard`/`mouse` (root).
+    # threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
+    # Captura (overlay de Snipping Tool de Windows): sin puerto a Linux, no existe el overlay.
+    # threading.Thread(target=captura.hilo_overlay, args=(dev,), daemon=True).start()
+    # seguimiento_mouse: deshabilitado — el indicador chico queda fijo en el centro.
+    # threading.Thread(target=seguimiento_mouse, daemon=True).start()
+    # Wrap-around de cursor: sin puerto a Linux (usa ctypes.windll).
+    # threading.Thread(target=wrap_around.wrap_loop,
+    #                  args=(pantalla_ancho, pantalla_alto), daemon=True).start()
+    # ocultar_indicador_si_mouse_cerca: deshabilitado — depende de pyautogui.position(),
+    # que no puede leer la posición real del cursor en Wayland (limitación de seguridad
+    # de Wayland para apps XWayland en segundo plano), causando parpadeo falso.
+    # threading.Thread(target=ocultar_indicador_si_mouse_cerca, daemon=True).start()
+
+    # Inicia la captura de Alt para OneNote 2016 (no disponible en Linux)
+    if utils.onenote_nav is not None:
+        utils.onenote_nav.run_in_background()
+    # Scroll Lock: deshabilitado en Linux — requiere `keyboard` (root) y ctypes.windll.
+    # scroll_lock.run_in_background(lambda: scroll_lock_activo)
 
     logger.info("=" * 55)
     logger.info("  🎯 CORNELL READY — SALTO + WRAP INTEGRADO")
