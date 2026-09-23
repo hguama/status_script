@@ -1,0 +1,15 @@
+[Unit]
+Description=Indicador de capas del Corne (status_script)
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/dev/status_script
+ExecStartPre=/usr/bin/rm -f /tmp/layer_status_script.lock
+ExecStart=/usr/bin/python3 -u %h/dev/status_script/layer_status_script.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,3 +1,5 @@
+> **Documentación de la versión Windows (rama `main`).** En Linux (rama `linux-port`) varias de estas funciones están deshabilitadas: ver [`README_LINUX.md`](README_LINUX.md).
+
 # 🖥️ Cornell Ready — Documentación del Sistema
 
 Sistema de asistencia para teclado **Corne** con firmware **QMK**.  
@@ -34,7 +36,8 @@ status script/
 │   ├── scroll_lock.py              ← Scroll Lock
 │   └── onenote_nav.py              ← OneNote 2016
 ├── DOCs/                           ← 📚 Documentación
-│   ├── README.md                   ← Este índice
+│   ├── README_WINDOWS.md           ← Este índice (versión Windows)
+│   ├── README_LINUX.md             ← Versión Linux
 │   ├── qmk_calibracion.md          ← Doc de calibración QMK
 │   └── wrap_around.md              ← Doc de wrap-around
 ├── f22_debug.log                   ← Log de ejecución

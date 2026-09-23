@@ -1,3 +1,5 @@
+> **Documentación de la versión Windows (rama `main`).** En Linux (rama `linux-port`) varias de estas funciones están deshabilitadas: ver [`README_LINUX.md`](README_LINUX.md).
+
 # WRAP-AROUND — Salto de borde a borde de pantalla
 
 > **Archivo:** `utils/wrap_around/__init__.py`  

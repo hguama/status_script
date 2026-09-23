@@ -1,3 +1,5 @@
+> **Documentación de la versión Windows (rama `main`).** En Linux (rama `linux-port`) varias de estas funciones están deshabilitadas: ver [`README_LINUX.md`](README_LINUX.md).
+
 # QMK Calibración — Mouse Keys vía HID Raw
 
 > **Archivo:** `utils/qmk_calibracion/__init__.py`  
