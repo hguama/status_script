@@ -108,7 +108,7 @@ indicador_visible_por_capa = False
 
 # ===============================================================
 # --- UI CONFIG ---
-DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 30, 10, 22
+DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 30, 20, 22
 TAMANO_SCROLL, COLOR_SCROLL = 18, "#2982F0"
 
 colores = {
@@ -299,8 +299,36 @@ def escuchar_hid(dev):
                 root.after(0, lambda c=capa_actual: actualizar_ui(c))
 
         except Exception as e:
-            print("[HID ERROR]", e)
-            break
+            logger.error(f"[HID ERROR] {e} — Corne desconectado, reintentando...")
+            capa_actual = None
+            root.after(0, lambda: actualizar_ui(""))
+            try:
+                dev.close()
+            except Exception:
+                pass
+            dev = _reconectar_hid()
+            logger.info("[HID] Corne reconectado")
+            try:
+                qmk_cal.enviar_calibracion(dev)
+            except Exception as e2:
+                logger.error(f"[HID] Calibración tras reconexión falló: {e2}")
+
+
+def _reconectar_hid():
+    """Reintenta abrir la interfaz raw HID del Corne hasta que reaparezca."""
+    while True:
+        path = next((d["path"] for d in hid.enumerate()
+                     if d["vendor_id"] == VID and d["product_id"] == PID
+                     and d.get("usage_page") == 0xFF60), None)
+        if path:
+            try:
+                nuevo = hid.device()
+                nuevo.open_path(path)
+                nuevo.set_nonblocking(True)
+                return nuevo
+            except Exception:
+                pass
+        time.sleep(2)
 
 # ===============================================================
 # ALT-TAB RESET
