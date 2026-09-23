@@ -111,6 +111,9 @@ indicador_visible_por_capa = False
 # ===============================================================
 # --- UI CONFIG ---
 DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 30, 20, 22
+# Posición del indicador grande: True = abajo-centro, False = arriba-centro.
+INDICADOR_INFERIOR = True
+MARGEN_BORDE = 5   # px entre el indicador grande y el borde de la pantalla
 TAMANO_SCROLL, COLOR_SCROLL = 18, "#2982F0"
 
 colores = {
@@ -131,7 +134,8 @@ pantalla_ancho = root.winfo_screenwidth()
 pantalla_alto = root.winfo_screenheight()
 
 # Círculos con fondo transparente real (ver utils/indicador_argb)
-ind_grande = CirculoARGB(DIAMETRO, (pantalla_ancho-DIAMETRO)//2, 5)
+indicador_y = (pantalla_alto - DIAMETRO - MARGEN_BORDE) if INDICADOR_INFERIOR else MARGEN_BORDE
+ind_grande = CirculoARGB(DIAMETRO, (pantalla_ancho-DIAMETRO)//2, indicador_y)
 ind_mouse = CirculoARGB(PUNTO_MOUSE, (pantalla_ancho-PUNTO_MOUSE)//2, (pantalla_alto-PUNTO_MOUSE)//2)
 
 scroll_lock_win = tk.Toplevel()
@@ -357,7 +361,7 @@ def ocultar_indicador_si_mouse_cerca():
             mx, my = pyautogui.position()
 
             cx = pantalla_ancho // 2
-            cy = 5 + DIAMETRO // 2
+            cy = indicador_y + DIAMETRO // 2
             dx = mx - cx
             dy = my - cy
             distancia = (dx*dx + dy*dy) ** 0.5
