@@ -44,6 +44,7 @@ import utils.scroll_lock as scroll_lock
 import utils.qmk_calibracion as qmk_cal
 import utils.wrap_around as wrap_around
 import utils.captura as captura
+from utils import cursor_kwin
 
 import logging
 import os
@@ -354,14 +355,13 @@ def detectar_clic_reset_alt(dev):
 # SEGUIMIENTO VISUAL DEL MOUSE
 # ===============================================================
 def seguimiento_mouse():
-    while True:
-        try:
-            x, y = pyautogui.position()
-            mouse_win.geometry(f"+{x-PUNTO_MOUSE//2}+{y+OFFSET_MOUSE}")
+    """Mueve el punto chico junto al cursor real (posición vía KWin, ver utils/cursor_kwin)."""
+    pos = cursor_kwin.get()
+    if pos:
+        x, y = pos
+        mouse_win.geometry(f"+{x-PUNTO_MOUSE//2}+{y+OFFSET_MOUSE}")
+    root.after(16, seguimiento_mouse)
 
-        except:
-            pass
-        time.sleep(0.01)
 
 # ===============================================================
 # ocultar indicador
@@ -479,8 +479,9 @@ def main():
     # threading.Thread(target=detectar_clic_reset_alt, args=(dev,), daemon=True).start()
     # Captura (overlay de Snipping Tool de Windows): sin puerto a Linux, no existe el overlay.
     # threading.Thread(target=captura.hilo_overlay, args=(dev,), daemon=True).start()
-    # seguimiento_mouse: deshabilitado — el indicador chico queda fijo en el centro.
-    # threading.Thread(target=seguimiento_mouse, daemon=True).start()
+    # El punto chico sigue al cursor: KWin manda la posición real por D-Bus.
+    cursor_kwin.start()
+    root.after(100, seguimiento_mouse)
     # Wrap-around de cursor: sin puerto a Linux (usa ctypes.windll).
     # threading.Thread(target=wrap_around.wrap_loop,
     #                  args=(pantalla_ancho, pantalla_alto), daemon=True).start()

@@ -7,7 +7,8 @@ Windows; este archivo describe solo lo que difiere en Linux.
 
 | Funcionalidad | Estado |
 |---|---|
-| Indicador de capas (círculo grande arriba-centro, punto chico fijo al centro) | Activo |
+| Indicador de capas (círculo grande arriba-centro) | Activo |
+| Punto chico que sigue al cursor (posición real vía KWin, ver abajo) | Activo |
 | Calibración de Mouse Keys (`utils/qmk_calibracion`) | Activo |
 | Reconexión automática al Corne tras desconexión/suspensión | Activo |
 
@@ -25,6 +26,21 @@ Windows; este archivo describe solo lo que difiere en Linux.
 
 Están comentados en `main()` de `layer_status_script.py`, no borrados.
 
+## Seguimiento del cursor (punto chico)
+
+Bajo Wayland, `pyautogui`/Tk no pueden leer la posición global del cursor
+(devuelven un valor obsoleto). KWin sí la conoce, así que `utils/cursor_kwin`:
+
+1. registra el servicio D-Bus `org.statusscript.Cursor` (vía `Gio`, paquete `python3-gobject`),
+2. carga en KWin el script QML `linux/kwin/CursorPos.qml`, que envía `Workspace.cursorPos`
+   por D-Bus ~60 veces por segundo,
+3. `seguimiento_mouse()` mueve el punto chico a esa posición (22 px bajo el cursor).
+
+Al cerrar, el script de KWin se descarga solo. Detalle importante: KWin cachea el
+listado de la carpeta y el QML compilado por ruta, y falla con
+`File name case mismatch` con archivos nuevos o modificados; por eso el QML se
+copia a una carpeta temporal nueva en cada arranque (`$XDG_RUNTIME_DIR`).
+
 ## Diferencias técnicas respecto a Windows
 
 - **Interfaz HID:** el Corne expone 3 interfaces con el mismo VID/PID. Se usa la
@@ -38,7 +54,7 @@ Están comentados en `main()` de `layer_status_script.py`, no borrados.
 ## Instalación
 
 Dependencias Python: `pip install --user hid pyautogui keyboard mouse`
-(`hid` viene con `pip install qmk`). Sistema: `hidapi`, `python3-tkinter`.
+(`hid` viene con `pip install qmk`). Sistema: `hidapi`, `python3-tkinter`, `python3-gobject`, `qt6-qttools` (`qdbus-qt6`, solo para depurar).
 
 Archivos en `linux/` de este repo:
 
@@ -72,3 +88,6 @@ journalctl --user -u status-script.service -f
 - **Aparece y desaparece en LAYER_BASE:** es lo esperado, el indicador solo se
   muestra en capas con color asignado.
 - **`Permission denied` en `/dev/hidraw*`:** falta la regla udev.
+- **El punto chico no sigue al mouse:** revisar en el journal la línea
+  `[CURSOR] script de KWin cargado`; verificar mensajes con
+  `dbus-monitor "interface='org.statusscript.Cursor'"` (deben ser ~60/s).

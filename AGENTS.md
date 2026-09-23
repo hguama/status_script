@@ -11,7 +11,7 @@ trabajo, usa la skill `task-manager` (`~/.agents/skills/task-manager/SKILL.md`)
 | Variante | Rama | Sistema | Funcionalidades |
 |---|---|---|---|
 | **Windows** | `main` | Windows | Todas |
-| **Linux** | `linux-port` | Fedora KDE (Wayland) | Reducidas (solo indicador de capas + calibración QMK) |
+| **Linux** | `linux-port` | Fedora KDE (Wayland) | Reducidas (indicador de capas + punto que sigue al cursor + calibración QMK) |
 
 **Toda la documentación de `DOCs/` (excepto `DOCs/README_LINUX.md`) describe la
 versión Windows.** Antes de tocar código, confirmar en qué rama se está.
@@ -31,8 +31,8 @@ versión Windows.** Antes de tocar código, confirmar en qué rama se está.
 
 ### Versión Linux (`linux-port`)
 
-Solo indicador de capas + calibración QMK, con reconexión automática si el
-Corne se desconecta. El resto se deshabilitó porque depende de APIs de Windows
+Indicador de capas (con punto chico que sigue al cursor vía KWin) + calibración
+QMK, con reconexión automática si el Corne se desconecta. El resto se deshabilitó porque depende de APIs de Windows
 (`ctypes.windll`) o exige root (`keyboard`/`mouse`). Detalle completo en
 [`DOCs/README_LINUX.md`](DOCs/README_LINUX.md).
 
