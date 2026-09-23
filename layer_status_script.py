@@ -45,6 +45,7 @@ import utils.qmk_calibracion as qmk_cal
 import utils.wrap_around as wrap_around
 import utils.captura as captura
 from utils import cursor_kwin
+from utils.indicador_argb import CirculoARGB
 
 import logging
 import os
@@ -124,29 +125,14 @@ colores = {
 }
 
 root = tk.Tk()
-root.withdraw()
+root.withdraw()  # raíz de Tk solo para mainloop/after; los indicadores son ventanas ARGB
 
 pantalla_ancho = root.winfo_screenwidth()
 pantalla_alto = root.winfo_screenheight()
 
-root.overrideredirect(True)
-root.attributes("-topmost", True)
-root.config(bg="magenta")
-root.geometry(f"{DIAMETRO}x{DIAMETRO}+{(pantalla_ancho-DIAMETRO)//2}+5")
-
-canvas = tk.Canvas(root, width=DIAMETRO, height=DIAMETRO,
-                   highlightthickness=0, bg="magenta")
-canvas.pack()
-
-mouse_win = tk.Toplevel()
-mouse_win.overrideredirect(True)
-mouse_win.attributes("-topmost", True)
-mouse_win.config(bg="magenta")
-mouse_win.geometry(f"{PUNTO_MOUSE}x{PUNTO_MOUSE}+{(pantalla_ancho-PUNTO_MOUSE)//2}+{(pantalla_alto-PUNTO_MOUSE)//2}")
-
-canvas_mouse = tk.Canvas(mouse_win, width=PUNTO_MOUSE, height=PUNTO_MOUSE,
-                         highlightthickness=0, bg="magenta")
-canvas_mouse.pack()
+# Círculos con fondo transparente real (ver utils/indicador_argb)
+ind_grande = CirculoARGB(DIAMETRO, (pantalla_ancho-DIAMETRO)//2, 5)
+ind_mouse = CirculoARGB(PUNTO_MOUSE, (pantalla_ancho-PUNTO_MOUSE)//2, (pantalla_alto-PUNTO_MOUSE)//2)
 
 scroll_lock_win = tk.Toplevel()
 scroll_lock_win.overrideredirect(True)
@@ -214,12 +200,12 @@ def toggle_indicadores(e=None):
     logger.info(f"Indicadores habilitados: {INDICADOR_HABILITADO}")
     
     if not INDICADOR_HABILITADO:
-        root.withdraw()
-        mouse_win.withdraw()
+        ind_grande.hide()
+        ind_mouse.hide()
         scroll_lock_win.withdraw()
     elif indicador_visible_por_capa:
-        root.deiconify()
-        mouse_win.deiconify()
+        ind_grande.show()
+        ind_mouse.show()
     
     root.after(0, actualizar_scroll_lock_ui)
 
@@ -234,23 +220,18 @@ def actualizar_ui(capa_msg):
     if clave:
         color_actual = colores[clave]
         c = color_actual
-        canvas.delete("all")
-        canvas.create_oval(2, 2, DIAMETRO-2, DIAMETRO-2, fill=c, outline="")
-        canvas_mouse.delete("all")
-        canvas_mouse.create_oval(0, 0, PUNTO_MOUSE, PUNTO_MOUSE, fill=c, outline="")
+        ind_grande.set_color(c)
+        ind_mouse.set_color(c)
         indicador_visible_por_capa = True
         logger.debug(f"[UI] Capa detectada: {clave} - Indicadores: {'ON' if INDICADOR_HABILITADO else 'OFF'}")
         
         if INDICADOR_HABILITADO:
-            root.deiconify()
-            # Reafirmar posición: en KWin, la geometría pedida antes de mapear
-            # la ventana (overrideredirect + withdraw) no siempre se respeta.
-            root.geometry(f"{DIAMETRO}x{DIAMETRO}+{(pantalla_ancho-DIAMETRO)//2}+5")
-            mouse_win.deiconify()
+            ind_grande.show()
+            ind_mouse.show()
     else:
         indicador_visible_por_capa = False
-        root.withdraw()
-        mouse_win.withdraw()
+        ind_grande.hide()
+        ind_mouse.hide()
 
     actualizar_scroll_lock_ui()
 
@@ -359,7 +340,7 @@ def seguimiento_mouse():
     pos = cursor_kwin.get()
     if pos:
         x, y = pos
-        mouse_win.geometry(f"+{x-PUNTO_MOUSE//2}+{y+OFFSET_MOUSE}")
+        ind_mouse.move(x-PUNTO_MOUSE//2, y+OFFSET_MOUSE)
     root.after(16, seguimiento_mouse)
 
 
@@ -390,11 +371,11 @@ def ocultar_indicador_si_mouse_cerca():
             ocultar = distancia < RADIO_OCULTAR or distancia_scroll < RADIO_OCULTAR
 
             if ocultar:
-                root.withdraw()
+                ind_grande.hide()
                 scroll_lock_win.withdraw()
             else:
                 if INDICADOR_HABILITADO and indicador_visible_por_capa:
-                    root.deiconify()
+                    ind_grande.show()
                 root.after(0, actualizar_scroll_lock_ui)
 
         except:

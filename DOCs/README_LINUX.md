@@ -47,9 +47,10 @@ copia a una carpeta temporal nueva en cada arranque (`$XDG_RUNTIME_DIR`).
   raw HID de QMK (`usage_page == 0xFF60`); en Linux `hid.enumerate()` no la
   devuelve primero.
 - **Instancia única:** `flock` sobre `/tmp/layer_status_script.lock` (en Windows, mutex).
-- **Ventanas:** opacas con fondo magenta; `-transparentcolor` no existe en Tk/X11.
-- **Posición:** KWin no respeta la geometría pedida antes de mapear la ventana
-  `overrideredirect`, por eso se reaplica en cada `deiconify()`.
+- **Ventanas:** círculos con fondo transparente real (`utils/indicador_argb`). `-transparentcolor`
+  no existe en Tk/X11 y el recorte con la extensión Shape no se respeta bajo XWayland
+  (queda el cuadrado de fondo), así que son ventanas X11 propias de 32 bits (ARGB) dibujadas
+  con `python-xlib`. Los clics las atraviesan. Bordes sin suavizado.
 
 ## Instalación
 
