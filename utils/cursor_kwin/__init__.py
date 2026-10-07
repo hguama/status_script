@@ -6,6 +6,9 @@ cursor (pyautogui/Tk devuelven un valor obsoleto). KWin sí la conoce, así que
 se carga un script QML (linux/kwin/CursorPos.qml) que la envía por D-Bus ~60
 veces por segundo a este módulo, que expone el último valor con ``get()``.
 
+Cada muestra trae además si hubo empuje contra un borde de la pantalla (lo usa
+utils/wrap_around, que se suscribe con ``on_muestra()``).
+
 Uso:
     from utils import cursor_kwin
     cursor_kwin.start()
@@ -13,11 +16,13 @@ Uso:
 """
 
 import atexit
+import collections
 import logging
 import os
 import shutil
 import tempfile
 import threading
+import time
 
 import gi
 gi.require_version("Gio", "2.0")
@@ -39,6 +44,7 @@ _XML = f"""
     <method name='pos'>
       <arg type='i' direction='in' name='x'/>
       <arg type='i' direction='in' name='y'/>
+      <arg type='b' direction='in' name='empuje'/>
     </method>
   </interface>
 </node>
@@ -46,6 +52,8 @@ _XML = f"""
 
 _pos = None
 _conn = None
+_muestras = collections.deque(maxlen=64)   # ~1 s de (t, x, y, empuje)
+_on_muestra = None
 
 
 def get():
@@ -53,10 +61,28 @@ def get():
     return _pos
 
 
+def muestras():
+    """Últimas muestras (t, x, y, empuje), de la más vieja a la más nueva."""
+    return list(_muestras)
+
+
+def on_muestra(callback):
+    """Registra callback() que se llama tras cada muestra nueva (~60 por segundo)."""
+    global _on_muestra
+    _on_muestra = callback
+
+
 def _on_method_call(conn, sender, path, iface, method, params, invocation):
     global _pos
     if method == "pos":
-        _pos = tuple(params.unpack())
+        x, y, empuje = params.unpack()
+        _pos = (x, y)
+        _muestras.append((time.monotonic(), x, y, empuje))
+        if _on_muestra:
+            try:
+                _on_muestra()
+            except Exception as e:
+                logger.error("[CURSOR] error al procesar la muestra: %s", e)
     invocation.return_value(None)
 
 

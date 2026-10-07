@@ -115,6 +115,8 @@ DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 30, 20, 22
 INDICADOR_INFERIOR = True
 MARGEN_BORDE = 5   # px entre el indicador grande y el borde de la pantalla
 TAMANO_SCROLL, COLOR_SCROLL = 18, "#2982F0"
+# Aviso visual del wrap: el punto chico toma este color mientras se arma el salto.
+AVISO_WRAP, COLOR_WRAP = False, "#FFFFFF"
 
 colores = {
     "ALFA": "#66BB6A",    # Verde claro / Menta (Material Green 400)
@@ -339,12 +341,26 @@ def detectar_clic_reset_alt(dev):
 # ===============================================================
 # SEGUIMIENTO VISUAL DEL MOUSE
 # ===============================================================
+_wrap_armando = False
+
 def seguimiento_mouse():
     """Mueve el punto chico junto al cursor real (posición vía KWin, ver utils/cursor_kwin)."""
+    global _wrap_armando
     pos = cursor_kwin.get()
     if pos:
         x, y = pos
         ind_mouse.move(x-PUNTO_MOUSE//2, y+OFFSET_MOUSE)
+
+    armando = AVISO_WRAP and INDICADOR_HABILITADO and wrap_around.armando()
+    if armando != _wrap_armando:
+        _wrap_armando = armando
+        if armando:
+            ind_mouse.set_color(COLOR_WRAP)
+            ind_mouse.show()
+        else:
+            ind_mouse.set_color(color_actual)
+            if not (INDICADOR_HABILITADO and indicador_visible_por_capa):
+                ind_mouse.hide()
     root.after(16, seguimiento_mouse)
 
 
@@ -467,9 +483,11 @@ def main():
     # El punto chico sigue al cursor: KWin manda la posición real por D-Bus.
     cursor_kwin.start()
     root.after(100, seguimiento_mouse)
-    # Wrap-around de cursor: sin puerto a Linux (usa ctypes.windll).
-    # threading.Thread(target=wrap_around.wrap_loop,
-    #                  args=(pantalla_ancho, pantalla_alto), daemon=True).start()
+    # Wrap-around de cursor: KWin avisa del empuje contra el borde y el salto
+    # se hace con un puntero virtual (ver utils/wrap_around). En un hilo
+    # porque crear el puntero virtual tarda ~2 s.
+    threading.Thread(target=wrap_around.iniciar,
+                     args=(pantalla_ancho, pantalla_alto), daemon=True).start()
     # ocultar_indicador_si_mouse_cerca: deshabilitado — depende de pyautogui.position(),
     # que no puede leer la posición real del cursor en Wayland (limitación de seguridad
     # de Wayland para apps XWayland en segundo plano), causando parpadeo falso.

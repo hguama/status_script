@@ -8,10 +8,10 @@ trabajo, usa la skill `task-manager` (`~/.agents/skills/task-manager/SKILL.md`)
 
 ## Dos variantes del script
 
-| Variante | Rama | Sistema | Funcionalidades |
-|---|---|---|---|
-| **Windows** | `main` | Windows | Todas |
-| **Linux** | `linux-port` | Fedora KDE (Wayland) | Reducidas (indicador de capas + punto que sigue al cursor + calibración QMK) |
+| Variante    | Rama         | Sistema              | Funcionalidades                                                                            |
+| ----------- | ------------ | -------------------- | ------------------------------------------------------------------------------------------ |
+| **Windows** | `main`       | Windows              | Todas                                                                                      |
+| **Linux**   | `linux-port` | Fedora KDE (Wayland) | Reducidas (indicador de capas + punto que sigue al cursor + calibración QMK + wrap-around) |
 
 **Toda la documentación de `DOCs/` (excepto `DOCs/README_LINUX.md`) describe la
 versión Windows.** Antes de tocar código, confirmar en qué rama se está.
@@ -32,7 +32,8 @@ versión Windows.** Antes de tocar código, confirmar en qué rama se está.
 ### Versión Linux (`linux-port`)
 
 Indicador de capas (con punto chico que sigue al cursor vía KWin) + calibración
-QMK, con reconexión automática si el Corne se desconecta. El resto se deshabilitó porque depende de APIs de Windows
+QMK + wrap-around del cursor (reescrito para KWin, distinto del de Windows), con
+reconexión automática si el Corne se desconecta. El resto se deshabilitó porque depende de APIs de Windows
 (`ctypes.windll`) o exige root (`keyboard`/`mouse`). Detalle completo en
 [`DOCs/README_LINUX.md`](DOCs/README_LINUX.md).
 
