@@ -8,11 +8,11 @@ este contrato deja por escrito qué hace antes de decidir el commit.
 
 ## 0. Manifiesto
 
-| id | archivo | rol | estado |
-|---|---|---|---|
-| C1 | `spec-modo-captura.md` | contrato | vigente · 2026-09-10 |
-| E1 | [spec-captura-evento.md](file:///C:/Users/Usuario/qmk_firmware/keyboards/crkbd/keymaps/cornekeymap/tasks/attachments/captura/spec-captura-evento.md) | referencia externa | as-built firmware + validación · 2026-09-09 |
-| E2 | [spec-migracion-captura.md](file:///C:/Users/Usuario/qmk_firmware/keyboards/crkbd/keymaps/cornekeymap/tasks/attachments/migra-captura/spec-migracion-captura.md) | referencia externa | plan de migración Task 15 · 2026-09-09 |
+| id  | archivo                                                                                                                                                          | rol                | estado                                      |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------- |
+| C1  | `spec-modo-captura.md`                                                                                                                                           | contrato           | vigente · 2026-09-10                        |
+| E1  | [spec-captura-evento.md](file:///C:/Users/Usuario/qmk_firmware/keyboards/crkbd/keymaps/cornekeymap/tasks/attachments/captura/spec-captura-evento.md)             | referencia externa | as-built firmware + validación · 2026-09-09 |
+| E2  | [spec-migracion-captura.md](file:///C:/Users/Usuario/qmk_firmware/keyboards/crkbd/keymaps/cornekeymap/tasks/attachments/migra-captura/spec-migracion-captura.md) | referencia externa | plan de migración Task 15 · 2026-09-09      |
 
 ## 1. Objetivo
 

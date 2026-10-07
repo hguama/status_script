@@ -43,13 +43,13 @@ MK_INTERVAL     = 6      # Intervalo entre eventos de movimiento (ms)
 
 ### Mapeo en el buffer HID
 
-| Posición Python (`buf`) | Posición QMK (`data`) | Variable | Significado |
-|---|---|---|---|
-| `buf[1]` | `data[0]` | `'M'` | Firma de comando |
-| `buf[2]` | `data[1]` | `MK_DELAY` | Retardo inicial (ms) |
-| `buf[3]` | `data[2]` | `MK_MAX_SPEED` | Velocidad máxima |
-| `buf[4]` | `data[3]` | `MK_TIME_TO_MAX` | Rampa de aceleración |
-| `buf[5]` | `data[4]` | `MK_INTERVAL` | Intervalo entre eventos (ms) |
+| Posición Python (`buf`) | Posición QMK (`data`) | Variable         | Significado                  |
+| ----------------------- | --------------------- | ---------------- | ---------------------------- |
+| `buf[1]`                | `data[0]`             | `'M'`            | Firma de comando             |
+| `buf[2]`                | `data[1]`             | `MK_DELAY`       | Retardo inicial (ms)         |
+| `buf[3]`                | `data[2]`             | `MK_MAX_SPEED`   | Velocidad máxima             |
+| `buf[4]`                | `data[3]`             | `MK_TIME_TO_MAX` | Rampa de aceleración         |
+| `buf[5]`                | `data[4]`             | `MK_INTERVAL`    | Intervalo entre eventos (ms) |
 
 > **Nota:** `buf[0] = 0x00` es el Report ID que Windows requiere pero que
 > el driver HID elimina antes de entregar los datos a QMK. Por eso en el
@@ -61,14 +61,14 @@ MK_INTERVAL     = 6      # Intervalo entre eventos de movimiento (ms)
 
 ### ¿Cómo sé qué perilla mover?
 
-| Síntoma | Solución |
-|---|---|
+| Síntoma                                         | Solución                                                                    |
+| ----------------------------------------------- | --------------------------------------------------------------------------- |
 | El cursor **no se mueve** al presionar la tecla | ¿Está `HABILITADA = True`? ¿Aparece `✅ CALIBRACIÓN QMK ENVIADA` en el log? |
-| Se siente **muy lento** en general | ↑ `MK_MAX_SPEED`, ↓ `MK_INTERVAL` |
-| **Arranca muy lento** (tarda en responder) | ↓ `MK_DELAY` |
-| Tarda mucho en **alcanzar velocidad punta** | ↓ `MK_TIME_TO_MAX` |
-| Se siente **muy brusco / saltarín** | ↓ `MK_MAX_SPEED`, ↑ `MK_INTERVAL`, ↑ `MK_TIME_TO_MAX` |
-| Se mueve **a tirones** (no fluido) | ↓ `MK_INTERVAL` (más eventos por segundo) |
+| Se siente **muy lento** en general              | ↑ `MK_MAX_SPEED`, ↓ `MK_INTERVAL`                                           |
+| **Arranca muy lento** (tarda en responder)      | ↓ `MK_DELAY`                                                                |
+| Tarda mucho en **alcanzar velocidad punta**     | ↓ `MK_TIME_TO_MAX`                                                          |
+| Se siente **muy brusco / saltarín**             | ↓ `MK_MAX_SPEED`, ↑ `MK_INTERVAL`, ↑ `MK_TIME_TO_MAX`                       |
+| Se mueve **a tirones** (no fluido)              | ↓ `MK_INTERVAL` (más eventos por segundo)                                   |
 
 ### Relación entre parámetros
 
@@ -99,9 +99,9 @@ MK_INTERVAL     = 6      # Intervalo entre eventos de movimiento (ms)
 HABILITADA = True
 ```
 
-| Estado | Comportamiento |
-|---|---|
-| `True` | Al iniciar el script, envía los 4 parámetros al Corne. |
+| Estado  | Comportamiento                                                            |
+| ------- | ------------------------------------------------------------------------- |
+| `True`  | Al iniciar el script, envía los 4 parámetros al Corne.                    |
 | `False` | No envía nada. Los valores deben estar hardcodeados en `config.h` de QMK. |
 
 ### Flujo recomendado

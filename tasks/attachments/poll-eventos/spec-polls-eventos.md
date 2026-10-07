@@ -2,9 +2,9 @@
 
 ## 0. Manifiesto
 
-| id | archivo | rol | estado |
-|---|---|---|---|
-| C1 | `spec-polls-eventos.md` | contrato | especificación · 2026-09-09 · auditoría 2026-09-10 (§5) · trasladada a este repo 2026-09-10 (rutas `qmk_*` y commits refieren a `qmk_firmware`) |
+| id  | archivo                 | rol      | estado                                                                                                                                          |
+| --- | ----------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| C1  | `spec-polls-eventos.md` | contrato | especificación · 2026-09-09 · auditoría 2026-09-10 (§5) · trasladada a este repo 2026-09-10 (rutas `qmk_*` y commits refieren a `qmk_firmware`) |
 
 ## 1. Objetivo
 
@@ -52,10 +52,10 @@ Auditado contra el código real (`layer_status_script.py` ≈457 líneas, `utils
 
 ### 5.1 Estrategia por categoría (reemplaza el modelo único)
 
-| Categoría | Polls | Conversión correcta |
-|---|---|---|
-| Discretos | §2.1 HID, §2.2 clic-alt | evento real: lectura **bloqueante** (`set_nonblocking(False)` + `read(timeout_ms=500)`); `mouse.on_button` (verificado: existe en la librería ya importada) |
-| Muestreo continuo | §2.3 dot, §2.4 ocultar, §2.5 wrap, §2.6 scroll | sin evento puro: **un solo hilo de cursor** a 10ms que reparte a los 4 + trabajo solo si la posición cambió |
+| Categoría         | Polls                                          | Conversión correcta                                                                                                                                         |
+| ----------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Discretos         | §2.1 HID, §2.2 clic-alt                        | evento real: lectura **bloqueante** (`set_nonblocking(False)` + `read(timeout_ms=500)`); `mouse.on_button` (verificado: existe en la librería ya importada) |
+| Muestreo continuo | §2.3 dot, §2.4 ocultar, §2.5 wrap, §2.6 scroll | sin evento puro: **un solo hilo de cursor** a 10ms que reparte a los 4 + trabajo solo si la posición cambió                                                 |
 
 ### 5.2 Punto por punto
 

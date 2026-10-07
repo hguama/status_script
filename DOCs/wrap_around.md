@@ -28,11 +28,11 @@ en esa dirección, lo **transporta al borde opuesto**.
 
 El módulo distingue entre dos intenciones del usuario cuando está en el borde:
 
-| Intención | Cómo se detecta | Qué hace |
-|---|---|---|
-| **Cruzar al otro lado** | Empuja en dirección al borde sin mover el otro eje | Inicia un timer de 50 ms → salta |
-| **Navegar íconos** | Mueve el eje perpendicular (vertical si está en borde lateral) | Cancela el timer de cruce |
-| **Movimiento ambiguo** | Movimiento mixto o pequeño | **Mantiene el estado actual** (no resetea) |
+| Intención               | Cómo se detecta                                                | Qué hace                                   |
+| ----------------------- | -------------------------------------------------------------- | ------------------------------------------ |
+| **Cruzar al otro lado** | Empuja en dirección al borde sin mover el otro eje             | Inicia un timer de 50 ms → salta           |
+| **Navegar íconos**      | Mueve el eje perpendicular (vertical si está en borde lateral) | Cancela el timer de cruce                  |
+| **Movimiento ambiguo**  | Movimiento mixto o pequeño                                     | **Mantiene el estado actual** (no resetea) |
 
 > **Novedad:** antes, cualquier movimiento mixto reseteaba el timer.
 > Ahora solo se resetea si hay navegación **claramente** perpendicular.
@@ -53,12 +53,12 @@ DELAY_MS           = 0.05    # Pausa en el borde antes de saltar (s)
 COOLDOWN           = 0.5     # Tiempo mínimo entre saltos (s)
 ```
 
-| Parámetro | Actual | Efecto |
-|---|---|---|
-| `MARGEN_PORCENTAJE` | 0.5% | Zona del borde donde se activa |
-| `DELAY_MS` | 50 ms | Cuánto esperar en el borde antes de saltar |
-| `COOLDOWN` | 0.5 s | Tiempo mínimo entre saltos consecutivos |
-| `FORCE_TIMEOUT` | 350 ms | Si llevás este tiempo en el borde empujando, cruza forzado |
+| Parámetro           | Actual | Efecto                                                     |
+| ------------------- | ------ | ---------------------------------------------------------- |
+| `MARGEN_PORCENTAJE` | 0.5%   | Zona del borde donde se activa                             |
+| `DELAY_MS`          | 50 ms  | Cuánto esperar en el borde antes de saltar                 |
+| `COOLDOWN`          | 0.5 s  | Tiempo mínimo entre saltos consecutivos                    |
+| `FORCE_TIMEOUT`     | 350 ms | Si llevás este tiempo en el borde empujando, cruza forzado |
 
 > `FORCE_TIMEOUT` está hardcodeado dentro de `wrap_loop()` (no es variable de módulo).
 > Si querés ajustarlo, editá la línea `FORCE_TIMEOUT = 0.35` dentro de la función.
@@ -67,13 +67,13 @@ COOLDOWN           = 0.5     # Tiempo mínimo entre saltos (s)
 
 ## 🧪 Guía de ajuste
 
-| Síntoma | Solución |
-|---|---|
-| Salta **sin querer** | ↓ `MARGEN_PORCENTAJE` |
-| No salta (hay que empujar mucho) | ↑ `MARGEN_PORCENTAJE` |
-| Salta **muy rápido** (sin pausa) | ↑ `DELAY_MS` |
-| Tarda mucho en saltar | ↓ `DELAY_MS` |
-| Salta **múltiples veces** seguidas | ↑ `COOLDOWN` |
+| Síntoma                                                 | Solución                                    |
+| ------------------------------------------------------- | ------------------------------------------- |
+| Salta **sin querer**                                    | ↓ `MARGEN_PORCENTAJE`                       |
+| No salta (hay que empujar mucho)                        | ↑ `MARGEN_PORCENTAJE`                       |
+| Salta **muy rápido** (sin pausa)                        | ↑ `DELAY_MS`                                |
+| Tarda mucho en saltar                                   | ↓ `DELAY_MS`                                |
+| Salta **múltiples veces** seguidas                      | ↑ `COOLDOWN`                                |
 | **Se traba** al querer cruzar después de navegar íconos | ↓ `FORCE_TIMEOUT` (dentro de `wrap_loop()`) |
 
 ### Debug logging
@@ -97,10 +97,10 @@ Eventos que aparecen en el log:
 HABILITADA = True   # ← Cambiar a False para desactivar
 ```
 
-| `True` | `False` |
-|---|---|
-| El hilo WRAP se inicia y monitorea el cursor | No se inicia |
-| Log: `🖱️ WRAP-AROUND: Hilo iniciado` | Log: `[WRAP] Módulo desactivado` |
+| `True`                                       | `False`                          |
+| -------------------------------------------- | -------------------------------- |
+| El hilo WRAP se inicia y monitorea el cursor | No se inicia                     |
+| Log: `🖱️ WRAP-AROUND: Hilo iniciado`          | Log: `[WRAP] Módulo desactivado` |
 
 ---
 

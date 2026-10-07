@@ -8,9 +8,9 @@ los casos de bloqueo y el diseño antes de tocar el código.
 
 ## 0. Manifiesto
 
-| id | archivo | rol | estado |
-|---|---|---|---|
-| C1 | `spec-bloqueo-wrap.md` | contrato | vigente · 2026-09-10 · aprobada por Hero 2026-09-10 |
+| id  | archivo                | rol      | estado                                              |
+| --- | ---------------------- | -------- | --------------------------------------------------- |
+| C1  | `spec-bloqueo-wrap.md` | contrato | vigente · 2026-09-10 · aprobada por Hero 2026-09-10 |
 
 ## 1. Objetivo
 
@@ -32,16 +32,16 @@ izquierdo, así que empujar el cuadro hasta el borde dispara el salto.
 
 ## 3. Casos de bloqueo
 
-| # | Caso | Señal | Decisión |
-|---|---|---|---|
-| 1 | Selección de texto (el reporte) | botón izquierdo presionado | ✅ Incluye — predicado base |
-| 2 | Recorte de pantalla (el reporte) | overlay visible + arrastre | ✅ Incluye — predicado base |
-| 3 | Mover/resize de ventana, arrastrar y soltar, sliders, dibujar | botón izquierdo presionado | ✅ Incluye — sale gratis con el caso 1 |
-| 4 | Arrastres con botón derecho (menús, gestos) | botón derecho presionado | ✅ Incluye — misma llamada, costo cero |
-| 5 | Captura armada antes del arrastre (`Win+Shift+S`, overlay aún sin drag) | overlay visible (huella `Snipping Tool Overlay`/`SnipOverlayRootWindow`) | ✅ Incluye — reutiliza la huella de `utils/captura` |
-| 6 | Menú Alt-Tab visible | bandera `alt_tab_menu_visible` | ❓ En evaluación — el salto ahí es inofensivo pero inútil |
-| 7 | App a pantalla completa (juegos, video, RDP) | ventana en foco es fullscreen | ❓ En evaluación — ventana distinta, pide chequeo de foco |
-| 8 | Scroll-lock activo (scroll horizontal por movimiento) | bandera del módulo | ❓ En evaluación — mover al borde ahí es scroll, no wrap |
+| #   | Caso                                                                    | Señal                                                                    | Decisión                                                  |
+| --- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------- |
+| 1   | Selección de texto (el reporte)                                         | botón izquierdo presionado                                               | ✅ Incluye — predicado base                               |
+| 2   | Recorte de pantalla (el reporte)                                        | overlay visible + arrastre                                               | ✅ Incluye — predicado base                               |
+| 3   | Mover/resize de ventana, arrastrar y soltar, sliders, dibujar           | botón izquierdo presionado                                               | ✅ Incluye — sale gratis con el caso 1                    |
+| 4   | Arrastres con botón derecho (menús, gestos)                             | botón derecho presionado                                                 | ✅ Incluye — misma llamada, costo cero                    |
+| 5   | Captura armada antes del arrastre (`Win+Shift+S`, overlay aún sin drag) | overlay visible (huella `Snipping Tool Overlay`/`SnipOverlayRootWindow`) | ✅ Incluye — reutiliza la huella de `utils/captura`       |
+| 6   | Menú Alt-Tab visible                                                    | bandera `alt_tab_menu_visible`                                           | ❓ En evaluación — el salto ahí es inofensivo pero inútil |
+| 7   | App a pantalla completa (juegos, video, RDP)                            | ventana en foco es fullscreen                                            | ❓ En evaluación — ventana distinta, pide chequeo de foco |
+| 8   | Scroll-lock activo (scroll horizontal por movimiento)                   | bandera del módulo                                                       | ❓ En evaluación — mover al borde ahí es scroll, no wrap  |
 
 ## 4. Diseño
 
@@ -75,13 +75,13 @@ flowchart TD
 
 ## 5. Riesgos (producción, uso diario)
 
-| Riesgo | Mitigación |
-|---|---|
+| Riesgo                                                                                                                   | Mitigación                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
 | Falso positivo: el wrap deja de funcionar cuando sí se quiere (botón atascado, hold QMK con `MS_BTN1` + teclas al borde) | kill-switch `BLOQUEAR_EN_ARRASTRE`; los holds QMK se evalúan en el contraste diario antes de aprobar |
-| Regresión de rendimiento por `EnumWindows` | caché ~200ms + solo en margen; el chequeo de botón es una llamada |
-| Falso positivo del overlay (otra ventana fullscreen con misma huella) | la huella es triple (tamaño + clase + título); ya validada en este PC |
-| Choque con Task 16 (migración del wrap a eventos) | el predicado es puro y vive en el módulo: lo consume cualquier loop; `Related to: Task 16` |
-| Regresión general del wrap calibrado (dwell/cooldown) | no se tocan `DELAY_MS`/`COOLDOWN`/lógica de ejes; cambio solo aditivo + revert por git |
+| Regresión de rendimiento por `EnumWindows`                                                                               | caché ~200ms + solo en margen; el chequeo de botón es una llamada                                    |
+| Falso positivo del overlay (otra ventana fullscreen con misma huella)                                                    | la huella es triple (tamaño + clase + título); ya validada en este PC                                |
+| Choque con Task 16 (migración del wrap a eventos)                                                                        | el predicado es puro y vive en el módulo: lo consume cualquier loop; `Related to: Task 16`           |
+| Regresión general del wrap calibrado (dwell/cooldown)                                                                    | no se tocan `DELAY_MS`/`COOLDOWN`/lógica de ejes; cambio solo aditivo + revert por git               |
 
 ## 6. Validación
 
