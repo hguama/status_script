@@ -44,8 +44,10 @@ import utils.scroll_lock as scroll_lock
 import utils.qmk_calibracion as qmk_cal
 import utils.wrap_around as wrap_around
 import utils.captura as captura
+from utils import marca_scroll
+from utils import cursor_texto
 from utils import cursor_kwin
-from utils.indicador_argb import CirculoARGB
+from utils.indicador_argb import CirculoARGB, CuadradoARGB
 
 import logging
 import os
@@ -111,6 +113,7 @@ indicador_visible_por_capa = False
 # ===============================================================
 # --- UI CONFIG ---
 DIAMETRO, PUNTO_MOUSE, OFFSET_MOUSE = 30, 20, 22
+PUNTO_TEXTO, OFFSET_TEXTO = 12, 6   # punto sobre el cursor de texto (cursor_texto): diámetro y px bajo la base de la celda
 # Posición del indicador grande: True = abajo-centro, False = arriba-centro.
 INDICADOR_INFERIOR = True
 MARGEN_BORDE = 5   # px entre el indicador grande y el borde de la pantalla
@@ -139,6 +142,9 @@ pantalla_alto = root.winfo_screenheight()
 indicador_y = (pantalla_alto - DIAMETRO - MARGEN_BORDE) if INDICADOR_INFERIOR else MARGEN_BORDE
 ind_grande = CirculoARGB(DIAMETRO, (pantalla_ancho-DIAMETRO)//2, indicador_y)
 ind_mouse = CirculoARGB(PUNTO_MOUSE, (pantalla_ancho-PUNTO_MOUSE)//2, (pantalla_alto-PUNTO_MOUSE)//2)
+
+# Marca que acompaña al texto al hacer scroll (ver utils/marca_scroll)
+ind_marca = CuadradoARGB(marca_scroll.TAM)
 
 scroll_lock_win = tk.Toplevel()
 scroll_lock_win.overrideredirect(True)
@@ -341,14 +347,25 @@ def detectar_clic_reset_alt(dev):
 # ===============================================================
 # SEGUIMIENTO VISUAL DEL MOUSE
 # ===============================================================
+def marca_scroll_tick():
+    marca_scroll.tick(ind_marca)
+    root.after(33, marca_scroll_tick)
+
 _wrap_armando = False
 
 def seguimiento_mouse():
     """Mueve el punto chico junto al cursor real (posición vía KWin, ver utils/cursor_kwin)."""
     global _wrap_armando
+    # En un terminal el puntero se oculta al escribir: el punto va en el cursor de texto.
+    texto = cursor_texto.get()
     pos = cursor_kwin.get()
-    if pos:
+    if texto:
+        x, y = texto
+        ind_mouse.resize(PUNTO_TEXTO)
+        ind_mouse.move(x-PUNTO_TEXTO//2, y+OFFSET_TEXTO)
+    elif pos:
         x, y = pos
+        ind_mouse.resize(PUNTO_MOUSE)
         ind_mouse.move(x-PUNTO_MOUSE//2, y+OFFSET_MOUSE)
 
     armando = AVISO_WRAP and INDICADOR_HABILITADO and wrap_around.armando()
@@ -436,6 +453,8 @@ def log_configuracion():
 
     # ── QMK Mouse (→ módulo independiente) ──
     qmk_cal.log_configuracion()
+    marca_scroll.log_configuracion()
+    cursor_texto.log_configuracion()
 
     # ── Wrap-around (→ módulo independiente) ──
     wrap_around.log_configuracion()
@@ -483,6 +502,11 @@ def main():
     # El punto chico sigue al cursor: KWin manda la posición real por D-Bus.
     cursor_kwin.start()
     root.after(100, seguimiento_mouse)
+    # Marca de scroll: lee la rueda del Corne (necesita linux/71-corne-wheel.rules).
+    marca_scroll.iniciar()
+    # Punto sobre el cursor de texto de Konsole (AT-SPI + geometría de KWin).
+    cursor_texto.iniciar()
+    root.after(100, marca_scroll_tick)
     # Wrap-around de cursor: KWin avisa del empuje contra el borde y el salto
     # se hace con un puntero virtual (ver utils/wrap_around). En un hilo
     # porque crear el puntero virtual tarda ~2 s.

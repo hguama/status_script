@@ -17,6 +17,29 @@ Item {
         method: "pos"
     }
 
+    DBusCall {
+        id: ventanaCall
+        service: "org.statusscript.Cursor"
+        path: "/Cursor"
+        dbusInterface: "org.statusscript.Cursor"
+        method: "ventana"
+    }
+
+    // Ventana activa (clase y geometría) para utils/marca_scroll.
+    Timer {
+        interval: 200
+        repeat: true
+        running: true
+        onTriggered: {
+            var w = Workspace.activeWindow;
+            if (!w) return;
+            var g = w.frameGeometry;
+            ventanaCall.arguments = [String(w.resourceClass), Math.round(g.x), Math.round(g.y),
+                                     Math.round(g.width), Math.round(g.height)];
+            ventanaCall.call();
+        }
+    }
+
     Connections {
         target: Workspace
         function onCursorPosChanged() {

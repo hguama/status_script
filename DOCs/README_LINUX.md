@@ -12,6 +12,8 @@ Windows; este archivo describe solo lo que difiere en Linux.
 | Calibración de Mouse Keys (`utils/qmk_calibracion`)                 | Activo |
 | Reconexión automática al Corne tras desconexión/suspensión          | Activo |
 | Wrap-around del cursor (salto de borde a borde, ver abajo)          | Activo |
+| Marca de scroll en Konsole (cuadrado que sigue al texto, ver abajo) | Activo |
+| Punto chico sobre el cursor de texto en Konsole (ver abajo)         | Activo |
 
 ## Qué está deshabilitado y por qué
 
@@ -94,6 +96,122 @@ irregular. Es un ajuste global, así que **las esquinas y bordes activos de KWin
 Bordes de pantalla) dejan de funcionar con el puntero**. El mosaico al arrastrar
 ventanas contra un borde no cambia. Asume una sola pantalla.
 
+## Marca de scroll en Konsole
+
+Al hacer scroll con la rueda del Corne en una ventana de Konsole aparece un
+cuadrado blanco en el margen izquierdo, sobre la **última fila de texto visible**
+(el pie de la página que se estaba leyendo). Cada paso de rueda lo mueve igual que
+el texto, así queda sobre esa misma línea y indica dónde seguir. Si sale de la ventana queda pegado al borde y se pone
+rojo. Sin scroll por 3 s desaparece y el siguiente scroll empieza otra vez desde
+el ancla. Es el módulo `utils/marca_scroll`.
+
+1. **Pasos de rueda:** `evdev` lee la interfaz de mouse del Corne (`/dev/input/event7`
+   hoy; se busca por nombre). Necesita `linux/71-corne-wheel.rules`, que da acceso
+   solo a esa interfaz y no al teclado. Sin la regla el servicio avisa en el log
+   (`sin acceso a la rueda del Corne`) y la marca no hace nada.
+2. **Ventana activa:** `linux/kwin/CursorPos.qml` envía por D-Bus la clase y la
+   geometría de la ventana activa (`ventana`, ~5 por segundo). KWin las manda como
+   `double`: la interfaz de `utils/cursor_kwin` debe declararlas así.
+3. **Dibujo:** `CuadradoARGB` (`utils/indicador_argb`), desde el hilo de Tk.
+
+Parámetros en `utils/marca_scroll/__init__.py`:
+
+| Parámetro                       | Valor          | Efecto                                                           |
+| ------------------------------- | -------------- | ---------------------------------------------------------------- |
+| `HABILITADA`                    | `True`         | Bandera maestra                                                  |
+| `APPS`                          | `("konsole",)` | Fragmentos de la clase de ventana donde actúa                    |
+| `LINEAS_POR_PASO`, `ALTO_LINEA` | 3, 18 px       | Líneas que mueve Qt por paso y alto de línea (ver abajo)         |
+| `ORIGEN_TEXTO`                  | 114 px         | Distancia del borde superior de la ventana a la 1ª fila de texto |
+| `ANCLA_X`, `TAM`                | 3 px, 14 px    | Posición horizontal y tamaño                                     |
+| `COLOR`, `COLOR_FUERA`          | blanco, rojo   | Dentro de la ventana / pegado al borde                           |
+| `INACTIVIDAD`                   | 3 s            | Tiempo sin scroll para ocultarla                                 |
+
+El desplazamiento por paso no es fijo: `px_por_paso()` lo calcula al armar la marca como
+`LINEAS_POR_PASO × ScrollFactor × ALTO_LINEA`, leyendo el `ScrollFactor` del Corne en
+`~/.config/kcminputrc` (grupo `[Libinput][18003][1][foostan Corne]`). Si cambias el factor
+la marca se adapta sola (en el siguiente scroll tras una pausa). Verificado con capturas
+en Kate y Konsole: factor 5 → 270 px por paso, factor 3 → 162 px (lineal, igual hacia arriba
+y abajo). Solo hay que recalibrar si cambia el tamaño de letra (`ALTO_LINEA`).
+
+Una pulsación del Corne manda 3 pasos de rueda (a 0, +10 y +90 ms; mantenida, sigue cada
+~80 ms). Los pasos salen del firmware (`MOUSEKEY_WHEEL_*` de `config.h` y los valores por
+defecto de QMK; los parámetros que envía `qmk_calibracion` son del movimiento del cursor,
+no de la rueda) y el factor de KDE los amplifica después: se multiplican. Con factor 3, una
+pulsación mueve 486 px. La marca cuenta los pasos reales, así que sigue cualquier cambio
+del firmware. Cada rueda recibida queda en el journal como `[MARCA]`, con la ventana
+activa que vio el servicio.
+
+El ancla es el centro de la última fila completa: `centro_ultima_fila()` reparte la
+ventana en filas de `ALTO_LINEA` desde `ORIGEN_TEXTO` (lo que sobra queda como margen
+abajo, así que no es una distancia fija al borde). Validado con capturas en ventanas de
+1154 y 1000 px de alto: tras una pulsación (486 px) la marca queda a ±0,5 px de la línea
+que era la última visible. Si cambias las barras de Konsole, ajusta `ORIGEN_TEXTO`.
+
+Límites: solo la ventana **activa** (la rueda va a la ventana bajo el puntero, que
+puede ser otra); no sabe cuándo el texto llegó a su tope, así que la marca se
+mueve aunque el texto no; solo el Corne (otros ratones no pasan por aquí).
+
+## Punto sobre el cursor de texto (Konsole)
+
+En un terminal el puntero del mouse se oculta al escribir y el punto chico, que sigue
+al puntero, no se ve. Con Konsole como ventana activa el punto se pone en el cursor de
+texto (más chico que sobre el mouse, 12 px en vez de 20, y 6 px bajo su celda; `PUNTO_TEXTO` y `OFFSET_TEXTO` en `layer_status_script.py`); en cualquier otra ventana vuelve a seguir al mouse. Es el
+módulo `utils/cursor_texto`. Sirve también con Claude Code, que deja el cursor nativo
+del terminal en el punto de escritura.
+
+1. **Cursor:** Konsole expone el terminal por AT-SPI como un widget `Text`; de ahí salen
+   el offset del cursor y el rectángulo de su celda (relativo al widget). `python3-gobject`
+   ya trae `Atspi`. Cada consulta cuesta ~0,3 ms; se hacen ~30 por segundo en un hilo.
+2. **Posición en pantalla:** Wayland no da posición global, así que se suma la geometría
+   de la ventana activa que envía KWin (`cursor_kwin.ventana()`), el origen del widget y
+   `TITULO_SSD` + `MARGEN_X` (ver tabla).
+3. **Foco, pestañas y paneles:** se guardan todos los terminales de todas las ventanas de
+   Konsole y en cada consulta se revisa cuál tiene el foco (solo lo tiene uno, el de la
+   ventana activa), así el punto sigue al panel enfocado sin esperar nada. Si ninguno lo
+   tiene (panel, pestaña o ventana nuevos) se recorre otra vez el árbol de AT-SPI, como
+   máximo una vez por segundo. Si el foco está fuera del terminal (p. ej. la barra de
+   búsqueda) el punto vuelve al mouse.
+4. **Paneles divididos:** cada panel lleva una barra de título que AT-SPI no descuenta (el
+   widget y su contenedor reportan el mismo rectángulo), así que con más de un panel
+   visible en la ventana se suman `CABECERA_PANEL` px. Validado con capturas en división
+   izquierda/derecha y arriba/abajo anidadas: el punto queda centrado bajo el cursor del
+   panel enfocado, igual que con un solo panel.
+
+Parámetros en `utils/cursor_texto/__init__.py`:
+
+| Parámetro        | Valor          | Efecto                                                        |
+| ---------------- | -------------- | ------------------------------------------------------------- |
+| `HABILITADA`     | `True`         | Bandera maestra                                               |
+| `APPS`           | `("konsole",)` | Fragmentos de la clase de ventana donde actúa                 |
+| `INTERVALO`      | 0,033 s        | Tiempo entre consultas                                        |
+| `TITULO_SSD`     | 29 px          | Barra de título de KWin sobre el área de cliente              |
+| `MARGEN_X`       | 4 px           | Margen interno del widget que AT-SPI no incluye               |
+| `CABECERA_PANEL` | 22 px          | Barra de título de cada panel cuando la ventana está dividida |
+| `REBUSCAR`       | 1 s            | Mínimo entre recorridos del árbol de AT-SPI (~60 ms cada uno) |
+
+`TITULO_SSD` y `MARGEN_X` se calibraron con capturas (el punto queda centrado bajo el
+bloque del cursor, ±1 px). Si cambias el tema de ventanas o el margen del perfil de
+Konsole, hay que recalibrarlos.
+
+**Requiere accesibilidad activa en Konsole.** Qt solo publica el árbol de AT-SPI si se
+arranca con `QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1`. Se activa solo para Konsole con un
+lanzador de usuario (no toca el resto de apps):
+
+```sh
+sed -E 's/^Exec=konsole/Exec=env QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1 konsole/' \
+  /usr/share/applications/org.kde.konsole.desktop > ~/.local/share/applications/org.kde.konsole.desktop
+```
+
+Hay que **cerrar todas las ventanas de Konsole** y abrirlo de nuevo desde el lanzador (un
+Konsole ya abierto absorbe las ventanas nuevas y seguiría sin accesibilidad). Si el
+servicio ve a Konsole sin el árbol, avisa una vez en el log:
+`[CURSOR-TEXTO] Konsole no aparece en AT-SPI`. Para revertir, borrar ese `.desktop`.
+
+Límites: solo Konsole (apps que dibujan su propio terminal, como Alacritty o kitty, no
+exponen el cursor); con scroll en el historial el cursor queda fuera de la vista y el
+punto vuelve al mouse; como el punto solo se muestra con una capa activa del Corne, en
+`LAYER_BASE` tampoco aparece sobre el cursor de texto; asume pantalla única sin escalado.
+
 ## Diferencias técnicas respecto a Windows
 
 - **Interfaz HID:** el Corne expone 3 interfaces con el mismo VID/PID. Se usa la
@@ -115,6 +233,7 @@ Archivos en `linux/` de este repo:
 ```sh
 # Permiso de acceso al Corne sin root (regla udev)
 sudo cp linux/70-corne-hid.rules /etc/udev/rules.d/
+sudo cp linux/71-corne-wheel.rules /etc/udev/rules.d/   # rueda del Corne (marca de scroll)
 sudo udevadm control --reload-rules && sudo udevadm trigger
 
 # Servicio de usuario (arranque automático al iniciar sesión)

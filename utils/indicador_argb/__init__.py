@@ -78,3 +78,24 @@ class CirculoARGB:
     def move(self, x, y):
         self._win.configure(x=x, y=y)
         _d.flush()
+
+    def resize(self, size):
+        if size == self.size:
+            return
+        self.size = size
+        self._win.configure(width=size, height=size)
+        if self._visible:
+            self._dibujar()
+        _d.flush()
+
+
+class CuadradoARGB(CirculoARGB):
+    """Mismo indicador pero cuadrado (para distinguirlo de los círculos)."""
+
+    def _dibujar(self):
+        r, g, b = (int(self._color[i:i + 2], 16) for i in (1, 3, 5))
+        gc = self._win.create_gc(foreground=0xFF000000 | (r << 16) | (g << 8) | b)
+        self._win.clear_area(0, 0, self.size, self.size)
+        self._win.fill_rectangle(gc, 0, 0, self.size, self.size)
+        gc.free()
+        _d.flush()

@@ -46,6 +46,13 @@ _XML = f"""
       <arg type='i' direction='in' name='y'/>
       <arg type='b' direction='in' name='empuje'/>
     </method>
+    <method name='ventana'>
+      <arg type='s' direction='in' name='clase'/>
+      <arg type='d' direction='in' name='x'/>
+      <arg type='d' direction='in' name='y'/>
+      <arg type='d' direction='in' name='ancho'/>
+      <arg type='d' direction='in' name='alto'/>
+    </method>
   </interface>
 </node>
 """
@@ -54,11 +61,17 @@ _pos = None
 _conn = None
 _muestras = collections.deque(maxlen=64)   # ~1 s de (t, x, y, empuje)
 _on_muestra = None
+_ventana = None
 
 
 def get():
     """Última posición (x, y) recibida de KWin, o None."""
     return _pos
+
+
+def ventana():
+    """Ventana activa (clase, x, y, ancho, alto) o None."""
+    return _ventana
 
 
 def muestras():
@@ -73,7 +86,7 @@ def on_muestra(callback):
 
 
 def _on_method_call(conn, sender, path, iface, method, params, invocation):
-    global _pos
+    global _pos, _ventana
     if method == "pos":
         x, y, empuje = params.unpack()
         _pos = (x, y)
@@ -83,6 +96,12 @@ def _on_method_call(conn, sender, path, iface, method, params, invocation):
                 _on_muestra()
             except Exception as e:
                 logger.error("[CURSOR] error al procesar la muestra: %s", e)
+    elif method == "ventana":
+        clase, x, y, ancho, alto = params.unpack()   # KWin manda la geometría como double
+        nueva = (clase, round(x), round(y), round(ancho), round(alto))
+        if not _ventana or _ventana[0] != clase:
+            logger.debug("[CURSOR] ventana activa: %s", nueva)
+        _ventana = nueva
     invocation.return_value(None)
 
 
