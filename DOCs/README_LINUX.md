@@ -161,7 +161,7 @@ del terminal en el punto de escritura.
 
 1. **Cursor:** Konsole expone el terminal por AT-SPI como un widget `Text`; de ahí salen
    el offset del cursor y el rectángulo de su celda (relativo al widget). `python3-gobject`
-   ya trae `Atspi`. Cada consulta cuesta ~0,3 ms; se hacen ~30 por segundo en un hilo.
+   ya trae `Atspi`. Cada consulta cuesta ~0,3 ms; se hacen ~30 por segundo en un proceso ayudante (punto 5).
 2. **Posición en pantalla:** Wayland no da posición global, así que se suma la geometría
    de la ventana activa que envía KWin (`cursor_kwin.ventana()`), el origen del widget y
    `TITULO_SSD` + `MARGEN_X` (ver tabla).
@@ -176,6 +176,15 @@ del terminal en el punto de escritura.
    visible en la ventana se suman `CABECERA_PANEL` px. Validado con capturas en división
    izquierda/derecha y arriba/abajo anidadas: el punto queda centrado bajo el cursor del
    panel enfocado, igual que con un solo panel.
+5. **Proceso ayudante:** las consultas a AT-SPI corren en otro proceso
+   (`python3 -m utils.cursor_texto`), no en un hilo del indicador. `libatspi` llegó a
+   corromper la memoria cuando Konsole tardó en responder (al bloquear la sesión) y
+   tumbó el script entero; aparte, solo cae el ayudante. El principal le manda por stdin
+   el origen de la ventana activa si es Konsole, y el ayudante responde por stdout una
+   línea por ciclo (`x y`, o `-` sin cursor), que sirve también de señal de vida. Si el
+   pipe se cierra (murió) o pasan `SIN_RESPUESTA` s sin líneas (se colgó), el principal
+   lo mata y lo relanza tras `RELANZAR` s; mientras, el punto sigue al mouse. En el log:
+   `[CURSOR-TEXTO] el ayudante terminó (código …)`.
 
 Parámetros en `utils/cursor_texto/__init__.py`:
 
@@ -188,6 +197,8 @@ Parámetros en `utils/cursor_texto/__init__.py`:
 | `MARGEN_X`       | 4 px           | Margen interno del widget que AT-SPI no incluye               |
 | `CABECERA_PANEL` | 22 px          | Barra de título de cada panel cuando la ventana está dividida |
 | `REBUSCAR`       | 1 s            | Mínimo entre recorridos del árbol de AT-SPI (~60 ms cada uno) |
+| `SIN_RESPUESTA`  | 3 s            | Silencio del ayudante tras el que se lo da por colgado        |
+| `RELANZAR`       | 2 s            | Espera antes de relanzar el ayudante                          |
 
 `TITULO_SSD` y `MARGEN_X` se calibraron con capturas (el punto queda centrado bajo el
 bloque del cursor, ±1 px). Si cambias el tema de ventanas o el margen del perfil de
