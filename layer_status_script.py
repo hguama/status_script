@@ -310,6 +310,9 @@ def escuchar_hid(dev):
 
 def _reconectar_hid():
     """Reintenta abrir la interfaz raw HID del Corne hasta que reaparezca."""
+    # usage_page 0xFF60 = interfaz raw HID de QMK (VIA), por donde el firmware
+    # manda los mensajes de capa. En Linux hid.enumerate() no la devuelve
+    # primero (a diferencia de Windows), hay que filtrar explícitamente.
     while True:
         path = next((d["path"] for d in hid.enumerate()
                      if d["vendor_id"] == VID and d["product_id"] == PID
@@ -474,19 +477,11 @@ def log_configuracion():
 def main():
     check_single_instance()
     
-    # usage_page 0xFF60 = interfaz raw HID de QMK (VIA), por donde el firmware
-    # manda los mensajes de capa. En Linux hid.enumerate() no la devuelve
-    # primero (a diferencia de Windows), hay que filtrar explícitamente.
-    path = next((d["path"] for d in hid.enumerate()
-                if d["vendor_id"] == VID and d["product_id"] == PID
-                and d.get("usage_page") == 0xFF60), None)
-    if not path:
-        print("❌ Teclado no encontrado")
-        return
-
-    dev = hid.device()
-    dev.open_path(path)
-    dev.set_nonblocking(True)
+    # Si el Corne no está (p. ej. al volver de suspensión el dock aún no lo
+    # enumeró), se espera a que aparezca en vez de salir: con código 0 systemd
+    # no reinicia el servicio y el indicador no vuelve.
+    print("[HID] Buscando el Corne...")
+    dev = _reconectar_hid()
 
     # ── Volcar toda la configuración al log ──
     log_configuracion()
