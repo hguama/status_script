@@ -2,7 +2,7 @@
 cursor_texto — Posición en pantalla del cursor de texto de Konsole.
 
 En un terminal el puntero del mouse se oculta al escribir, así que el punto chico
-que lo sigue no se ve. Konsole expone el terminal por accesibilidad (AT-SPI) como
+que lo sigue no se ve (por eso hay un segundo punto sobre el cursor de texto). Konsole expone el terminal por accesibilidad (AT-SPI) como
 un widget ``Text``: de ahí salen el offset del cursor y el rectángulo de su celda,
 relativo al widget. Bajo Wayland no hay posición global, así que se suma la
 geometría de la ventana activa que envía KWin (``cursor_kwin.ventana()``) más el

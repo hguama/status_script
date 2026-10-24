@@ -34,8 +34,8 @@ versión Windows.** Antes de tocar código, confirmar en qué rama se está.
 Indicador de capas (con punto chico que sigue al cursor vía KWin) + calibración
 QMK + wrap-around del cursor (reescrito para KWin, distinto del de Windows) + marca de scroll en
 Konsole (`utils/marca_scroll`, lee la rueda del Corne vía evdev), con
-reconexión automática si el Corne se desconecta. Con Konsole activa, el punto chico
-va sobre el cursor de texto (`utils/cursor_texto`, AT-SPI; requiere arrancar Konsole con
+reconexión automática si el Corne se desconecta. Con Konsole activa, un segundo punto chico
+va sobre el cursor de texto (además del que sigue al mouse) (`utils/cursor_texto`, AT-SPI; requiere arrancar Konsole con
 accesibilidad, ver el README). El resto se deshabilitó porque depende de APIs de Windows
 (`ctypes.windll`) o exige root (`keyboard`/`mouse`). Detalle completo en
 [`DOCs/README_LINUX.md`](DOCs/README_LINUX.md).

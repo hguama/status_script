@@ -51,6 +51,10 @@ class CirculoARGB:
             logger.debug("[ARGB] no se pudo hacer transparente a los clics: %s", e)
         _d.sync()
 
+    @property
+    def visible(self):
+        return self._visible
+
     def _dibujar(self):
         r, g, b = (int(self._color[i:i + 2], 16) for i in (1, 3, 5))
         gc = self._win.create_gc(foreground=0xFF000000 | (r << 16) | (g << 8) | b)

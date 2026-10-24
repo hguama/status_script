@@ -153,9 +153,9 @@ mueve aunque el texto no; solo el Corne (otros ratones no pasan por aquí).
 
 ## Punto sobre el cursor de texto (Konsole)
 
-En un terminal el puntero del mouse se oculta al escribir y el punto chico, que sigue
-al puntero, no se ve. Con Konsole como ventana activa el punto se pone en el cursor de
-texto (más chico que sobre el mouse, 12 px en vez de 20, y 6 px bajo su celda; `PUNTO_TEXTO` y `OFFSET_TEXTO` en `layer_status_script.py`); en cualquier otra ventana vuelve a seguir al mouse. Es el
+En un terminal el puntero del mouse se oculta al escribir. Con Konsole como ventana activa
+aparece un **segundo** punto sobre el cursor de texto (más chico, 12 px en vez de 20, y 6 px bajo su celda; `PUNTO_TEXTO` y `OFFSET_TEXTO` en `layer_status_script.py`) y el punto del mouse sigue
+a su puntero como en cualquier otra ventana; ambos comparten color y se muestran solo con una capa activa. Es el
 módulo `utils/cursor_texto`. Sirve también con Claude Code, que deja el cursor nativo
 del terminal en el punto de escritura.
 

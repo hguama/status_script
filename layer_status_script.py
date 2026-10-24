@@ -142,6 +142,8 @@ pantalla_alto = root.winfo_screenheight()
 indicador_y = (pantalla_alto - DIAMETRO - MARGEN_BORDE) if INDICADOR_INFERIOR else MARGEN_BORDE
 ind_grande = CirculoARGB(DIAMETRO, (pantalla_ancho-DIAMETRO)//2, indicador_y)
 ind_mouse = CirculoARGB(PUNTO_MOUSE, (pantalla_ancho-PUNTO_MOUSE)//2, (pantalla_alto-PUNTO_MOUSE)//2)
+# Segundo punto, solo sobre el cursor de texto de Konsole (el de arriba sigue al puntero)
+ind_texto = CirculoARGB(PUNTO_TEXTO)
 
 # Marca que acompaña al texto al hacer scroll (ver utils/marca_scroll)
 ind_marca = CuadradoARGB(marca_scroll.TAM)
@@ -214,6 +216,7 @@ def toggle_indicadores(e=None):
     if not INDICADOR_HABILITADO:
         ind_grande.hide()
         ind_mouse.hide()
+        ind_texto.hide()
         scroll_lock_win.withdraw()
     elif indicador_visible_por_capa:
         ind_grande.show()
@@ -234,6 +237,7 @@ def actualizar_ui(capa_msg):
         c = color_actual
         ind_grande.set_color(c)
         ind_mouse.set_color(c)
+        ind_texto.set_color(c)
         indicador_visible_por_capa = True
         logger.debug(f"[UI] Capa detectada: {clave} - Indicadores: {'ON' if INDICADOR_HABILITADO else 'OFF'}")
         
@@ -244,6 +248,7 @@ def actualizar_ui(capa_msg):
         indicador_visible_por_capa = False
         ind_grande.hide()
         ind_mouse.hide()
+        ind_texto.hide()
 
     actualizar_scroll_lock_ui()
 
@@ -359,26 +364,30 @@ _wrap_armando = False
 def seguimiento_mouse():
     """Mueve el punto chico junto al cursor real (posición vía KWin, ver utils/cursor_kwin)."""
     global _wrap_armando
-    # En un terminal el puntero se oculta al escribir: el punto va en el cursor de texto.
     texto = cursor_texto.get()
     pos = cursor_kwin.get()
-    if texto:
-        x, y = texto
-        ind_mouse.resize(PUNTO_TEXTO)
-        ind_mouse.move(x-PUNTO_TEXTO//2, y+OFFSET_TEXTO)
-    elif pos:
+    if pos:
         x, y = pos
-        ind_mouse.resize(PUNTO_MOUSE)
         ind_mouse.move(x-PUNTO_MOUSE//2, y+OFFSET_MOUSE)
+    # En un terminal el puntero se oculta al escribir: un segundo punto va en el cursor de texto.
+    if texto and INDICADOR_HABILITADO and indicador_visible_por_capa:
+        x, y = texto
+        ind_texto.move(x-PUNTO_TEXTO//2, y+OFFSET_TEXTO)
+        if not ind_texto.visible:
+            ind_texto.show()
+    elif ind_texto.visible:
+        ind_texto.hide()
 
     armando = AVISO_WRAP and INDICADOR_HABILITADO and wrap_around.armando()
     if armando != _wrap_armando:
         _wrap_armando = armando
         if armando:
             ind_mouse.set_color(COLOR_WRAP)
+            ind_texto.set_color(COLOR_WRAP)
             ind_mouse.show()
         else:
             ind_mouse.set_color(color_actual)
+            ind_texto.set_color(color_actual)
             if not (INDICADOR_HABILITADO and indicador_visible_por_capa):
                 ind_mouse.hide()
     root.after(16, seguimiento_mouse)
