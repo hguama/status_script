@@ -5,15 +5,15 @@ Windows; este archivo describe solo lo que difiere en Linux.
 
 ## Qué funciona
 
-| Funcionalidad                                                       | Estado |
-| ------------------------------------------------------------------- | ------ |
-| Indicador de capas (círculo grande arriba-centro)                   | Activo |
-| Punto chico que sigue al cursor (posición real vía KWin, ver abajo) | Activo |
-| Calibración de Mouse Keys (`utils/qmk_calibracion`)                 | Activo |
-| Reconexión automática al Corne tras desconexión/suspensión          | Activo |
-| Wrap-around del cursor (salto de borde a borde, ver abajo)          | Activo |
-| Marca de scroll en Konsole (cuadrado que sigue al texto, ver abajo) | Activo |
-| Punto chico sobre el cursor de texto en Konsole (ver abajo)         | Activo |
+| Funcionalidad                                                       | Estado                             |
+| ------------------------------------------------------------------- | ---------------------------------- |
+| Indicador de capas (círculo grande arriba-centro)                   | Activo                             |
+| Punto chico que sigue al cursor (posición real vía KWin, ver abajo) | Activo                             |
+| Calibración de Mouse Keys (`utils/qmk_calibracion`)                 | Activo                             |
+| Reconexión automática al Corne tras desconexión/suspensión          | Activo                             |
+| Wrap-around del cursor (salto de borde a borde, ver abajo)          | Activo                             |
+| Marca de scroll en Konsole (cuadrado que sigue al texto, ver abajo) | Desactivado (`HABILITADA = False`) |
+| Punto chico sobre el cursor de texto en Konsole (ver abajo)         | Activo                             |
 
 ## Qué está deshabilitado y por qué
 

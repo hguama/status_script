@@ -32,7 +32,7 @@ from utils import cursor_kwin
 
 logger = logging.getLogger(__name__)
 
-HABILITADA = True
+HABILITADA = False
 
 APPS = ("konsole",)          # fragmentos de la clase de la ventana (en minúsculas)
 LINEAS_POR_PASO = 3          # líneas que desplaza Qt por paso de rueda con factor 1 (Kate y Konsole)
