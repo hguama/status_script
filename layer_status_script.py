@@ -122,7 +122,11 @@ TAMANO_SCROLL, COLOR_SCROLL = 18, "#2982F0"
 # Aviso visual del wrap: el punto chico toma este color mientras se arma el salto.
 AVISO_WRAP, COLOR_WRAP = False, "#FFFFFF"
 
+# Se busca la primera clave contenida en el nombre de la capa, en este orden:
+# MOUSE_FAST va antes que FAST y MOUSE para que no tome el color de esas.
+# Un par (borde, centro) dibuja el círculo con un punto central de otro color.
 colores = {
+    "MOUSE_FAST": ("#202D80", "#64B5F6"),   # azul de MOUSE con punto azul claro
     "ALFA": "#66BB6A",    # Verde claro / Menta (Material Green 400)
     "MOVEWIN": "#8E24AA",    # Púrpura / Morado (Material Purple 600)
     "FAST": "#E53935",    # Rojo intenso / Carmesí (Material Red 600)

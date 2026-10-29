@@ -13,6 +13,7 @@ Uso:
     c = CirculoARGB(30, x=945, y=5)
     c.set_color("#66BB6A")
     c.show(); c.move(100, 100); c.hide()
+    c.set_color(("#202D80", "#64B5F6"))   # círculo con un punto central de otro color
 """
 
 import logging
@@ -21,6 +22,19 @@ from Xlib import X, display
 from Xlib.ext import shape
 
 logger = logging.getLogger(__name__)
+
+CENTRO = 0.45   # diámetro del punto central, como fracción del círculo
+
+
+def _pixel(color):
+    r, g, b = (int(color[i:i + 2], 16) for i in (1, 3, 5))
+    return 0xFF000000 | (r << 16) | (g << 8) | b
+
+
+def _partes(color):
+    """'#RRGGBB' → (color, None); ('#borde', '#centro') → tal cual."""
+    return (color, None) if isinstance(color, str) else color
+
 
 _d = display.Display()
 _scr = _d.screen()
@@ -56,10 +70,15 @@ class CirculoARGB:
         return self._visible
 
     def _dibujar(self):
-        r, g, b = (int(self._color[i:i + 2], 16) for i in (1, 3, 5))
-        gc = self._win.create_gc(foreground=0xFF000000 | (r << 16) | (g << 8) | b)
+        fondo, centro = _partes(self._color)
+        gc = self._win.create_gc(foreground=_pixel(fondo))
         self._win.clear_area(0, 0, self.size, self.size)
         self._win.fill_arc(gc, 0, 0, self.size, self.size, 0, 360 * 64)
+        if centro:
+            d = max(2, round(self.size * CENTRO))
+            o = (self.size - d) // 2
+            gc.change(foreground=_pixel(centro))
+            self._win.fill_arc(gc, o, o, d, d, 0, 360 * 64)
         gc.free()
         _d.flush()
 
@@ -97,8 +116,7 @@ class CuadradoARGB(CirculoARGB):
     """Mismo indicador pero cuadrado (para distinguirlo de los círculos)."""
 
     def _dibujar(self):
-        r, g, b = (int(self._color[i:i + 2], 16) for i in (1, 3, 5))
-        gc = self._win.create_gc(foreground=0xFF000000 | (r << 16) | (g << 8) | b)
+        gc = self._win.create_gc(foreground=_pixel(_partes(self._color)[0]))
         self._win.clear_area(0, 0, self.size, self.size)
         self._win.fill_rectangle(gc, 0, 0, self.size, self.size)
         gc.free()
