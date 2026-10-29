@@ -47,6 +47,7 @@ import utils.captura as captura
 from utils import marca_scroll
 from utils import cursor_texto
 from utils import cursor_kwin
+from utils import dictado_terminal
 from utils.indicador_argb import CirculoARGB, CuadradoARGB
 
 import logging
@@ -306,11 +307,22 @@ def escuchar_hid(dev):
             except Exception:
                 pass
             dev = _reconectar_hid()
+            _set_dev_hid(dev)
+            dictado_terminal.reenviar()
             logger.info("[HID] Corne reconectado")
             try:
                 qmk_cal.enviar_calibracion(dev)
             except Exception as e2:
                 logger.error(f"[HID] Calibración tras reconexión falló: {e2}")
+
+
+# Dispositivo HID actual, para los módulos que escriben desde su propio hilo
+# (escuchar_hid lo reemplaza al reconectar).
+_dev_hid = None
+
+def _set_dev_hid(dev):
+    global _dev_hid
+    _dev_hid = dev
 
 
 def _reconectar_hid():
@@ -467,6 +479,7 @@ def log_configuracion():
     qmk_cal.log_configuracion()
     marca_scroll.log_configuracion()
     cursor_texto.log_configuracion()
+    dictado_terminal.log_configuracion()
 
     # ── Wrap-around (→ módulo independiente) ──
     wrap_around.log_configuracion()
@@ -491,6 +504,7 @@ def main():
     # no reinicia el servicio y el indicador no vuelve.
     print("[HID] Buscando el Corne...")
     dev = _reconectar_hid()
+    _set_dev_hid(dev)
 
     # ── Volcar toda la configuración al log ──
     log_configuracion()
@@ -510,6 +524,8 @@ def main():
     marca_scroll.iniciar()
     # Punto sobre el cursor de texto de Konsole (AT-SPI + geometría de KWin).
     cursor_texto.iniciar()
+    # Ctrl+Espacio → Alt+K en Konsole: avisa al Corne qué ventana está activa.
+    dictado_terminal.iniciar(lambda: _dev_hid)
     root.after(100, marca_scroll_tick)
     # Wrap-around de cursor: KWin avisa del empuje contra el borde y el salto
     # se hace con un puntero virtual (ver utils/wrap_around). En un hilo
