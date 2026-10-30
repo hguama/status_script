@@ -236,6 +236,7 @@ def actualizar_ui(capa_msg):
     global indicador_visible_por_capa, color_actual, scroll_lock_activo
 
     clave = next((k for k in colores if k in capa_msg), None)
+    wrap_around.set_teclado("MOUSE" in capa_msg)
 
     if clave:
         color_actual = colores[clave]

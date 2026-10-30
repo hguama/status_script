@@ -63,15 +63,17 @@ código de Windows que describe [`wrap_around.md`](wrap_around.md).
 
 Parámetros en `utils/wrap_around/__init__.py`:
 
-| Parámetro            | Valor  | Efecto                                                                 |
-| -------------------- | ------ | ---------------------------------------------------------------------- |
-| `HABILITADA`         | `True` | Bandera maestra                                                        |
-| `RESISTENCIA_MS`     | 90     | Empuje sostenido necesario para saltar                                 |
-| `TOLERANCIA_LATERAL` | 15 px  | Recorrido máximo a lo largo del borde en ese lapso (~170 px/s)         |
-| `PAUSA_MAX`          | 0.06 s | Pausa sin empuje que corta la racha                                    |
-| `COOLDOWN`           | 0.5 s  | Tiempo mínimo entre saltos                                             |
-| `INSET`              | 15 px  | Distancia al borde opuesto donde aterriza el cursor                    |
-| `RETARDO_KWIN_MS`    | 60000  | Valor esperado de `ElectricBorderDelay` de KWin (ver Instalación)      |
+| Parámetro            | Valor  | Efecto                                                                             |
+| -------------------- | ------ | ---------------------------------------------------------------------------------- |
+| `HABILITADA`         | `True` | Bandera maestra                                                                    |
+| `RESISTENCIA_MS`     | 90     | Empuje sostenido necesario para saltar                                             |
+| `TOLERANCIA_LATERAL` | 15 px  | Recorrido máximo a lo largo del borde en ese lapso (~170 px/s)                     |
+| `PAUSA_MAX`          | 0.06 s | Pausa sin empuje que corta la racha                                                |
+| `TOQUES_TECLADO`     | 2      | Capas de ratón del Corne: toques contra el borde para saltar (el que llega cuenta) |
+| `SEPARACION_TOQUE`   | 0.03 s | Capas de ratón: empujes más juntos cuentan como un solo toque                      |
+| `COOLDOWN`           | 0.5 s  | Tiempo mínimo entre saltos                                                         |
+| `INSET`              | 15 px  | Distancia al borde opuesto donde aterriza el cursor                                |
+| `RETARDO_KWIN_MS`    | 60000  | Valor esperado de `ElectricBorderDelay` de KWin (ver Instalación)                  |
 
 Guía de ajuste (cada salto, y cada empuje largo que no saltó, queda en el journal
 como `[WRAP]` con la duración y el recorrido lateral medidos):

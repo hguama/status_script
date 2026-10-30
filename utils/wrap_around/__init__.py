@@ -14,6 +14,11 @@ Cómo funciona:
      casi no se movió a lo largo del borde.
   3. El salto se hace con un puntero absoluto virtual (uinput).
 
+Con las capas de ratón del Corne el movimiento llega en pasos separados, y una
+racha por tiempo nunca se forma: ahí se cuentan toques contra el borde (cada
+paso que choca da una muestra con empuje), sin límite de tiempo: la cuenta dura
+mientras el cursor siga en ese borde. Lo activa set_teclado() según la capa.
+
 KWin no debe activar sus propios bordes mientras tanto (al hacerlo deja de
 rebotar el cursor): por eso ElectricBorderDelay va en RETARDO_KWIN_MS.
 
@@ -39,6 +44,8 @@ COOLDOWN           = 0.5   # s mínimos entre saltos
 INSET              = 15    # px desde el borde opuesto donde aterriza el cursor
 ARMADO_MS          = 50    # racha mínima para el aviso visual
 RETARDO_KWIN_MS    = 60000 # ElectricBorderDelay de KWin (kwinrc): que nunca se active
+TOQUES_TECLADO     = 2     # capas de ratón: toques contra el borde para saltar (el que llega cuenta)
+SEPARACION_TOQUE   = 0.03  # s: empujes más juntos son el mismo toque (un salto largo va en tramos)
 
 _ancho = _alto = 0
 _uinput = None
@@ -49,6 +56,8 @@ _borde = None          # "izq" | "der" | "arriba" | "abajo" | None
 _t_inicio = 0.0
 _t_ultimo = 0.0
 _lateral_min = None    # menor recorrido lateral visto en la racha (para el log)
+_toques = 0            # toques contra el borde en la racha (solo capas de ratón)
+_teclado = False       # True mientras una capa de ratón del Corne está activa
 
 
 def log_configuracion():
@@ -57,6 +66,7 @@ def log_configuracion():
     logger.info("│  resistencia = %d ms de empuje sostenido", RESISTENCIA_MS)
     logger.info("│  tolerancia  = %d px a lo largo del borde", TOLERANCIA_LATERAL)
     logger.info("│  cooldown    = %.2f s", COOLDOWN)
+    logger.info("│  teclado     = %d toques contra el borde", TOQUES_TECLADO)
 
 
 def borde_de(x, y, ancho, alto):
@@ -96,6 +106,12 @@ def armando():
         and ahora - _t_inicio >= ARMADO_MS / 1000 and ahora >= _bloqueado_hasta
 
 
+def set_teclado(activo):
+    """Activa la regla por toques mientras hay una capa de ratón del Corne."""
+    global _teclado
+    _teclado = activo
+
+
 def _transportar(x, y):
     from evdev import ecodes as e
     _uinput.write(e.EV_ABS, e.ABS_X, x)
@@ -113,24 +129,34 @@ def _cerrar_racha():
 
 
 def _al_muestrear():
-    global _borde, _t_inicio, _t_ultimo, _lateral_min, _bloqueado_hasta
+    global _borde, _t_inicio, _t_ultimo, _lateral_min, _bloqueado_hasta, _toques
     muestras = cursor_kwin.muestras()
     t, x, y, empuje = muestras[-1]
 
-    if _borde and t - _t_ultimo > PAUSA_MAX:
+    if _teclado:
+        if _borde and borde_de(x, y, _ancho, _alto) != _borde:
+            _cerrar_racha()
+    elif _borde and t - _t_ultimo > PAUSA_MAX:
         _cerrar_racha()
     if not empuje or t < _bloqueado_hasta:
         return
 
     borde = borde_de(x, y, _ancho, _alto)
+    if borde is None:
+        _cerrar_racha()
+        return
     if borde != _borde:
         _cerrar_racha()
-        if borde is None:
-            return
-        _borde, _t_inicio, _lateral_min = borde, t, None
+        _borde, _t_inicio, _lateral_min, _toques = borde, t, None, 1
+    elif t - _t_ultimo >= SEPARACION_TOQUE:
+        _toques += 1
     _t_ultimo = t
 
-    if t - _t_inicio < RESISTENCIA_MS / 1000:
+    if _teclado:
+        logger.debug("[WRAP] %s: toque %d de %d", borde, _toques, TOQUES_TECLADO)
+        if _toques < TOQUES_TECLADO:
+            return
+    elif t - _t_inicio < RESISTENCIA_MS / 1000:
         return
     lat = lateral(borde, muestras, t)
     if lat > TOLERANCIA_LATERAL:
