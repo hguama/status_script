@@ -48,6 +48,7 @@ from utils import marca_scroll
 from utils import cursor_texto
 from utils import cursor_kwin
 from utils import dictado_terminal
+from utils import turbo_trackball
 from utils.indicador_argb import CirculoARGB, CuadradoARGB
 
 import logging
@@ -237,6 +238,7 @@ def actualizar_ui(capa_msg):
 
     clave = next((k for k in colores if k in capa_msg), None)
     wrap_around.set_teclado("MOUSE" in capa_msg)
+    turbo_trackball.set_capa(clave or "")
 
     if clave:
         color_actual = colores[clave]
@@ -485,6 +487,7 @@ def log_configuracion():
     marca_scroll.log_configuracion()
     cursor_texto.log_configuracion()
     dictado_terminal.log_configuracion()
+    turbo_trackball.log_configuracion()
 
     # ── Wrap-around (→ módulo independiente) ──
     wrap_around.log_configuracion()
@@ -493,6 +496,7 @@ def log_configuracion():
     modulos = []
     if qmk_cal.HABILITADA:     modulos.append("QMK calibración")
     if wrap_around.HABILITADA: modulos.append("WRAP-AROUND")
+    if turbo_trackball.HABILITADA: modulos.append("TURBO-TRACKBALL")
     logger.info("├─ MÓDULOS ACTIVOS: %s", ", ".join(modulos) if modulos else "(ninguno)")
 
     # ── Otros ──
@@ -532,6 +536,8 @@ def main():
     # Ctrl+Espacio → Alt+K en Konsole: avisa al Corne qué ventana está activa.
     dictado_terminal.iniciar(lambda: _dev_hid)
     root.after(100, marca_scroll_tick)
+    # Turbo de los trackballs al sostener _AI (necesita linux/72-trackball-turbo.rules).
+    turbo_trackball.iniciar()
     # Wrap-around de cursor: KWin avisa del empuje contra el borde y el salto
     # se hace con un puntero virtual (ver utils/wrap_around). En un hilo
     # porque crear el puntero virtual tarda ~2 s.

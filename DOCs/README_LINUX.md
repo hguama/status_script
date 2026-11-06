@@ -98,6 +98,24 @@ irregular. Es un ajuste global, así que **las esquinas y bordes activos de KWin
 Bordes de pantalla) dejan de funcionar con el puntero**. El mosaico al arrastrar
 ventanas contra un borde no cambia. Asume una sola pantalla.
 
+## Turbo de los trackballs
+
+Mientras se sostiene una tecla de `_AI` del Corne (meñique izquierdo o derecho),
+los trackballs mueven el puntero más rápido; al soltarla vuelven a su velocidad
+normal, la de precisión. Es el módulo `utils/turbo_trackball`.
+
+- Fuera de `_AI` los trackballs van directo al sistema, sin pasar por el script.
+- En `_AI` el módulo toma cada trackball (grab de `evdev`) y reenvía sus movimientos
+  multiplicados por un dispositivo virtual (`Turbo <nombre>`) que copia los ajustes
+  de KWin del real. Clics y rueda pasan sin cambio.
+- Necesita `linux/72-trackball-turbo.rules`. Si el script se cae, el kernel suelta
+  los trackballs solos.
+
+Valores en `TRACKBALLS` de `utils/turbo_trackball/__init__.py`, por trackball:
+`"normal"` (velocidad de KDE que se aplica al arrancar, −1…1; `None` = no tocar) y
+`"turbo"` (factores horizontal y vertical). Tras cambiarlos:
+`systemctl --user restart status-script.service`.
+
 ## Marca de scroll en Konsole
 
 Al hacer scroll con la rueda del Corne en una ventana de Konsole aparece un
@@ -247,6 +265,7 @@ Archivos en `linux/` de este repo:
 # Permiso de acceso al Corne sin root (regla udev)
 sudo cp linux/70-corne-hid.rules /etc/udev/rules.d/
 sudo cp linux/71-corne-wheel.rules /etc/udev/rules.d/   # rueda del Corne (marca de scroll)
+sudo cp linux/72-trackball-turbo.rules /etc/udev/rules.d/ # trackballs (turbo)
 sudo udevadm control --reload-rules && sudo udevadm trigger
 
 # Servicio de usuario (arranque automático al iniciar sesión)

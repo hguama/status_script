@@ -1,0 +1,3 @@
+# Deja que el usuario con sesión iniciada lea los trackballs (tarea 23, turbo).
+SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="Logitech ERGO M575", TAG+="uaccess"
+SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="Kensington Expert Wireless TB Mouse", TAG+="uaccess"
